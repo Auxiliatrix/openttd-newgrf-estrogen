@@ -1,0 +1,14 @@
+##grflangid 0x00
+
+# GRF name and description definitions
+STR_GRF_NAME                :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION         :Test GRF before implementing actual GRF
+
+STR_QUANTITY_VIALS              :Vials
+
+# Cargos
+STR_CARGO_PLURAL_ESTROGEN       :Estrogen
+STR_CARGO_SINGULAR_ESTROGEN     :Estrogen
+STR_ABBREV_ESTROGEN             :{TINYFONT}ES
+STR_LABEL_ESTROGEN              :ESTR
+STR_CARGO_UNIT_ESTROGEN         :{COMMA} vial{P "'"s} of estrogen

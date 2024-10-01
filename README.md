@@ -1,0 +1,1 @@
+Compilation command: `nmlc --grf mygrf.grf mygrf.nml`

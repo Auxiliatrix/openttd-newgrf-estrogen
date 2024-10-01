@@ -1,0 +1,33 @@
+grf {
+    grfid: "AK\01\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+item (FEAT_CARGOS, item_estrogen) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_ESTROGEN);
+        unit_name: string(STR_CARGO_SINGULAR_ESTROGEN);
+        type_abbreviation: string(STR_ABBREV_ESTROGEN);
+        cargo_label: string(STR_LABEL_ESTROGEN);
+        units_of_cargo: string(STR_QUANTITY_VIALS);
+        items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN)
+        cargo_classes: bitmask(CC_LIQUID);
+        penalty_lowerbound: 15;
+        single_penalty_length: 128;
+        price_factor: 164;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+        
+    }
+}
