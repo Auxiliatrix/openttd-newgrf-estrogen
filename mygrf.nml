@@ -110,6 +110,162 @@ item (FEAT_CARGOS, item_soy) {
     }
 }
 
+item (FEAT_CARGOS, item_grain) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_GRAIN);
+        unit_name: string(STR_CARGO_SINGULAR_GRAIN);
+        type_abbreviation: string(STR_ABBREV_GRAIN);
+        cargo_label: string(STR_LABEL_GRAIN);
+        units_of_cargo: string(TTD_STR_TONS);
+        items_of_cargo: string(STR_CARGO_UNIT_GRAIN)
+        cargo_classes: bitmask(CC_BULK);
+        penalty_lowerbound: 5;
+        single_penalty_length: 30;
+        price_factor: 99;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
+item (FEAT_CARGOS, item_ethanol) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_ETHANOL);
+        unit_name: string(STR_CARGO_SINGULAR_ETHANOL);
+        type_abbreviation: string(STR_ABBREV_ETHANOL);
+        cargo_label: string(STR_LABEL_ETHANOL);
+        units_of_cargo: string(TTD_STR_LITERS);
+        items_of_cargo: string(STR_CARGO_UNIT_ETHANOL)
+        cargo_classes: bitmask(CC_LIQUID);
+        penalty_lowerbound: 9;
+        single_penalty_length: 36;
+        price_factor: 166;
+        weight: "1.1";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
+item (FEAT_CARGOS, item_diosgenin) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_DIOSGENIN);
+        unit_name: string(STR_CARGO_SINGULAR_DIOSGENIN);
+        type_abbreviation: string(STR_ABBREV_DIOSGENIN);
+        cargo_label: string(STR_LABEL_DIOSGENIN);
+        units_of_cargo: string(TTD_STR_CRATES);
+        items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN)
+        cargo_classes: bitmask(CC_PIECE_GOODS);
+        penalty_lowerbound: 9;
+        single_penalty_length: 20;
+        price_factor: 255;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
+item (FEAT_CARGOS, item_progesterone) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_PROGESTERONE);
+        unit_name: string(STR_CARGO_SINGULAR_PROGESTERONE);
+        type_abbreviation: string(STR_ABBREV_PROGESTERONE);
+        cargo_label: string(STR_LABEL_PROGESTERONE);
+        units_of_cargo: string(TTD_STR_LITERS);
+        items_of_cargo: string(STR_CARGO_UNIT_PROGESTERONE)
+        cargo_classes: bitmask(CC_LIQUID);
+        penalty_lowerbound: 15;
+        single_penalty_length: 128;
+        price_factor: 155;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
+item (FEAT_CARGOS, item_raw_estrogen) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_RAW_ESTROGEN);
+        unit_name: string(STR_CARGO_SINGULAR_RAW_ESTROGEN);
+        type_abbreviation: string(STR_ABBREV_RAW_ESTROGEN);
+        cargo_label: string(STR_LABEL_RAW_ESTROGEN);
+        units_of_cargo: string(TTD_STR_LITERS);
+        items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTROGEN)
+        cargo_classes: bitmask(CC_LIQUID);
+        penalty_lowerbound: 15;
+        single_penalty_length: 128;
+        price_factor: 164;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
+item (FEAT_CARGOS, item_raw_testosterone) {
+    property {
+        type_name: string(STR_CARGO_PLURAL_RAW_TESTOSTERONE);
+        unit_name: string(STR_CARGO_SINGULAR_RAW_TESTOSTERONE);
+        type_abbreviation: string(STR_ABBREV_RAW_TESTOSTERONE);
+        cargo_label: string(STR_LABEL_RAW_TESTOSTERONE);
+        units_of_cargo: string(TTD_STR_LITERS);
+        items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE)
+        cargo_classes: bitmask(CC_LIQUID);
+        penalty_lowerbound: 15;
+        single_penalty_length: 128;
+        price_factor: 164;
+        weight: "1.0";
+        is_freight: "1.0";
+        capacity_multiplier: 1;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        town_production_effect: TOWNPRODUCTION_NONE;
+        town_production_multiplier: 1;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+
+    }
+}
+
 item (FEAT_CARGOS, item_estrogen) {
     property {
         type_name: string(STR_CARGO_PLURAL_ESTROGEN);

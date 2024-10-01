@@ -1,44 +1,80 @@
 ##grflangid 0x00
 
 # GRF name and description definitions
-STR_GRF_NAME                :{TITLE} {VERSION}
-STR_GRF_DESCRIPTION         :Test GRF before implementing actual GRF
+STR_GRF_NAME                        :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                 :Test GRF before implementing actual GRF
 
-STR_QUANTITY_VIALS              :Vials
+STR_QUANTITY_VIALS                  :Vials
 
 # Cargos
-STR_CARGO_PLURAL_SAND       :Sand
-STR_CARGO_SINGULAR_SAND     :Sand
-STR_ABBREV_SAND             :{TINYFONT}SA
-STR_LABEL_SAND              :SAND
-STR_CARGO_UNIT_SAND         :{WEIGHT} of sand
+STR_CARGO_PLURAL_SAND               :Sand
+STR_CARGO_SINGULAR_SAND             :Sand
+STR_ABBREV_SAND                     :{TINYFONT}SA
+STR_LABEL_SAND                      :SAND
+STR_CARGO_UNIT_SAND                 :{WEIGHT} of sand
 
-STR_CARGO_PLURAL_GLASS       :Glass
-STR_CARGO_SINGULAR_GLASS     :Glass
-STR_ABBREV_GLASS             :{TINYFONT}GL
-STR_LABEL_GLASS              :GLSS
-STR_CARGO_UNIT_GLASS         :{WEIGHT} of glass
+STR_CARGO_PLURAL_GLASS              :Glass
+STR_CARGO_SINGULAR_GLASS            :Glass
+STR_ABBREV_GLASS                    :{TINYFONT}GL
+STR_LABEL_GLASS                     :GLSS
+STR_CARGO_UNIT_GLASS                :{WEIGHT} of glass
 
-STR_CARGO_PLURAL_YAM       :Yam
-STR_CARGO_SINGULAR_YAM     :Yam
-STR_ABBREV_YAM             :{TINYFONT}YA
-STR_LABEL_YAM              :YAMS
-STR_CARGO_UNIT_YAM         :{WEIGHT} of yams
+STR_CARGO_PLURAL_YAM                :Yam
+STR_CARGO_SINGULAR_YAM              :Yam
+STR_ABBREV_YAM                      :{TINYFONT}YA
+STR_LABEL_YAM                       :YAMS
+STR_CARGO_UNIT_YAM                  :{WEIGHT} of yams
 
-STR_CARGO_PLURAL_SOY       :Soy
-STR_CARGO_SINGULAR_SOY     :Soy
-STR_ABBREV_SOY             :{TINYFONT}SY
-STR_LABEL_SOY              :SOYB
-STR_CARGO_UNIT_SOY         :{WEIGHT} of soybeans
+STR_CARGO_PLURAL_SOY                :Soy
+STR_CARGO_SINGULAR_SOY              :Soy
+STR_ABBREV_SOY                      :{TINYFONT}SY
+STR_LABEL_SOY                       :SOYB
+STR_CARGO_UNIT_SOY                  :{WEIGHT} of soybeans
 
-STR_CARGO_PLURAL_ESTROGEN       :Estrogen
-STR_CARGO_SINGULAR_ESTROGEN     :Estrogen
-STR_ABBREV_ESTROGEN             :{TINYFONT}ES
-STR_LABEL_ESTROGEN              :ESTR
-STR_CARGO_UNIT_ESTROGEN         :{COMMA} vial{P "'"s} of estrogen
+STR_CARGO_PLURAL_GRAIN              :Grains
+STR_CARGO_SINGULAR_GRAIN            :Grain
+STR_ABBREV_GRAIN                    :{TINYFONT}GR
+STR_LABEL_GRAIN                     :GRAI
+STR_CARGO_UNIT_GRAIN                :{WEIGHT} of grains
 
-STR_CARGO_PLURAL_TESTOSTERONE   :Testosterone
-STR_CARGO_SINGULAR_TESTOSTERONE :Testosterone
-STR_ABBREV_TESTOSTERONE         :{TINYFONT}TS
-STR_LABEL_TESTOSTERONE          :TEST
-STR_CARGO_UNIT_TESTOSTERONE     :{COMMA} vial{P "'"s} of testosterone
+STR_CARGO_PLURAL_ETHANOL            :Ethanol
+STR_CARGO_SINGULAR_ETHANOL          :Ethanol
+STR_ABBREV_ETHANOL                  :{TINYFONT}ET
+STR_LABEL_ETHANOL                   :ETHA
+STR_CARGO_UNIT_ETHANOL              :{VOLUME} of ethanol
+
+STR_CARGO_PLURAL_DIOSGENIN          :Diosgenin
+STR_CARGO_SINGULAR_DIOSGENIN        :Diosgenin
+STR_ABBREV_DIOSGENIN                :{TINYFONT}DI
+STR_LABEL_DIOSGENIN                 :DIOS
+STR_CARGO_UNIT_DIOSGENIN            :{SIGNED_WORD} crate{P 0 ""s} of diosgenin
+
+STR_CARGO_PLURAL_PROGESTERONE       :Progesterone
+STR_CARGO_SINGULAR_PROGESTERONE     :Progesterone
+STR_ABBREV_PROGESTERONE             :{TINYFONT}PR
+STR_LABEL_PROGESTERONE              :PROG
+STR_CARGO_UNIT_PROGESTERONE         :{VOLUME} of progesterone
+
+STR_CARGO_PLURAL_RAW_ESTROGEN       :Raw Estrogen
+STR_CARGO_SINGULAR_RAW_ESTROGEN     :Raw Estrogen
+STR_ABBREV_RAW_ESTROGEN             :{TINYFONT}RE
+STR_LABEL_RAW_ESTROGEN              :RWES
+STR_CARGO_UNIT_RAW_ESTROGEN         :{VOLUME} of raw estrogen
+
+STR_CARGO_PLURAL_RAW_TESTOSTERONE   :Raw Testosterone
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE :Raw Testosterone
+STR_ABBREV_RAW_TESTOSTERONE         :{TINYFONT}RT
+STR_LABEL_RAW_TESTOSTERONE          :RWTS
+STR_CARGO_UNIT_RAW_TESTOSTERONE     :{VOLUME} of raw testosterone
+
+STR_CARGO_PLURAL_ESTROGEN           :Estrogen
+STR_CARGO_SINGULAR_ESTROGEN         :Estrogen
+STR_ABBREV_ESTROGEN                 :{TINYFONT}ES
+STR_LABEL_ESTROGEN                  :ESTR
+STR_CARGO_UNIT_ESTROGEN             :{SIGNED_WORD} vial{P 0 ""s} of estrogen
+
+STR_CARGO_PLURAL_TESTOSTERONE       :Testosterone
+STR_CARGO_SINGULAR_TESTOSTERONE     :Testosterone
+STR_ABBREV_TESTOSTERONE             :{TINYFONT}TE
+STR_LABEL_TESTOSTERONE              :TEST
+STR_CARGO_UNIT_TESTOSTERONE         :{SIGNED_WORD} vial{P 0 ""s} of testosterone
