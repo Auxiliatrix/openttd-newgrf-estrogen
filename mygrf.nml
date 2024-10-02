@@ -59,9 +59,9 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES)
         cargo_classes: bitmask(CC_PIECE_GOODS);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 20;
+        single_penalty_length: 40;
+        price_factor: 110;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -82,9 +82,9 @@ item (FEAT_CARGOS, item_fertilizer) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER)
         cargo_classes: bitmask(CC_BULK);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 20;
+        single_penalty_length: 40;
+        price_factor: 151;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -105,9 +105,9 @@ item (FEAT_CARGOS, item_salt) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SALT)
         cargo_classes: bitmask(CC_BULK);
-        penalty_lowerbound: 64;
+        penalty_lowerbound: 30;
         single_penalty_length: 255;
-        price_factor: 93;
+        price_factor: 100;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -128,9 +128,9 @@ item (FEAT_CARGOS, item_potash) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_POTASH)
         cargo_classes: bitmask(CC_BULK);
-        penalty_lowerbound: 64;
+        penalty_lowerbound: 30;
         single_penalty_length: 255;
-        price_factor: 93;
+        price_factor: 100;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -151,9 +151,9 @@ item (FEAT_CARGOS, item_sand) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SAND)
         cargo_classes: bitmask(CC_BULK);
-        penalty_lowerbound: 64;
+        penalty_lowerbound: 40;
         single_penalty_length: 255;
-        price_factor: 93;
+        price_factor: 100;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -174,9 +174,9 @@ item (FEAT_CARGOS, item_minerals) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS)
         cargo_classes: bitmask(CC_BULK);
-        penalty_lowerbound: 64;
+        penalty_lowerbound: 30;
         single_penalty_length: 255;
-        price_factor: 93;
+        price_factor: 100;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -197,9 +197,9 @@ item (FEAT_CARGOS, item_corn) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_CORN)
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 12;
+        single_penalty_length: 40;
+        price_factor: 90;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -220,9 +220,9 @@ item (FEAT_CARGOS, item_soy) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SOY)
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
-        penalty_lowerbound: 5;
-        single_penalty_length: 30;
-        price_factor: 99;
+        penalty_lowerbound: 8;
+        single_penalty_length: 24;
+        price_factor: 117;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -243,9 +243,9 @@ item (FEAT_CARGOS, item_yam) {
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_YAM)
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
-        penalty_lowerbound: 5;
-        single_penalty_length: 30;
-        price_factor: 99;
+        penalty_lowerbound: 8;
+        single_penalty_length: 24;
+        price_factor: 117;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -266,9 +266,9 @@ item (FEAT_CARGOS, item_vials) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_VIALS)
         cargo_classes: bitmask(CC_PIECE_GOODS);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 16;
+        single_penalty_length: 160;
+        price_factor: 110;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -289,9 +289,9 @@ item (FEAT_CARGOS, item_chemicals) {
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS)
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 24;
+        single_penalty_length: 48;
+        price_factor: 148;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -312,9 +312,9 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL)
         cargo_classes: bitmask(CC_LIQUID);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 8;
+        single_penalty_length: 36;
+        price_factor: 124;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -335,9 +335,9 @@ item (FEAT_CARGOS, item_alcohol) {
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL)
         cargo_classes: bitmask(CC_LIQUID);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 12;
+        single_penalty_length: 40;
+        price_factor: 122;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -358,9 +358,9 @@ item (FEAT_CARGOS, item_diosgenin) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN)
         cargo_classes: bitmask(CC_POWDERIZED);
-        penalty_lowerbound: 9;
-        single_penalty_length: 20;
-        price_factor: 255;
+        penalty_lowerbound: 32;
+        single_penalty_length: 40;
+        price_factor: 170;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -381,9 +381,9 @@ item (FEAT_CARGOS, item_raw_estrone) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE)
         cargo_classes: bitmask(CC_POWDERIZED);
-        penalty_lowerbound: 64;
-        single_penalty_length: 255;
-        price_factor: 93;
+        penalty_lowerbound: 32;
+        single_penalty_length: 140;
+        price_factor: 160;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -404,9 +404,9 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE)
         cargo_classes: bitmask(CC_POWDERIZED);
-        penalty_lowerbound: 15;
-        single_penalty_length: 128;
-        price_factor: 164;
+        penalty_lowerbound: 32;
+        single_penalty_length: 140;
+        price_factor: 160;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -427,9 +427,9 @@ item (FEAT_CARGOS, item_estrogen) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN)
         cargo_classes: bitmask(CC_PIECE_GOODS);
-        penalty_lowerbound: 15;
-        single_penalty_length: 128;
-        price_factor: 164;
+        penalty_lowerbound: 12;
+        single_penalty_length: 32;
+        price_factor: 193;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
@@ -450,9 +450,9 @@ item (FEAT_CARGOS, item_testosterone) {
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE)
         cargo_classes: bitmask(CC_PIECE_GOODS);
-        penalty_lowerbound: 15;
-        single_penalty_length: 128;
-        price_factor: 164;
+        penalty_lowerbound: 13;
+        single_penalty_length: 32;
+        price_factor: 193;
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
