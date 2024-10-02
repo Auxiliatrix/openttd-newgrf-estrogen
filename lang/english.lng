@@ -4,6 +4,13 @@
 STR_GRF_NAME                        :{TITLE} {VERSION}
 STR_GRF_DESCRIPTION                 :Test GRF before implementing actual GRF
 
+STR_PARAM_NAME_HORMONE              :Hormone
+STR_PARAM_DESC_HORMONE              :Hormone that progesterone can be turned into at pharmaceutical plants.{}Selecting Both may result in unbalanced gameplay.
+
+STR_PARAM_VALUE_HORMONE_ESTROGEN    :Estrogen
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE:Testosterone
+STR_PARAM_VALUE_HORMONE_BOTH        :Both
+
 STR_QUANTITY_VIALS                  :Vials
 
 # Cargos
