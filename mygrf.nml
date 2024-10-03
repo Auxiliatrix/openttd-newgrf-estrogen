@@ -463,6 +463,31 @@ item (FEAT_CARGOS, item_testosterone) {
     }
 }
 
+item (FEAT_INDUSTRIES, industry_port) {
+    property {
+        name: string(STR_INDUSTRY_NAME_PORT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PORT);
+        life_type: IND_LIFE_TYPE_EXTRACTIVE;
+        cargo_types: [
+            produce_cargo("ENGS", 0),
+            produce_cargo("SALT", 0)
+        ];
+        spec_flags: [IND_FLAG_BUILT_ON_WATER];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PORT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PORT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT);
+        prob_random: 1;
+        prob_map_gen: 1;
+        prob_in_game: 1;
+        fund_cost_multiplier: 1;
+        prospect_chance: 1;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+}
+
 item (FEAT_INDUSTRIES, industry_template) {
     property {
         name: string(STR_INDUSTRY_NAME_TEMPLATE);
