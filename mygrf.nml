@@ -21,6 +21,16 @@ grf {
     }
 }
 
+// ----------------------------------------------------------------
+// Conventions
+// ----------------------------------------------------------------
+
+// BOOST_CARGO_FIRST    :Cargos that boost production should be listed first in all indexes.
+
+// ----------------------------------------------------------------
+// Settings
+// ----------------------------------------------------------------
+
 disable_item(FEAT_CARGOS, 1);
 disable_item(FEAT_CARGOS, 3, 4);
 disable_item(FEAT_CARGOS, 6, 11);
@@ -48,6 +58,10 @@ switch (FEAT_INDUSTRIES, SELF, enabled_in_testosterone, hormone) {
     2: CB_RESULT_IND_ALLOW;
     CB_RESULT_IND_DISALLOW;
 }
+
+// ----------------------------------------------------------------
+// Cargo Definitions
+// ----------------------------------------------------------------
 
 item (FEAT_CARGOS, item_engineering_supplies) {
     property {
@@ -462,6 +476,89 @@ item (FEAT_CARGOS, item_testosterone) {
 
     }
 }
+
+// ----------------------------------------------------------------
+// Industry Addressing Reference
+// ----------------------------------------------------------------
+// PERM_000         :Production cycle index
+// PERM_001..028    :Input Cargo 0 delivered last 27 cycles (+1 sum @ PERM_028)
+// PERM_029..056    :Input Cargo 1 delivered last 27 cycles (+1 sum @ PERM_056)
+// PERM_057..083    :Input Cargo 2 delivered last 27 cycles (+1 sum @ PERM_083)
+
+// ----------------------------------------------------------------
+// Industry Scripts
+// ----------------------------------------------------------------
+
+// TEMP_000         :Input cargo number
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
+    STORE_PERM(0, 1+28*LOAD_TEMP(0)+LOAD_PERM(0))   // Store 0 in this production cycle index's register
+]) {
+    return;
+}
+
+// TEMP_000         :Input cargo number
+// TEMP_001         :Index offset of register to shift
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
+    // Add current offset register to total for this input cargo
+    STORE_PERM(LOAD_PERM(28*LOAD_TEMP(0))+LOAD_PERM(1+28*LOAD_TEMP(0)+LOAD_TEMP(1)), 28*LOAD_TEMP(0))
+    STORE_TEMP(LOAD_TEMP(1)+1,1),               // Increment index offset
+    LOAD_TEMP(1)                                // Make decision based off of index offset
+]) {
+    27: production_cycle_tick_closer;           // If index offset is 27, we're finished
+    production_cycle_tick_cargo;                // Otherwise, recurse
+}
+
+// TEMP_000         :Input cargo number
+// TEMP_001         :Index offset of register to shift
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, [
+    STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
+    STORE_PERM(0, 28*LOAD_TEMP(0)),             // Reset total
+    STORE_TEMP(0, 1)                            // Store 0 in offset 
+]) {
+    production_cycle_tick_cargo
+}
+
+// TEMP_000         :Input cargo number
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
+    STORE_TEMP(0, 0),                           // Do input cargo 0
+    production_cycle_tick_helper,
+    STORE_TEMP(1, 0),                           // Do input cargo 1
+    production_cycle_tick_helper,
+    STORE_TEMP(2, 0),                           // Do input cargo 2
+    production_cycle_tick_helper
+]) {
+    return;
+}
+
+// TEMP_000         :Input cargo number
+// TEMP_001         :Quantity of input cargo
+// TEMP_127         :Index
+switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, [
+    LOAD_TEMP(1+28*LOAD_TEMP(0)+LOAD_PERM(0), 127),
+    STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_TEMP(1), LOAD_TEMP(127))
+]) {
+    return;    
+}
+
+switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multipler, [
+    LOAD_PERM(28)
+]) {
+    0..19: return 1;
+    20..79: return 2;
+    return 4;
+}
+
+switch(FEAT_INDUSTRIES, SELF, fertilizer_multiplier, [
+    LOAD_PERM(28)
+]) {
+    0..13: return 1;
+    14..59: return 2;
+    return 4;
+}
+
+// ----------------------------------------------------------------
+// Industry Definitions
+// ----------------------------------------------------------------
 
 item (FEAT_INDUSTRIES, industry_port) {
     property {
