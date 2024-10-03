@@ -68,8 +68,8 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         number: 12;
         type_name: string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES);
         unit_name: string(STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES);
-        type_abbreviation: string(STR_ABBREV_ENGINEERING_SUPPLIES);
-        cargo_label: string(STR_LABEL_ENGINEERING_SUPPLIES);
+        type_abbreviation: string(STR_CARGO_ABBREV_ENGINEERING_SUPPLIES);
+        cargo_label: string(STR_CARGO_LABEL_ENGINEERING_SUPPLIES);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES\);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -91,8 +91,8 @@ item (FEAT_CARGOS, item_fertilizer) {
         number: 13;
         type_name: string(STR_CARGO_PLURAL_FERTILIZER);
         unit_name: string(STR_CARGO_SINGULAR_FERTILIZER);
-        type_abbreviation: string(STR_ABBREV_FERTILIZER);
-        cargo_label: string(STR_LABEL_FERTILIZER);
+        type_abbreviation: string(STR_CARGO_ABBREV_FERTILIZER);
+        cargo_label: string(STR_CARGO_LABEL_FERTILIZER);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER\);
         cargo_classes: bitmask(CC_BULK);
@@ -114,8 +114,8 @@ item (FEAT_CARGOS, item_salt) {
         number: 14;
         type_name: string(STR_CARGO_PLURAL_SALT);
         unit_name: string(STR_CARGO_SINGULAR_SALT);
-        type_abbreviation: string(STR_ABBREV_SALT);
-        cargo_label: string(STR_LABEL_SALT);
+        type_abbreviation: string(STR_CARGO_ABBREV_SALT);
+        cargo_label: string(STR_CARGO_LABEL_SALT);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SALT\);
         cargo_classes: bitmask(CC_BULK);
@@ -137,8 +137,8 @@ item (FEAT_CARGOS, item_potash) {
         number: 15;
         type_name: string(STR_CARGO_PLURAL_POTASH);
         unit_name: string(STR_CARGO_SINGULAR_POTASH);
-        type_abbreviation: string(STR_ABBREV_POTASH);
-        cargo_label: string(STR_LABEL_POTASH);
+        type_abbreviation: string(STR_CARGO_ABBREV_POTASH);
+        cargo_label: string(STR_CARGO_LABEL_POTASH);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_POTASH\);
         cargo_classes: bitmask(CC_BULK);
@@ -160,8 +160,8 @@ item (FEAT_CARGOS, item_sand) {
         number: 16;
         type_name: string(STR_CARGO_PLURAL_SAND);
         unit_name: string(STR_CARGO_SINGULAR_SAND);
-        type_abbreviation: string(STR_ABBREV_SAND);
-        cargo_label: string(STR_LABEL_SAND);
+        type_abbreviation: string(STR_CARGO_ABBREV_SAND);
+        cargo_label: string(STR_CARGO_LABEL_SAND);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SAND\);
         cargo_classes: bitmask(CC_BULK);
@@ -183,8 +183,8 @@ item (FEAT_CARGOS, item_minerals) {
         number: 17;
         type_name: string(STR_CARGO_PLURAL_MINERALS);
         unit_name: string(STR_CARGO_SINGULAR_MINERALS);
-        type_abbreviation: string(STR_ABBREV_MINERALS);
-        cargo_label: string(STR_LABEL_MINERALS);
+        type_abbreviation: string(STR_CARGO_ABBREV_MINERALS);
+        cargo_label: string(STR_CARGO_LABEL_MINERALS);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS\);
         cargo_classes: bitmask(CC_BULK);
@@ -206,8 +206,8 @@ item (FEAT_CARGOS, item_corn) {
         number: 18;
         type_name: string(STR_CARGO_PLURAL_CORN);
         unit_name: string(STR_CARGO_SINGULAR_CORN);
-        type_abbreviation: string(STR_ABBREV_CORN);
-        cargo_label: string(STR_LABEL_CORN);
+        type_abbreviation: string(STR_CARGO_ABBREV_CORN);
+        cargo_label: string(STR_CARGO_LABEL_CORN);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_CORN\);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -229,8 +229,8 @@ item (FEAT_CARGOS, item_soy) {
         number: 19;
         type_name: string(STR_CARGO_PLURAL_SOY);
         unit_name: string(STR_CARGO_SINGULAR_SOY);
-        type_abbreviation: string(STR_ABBREV_SOY);
-        cargo_label: string(STR_LABEL_SOY);
+        type_abbreviation: string(STR_CARGO_ABBREV_SOY);
+        cargo_label: string(STR_CARGO_LABEL_SOY);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SOY\);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -252,8 +252,8 @@ item (FEAT_CARGOS, item_yam) {
         number: 20;
         type_name: string(STR_CARGO_PLURAL_YAM);
         unit_name: string(STR_CARGO_SINGULAR_YAM);
-        type_abbreviation: string(STR_ABBREV_YAM);
-        cargo_label: string(STR_LABEL_YAM);
+        type_abbreviation: string(STR_CARGO_ABBREV_YAM);
+        cargo_label: string(STR_CARGO_LABEL_YAM);
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_YAM\);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -275,8 +275,8 @@ item (FEAT_CARGOS, item_vials) {
         number: 21;
         type_name: string(STR_CARGO_PLURAL_VIALS);
         unit_name: string(STR_CARGO_SINGULAR_VIALS);
-        type_abbreviation: string(STR_ABBREV_VIALS);
-        cargo_label: string(STR_LABEL_VIALS);
+        type_abbreviation: string(STR_CARGO_ABBREV_VIALS);
+        cargo_label: string(STR_CARGO_LABEL_VIALS);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_VIALS\);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -298,8 +298,8 @@ item (FEAT_CARGOS, item_chemicals) {
         number: 22;
         type_name: string(STR_CARGO_PLURAL_CHEMICALS);
         unit_name: string(STR_CARGO_SINGULAR_CHEMICALS);
-        type_abbreviation: string(STR_ABBREV_CHEMICALS);
-        cargo_label: string(STR_LABEL_CHEMICALS);
+        type_abbreviation: string(STR_CARGO_ABBREV_CHEMICALS);
+        cargo_label: string(STR_CARGO_LABEL_CHEMICALS);
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS\);
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
@@ -321,8 +321,8 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         number: 23;
         type_name: string(STR_CARGO_PLURAL_VEGETABLE_OIL);
         unit_name: string(STR_CARGO_SINGULAR_VEGETABLE_OIL);
-        type_abbreviation: string(STR_ABBREV_VEGETABLE_OIL);
-        cargo_label: string(STR_LABEL_VEGETABLE_OIL);
+        type_abbreviation: string(STR_CARGO_ABBREV_VEGETABLE_OIL);
+        cargo_label: string(STR_CARGO_LABEL_VEGETABLE_OIL);
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL\);
         cargo_classes: bitmask(CC_LIQUID);
@@ -344,8 +344,8 @@ item (FEAT_CARGOS, item_alcohol) {
         number: 24;
         type_name: string(STR_CARGO_PLURAL_ALCOHOL);
         unit_name: string(STR_CARGO_SINGULAR_ALCOHOL);
-        type_abbreviation: string(STR_ABBREV_ALCOHOL);
-        cargo_label: string(STR_LABEL_ALCOHOL);
+        type_abbreviation: string(STR_CARGO_ABBREV_ALCOHOL);
+        cargo_label: string(STR_CARGO_LABEL_ALCOHOL);
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL\);
         cargo_classes: bitmask(CC_LIQUID);
@@ -367,8 +367,8 @@ item (FEAT_CARGOS, item_diosgenin) {
         number: 25;
         type_name: string(STR_CARGO_PLURAL_DIOSGENIN);
         unit_name: string(STR_CARGO_SINGULAR_DIOSGENIN);
-        type_abbreviation: string(STR_ABBREV_DIOSGENIN);
-        cargo_label: string(STR_LABEL_DIOSGENIN);
+        type_abbreviation: string(STR_CARGO_ABBREV_DIOSGENIN);
+        cargo_label: string(STR_CARGO_LABEL_DIOSGENIN);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN\);
         cargo_classes: bitmask(CC_POWDERIZED);
@@ -390,8 +390,8 @@ item (FEAT_CARGOS, item_raw_estrone) {
         number: 26;
         type_name: string(STR_CARGO_PLURAL_RAW_ESTRONE);
         unit_name: string(STR_CARGO_SINGULAR_RAW_ESTRONE);
-        type_abbreviation: string(STR_ABBREV_RAW_ESTRONE);
-        cargo_label: string(STR_LABEL_RAW_ESTRONE);
+        type_abbreviation: string(STR_CARGO_ABBREV_RAW_ESTRONE);
+        cargo_label: string(STR_CARGO_LABEL_RAW_ESTRONE);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE\);
         cargo_classes: bitmask(CC_POWDERIZED);
@@ -413,8 +413,8 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         number: 27;
         type_name: string(STR_CARGO_PLURAL_RAW_TESTOSTERONE);
         unit_name: string(STR_CARGO_SINGULAR_RAW_TESTOSTERONE);
-        type_abbreviation: string(STR_ABBREV_RAW_TESTOSTERONE);
-        cargo_label: string(STR_LABEL_RAW_TESTOSTERONE);
+        type_abbreviation: string(STR_CARGO_ABBREV_RAW_TESTOSTERONE);
+        cargo_label: string(STR_CARGO_LABEL_RAW_TESTOSTERONE);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE\);
         cargo_classes: bitmask(CC_POWDERIZED);
@@ -436,8 +436,8 @@ item (FEAT_CARGOS, item_estrogen) {
         number: 28;
         type_name: string(STR_CARGO_PLURAL_ESTROGEN);
         unit_name: string(STR_CARGO_SINGULAR_ESTROGEN);
-        type_abbreviation: string(STR_ABBREV_ESTROGEN);
-        cargo_label: string(STR_LABEL_ESTROGEN);
+        type_abbreviation: string(STR_CARGO_ABBREV_ESTROGEN);
+        cargo_label: string(STR_CARGO_LABEL_ESTROGEN);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN\);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -459,8 +459,8 @@ item (FEAT_CARGOS, item_testosterone) {
         number: 29;
         type_name: string(STR_CARGO_PLURAL_TESTOSTERONE);
         unit_name: string(STR_CARGO_SINGULAR_TESTOSTERONE);
-        type_abbreviation: string(STR_ABBREV_TESTOSTERONE);
-        cargo_label: string(STR_LABEL_TESTOSTERONE);
+        type_abbreviation: string(STR_CARGO_ABBREV_TESTOSTERONE);
+        cargo_label: string(STR_CARGO_LABEL_TESTOSTERONE);
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -556,12 +556,23 @@ switch(FEAT_INDUSTRIES, SELF, fertilizer_multiplier, [
     return 4;
 }
 
+produce(prod_port, 
+    [], 
+    [string(STR_CARGO_LABEL_ENGINEERING_SUPPLIES):1;string(STR_CARGO_LABEL_SALT):1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
+    prod_port;
+}
+
 // ----------------------------------------------------------------
 // Industry Definitions
 // ----------------------------------------------------------------
 
 item (FEAT_INDUSTRIES, industry_port) {
     property {
+        substitute: 0x25,
         name: string(STR_INDUSTRY_NAME_PORT);
         nearby_station_name: string(STR_INDUSTRY_STATION_PORT);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
@@ -580,8 +591,11 @@ item (FEAT_INDUSTRIES, industry_port) {
         fund_cost_multiplier: 1;
         prospect_chance: 1;
         min_cargo_distr: 1;
-        conflicting_ind_types: [];
+        conflicting_ind_types: [industry_type(IND_TYPE_NEW, )];
         layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_port;        
     }
 }
 
