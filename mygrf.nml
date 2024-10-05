@@ -532,6 +532,16 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
     return;
 }
 
+produce(produce_regular_port, 
+    [], 
+    [ENGS:1;SALT:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
+    produce_regular_port;
+}
+
 // TEMP_000         :Input cargo number:        [0,1,2]
 // TEMP_001         :Quantity of input cargo    n
 // TEMP_127         :Index                      
@@ -540,6 +550,23 @@ switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, [
     STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_TEMP(1), LOAD_TEMP(127))  // Increment by quantity of input cargo
 ]) {
     return;
+}
+
+// Return amount of total cargo consumed
+switch(FEAT_INDUSTRIES, SELF, do_cargo_accept_cycle, [
+    STORE_TEMP(0, 5),
+    STORE_TEMP(0, 0),
+    STORE_TEMP(LOAD_TEMP(2), 1),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    STORE_TEMP(1, 0),
+    STORE_TEMP(LOAD_TEMP(3), 1),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    STORE_TEMP(2, 0),
+    STORE_TEMP(LOAD_TEMP(4), 1),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    LOAD_TEMP(5)
+]) {
+    return LOAD_TEMP(5);
 }
 
 switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multipler, LOAD_PERM(28)) {
@@ -554,14 +581,19 @@ switch(FEAT_INDUSTRIES, SELF, fertilizer_multiplier, LOAD_PERM(28)) {
     return 4;
 }
 
-produce(prod_port, 
-    [], 
-    [ENGS:1;SALT:1;],
-    0
+produce(produce_accept_port,
+    [: LOAD_TEMP(2); : LOAD_TEMP(3); : LOAD_TEMP(4);],
+    [: LOAD_TEMP(5) * LOAD_TEMP(6); : LOAD_TEMP(5) * LOAD_TEMP(6)]
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
-    prod_port;
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_port, [
+    STORE_TEMP(incoming_cargo_waiting(""), 2),
+    STORE_TEMP(incoming_cargo_waiting(""), 3),
+    STORE_TEMP(incoming_cargo_waiting(""), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(engineering_supplies_multiplier, 6)
+]) {
+    produce_accept_port;
 }
 
 // ----------------------------------------------------------------
@@ -570,7 +602,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
 
 item (FEAT_INDUSTRIES, industry_port) {
     property {
-        substitute: 0x25,
+        substitute: 0x25;
         name: string(STR_INDUSTRY_NAME_PORT);
         nearby_station_name: string(STR_INDUSTRY_STATION_PORT);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
@@ -589,7 +621,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         fund_cost_multiplier: 1;
         prospect_chance: 1;
         min_cargo_distr: 1;
-        conflicting_ind_types: [industry_type(IND_TYPE_NEW, )];
+        conflicting_ind_types: [];
         layouts: [];
     }
     graphics {
