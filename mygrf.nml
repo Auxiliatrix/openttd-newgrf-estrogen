@@ -483,7 +483,7 @@ item (FEAT_CARGOS, item_testosterone) {
 // PERM_000         :Production cycle index                                         [0..26]
 // PERM_001..028    :Input Cargo 0 delivered last 27 cycles (+1 sum @ PERM_028)
 // PERM_029..056    :Input Cargo 1 delivered last 27 cycles (+1 sum @ PERM_056)
-// PERM_057..083    :Input Cargo 2 delivered last 27 cycles (+1 sum @ PERM_083)
+// PERM_057..084    :Input Cargo 2 delivered last 27 cycles (+1 sum @ PERM_084)
 
 // ----------------------------------------------------------------
 // Industry Scripts
@@ -581,12 +581,43 @@ switch(FEAT_INDUSTRIES, SELF, fertilizer_multiplier, LOAD_PERM(28)) {
     return 4;
 }
 
-produce(produce_accept_port,
+switch(FEAT_INDUSTRIES, SELF, check_positive, LOAD_TEMP(127)) {
+    0: return 0;
+    return 1;
+}
+
+switch(FEAT_INDUSTRIES, SELF, double_combo_multiplier, [
+    STORE_TEMP(0, 7),
+    STORE_TEMP(28, 127),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(56, 127),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    LOAD_TEMP(7)
+]) {
+    2: return 2;
+    return 1;
+}
+
+switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
+    STORE_TEMP(0, 7),
+    STORE_TEMP(28, 127),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(56, 127),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(84, 127),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    LOAD_TEMP(7)
+]) {
+    3: return 4;
+    return 1;
+}
+
+produce(produce_accept_template,
     [: LOAD_TEMP(2); : LOAD_TEMP(3); : LOAD_TEMP(4);],
     [: LOAD_TEMP(5) * LOAD_TEMP(6); : LOAD_TEMP(5) * LOAD_TEMP(6)]
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_port, [
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_template, [
     STORE_TEMP(incoming_cargo_waiting(""), 2),
     STORE_TEMP(incoming_cargo_waiting(""), 3),
     STORE_TEMP(incoming_cargo_waiting(""), 4),
