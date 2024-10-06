@@ -616,6 +616,16 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 // Industry Definitions
 // ----------------------------------------------------------------
 
+produce(produce_regular_port, 
+    [], 
+    [ENGS:1;SALT:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
+    produce_regular_port;
+}
+
 item (FEAT_INDUSTRIES, industry_port) {
     property {
         substitute: 0x25;
@@ -660,14 +670,14 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_template, [
     produce_accept_template;
 }
 
-produce(produce_regular_port, 
+produce(produce_regular_template, 
     [], 
-    [ENGS:1;SALT:1;],
+    [XXXX:1;XXXX:1;],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
-    produce_regular_port;
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_template, 0) {
+    produce_regular_template;
 }
 
 item (FEAT_INDUSTRIES, industry_template) {
