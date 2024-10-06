@@ -1230,8 +1230,8 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_e, producti
 item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
     property {
         substitute: 0x30;
-        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT);
-        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT);
+        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("DIOS"),
@@ -1239,10 +1239,10 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
             produce_cargo("RWES", 0),
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E);
         prob_in_game: 8;
         prob_random: 8;
         prob_map_gen: 10;
@@ -1287,8 +1287,8 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_t, producti
 item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
     property {
         substitute: 0x31;
-        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT);
-        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT);
+        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("DIOS"),
@@ -1296,10 +1296,10 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
             produce_cargo("RWTS", 0),
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T);
         prob_in_game: 8;
         prob_random: 8;
         prob_map_gen: 10;
@@ -1344,8 +1344,8 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmacy_e, production_cycle_tic
 item (FEAT_INDUSTRIES, industry_pharmacy_e) {
     property {
         substitute: 0x32;
-        name: string(STR_INDUSTRY_NAME_PHARMACY);
-        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY);
+        name: string(STR_INDUSTRY_NAME_PHARMACY_E);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_E);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("VIAL"),
@@ -1354,10 +1354,10 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
             produce_cargo("ESTR")
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_E);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_E);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E);
         prob_in_game: 6;
         prob_random: 6;
         prob_map_gen: 9;
@@ -1403,8 +1403,8 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharamacy_t, production_cycle_ti
 item (FEAT_INDUSTRIES, industry_pharamacy_t) {
     property {
         substitute: 0x33;
-        name: string(STR_INDUSTRY_NAME_PHARMACY);
-        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY);
+        name: string(STR_INDUSTRY_NAME_PHARMACY_T);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_T);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("VIAL"),
@@ -1413,10 +1413,10 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
             produce_cargo("TEST")
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_T);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_T);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T);
         prob_in_game: 6;
         prob_random: 6;
         prob_map_gen: 9;
@@ -1441,17 +1441,17 @@ produce(produce_accept_gender_clinic_e,
 item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
     property {
         substitute: 0x34;
-        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC);
-        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC);
+        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC_E);
+        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC_E);
         life_type: IND_LIFE_TYPE_BLACK_HOLE;
         cargo_types: [
             accept_cargo("ESTR"),
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_E);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_E);
         prob_in_game: 4;
         prob_random: 4;
         prob_map_gen: 5;
@@ -1476,17 +1476,17 @@ produce(produce_accept_gender_clinic_t,
 item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
     property {
         substitute: 0x35;
-        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC);
-        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC);
+        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC_T);
+        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC_T);
         life_type: IND_LIFE_TYPE_BLACK_HOLE;
         cargo_types: [
             accept_cargo("TEST"),
         ];
         spec_flags: [];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_T);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_T);
         prob_in_game: 4;
         prob_random: 4;
         prob_map_gen: 5;
