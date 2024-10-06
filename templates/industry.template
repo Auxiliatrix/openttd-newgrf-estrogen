@@ -1,0 +1,55 @@
+produce(produce_accept_template,
+    [XXXX: LOAD_TEMP(2); XXXX: LOAD_TEMP(3); XXXX: LOAD_TEMP(4);],
+    [XXXX: LOAD_TEMP(5) * LOAD_TEMP(6); XXXX: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_template, [
+    STORE_TEMP(incoming_cargo_waiting("XXXX"), 2),
+    STORE_TEMP(incoming_cargo_waiting("XXXX"), 3),
+    STORE_TEMP(incoming_cargo_waiting("XXXX"), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(engineering_supplies_multiplier, 6)
+]) {
+    produce_accept_template;
+}
+
+produce(produce_regular_template, 
+    [], 
+    [XXXX:1;XXXX:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_template, production_cycle_tick) {
+    produce_regular_template;
+}
+
+item (FEAT_INDUSTRIES, industry_template) {
+    property {
+        substitute: 0x25;
+        name: string(STR_INDUSTRY_NAME_TEMPLATE);
+        nearby_station_name: string(STR_INDUSTRY_STATION_TEMPLATE);
+        life_type: IND_LIFE_TYPE_EXTRACTIVE;
+        cargo_types: [
+            accept_cargo("ENGS"),
+            produce_cargo("ENGS", 0),
+            produce_cargo("SALT", 0)
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_TEMPLATE);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_TEMPLATE);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_TEMPLATE);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_TEMPLATE);
+        prob_in_game: 2;
+        prob_random: 2;
+        prob_map_gen: 4;
+        fund_cost_multiplier: 150;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_template;
+        produce_cargo_arrival: produce_cargo_arrival_template;
+    }
+}

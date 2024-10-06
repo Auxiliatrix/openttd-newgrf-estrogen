@@ -500,7 +500,7 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
 // TEMP_001         :Index offset of register to shift  [0..26]
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
     // Add current offset register to total for this input cargo
-    STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_PERM(LOAD_TEMP(127)-28+LOAD_TEMP(1)+1), LOAD_TEMP(127))
+    STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_PERM(LOAD_TEMP(127)-28+LOAD_TEMP(1)+1), LOAD_TEMP(127)),
     STORE_TEMP(LOAD_TEMP(1)+1, 1),              // Increment index offset
     LOAD_TEMP(1)                                // Make decision based off of index offset
 ]) {
@@ -530,16 +530,6 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
     production_cycle_tick_helper
 ]) {
     return;
-}
-
-produce(produce_regular_port, 
-    [], 
-    [ENGS:1;SALT:1;],
-    0
-)
-
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
-    produce_regular_port;
 }
 
 // TEMP_000         :Input cargo number:        [0,1,2]
@@ -617,12 +607,12 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 // ----------------------------------------------------------------
 
 produce(produce_regular_port, 
-    [], 
+    [],
     [ENGS:1;SALT:1;],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, 0) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, production_cycle_tick) {
     produce_regular_port;
 }
 
@@ -642,7 +632,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT);
         prob_in_game: 2;
-        prob_random: 4;
+        prob_random: 2;
         prob_map_gen: 4;
         fund_cost_multiplier: 150;
         prospect_chance: 0.75;
@@ -651,61 +641,863 @@ item (FEAT_INDUSTRIES, industry_port) {
         layouts: [];
     }
     graphics {
-        produce_256_ticks: produce_256_ticks_port;        
+        produce_256_ticks: produce_256_ticks_port;
     }
 }
 
-produce(produce_accept_template,
-    [XXXX: LOAD_TEMP(2); XXXX: LOAD_TEMP(3); XXXX: LOAD_TEMP(4);],
-    [XXXX: LOAD_TEMP(5) * LOAD_TEMP(6); XXXX: LOAD_TEMP(5) * LOAD_TEMP(6)]
+produce(produce_accept_quarry,
+    [ENGS: LOAD_TEMP(2);],
+    [SAND: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5; PTSH: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_template, [
-    STORE_TEMP(incoming_cargo_waiting("XXXX"), 2),
-    STORE_TEMP(incoming_cargo_waiting("XXXX"), 3),
-    STORE_TEMP(incoming_cargo_waiting("XXXX"), 4),
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
+    STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
     STORE_TEMP(do_cargo_accept_cycle, 5),
     STORE_TEMP(engineering_supplies_multiplier, 6)
 ]) {
-    produce_accept_template;
+    produce_accept_quarry;
 }
 
-produce(produce_regular_template, 
-    [], 
-    [XXXX:1;XXXX:1;],
+produce(produce_regular_quarry, 
+    [],
+    [SAND: 1*engineering_supplies_multiplier; PTSH: 1*engineering_supplies_multiplier;],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_template, 0) {
-    produce_regular_template;
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_quarry, production_cycle_tick) {
+    produce_regular_quarry;
 }
 
-item (FEAT_INDUSTRIES, industry_template) {
+item (FEAT_INDUSTRIES, industry_quarry) {
     property {
-        substitute: 0x25;
-        name: string(STR_INDUSTRY_NAME_TEMPLATE);
-        nearby_station_name: string(STR_INDUSTRY_STATION_TEMPLATE);
+        substitute: 0x26;
+        name: string(STR_INDUSTRY_NAME_QUARRY);
+        nearby_station_name: string(STR_INDUSTRY_STATION_QUARRY);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
         cargo_types: [
-            produce_cargo("ENGS", 0),
-            produce_cargo("SALT", 0)
+            accept_cargo("ENGS"),
+            produce_cargo("SAND", 0),
+            produce_cargo("PTSH", 0)
         ];
-        spec_flags: [IND_FLAG_BUILT_ON_WATER];
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_TEMPLATE);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_TEMPLATE);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_TEMPLATE);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_TEMPLATE);
-        prob_in_game: 2;
-        prob_random: 4;
-        prob_map_gen: 4;
-        fund_cost_multiplier: 150;
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_QUARRY);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 200;
         prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
     }
     graphics {
-        produce_256_ticks: produce_256_ticks_template;
-        produce_cargo_arrival: produce_cargo_arrival_template;
+        produce_256_ticks: produce_256_ticks_quarry;
+        produce_cargo_arrival: produce_cargo_arrival_quarry;
+    }
+}
+
+produce(produce_accept_mineral_mine,
+    [ENGS: LOAD_TEMP(2);],
+    [MNRL: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
+    STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(engineering_supplies_multiplier, 6)
+]) {
+    produce_accept_mineral_mine;
+}
+
+produce(produce_regular_mineral_mine, 
+    [], 
+    [MNRL: 1*engineering_supplies_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_mineral_mine, production_cycle_tick) {
+    produce_regular_mineral_mine;
+}
+
+item (FEAT_INDUSTRIES, industry_mineral_mine) {
+    property {
+        substitute: 0x27;
+        name: string(STR_INDUSTRY_NAME_MINERAL_MINE);
+        nearby_station_name: string(STR_INDUSTRY_STATION_MINERAL_MINE);
+        life_type: IND_LIFE_TYPE_EXTRACTIVE;
+        cargo_types: [
+            accept_cargo("ENGS"),
+            produce_cargo("MNRL", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_MINERAL_MINE);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_MINERAL_MINE);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE);
+        prob_in_game: 4;
+        prob_random: 4;
+        prob_map_gen: 5;
+        fund_cost_multiplier: 200;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_mineral_mine;
+        produce_cargo_arrival: produce_cargo_arrival_mineral_mine;
+    }
+}
+
+produce(produce_accept_corn_farm,
+    [FERT: LOAD_TEMP(2);],
+    [CORN: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
+    STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(fertilizer_multiplier, 6)
+]) {
+    produce_accept_corn_farm;
+}
+
+produce(produce_regular_corn_farm, 
+    [], 
+    [CORN: 1 * fertilizer_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_corn_farm, production_cycle_tick) {
+    produce_regular_corn_farm;
+}
+
+item (FEAT_INDUSTRIES, industry_corn_farm) {
+    property {
+        substitute: 0x28;
+        name: string(STR_INDUSTRY_NAME_CORN_FARM);
+        nearby_station_name: string(STR_INDUSTRY_STATION_CORN_FARM);
+        life_type: IND_LIFE_TYPE_ORGANIC;
+        cargo_types: [
+            accept_cargo("FERT"),
+            produce_cargo("CORN", 0),
+        ];
+        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_CORN_FARM);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_CORN_FARM);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 50;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_corn_farm;
+        produce_cargo_arrival: produce_cargo_arrival_corn_farm;
+    }
+}
+
+produce(produce_accept_soy_farm,
+    [FERT: LOAD_TEMP(2);],
+    [SOYB: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
+    STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(fertilizer_multiplier, 6)
+]) {
+    produce_accept_soy_farm;
+}
+
+produce(produce_regular_soy_farm, 
+    [], 
+    [SOYB: 1 * fertilizer_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_soy_farm, production_cycle_tick) {
+    produce_regular_soy_farm;
+}
+
+item (FEAT_INDUSTRIES, industry_soy_farm) {
+    property {
+        substitute: 0x29;
+        name: string(STR_INDUSTRY_NAME_SOY_FARM);
+        nearby_station_name: string(STR_INDUSTRY_STATION_SOY_FARM);
+        life_type: IND_LIFE_TYPE_ORGANIC;
+        cargo_types: [
+            accept_cargo("FERT"),
+            produce_cargo("SOYB", 0),
+        ];
+        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_SOY_FARM);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_SOY_FARM);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM);
+        prob_in_game: 4;
+        prob_random: 4;
+        prob_map_gen: 5;
+        fund_cost_multiplier: 50;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_soy_farm;
+        produce_cargo_arrival: produce_cargo_arrival_soy_farm;
+    }
+}
+
+produce(produce_accept_yam_farm,
+    [FERT: LOAD_TEMP(2);],
+    [YAMS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
+    STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(fertilizer_multiplier, 6)
+]) {
+    produce_accept_yam_farm;
+}
+
+produce(produce_regular_yam_farm, 
+    [], 
+    [YAM: 1 * fertilizer_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_yam_farm, production_cycle_tick) {
+    produce_regular_yam_farm;
+}
+
+item (FEAT_INDUSTRIES, industry_yam_farm) {
+    property {
+        substitute: 0x2A;
+        name: string(STR_INDUSTRY_NAME_YAM_FARM);
+        nearby_station_name: string(STR_INDUSTRY_STATION_YAM_FARM);
+        life_type: IND_LIFE_TYPE_ORGANIC;
+        cargo_types: [
+            accept_cargo("FERT"),
+            produce_cargo("YAM", 0),
+        ];
+        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_YAM_FARM);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_YAM_FARM);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM);
+        prob_in_game: 4;
+        prob_random: 4;
+        prob_map_gen: 5;
+        fund_cost_multiplier: 50;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_yam_farm;
+        produce_cargo_arrival: produce_cargo_arrival_yam_farm;
+    }
+}
+
+produce(produce_accept_glassworks,
+    [SAND: LOAD_TEMP(2);],
+    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6); GOOD: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
+    STORE_TEMP(incoming_cargo_waiting("SAND"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(1, 6)
+]) {
+    produce_accept_glassworks;
+}
+
+produce(produce_regular_glassworks, 
+    [], 
+    [VIAL:1;GOOD:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, production_cycle_tick) {
+    produce_regular_glassworks;
+}
+
+item (FEAT_INDUSTRIES, industry_glassworks) {
+    property {
+        substitute: 0x2B;
+        name: string(STR_INDUSTRY_NAME_GLASSWORKS);
+        nearby_station_name: string(STR_INDUSTRY_STATION_GLASSWORKS);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("SAND"),
+            produce_cargo("VIAL", 0),
+            produce_cargo("GOOD", 0)
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GLASSWORKS);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_glassworks;
+        produce_cargo_arrival: produce_cargo_arrival_glassworks;
+    }
+}
+
+produce(produce_accept_chemical_plant,
+    [SALT: LOAD_TEMP(2); PTSH: LOAD_TEMP(3); MNRL: LOAD_TEMP(4);],
+    [FERT: LOAD_TEMP(5) * LOAD_TEMP(6); CHEM: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
+    STORE_TEMP(incoming_cargo_waiting("SALT"), 2),
+    STORE_TEMP(incoming_cargo_waiting("PTSH"), 3),
+    STORE_TEMP(incoming_cargo_waiting("MNRL"), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(triple_combo_multiplier, 6)
+]) {
+    produce_accept_chemical_plant;
+}
+
+produce(produce_regular_chemical_plant, 
+    [], 
+    [FERT: 1 * triple_combo_multiplier; CHEM: 1 * triple_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_chemical_plant, production_cycle_tick) {
+    produce_regular_chemical_plant;
+}
+
+item (FEAT_INDUSTRIES, industry_chemical_plant) {
+    property {
+        substitute: 0x2C;
+        name: string(STR_INDUSTRY_NAME_CHEMICAL_PLANT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_CHEMICAL_PLANT);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("SALT"),
+            accept_cargo("PTSH"),
+            accept_cargo("MNRL"),
+            produce_cargo("FERT", 0),
+            produce_cargo("CHEM", 0)
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_CHEMICAL_PLANT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT);
+        prob_in_game: 6;
+        prob_random: 6;
+        prob_map_gen: 9;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_chemical_plant;
+        produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
+    }
+}
+
+produce(produce_accept_biolab,
+    [CORN: LOAD_TEMP(2);],
+    [VGOL: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
+    STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(1, 6)
+]) {
+    produce_accept_biolab;
+}
+
+produce(produce_regular_biolab, 
+    [], 
+    [VGOL:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, production_cycle_tick) {
+    produce_regular_biolab;
+}
+
+item (FEAT_INDUSTRIES, industry_biolab) {
+    property {
+        substitute: 0x2D;
+        name: string(STR_INDUSTRY_NAME_BIOLAB);
+        nearby_station_name: string(STR_INDUSTRY_STATION_BIOLAB);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("CORN"),
+            produce_cargo("VGOL", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_biolab;
+        produce_cargo_arrival: produce_cargo_arrival_biolab;
+    }
+}
+
+produce(produce_accept_distillery,
+    [CORN: LOAD_TEMP(2);],
+    [ALCH: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
+    STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
+    STORE_TEMP(0, 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(1, 6)
+]) {
+    produce_accept_distillery;
+}
+
+produce(produce_regular_distillery, 
+    [], 
+    [ALCH:1;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_distillery, production_cycle_tick) {
+    produce_regular_distillery;
+}
+
+item (FEAT_INDUSTRIES, industry_distillery) {
+    property {
+        substitute: 0x2E;
+        name: string(STR_INDUSTRY_NAME_DISTILLERY);
+        nearby_station_name: string(STR_INDUSTRY_STATION_DISTILLERY);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("CORN"),
+            produce_cargo("ALCH", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_DISTILLERY);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_DISTILLERY);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_distillery;
+        produce_cargo_arrival: produce_cargo_arrival_distillery;
+    }
+}
+
+produce(produce_accept_processing_plant,
+    [SOYB: LOAD_TEMP(2); YAMS: LOAD_TEMP(3); ALCH: LOAD_TEMP(4);],
+    [DIOS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
+    STORE_TEMP(incoming_cargo_waiting("SOYB"), 2),
+    STORE_TEMP(incoming_cargo_waiting("YAMS"), 3),
+    STORE_TEMP(incoming_cargo_waiting("ALCH"), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(triple_combo_multiplier, 6)
+]) {
+    produce_accept_processing_plant;
+}
+
+produce(produce_regular_processing_plant, 
+    [], 
+    [DIOS: 1*triple_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, production_cycle_tick) {
+    produce_regular_processing_plant;
+}
+
+item (FEAT_INDUSTRIES, industry_processing_plant) {
+    property {
+        substitute: 0x2F;
+        name: string(STR_INDUSTRY_NAME_PROCESSING_PLANT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PROCESSING_PLANT);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("SOYB"),
+            accept_cargo("YAMS"),
+            accept_cargo("ALCH"),
+            produce_cargo("DIOS", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT);
+        prob_in_game: 6;
+        prob_random: 6;
+        prob_map_gen: 9;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_processing_plant;
+        produce_cargo_arrival: produce_cargo_arrival_processing_plant;
+    }
+}
+
+produce(produce_accept_pharmaceutical_plant_e,
+    [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
+    [RWES: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
+    STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
+    STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(double_combo_multiplier, 6)
+]) {
+    produce_accept_pharmaceutical_plant_e;
+}
+
+produce(produce_regular_pharmaceutical_plant_e, 
+    [], 
+    [RWES: 1*double_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_e, production_cycle_tick) {
+    produce_regular_pharmaceutical_plant_e;
+}
+
+item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
+    property {
+        substitute: 0x30;
+        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("DIOS"),
+            accept_cargo("CHEM"),
+            produce_cargo("RWES", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
+        produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
+        availability: enabled_in_estrogen;
+    }
+}
+
+produce(produce_accept_pharmaceutical_plant_t,
+    [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
+    [RWTS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
+    STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
+    STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
+    STORE_TEMP(0, 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(double_combo_multiplier, 6)
+]) {
+    produce_accept_pharmaceutical_plant_t;
+}
+
+produce(produce_regular_pharmaceutical_plant_t, 
+    [], 
+    [RWTS: 1*double_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_t, production_cycle_tick) {
+    produce_regular_pharmaceutical_plant_t;
+}
+
+item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
+    property {
+        substitute: 0x31;
+        name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("DIOS"),
+            accept_cargo("CHEM"),
+            produce_cargo("RWTS", 0),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT);
+        prob_in_game: 8;
+        prob_random: 8;
+        prob_map_gen: 10;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
+        produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
+        availability: enabled_in_testosterone;
+    }
+}
+
+produce(produce_accept_pharmacy_e,
+    [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWES: LOAD_TEMP(4);],
+    [ESTR: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
+    STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
+    STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
+    STORE_TEMP(incoming_cargo_waiting("RWES"), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(triple_combo_multiplier, 6)
+]) {
+    produce_accept_pharmacy_e;
+}
+
+produce(produce_regular_pharmacy_e, 
+    [], 
+    [ESTR: 1*triple_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmacy_e, production_cycle_tick) {
+    produce_regular_pharmacy_e;
+}
+
+item (FEAT_INDUSTRIES, industry_pharmacy_e) {
+    property {
+        substitute: 0x32;
+        name: string(STR_INDUSTRY_NAME_PHARMACY);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("VIAL"),
+            accept_cargo("VGOL"),
+            accept_cargo("RWES"),
+            produce_cargo("ESTR")
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY);
+        prob_in_game: 6;
+        prob_random: 6;
+        prob_map_gen: 9;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_pharmacy_e;
+        produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
+        availability: enabled_in_estrogen;
+    }
+}
+
+
+produce(produce_accept_pharamacy_t,
+    [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWTS: LOAD_TEMP(4);],
+    [TEST: LOAD_TEMP(5) * LOAD_TEMP(6);]
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
+    STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
+    STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
+    STORE_TEMP(incoming_cargo_waiting("RWTS"), 4),
+    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(triple_combo_multiplier, 6)
+]) {
+    produce_accept_pharamacy_t;
+}
+
+produce(produce_regular_pharamacy_t, 
+    [], 
+    [TEST: 1*triple_combo_multiplier;],
+    0
+)
+
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharamacy_t, production_cycle_tick) {
+    produce_regular_pharamacy_t;
+}
+
+item (FEAT_INDUSTRIES, industry_pharamacy_t) {
+    property {
+        substitute: 0x33;
+        name: string(STR_INDUSTRY_NAME_PHARMACY);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY);
+        life_type: IND_LIFE_TYPE_PROCESSING;
+        cargo_types: [
+            accept_cargo("VIAL"),
+            accept_cargo("VGOL"),
+            accept_cargo("RWTS"),
+            produce_cargo("TEST")
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY);
+        prob_in_game: 6;
+        prob_random: 6;
+        prob_map_gen: 9;
+        fund_cost_multiplier: 100;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_256_ticks: produce_256_ticks_pharamacy_t;
+        produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
+        availability: enabled_in_testosterone;
+    }
+}
+
+produce(produce_accept_gender_clinic_e,
+    [ESTR: incoming_cargo_waiting("ESTR");],
+    []
+)
+
+item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
+    property {
+        substitute: 0x34;
+        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC);
+        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC);
+        life_type: IND_LIFE_TYPE_BLACK_HOLE;
+        cargo_types: [
+            accept_cargo("ESTR"),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC);
+        prob_in_game: 4;
+        prob_random: 4;
+        prob_map_gen: 5;
+        fund_cost_multiplier: 25;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_cargo_arrival: produce_accept_gender_clinic_e;
+        availability: enabled_in_estrogen;
+    }
+}
+
+
+produce(produce_accept_gender_clinic_t,
+    [TEST: incoming_cargo_waiting("TEST");],
+    []
+)
+
+item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
+    property {
+        substitute: 0x35;
+        name: string(STR_INDUSTRY_NAME_GENDER_CLINIC);
+        nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC);
+        life_type: IND_LIFE_TYPE_BLACK_HOLE;
+        cargo_types: [
+            accept_cargo("TEST"),
+        ];
+        spec_flags: [];
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC);
+        prob_in_game: 4;
+        prob_random: 4;
+        prob_map_gen: 5;
+        fund_cost_multiplier: 25;
+        prospect_chance: 0.75;
+        min_cargo_distr: 1;
+        conflicting_ind_types: [];
+        layouts: [];
+    }
+    graphics {
+        produce_cargo_arrival: produce_accept_gender_clinic_t;
+        availability: enabled_in_testosterone;
     }
 }
