@@ -598,7 +598,8 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
     STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
     LOAD_TEMP(7)
 ]) {
-    3: return 4;
+    3: return 3;
+    2: return 2;
     return 1;
 }
 
@@ -608,7 +609,7 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 
 produce(produce_regular_port, 
     [],
-    [ENGS:1;SALT:1;],
+    [ENGS:12;SALT:8;],
     0
 )
 
@@ -647,22 +648,21 @@ item (FEAT_INDUSTRIES, industry_port) {
 
 produce(produce_accept_quarry,
     [ENGS: LOAD_TEMP(2);],
-    [SAND: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5; PTSH: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
     STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(engineering_supplies_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle, 5)
 ]) {
     produce_accept_quarry;
 }
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: 1*engineering_supplies_multiplier; PTSH: 1*engineering_supplies_multiplier;],
+    [SAND: 12*engineering_supplies_multiplier; PTSH: 8*engineering_supplies_multiplier;],
     0
 )
 
@@ -703,7 +703,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
 
 produce(produce_accept_mineral_mine,
     [ENGS: LOAD_TEMP(2);],
-    [MNRL: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
@@ -711,14 +711,13 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
     STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(engineering_supplies_multiplier, 6)
 ]) {
     produce_accept_mineral_mine;
 }
 
 produce(produce_regular_mineral_mine, 
     [], 
-    [MNRL: 1*engineering_supplies_multiplier;],
+    [MNRL: 16*engineering_supplies_multiplier;],
     0
 )
 
@@ -758,7 +757,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
 
 produce(produce_accept_corn_farm,
     [FERT: LOAD_TEMP(2);],
-    [CORN: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
@@ -773,7 +772,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
 
 produce(produce_regular_corn_farm, 
     [], 
-    [CORN: 1 * fertilizer_multiplier;],
+    [CORN: 16 * fertilizer_multiplier;],
     0
 )
 
@@ -813,7 +812,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
 
 produce(produce_accept_soy_farm,
     [FERT: LOAD_TEMP(2);],
-    [SOYB: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
@@ -828,7 +827,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
 
 produce(produce_regular_soy_farm, 
     [], 
-    [SOYB: 1 * fertilizer_multiplier;],
+    [SOYB: 12 * fertilizer_multiplier;],
     0
 )
 
@@ -868,7 +867,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
 
 produce(produce_accept_yam_farm,
     [FERT: LOAD_TEMP(2);],
-    [YAMS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
@@ -883,7 +882,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
 
 produce(produce_regular_yam_farm, 
     [], 
-    [YAM: 1 * fertilizer_multiplier;],
+    [YAM: 12 * fertilizer_multiplier;],
     0
 )
 
@@ -923,7 +922,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(2);],
-    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6); GOOD: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.33; GOOD: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.33;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
@@ -938,7 +937,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [], 
-    [VIAL:1;GOOD:1;],
+    [VIAL:6;GOOD:4;],
     0
 )
 
@@ -966,7 +965,6 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -979,7 +977,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
 
 produce(produce_accept_chemical_plant,
     [SALT: LOAD_TEMP(2); PTSH: LOAD_TEMP(3); MNRL: LOAD_TEMP(4);],
-    [FERT: LOAD_TEMP(5) * LOAD_TEMP(6); CHEM: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [FERT: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.25; CHEM: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.25;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
@@ -994,7 +992,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: 1 * triple_combo_multiplier; CHEM: 1 * triple_combo_multiplier;],
+    [FERT: 6 * triple_combo_multiplier; CHEM: 4 * triple_combo_multiplier;],
     0
 )
 
@@ -1024,7 +1022,6 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1037,7 +1034,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
 
 produce(produce_accept_biolab,
     [CORN: LOAD_TEMP(2);],
-    [VGOL: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [VGOL: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
@@ -1052,7 +1049,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
 
 produce(produce_regular_biolab, 
     [], 
-    [VGOL:1;],
+    [VGOL:6;],
     0
 )
 
@@ -1079,7 +1076,6 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1092,7 +1088,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
 
 produce(produce_accept_distillery,
     [CORN: LOAD_TEMP(2);],
-    [ALCH: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [ALCH: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
@@ -1107,7 +1103,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
 
 produce(produce_regular_distillery, 
     [], 
-    [ALCH:1;],
+    [ALCH:6;],
     0
 )
 
@@ -1134,7 +1130,6 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1147,7 +1142,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
 
 produce(produce_accept_processing_plant,
     [SOYB: LOAD_TEMP(2); YAMS: LOAD_TEMP(3); ALCH: LOAD_TEMP(4);],
-    [DIOS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [DIOS: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
@@ -1162,7 +1157,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
 
 produce(produce_regular_processing_plant, 
     [], 
-    [DIOS: 1*triple_combo_multiplier;],
+    [DIOS: 6;],
     0
 )
 
@@ -1191,7 +1186,6 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1204,7 +1198,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
 
 produce(produce_accept_pharmaceutical_plant_e,
     [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
-    [RWES: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [RWES: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
@@ -1219,7 +1213,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
 
 produce(produce_regular_pharmaceutical_plant_e, 
     [], 
-    [RWES: 1*double_combo_multiplier;],
+    [RWES: 6;],
     0
 )
 
@@ -1247,7 +1241,6 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1261,7 +1254,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
 
 produce(produce_accept_pharmaceutical_plant_t,
     [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
-    [RWTS: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [RWTS: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
@@ -1276,7 +1269,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
 
 produce(produce_regular_pharmaceutical_plant_t, 
     [], 
-    [RWTS: 1*double_combo_multiplier;],
+    [RWTS: 6*double_combo_multiplier;],
     0
 )
 
@@ -1304,7 +1297,6 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1318,7 +1310,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
 
 produce(produce_accept_pharmacy_e,
     [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWES: LOAD_TEMP(4);],
-    [ESTR: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [ESTR: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
@@ -1333,7 +1325,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
 
 produce(produce_regular_pharmacy_e, 
     [], 
-    [ESTR: 1*triple_combo_multiplier;],
+    [ESTR: 6*triple_combo_multiplier;],
     0
 )
 
@@ -1362,7 +1354,6 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1377,7 +1368,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
 
 produce(produce_accept_pharamacy_t,
     [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWTS: LOAD_TEMP(4);],
-    [TEST: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [TEST: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
@@ -1392,7 +1383,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
 
 produce(produce_regular_pharamacy_t, 
     [], 
-    [TEST: 1*triple_combo_multiplier;],
+    [TEST: 6*triple_combo_multiplier;],
     0
 )
 
@@ -1421,7 +1412,6 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1456,7 +1446,6 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1491,7 +1480,6 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
-        prospect_chance: 0.75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
