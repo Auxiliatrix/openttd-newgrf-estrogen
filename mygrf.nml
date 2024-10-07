@@ -21,6 +21,10 @@ grf {
     }
 }
 
+// Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
+// Yes, I could build a basic templating program to do actual compartmentalization,
+// But I'm lazy and this mod is supposed to be a meme, so one giant .nml file it is.
+
 // ----------------------------------------------------------------
 // Conventions
 // ----------------------------------------------------------------
@@ -633,10 +637,10 @@ item (FEAT_INDUSTRIES, industry_port) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT);
         prob_in_game: 2;
-        prob_random: 2;
         prob_map_gen: 4;
         fund_cost_multiplier: 150;
         prospect_chance: 0.75;
+        map_colour: 146;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -687,10 +691,10 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 200;
         prospect_chance: 0.75;
+        map_colour: 33;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -741,10 +745,10 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE);
         prob_in_game: 4;
-        prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 200;
         prospect_chance: 0.75;
+        map_colour: 41;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -796,10 +800,10 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 50;
         prospect_chance: 0.75;
+        map_colour: 66;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -851,10 +855,10 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM);
         prob_in_game: 4;
-        prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 50;
         prospect_chance: 0.75;
+        map_colour: 71;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -906,10 +910,10 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM);
         prob_in_game: 4;
-        prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 50;
         prospect_chance: 0.75;
+        map_colour: 75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -962,9 +966,9 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
+        map_colour: 135;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1019,9 +1023,9 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT);
         prob_in_game: 6;
-        prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
+        map_colour: 185;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1073,9 +1077,9 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
+        map_colour: 206;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1127,9 +1131,9 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
+        map_colour: 192;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1183,9 +1187,9 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT);
         prob_in_game: 6;
-        prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
+        map_colour: 174;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1238,9 +1242,9 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
+        map_colour: 152;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1294,9 +1298,9 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T);
         prob_in_game: 8;
-        prob_random: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
+        map_colour: 103;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1351,9 +1355,9 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E);
         prob_in_game: 6;
-        prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
+        map_colour: 150;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1409,9 +1413,9 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T);
         prob_in_game: 6;
-        prob_random: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
+        map_colour: 101;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1443,9 +1447,9 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_E);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_E);
         prob_in_game: 4;
-        prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
+        map_colour: 49;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
@@ -1477,9 +1481,9 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_T);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_T);
         prob_in_game: 4;
-        prob_random: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
+        map_colour: 48;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
         layouts: [];
