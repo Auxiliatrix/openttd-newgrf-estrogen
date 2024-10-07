@@ -87,10 +87,11 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -111,10 +112,11 @@ item (FEAT_CARGOS, item_fertilizer) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -135,10 +137,11 @@ item (FEAT_CARGOS, item_salt) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -159,10 +162,11 @@ item (FEAT_CARGOS, item_potash) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -183,10 +187,11 @@ item (FEAT_CARGOS, item_sand) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -207,10 +212,11 @@ item (FEAT_CARGOS, item_minerals) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -231,10 +237,11 @@ item (FEAT_CARGOS, item_corn) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -255,10 +262,11 @@ item (FEAT_CARGOS, item_soy) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -279,10 +287,11 @@ item (FEAT_CARGOS, item_yam) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -303,10 +312,11 @@ item (FEAT_CARGOS, item_vials) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -327,10 +337,11 @@ item (FEAT_CARGOS, item_chemicals) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -351,10 +362,11 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -375,10 +387,11 @@ item (FEAT_CARGOS, item_alcohol) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -399,10 +412,11 @@ item (FEAT_CARGOS, item_diosgenin) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -423,10 +437,11 @@ item (FEAT_CARGOS, item_raw_estrone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -447,10 +462,11 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -471,10 +487,11 @@ item (FEAT_CARGOS, item_estrogen) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
@@ -495,13 +512,86 @@ item (FEAT_CARGOS, item_testosterone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
 
     }
 }
+
+// ----------------------------------------------------------------
+// Tiles
+// ----------------------------------------------------------------
+
+spritelayout spritelayout_placeholder {
+    ground: {
+        sprite: GROUNDSPRITE_NORMAL;
+    }
+    building: {
+        sprite: 4698;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_placeholder) {
+    property {
+        substitute: 0;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        default: spritelayout_placeholder;
+    }
+}
+
+tilelayout layout_default {
+    0,0: tile_placeholder;
+}
+
+// spritelayout spritelayout_port_coast {
+//     ground: {
+//         sprite:GROUNDSPRITE_NORMAL;
+//     }
+//     building: {
+//         sprite:XXXX;
+//     }
+// }
+
+// spritelayout spritelayout_port_water {
+//     ground: {
+//         sprite:GROUNDSPRITE_WATER;
+//     }
+//     building: {
+//         sprite:XXXX;
+//     }
+// }
+
+// item(FEAT_INDUSTRYTILES, tile_port_coast) {
+//     property {
+//         substitute: 0;
+//         land_shape_flags: bitmask(LSF_ONLY_ON_FLAT_LAND);
+//         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+//     }
+//     graphics {
+//         default: spritelayout_port_coast;
+//     }
+// }
+
+// item(FEAT_INDUSTRYTILES, tile_port_water) {
+//     property {
+//         substitute: 0;
+//         land_shape_flags: bitmask(LSF_ALLOW_ON_WATER);
+//         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+//     }
+//     graphics {
+//         default: spritelayout_port_water;
+//     }
+// }
+
+// tilelayout layout_port_north {
+//     rotation: DIRECTION_NORTH;
+//     0,0: tile_port_coast;
+// }
 
 // ----------------------------------------------------------------
 // Industry Addressing Reference
@@ -713,10 +803,11 @@ item (FEAT_INDUSTRIES, industry_port) {
         map_colour: 146;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_port;
     }
 }
@@ -768,10 +859,11 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         map_colour: 33;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_quarry;
         produce_cargo_arrival: produce_cargo_arrival_quarry;
         extra_text_industry: extra_text_industry_engineering;
@@ -824,10 +916,11 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         map_colour: 41;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_mineral_mine;
         produce_cargo_arrival: produce_cargo_arrival_mineral_mine;
         extra_text_industry: extra_text_industry_engineering;
@@ -881,10 +974,11 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         map_colour: 66;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_corn_farm;
         produce_cargo_arrival: produce_cargo_arrival_corn_farm;
         extra_text_industry: extra_text_industry_fertilizer;
@@ -938,10 +1032,11 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         map_colour: 71;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_soy_farm;
         produce_cargo_arrival: produce_cargo_arrival_soy_farm;
         extra_text_industry: extra_text_industry_fertilizer;
@@ -995,10 +1090,11 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         map_colour: 75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_yam_farm;
         produce_cargo_arrival: produce_cargo_arrival_yam_farm;
         extra_text_industry: extra_text_industry_fertilizer;
@@ -1052,10 +1148,11 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         map_colour: 135;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
     }
@@ -1110,10 +1207,11 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         map_colour: 185;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
         extra_text_industry: extra_text_industry_triple;
@@ -1166,10 +1264,11 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         map_colour: 206;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
     }
@@ -1221,10 +1320,11 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         map_colour: 192;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
     }
@@ -1278,10 +1378,11 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         map_colour: 174;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
         extra_text_industry: extra_text_industry_triple;
@@ -1335,10 +1436,11 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         map_colour: 152;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
         construction_probability: availability_in_estrogen;
@@ -1393,10 +1495,11 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         map_colour: 103;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
         construction_probability: availability_in_testosterone;
@@ -1452,10 +1555,11 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         map_colour: 150;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
         construction_probability: availability_in_estrogen;
@@ -1512,10 +1616,11 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         map_colour: 101;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharamacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
         construction_probability: availability_in_testosterone;
@@ -1540,18 +1645,17 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         spec_flags: [];
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_E);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_E);
         prob_in_game: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
         map_colour: 49;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_e;
         construction_probability: availability_in_estrogen;
     }
@@ -1575,18 +1679,17 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         spec_flags: [];
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_T);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_T);
         prob_in_game: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
         map_colour: 48;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [];
+        layouts: [layout_default];
     }
     graphics {
         build_prod_change: initialize_industry_registers;
+        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_t;
         construction_probability: availability_in_testosterone;
     }
