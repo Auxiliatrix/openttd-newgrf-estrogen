@@ -250,12 +250,8 @@ STR_INDUSTRY_NAME_PHARMACY_T                            :Pharmacy (Testosterone)
 STR_INDUSTRY_STATION_PHARMACY_T                         :{STRING} Pharmacy (Testosterone)
 STR_INDUSTRY_PLANTED_PHARMACY_T                         :{BIGFONT}{BLACK}New {STRING2} sets up shop near {TOWN}!
 STR_INDUSTRY_CLOSURE_PHARMACY_T                         :{BIGFONT}{BLACK}{STRING2} announces imminent closure!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T             :{BIGFONT}{BLACK}{INDUSTRY} forgets to check for prescriptions! (+50% production)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T             :{BIGFONT}{BLACK}{INDUSTRY} mislabels critical medications! (-50% production)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                       :Gender Clinic (Testosterone)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                    :{STRING} Gender Clinic (Testosterone)
 STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}New {STRING2} magically appears near {TOWN}!
 STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}{STRING2} has finished transing everyone's genders!
-STR_INDUSTRY_PRODUCTION_INCREASE_GENDER_CLINIC_T        :{BIGFONT}{BLACK}{INDUSTRY} offers more cropped tank tops with each refill! (+50% production)
-STR_INDUSTRY_PRODUCTION_DECREASE_GENDER_CLINIC_T        :{BIGFONT}{BLACK}{INDUSTRY} makes their HRT last longer, reducing refills! (-50% production)
