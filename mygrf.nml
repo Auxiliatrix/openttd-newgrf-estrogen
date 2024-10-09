@@ -87,7 +87,7 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -112,7 +112,7 @@ item (FEAT_CARGOS, item_fertilizer) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -137,7 +137,7 @@ item (FEAT_CARGOS, item_salt) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -162,7 +162,7 @@ item (FEAT_CARGOS, item_potash) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -187,7 +187,7 @@ item (FEAT_CARGOS, item_sand) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -212,7 +212,7 @@ item (FEAT_CARGOS, item_minerals) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -237,7 +237,7 @@ item (FEAT_CARGOS, item_corn) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -262,7 +262,7 @@ item (FEAT_CARGOS, item_soy) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -287,7 +287,7 @@ item (FEAT_CARGOS, item_yam) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -312,7 +312,7 @@ item (FEAT_CARGOS, item_vials) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -337,7 +337,7 @@ item (FEAT_CARGOS, item_chemicals) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -362,7 +362,7 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -387,7 +387,7 @@ item (FEAT_CARGOS, item_alcohol) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -412,7 +412,7 @@ item (FEAT_CARGOS, item_diosgenin) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -437,7 +437,7 @@ item (FEAT_CARGOS, item_raw_estrone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -462,7 +462,7 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -487,7 +487,7 @@ item (FEAT_CARGOS, item_estrogen) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
@@ -512,7 +512,7 @@ item (FEAT_CARGOS, item_testosterone) {
         weight: "1.0";
         is_freight: "1.0";
         capacity_multiplier: 1;
-        sprite: NEW_CARGO_SPRITE;
+        sprite: 4311;
     }
     graphics {
         build_prod_change: initialize_industry_registers;
