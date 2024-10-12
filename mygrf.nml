@@ -1,5 +1,5 @@
 grf {
-    grfid: "AK\01\01";
+    grfid: "AK01";
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESCRIPTION);
     version: 0;
@@ -35,6 +35,10 @@ grf {
 // Settings
 // ----------------------------------------------------------------
 
+cargotable {
+    PASS, GOOD, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
+}
+
 disable_item(FEAT_CARGOS, 1);
 disable_item(FEAT_CARGOS, 3, 4);
 disable_item(FEAT_CARGOS, 6, 11);
@@ -49,9 +53,9 @@ disable_item(FEAT_ROADVEHS, 7, 9);
 disable_item(FEAT_ROADVEHS, 16, 21);
 disable_item(FEAT_ROADVEHS, 25, 87);
 
-switch(FEAT_INDUSTRIES, SELF, availability_default, 0) {
-    CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
-}
+// switch(FEAT_INDUSTRIES, SELF, availability_default, 0) {
+//     CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+// }
 
 switch (FEAT_INDUSTRIES, SELF, availability_in_estrogen, hormone) {
     0: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
@@ -77,23 +81,19 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         type_name: string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES);
         unit_name: string(STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES);
         type_abbreviation: string(STR_CARGO_ABBREV_ENGINEERING_SUPPLIES);
-        cargo_label: string(STR_CARGO_LABEL_ENGINEERING_SUPPLIES);
+        cargo_label: "ENGS";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES\);
+        items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 20;
         single_penalty_length: 40;
         price_factor: 110;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_fertilizer) {
@@ -102,23 +102,19 @@ item (FEAT_CARGOS, item_fertilizer) {
         type_name: string(STR_CARGO_PLURAL_FERTILIZER);
         unit_name: string(STR_CARGO_SINGULAR_FERTILIZER);
         type_abbreviation: string(STR_CARGO_ABBREV_FERTILIZER);
-        cargo_label: string(STR_CARGO_LABEL_FERTILIZER);
+        cargo_label: "FERT";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER\);
+        items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 20;
         single_penalty_length: 40;
         price_factor: 151;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_salt) {
@@ -127,23 +123,19 @@ item (FEAT_CARGOS, item_salt) {
         type_name: string(STR_CARGO_PLURAL_SALT);
         unit_name: string(STR_CARGO_SINGULAR_SALT);
         type_abbreviation: string(STR_CARGO_ABBREV_SALT);
-        cargo_label: string(STR_CARGO_LABEL_SALT);
+        cargo_label: "SALT";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_SALT\);
+        items_of_cargo: string(STR_CARGO_UNIT_SALT);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_potash) {
@@ -152,23 +144,19 @@ item (FEAT_CARGOS, item_potash) {
         type_name: string(STR_CARGO_PLURAL_POTASH);
         unit_name: string(STR_CARGO_SINGULAR_POTASH);
         type_abbreviation: string(STR_CARGO_ABBREV_POTASH);
-        cargo_label: string(STR_CARGO_LABEL_POTASH);
+        cargo_label: "PTSH";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_POTASH\);
+        items_of_cargo: string(STR_CARGO_UNIT_POTASH);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_sand) {
@@ -177,23 +165,19 @@ item (FEAT_CARGOS, item_sand) {
         type_name: string(STR_CARGO_PLURAL_SAND);
         unit_name: string(STR_CARGO_SINGULAR_SAND);
         type_abbreviation: string(STR_CARGO_ABBREV_SAND);
-        cargo_label: string(STR_CARGO_LABEL_SAND);
+        cargo_label: "SAND";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_SAND\);
+        items_of_cargo: string(STR_CARGO_UNIT_SAND);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 40;
         single_penalty_length: 255;
         price_factor: 100;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_minerals) {
@@ -202,23 +186,19 @@ item (FEAT_CARGOS, item_minerals) {
         type_name: string(STR_CARGO_PLURAL_MINERALS);
         unit_name: string(STR_CARGO_SINGULAR_MINERALS);
         type_abbreviation: string(STR_CARGO_ABBREV_MINERALS);
-        cargo_label: string(STR_CARGO_LABEL_MINERALS);
+        cargo_label: "MNRL";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_MINERALS\);
+        items_of_cargo: string(STR_CARGO_UNIT_MINERALS);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_corn) {
@@ -227,23 +207,19 @@ item (FEAT_CARGOS, item_corn) {
         type_name: string(STR_CARGO_PLURAL_CORN);
         unit_name: string(STR_CARGO_SINGULAR_CORN);
         type_abbreviation: string(STR_CARGO_ABBREV_CORN);
-        cargo_label: string(STR_CARGO_LABEL_CORN);
+        cargo_label: "CORN";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_CORN\);
+        items_of_cargo: string(STR_CARGO_UNIT_CORN);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 12;
         single_penalty_length: 40;
         price_factor: 90;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_soy) {
@@ -252,23 +228,19 @@ item (FEAT_CARGOS, item_soy) {
         type_name: string(STR_CARGO_PLURAL_SOY);
         unit_name: string(STR_CARGO_SINGULAR_SOY);
         type_abbreviation: string(STR_CARGO_ABBREV_SOY);
-        cargo_label: string(STR_CARGO_LABEL_SOY);
+        cargo_label: "SOYB";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_SOY\);
+        items_of_cargo: string(STR_CARGO_UNIT_SOY);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
         single_penalty_length: 24;
         price_factor: 117;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_yam) {
@@ -277,23 +249,19 @@ item (FEAT_CARGOS, item_yam) {
         type_name: string(STR_CARGO_PLURAL_YAM);
         unit_name: string(STR_CARGO_SINGULAR_YAM);
         type_abbreviation: string(STR_CARGO_ABBREV_YAM);
-        cargo_label: string(STR_CARGO_LABEL_YAM);
+        cargo_label: "YAMS";
         units_of_cargo: string(TTD_STR_TONS);
-        items_of_cargo: string(STR_CARGO_UNIT_YAM\);
+        items_of_cargo: string(STR_CARGO_UNIT_YAM);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
         single_penalty_length: 24;
         price_factor: 117;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_vials) {
@@ -302,23 +270,19 @@ item (FEAT_CARGOS, item_vials) {
         type_name: string(STR_CARGO_PLURAL_VIALS);
         unit_name: string(STR_CARGO_SINGULAR_VIALS);
         type_abbreviation: string(STR_CARGO_ABBREV_VIALS);
-        cargo_label: string(STR_CARGO_LABEL_VIALS);
+        cargo_label: "VIAL";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_VIALS\);
+        items_of_cargo: string(STR_CARGO_UNIT_VIALS);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 16;
         single_penalty_length: 160;
         price_factor: 110;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_chemicals) {
@@ -327,23 +291,19 @@ item (FEAT_CARGOS, item_chemicals) {
         type_name: string(STR_CARGO_PLURAL_CHEMICALS);
         unit_name: string(STR_CARGO_SINGULAR_CHEMICALS);
         type_abbreviation: string(STR_CARGO_ABBREV_CHEMICALS);
-        cargo_label: string(STR_CARGO_LABEL_CHEMICALS);
+        cargo_label: "CHEM";
         units_of_cargo: string(TTD_STR_LITERS);
-        items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS\);
+        items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS);
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
         penalty_lowerbound: 24;
         single_penalty_length: 48;
         price_factor: 148;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_vegetable_oil) {
@@ -352,23 +312,19 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         type_name: string(STR_CARGO_PLURAL_VEGETABLE_OIL);
         unit_name: string(STR_CARGO_SINGULAR_VEGETABLE_OIL);
         type_abbreviation: string(STR_CARGO_ABBREV_VEGETABLE_OIL);
-        cargo_label: string(STR_CARGO_LABEL_VEGETABLE_OIL);
+        cargo_label: "VGOL";
         units_of_cargo: string(TTD_STR_LITERS);
-        items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL\);
+        items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 8;
         single_penalty_length: 36;
         price_factor: 124;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_alcohol) {
@@ -377,23 +333,19 @@ item (FEAT_CARGOS, item_alcohol) {
         type_name: string(STR_CARGO_PLURAL_ALCOHOL);
         unit_name: string(STR_CARGO_SINGULAR_ALCOHOL);
         type_abbreviation: string(STR_CARGO_ABBREV_ALCOHOL);
-        cargo_label: string(STR_CARGO_LABEL_ALCOHOL);
+        cargo_label: "ALCH";
         units_of_cargo: string(TTD_STR_LITERS);
-        items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL\);
+        items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 12;
         single_penalty_length: 40;
         price_factor: 122;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_diosgenin) {
@@ -402,23 +354,19 @@ item (FEAT_CARGOS, item_diosgenin) {
         type_name: string(STR_CARGO_PLURAL_DIOSGENIN);
         unit_name: string(STR_CARGO_SINGULAR_DIOSGENIN);
         type_abbreviation: string(STR_CARGO_ABBREV_DIOSGENIN);
-        cargo_label: string(STR_CARGO_LABEL_DIOSGENIN);
+        cargo_label: "DIOS";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN\);
+        items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
         cargo_classes: bitmask(CC_POWDERIZED);
         penalty_lowerbound: 32;
         single_penalty_length: 40;
         price_factor: 170;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_raw_estrone) {
@@ -427,23 +375,19 @@ item (FEAT_CARGOS, item_raw_estrone) {
         type_name: string(STR_CARGO_PLURAL_RAW_ESTRONE);
         unit_name: string(STR_CARGO_SINGULAR_RAW_ESTRONE);
         type_abbreviation: string(STR_CARGO_ABBREV_RAW_ESTRONE);
-        cargo_label: string(STR_CARGO_LABEL_RAW_ESTRONE);
+        cargo_label: "RWES";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE\);
+        items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
         cargo_classes: bitmask(CC_POWDERIZED);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 160;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_raw_testosterone) {
@@ -452,23 +396,19 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         type_name: string(STR_CARGO_PLURAL_RAW_TESTOSTERONE);
         unit_name: string(STR_CARGO_SINGULAR_RAW_TESTOSTERONE);
         type_abbreviation: string(STR_CARGO_ABBREV_RAW_TESTOSTERONE);
-        cargo_label: string(STR_CARGO_LABEL_RAW_TESTOSTERONE);
+        cargo_label: "RWTS";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE\);
+        items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
         cargo_classes: bitmask(CC_POWDERIZED);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 160;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_estrogen) {
@@ -477,23 +417,19 @@ item (FEAT_CARGOS, item_estrogen) {
         type_name: string(STR_CARGO_PLURAL_ESTROGEN);
         unit_name: string(STR_CARGO_SINGULAR_ESTROGEN);
         type_abbreviation: string(STR_CARGO_ABBREV_ESTROGEN);
-        cargo_label: string(STR_CARGO_LABEL_ESTROGEN);
+        cargo_label: "ESTR";
         units_of_cargo: string(TTD_STR_CRATES);
-        items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN\);
+        items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 12;
         single_penalty_length: 32;
         price_factor: 193;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
     }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
-    }
+    
 }
 
 item (FEAT_CARGOS, item_testosterone) {
@@ -502,22 +438,17 @@ item (FEAT_CARGOS, item_testosterone) {
         type_name: string(STR_CARGO_PLURAL_TESTOSTERONE);
         unit_name: string(STR_CARGO_SINGULAR_TESTOSTERONE);
         type_abbreviation: string(STR_CARGO_ABBREV_TESTOSTERONE);
-        cargo_label: string(STR_CARGO_LABEL_TESTOSTERONE);
+        cargo_label: "TEST";
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 13;
         single_penalty_length: 32;
         price_factor: 193;
-        weight: "1.0";
-        is_freight: "1.0";
+        weight: 1.0;
+        is_freight: 1.0;
         capacity_multiplier: 1;
         sprite: 4311;
-    }
-    graphics {
-        build_prod_change: initialize_industry_registers;
-        monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-
     }
 }
 
@@ -526,10 +457,10 @@ item (FEAT_CARGOS, item_testosterone) {
 // ----------------------------------------------------------------
 
 spritelayout spritelayout_placeholder {
-    ground: {
+    ground {
         sprite: GROUNDSPRITE_NORMAL;
     }
-    building: {
+    building {
         sprite: 4698;
     }
 }
@@ -549,19 +480,19 @@ tilelayout layout_default {
 }
 
 // spritelayout spritelayout_port_coast {
-//     ground: {
+//     ground {
 //         sprite:GROUNDSPRITE_NORMAL;
 //     }
-//     building: {
+//     building {
 //         sprite:XXXX;
 //     }
 // }
 
 // spritelayout spritelayout_port_water {
-//     ground: {
+//     ground {
 //         sprite:GROUNDSPRITE_WATER;
 //     }
-//     building: {
+//     building {
 //         sprite:XXXX;
 //     }
 // }
@@ -610,21 +541,26 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers_helper, [
     STORE_TEMP(LOAD_TEMP(0)+1, 0),
     LOAD_TEMP(0)
 ]) {
-    255: return;
-    initialize_industry_registers_helper;
+    255: return 0;
+    1;
 }
+
+produce(recurse_initialize_industry_registers_helper,
+        [],
+        [],
+        initialize_industry_registers_helper())
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers, [
     STORE_TEMP(0, 0)
 ]) {
-    initialize_industry_registers_helper;
+    recurse_initialize_industry_registers_helper;
 }
 
 // TEMP_000         :Input cargo number
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
     STORE_PERM(0, LOAD_TEMP(127)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
 ]) {
-    return;
+    return 0;
 }
 
 // TEMP_000         :Input cargo number         [0,1,2]
@@ -635,9 +571,14 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
     STORE_TEMP(LOAD_TEMP(1)+1, 1),              // Increment index offset
     LOAD_TEMP(1)                                // Make decision based off of index offset
 ]) {
-    27: return production_cycle_tick_closer;           // If index offset is 27, we're finished
-    production_cycle_tick_cargo;                // Otherwise, recurse
+    27: production_cycle_tick_closer;           // If index offset is 27, we're finished
+    1;                // Otherwise, recurse
 }
+
+produce(recurse_production_cycle_tick_cargo,
+        [],
+        [],
+        production_cycle_tick_cargo())
 
 // TEMP_000         :Input cargo number
 // TEMP_001         :Index offset of register to shift
@@ -648,27 +589,550 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, [
     STORE_PERM(0, LOAD_TEMP(127)),              // Reset total
     STORE_TEMP(0, 1)                            // Store 0 in offset
 ]) {
-    production_cycle_tick_cargo                 // Kick off recursive summation
+    recurse_production_cycle_tick_cargo;                 // Kick off recursive summation
 }
 
 // TEMP_000         :Input cargo number         [0,1,2]
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
     STORE_TEMP(0, 0),                           // Do input cargo 0
-    production_cycle_tick_helper,
+    production_cycle_tick_helper(),
     STORE_TEMP(1, 0),                           // Do input cargo 1
-    production_cycle_tick_helper,
+    production_cycle_tick_helper(),
     STORE_TEMP(2, 0),                           // Do input cargo 2
-    production_cycle_tick_helper
+    production_cycle_tick_helper()
 ]) {
     return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, store_perm_variable, [
+    LOAD_TEMP(127)
+]) {
+    0: STORE_PERM(LOAD_TEMP(126), 0);
+    1: STORE_PERM(LOAD_TEMP(126), 1);
+    2: STORE_PERM(LOAD_TEMP(126), 2);
+    3: STORE_PERM(LOAD_TEMP(126), 3);
+    4: STORE_PERM(LOAD_TEMP(126), 4);
+    5: STORE_PERM(LOAD_TEMP(126), 5);
+    6: STORE_PERM(LOAD_TEMP(126), 6);
+    7: STORE_PERM(LOAD_TEMP(126), 7);
+    8: STORE_PERM(LOAD_TEMP(126), 8);
+    9: STORE_PERM(LOAD_TEMP(126), 9);
+    10: STORE_PERM(LOAD_TEMP(126), 10);
+    11: STORE_PERM(LOAD_TEMP(126), 11);
+    12: STORE_PERM(LOAD_TEMP(126), 12);
+    13: STORE_PERM(LOAD_TEMP(126), 13);
+    14: STORE_PERM(LOAD_TEMP(126), 14);
+    15: STORE_PERM(LOAD_TEMP(126), 15);
+    16: STORE_PERM(LOAD_TEMP(126), 16);
+    17: STORE_PERM(LOAD_TEMP(126), 17);
+    18: STORE_PERM(LOAD_TEMP(126), 18);
+    19: STORE_PERM(LOAD_TEMP(126), 19);
+    20: STORE_PERM(LOAD_TEMP(126), 20);
+    21: STORE_PERM(LOAD_TEMP(126), 21);
+    22: STORE_PERM(LOAD_TEMP(126), 22);
+    23: STORE_PERM(LOAD_TEMP(126), 23);
+    24: STORE_PERM(LOAD_TEMP(126), 24);
+    25: STORE_PERM(LOAD_TEMP(126), 25);
+    26: STORE_PERM(LOAD_TEMP(126), 26);
+    27: STORE_PERM(LOAD_TEMP(126), 27);
+    28: STORE_PERM(LOAD_TEMP(126), 28);
+    29: STORE_PERM(LOAD_TEMP(126), 29);
+    30: STORE_PERM(LOAD_TEMP(126), 30);
+    31: STORE_PERM(LOAD_TEMP(126), 31);
+    32: STORE_PERM(LOAD_TEMP(126), 32);
+    33: STORE_PERM(LOAD_TEMP(126), 33);
+    34: STORE_PERM(LOAD_TEMP(126), 34);
+    35: STORE_PERM(LOAD_TEMP(126), 35);
+    36: STORE_PERM(LOAD_TEMP(126), 36);
+    37: STORE_PERM(LOAD_TEMP(126), 37);
+    38: STORE_PERM(LOAD_TEMP(126), 38);
+    39: STORE_PERM(LOAD_TEMP(126), 39);
+    40: STORE_PERM(LOAD_TEMP(126), 40);
+    41: STORE_PERM(LOAD_TEMP(126), 41);
+    42: STORE_PERM(LOAD_TEMP(126), 42);
+    43: STORE_PERM(LOAD_TEMP(126), 43);
+    44: STORE_PERM(LOAD_TEMP(126), 44);
+    45: STORE_PERM(LOAD_TEMP(126), 45);
+    46: STORE_PERM(LOAD_TEMP(126), 46);
+    47: STORE_PERM(LOAD_TEMP(126), 47);
+    48: STORE_PERM(LOAD_TEMP(126), 48);
+    49: STORE_PERM(LOAD_TEMP(126), 49);
+    50: STORE_PERM(LOAD_TEMP(126), 50);
+    51: STORE_PERM(LOAD_TEMP(126), 51);
+    52: STORE_PERM(LOAD_TEMP(126), 52);
+    53: STORE_PERM(LOAD_TEMP(126), 53);
+    54: STORE_PERM(LOAD_TEMP(126), 54);
+    55: STORE_PERM(LOAD_TEMP(126), 55);
+    56: STORE_PERM(LOAD_TEMP(126), 56);
+    57: STORE_PERM(LOAD_TEMP(126), 57);
+    58: STORE_PERM(LOAD_TEMP(126), 58);
+    59: STORE_PERM(LOAD_TEMP(126), 59);
+    60: STORE_PERM(LOAD_TEMP(126), 60);
+    61: STORE_PERM(LOAD_TEMP(126), 61);
+    62: STORE_PERM(LOAD_TEMP(126), 62);
+    63: STORE_PERM(LOAD_TEMP(126), 63);
+    64: STORE_PERM(LOAD_TEMP(126), 64);
+    65: STORE_PERM(LOAD_TEMP(126), 65);
+    66: STORE_PERM(LOAD_TEMP(126), 66);
+    67: STORE_PERM(LOAD_TEMP(126), 67);
+    68: STORE_PERM(LOAD_TEMP(126), 68);
+    69: STORE_PERM(LOAD_TEMP(126), 69);
+    70: STORE_PERM(LOAD_TEMP(126), 70);
+    71: STORE_PERM(LOAD_TEMP(126), 71);
+    72: STORE_PERM(LOAD_TEMP(126), 72);
+    73: STORE_PERM(LOAD_TEMP(126), 73);
+    74: STORE_PERM(LOAD_TEMP(126), 74);
+    75: STORE_PERM(LOAD_TEMP(126), 75);
+    76: STORE_PERM(LOAD_TEMP(126), 76);
+    77: STORE_PERM(LOAD_TEMP(126), 77);
+    78: STORE_PERM(LOAD_TEMP(126), 78);
+    79: STORE_PERM(LOAD_TEMP(126), 79);
+    80: STORE_PERM(LOAD_TEMP(126), 80);
+    81: STORE_PERM(LOAD_TEMP(126), 81);
+    82: STORE_PERM(LOAD_TEMP(126), 82);
+    83: STORE_PERM(LOAD_TEMP(126), 83);
+    84: STORE_PERM(LOAD_TEMP(126), 84);
+    85: STORE_PERM(LOAD_TEMP(126), 85);
+    86: STORE_PERM(LOAD_TEMP(126), 86);
+    87: STORE_PERM(LOAD_TEMP(126), 87);
+    88: STORE_PERM(LOAD_TEMP(126), 88);
+    89: STORE_PERM(LOAD_TEMP(126), 89);
+    90: STORE_PERM(LOAD_TEMP(126), 90);
+    91: STORE_PERM(LOAD_TEMP(126), 91);
+    92: STORE_PERM(LOAD_TEMP(126), 92);
+    93: STORE_PERM(LOAD_TEMP(126), 93);
+    94: STORE_PERM(LOAD_TEMP(126), 94);
+    95: STORE_PERM(LOAD_TEMP(126), 95);
+    96: STORE_PERM(LOAD_TEMP(126), 96);
+    97: STORE_PERM(LOAD_TEMP(126), 97);
+    98: STORE_PERM(LOAD_TEMP(126), 98);
+    99: STORE_PERM(LOAD_TEMP(126), 99);
+    100: STORE_PERM(LOAD_TEMP(126), 100);
+    101: STORE_PERM(LOAD_TEMP(126), 101);
+    102: STORE_PERM(LOAD_TEMP(126), 102);
+    103: STORE_PERM(LOAD_TEMP(126), 103);
+    104: STORE_PERM(LOAD_TEMP(126), 104);
+    105: STORE_PERM(LOAD_TEMP(126), 105);
+    106: STORE_PERM(LOAD_TEMP(126), 106);
+    107: STORE_PERM(LOAD_TEMP(126), 107);
+    108: STORE_PERM(LOAD_TEMP(126), 108);
+    109: STORE_PERM(LOAD_TEMP(126), 109);
+    110: STORE_PERM(LOAD_TEMP(126), 110);
+    111: STORE_PERM(LOAD_TEMP(126), 111);
+    112: STORE_PERM(LOAD_TEMP(126), 112);
+    113: STORE_PERM(LOAD_TEMP(126), 113);
+    114: STORE_PERM(LOAD_TEMP(126), 114);
+    115: STORE_PERM(LOAD_TEMP(126), 115);
+    116: STORE_PERM(LOAD_TEMP(126), 116);
+    117: STORE_PERM(LOAD_TEMP(126), 117);
+    118: STORE_PERM(LOAD_TEMP(126), 118);
+    119: STORE_PERM(LOAD_TEMP(126), 119);
+    120: STORE_PERM(LOAD_TEMP(126), 120);
+    121: STORE_PERM(LOAD_TEMP(126), 121);
+    122: STORE_PERM(LOAD_TEMP(126), 122);
+    123: STORE_PERM(LOAD_TEMP(126), 123);
+    124: STORE_PERM(LOAD_TEMP(126), 124);
+    125: STORE_PERM(LOAD_TEMP(126), 125);
+    126: STORE_PERM(LOAD_TEMP(126), 126);
+    127: STORE_PERM(LOAD_TEMP(126), 127);
+    128: STORE_PERM(LOAD_TEMP(126), 128);
+    129: STORE_PERM(LOAD_TEMP(126), 129);
+    130: STORE_PERM(LOAD_TEMP(126), 130);
+    131: STORE_PERM(LOAD_TEMP(126), 131);
+    132: STORE_PERM(LOAD_TEMP(126), 132);
+    133: STORE_PERM(LOAD_TEMP(126), 133);
+    134: STORE_PERM(LOAD_TEMP(126), 134);
+    135: STORE_PERM(LOAD_TEMP(126), 135);
+    136: STORE_PERM(LOAD_TEMP(126), 136);
+    137: STORE_PERM(LOAD_TEMP(126), 137);
+    138: STORE_PERM(LOAD_TEMP(126), 138);
+    139: STORE_PERM(LOAD_TEMP(126), 139);
+    140: STORE_PERM(LOAD_TEMP(126), 140);
+    141: STORE_PERM(LOAD_TEMP(126), 141);
+    142: STORE_PERM(LOAD_TEMP(126), 142);
+    143: STORE_PERM(LOAD_TEMP(126), 143);
+    144: STORE_PERM(LOAD_TEMP(126), 144);
+    145: STORE_PERM(LOAD_TEMP(126), 145);
+    146: STORE_PERM(LOAD_TEMP(126), 146);
+    147: STORE_PERM(LOAD_TEMP(126), 147);
+    148: STORE_PERM(LOAD_TEMP(126), 148);
+    149: STORE_PERM(LOAD_TEMP(126), 149);
+    150: STORE_PERM(LOAD_TEMP(126), 150);
+    151: STORE_PERM(LOAD_TEMP(126), 151);
+    152: STORE_PERM(LOAD_TEMP(126), 152);
+    153: STORE_PERM(LOAD_TEMP(126), 153);
+    154: STORE_PERM(LOAD_TEMP(126), 154);
+    155: STORE_PERM(LOAD_TEMP(126), 155);
+    156: STORE_PERM(LOAD_TEMP(126), 156);
+    157: STORE_PERM(LOAD_TEMP(126), 157);
+    158: STORE_PERM(LOAD_TEMP(126), 158);
+    159: STORE_PERM(LOAD_TEMP(126), 159);
+    160: STORE_PERM(LOAD_TEMP(126), 160);
+    161: STORE_PERM(LOAD_TEMP(126), 161);
+    162: STORE_PERM(LOAD_TEMP(126), 162);
+    163: STORE_PERM(LOAD_TEMP(126), 163);
+    164: STORE_PERM(LOAD_TEMP(126), 164);
+    165: STORE_PERM(LOAD_TEMP(126), 165);
+    166: STORE_PERM(LOAD_TEMP(126), 166);
+    167: STORE_PERM(LOAD_TEMP(126), 167);
+    168: STORE_PERM(LOAD_TEMP(126), 168);
+    169: STORE_PERM(LOAD_TEMP(126), 169);
+    170: STORE_PERM(LOAD_TEMP(126), 170);
+    171: STORE_PERM(LOAD_TEMP(126), 171);
+    172: STORE_PERM(LOAD_TEMP(126), 172);
+    173: STORE_PERM(LOAD_TEMP(126), 173);
+    174: STORE_PERM(LOAD_TEMP(126), 174);
+    175: STORE_PERM(LOAD_TEMP(126), 175);
+    176: STORE_PERM(LOAD_TEMP(126), 176);
+    177: STORE_PERM(LOAD_TEMP(126), 177);
+    178: STORE_PERM(LOAD_TEMP(126), 178);
+    179: STORE_PERM(LOAD_TEMP(126), 179);
+    180: STORE_PERM(LOAD_TEMP(126), 180);
+    181: STORE_PERM(LOAD_TEMP(126), 181);
+    182: STORE_PERM(LOAD_TEMP(126), 182);
+    183: STORE_PERM(LOAD_TEMP(126), 183);
+    184: STORE_PERM(LOAD_TEMP(126), 184);
+    185: STORE_PERM(LOAD_TEMP(126), 185);
+    186: STORE_PERM(LOAD_TEMP(126), 186);
+    187: STORE_PERM(LOAD_TEMP(126), 187);
+    188: STORE_PERM(LOAD_TEMP(126), 188);
+    189: STORE_PERM(LOAD_TEMP(126), 189);
+    190: STORE_PERM(LOAD_TEMP(126), 190);
+    191: STORE_PERM(LOAD_TEMP(126), 191);
+    192: STORE_PERM(LOAD_TEMP(126), 192);
+    193: STORE_PERM(LOAD_TEMP(126), 193);
+    194: STORE_PERM(LOAD_TEMP(126), 194);
+    195: STORE_PERM(LOAD_TEMP(126), 195);
+    196: STORE_PERM(LOAD_TEMP(126), 196);
+    197: STORE_PERM(LOAD_TEMP(126), 197);
+    198: STORE_PERM(LOAD_TEMP(126), 198);
+    199: STORE_PERM(LOAD_TEMP(126), 199);
+    200: STORE_PERM(LOAD_TEMP(126), 200);
+    201: STORE_PERM(LOAD_TEMP(126), 201);
+    202: STORE_PERM(LOAD_TEMP(126), 202);
+    203: STORE_PERM(LOAD_TEMP(126), 203);
+    204: STORE_PERM(LOAD_TEMP(126), 204);
+    205: STORE_PERM(LOAD_TEMP(126), 205);
+    206: STORE_PERM(LOAD_TEMP(126), 206);
+    207: STORE_PERM(LOAD_TEMP(126), 207);
+    208: STORE_PERM(LOAD_TEMP(126), 208);
+    209: STORE_PERM(LOAD_TEMP(126), 209);
+    210: STORE_PERM(LOAD_TEMP(126), 210);
+    211: STORE_PERM(LOAD_TEMP(126), 211);
+    212: STORE_PERM(LOAD_TEMP(126), 212);
+    213: STORE_PERM(LOAD_TEMP(126), 213);
+    214: STORE_PERM(LOAD_TEMP(126), 214);
+    215: STORE_PERM(LOAD_TEMP(126), 215);
+    216: STORE_PERM(LOAD_TEMP(126), 216);
+    217: STORE_PERM(LOAD_TEMP(126), 217);
+    218: STORE_PERM(LOAD_TEMP(126), 218);
+    219: STORE_PERM(LOAD_TEMP(126), 219);
+    220: STORE_PERM(LOAD_TEMP(126), 220);
+    221: STORE_PERM(LOAD_TEMP(126), 221);
+    222: STORE_PERM(LOAD_TEMP(126), 222);
+    223: STORE_PERM(LOAD_TEMP(126), 223);
+    224: STORE_PERM(LOAD_TEMP(126), 224);
+    225: STORE_PERM(LOAD_TEMP(126), 225);
+    226: STORE_PERM(LOAD_TEMP(126), 226);
+    227: STORE_PERM(LOAD_TEMP(126), 227);
+    228: STORE_PERM(LOAD_TEMP(126), 228);
+    229: STORE_PERM(LOAD_TEMP(126), 229);
+    230: STORE_PERM(LOAD_TEMP(126), 230);
+    231: STORE_PERM(LOAD_TEMP(126), 231);
+    232: STORE_PERM(LOAD_TEMP(126), 232);
+    233: STORE_PERM(LOAD_TEMP(126), 233);
+    234: STORE_PERM(LOAD_TEMP(126), 234);
+    235: STORE_PERM(LOAD_TEMP(126), 235);
+    236: STORE_PERM(LOAD_TEMP(126), 236);
+    237: STORE_PERM(LOAD_TEMP(126), 237);
+    238: STORE_PERM(LOAD_TEMP(126), 238);
+    239: STORE_PERM(LOAD_TEMP(126), 239);
+    240: STORE_PERM(LOAD_TEMP(126), 240);
+    241: STORE_PERM(LOAD_TEMP(126), 241);
+    242: STORE_PERM(LOAD_TEMP(126), 242);
+    243: STORE_PERM(LOAD_TEMP(126), 243);
+    244: STORE_PERM(LOAD_TEMP(126), 244);
+    245: STORE_PERM(LOAD_TEMP(126), 245);
+    246: STORE_PERM(LOAD_TEMP(126), 246);
+    247: STORE_PERM(LOAD_TEMP(126), 247);
+    248: STORE_PERM(LOAD_TEMP(126), 248);
+    249: STORE_PERM(LOAD_TEMP(126), 249);
+    250: STORE_PERM(LOAD_TEMP(126), 250);
+    251: STORE_PERM(LOAD_TEMP(126), 251);
+    252: STORE_PERM(LOAD_TEMP(126), 252);
+    253: STORE_PERM(LOAD_TEMP(126), 253);
+    254: STORE_PERM(LOAD_TEMP(126), 254);
+    255: STORE_PERM(LOAD_TEMP(126), 255);
+}
+
+switch(FEAT_INDUSTRIES, SELF, load_perm_variable, [
+    LOAD_TEMP(127)
+]) {
+    0: LOAD_PERM(0);
+    1: LOAD_PERM(1);
+    2: LOAD_PERM(2);
+    3: LOAD_PERM(3);
+    4: LOAD_PERM(4);
+    5: LOAD_PERM(5);
+    6: LOAD_PERM(6);
+    7: LOAD_PERM(7);
+    8: LOAD_PERM(8);
+    9: LOAD_PERM(9);
+    10: LOAD_PERM(10);
+    11: LOAD_PERM(11);
+    12: LOAD_PERM(12);
+    13: LOAD_PERM(13);
+    14: LOAD_PERM(14);
+    15: LOAD_PERM(15);
+    16: LOAD_PERM(16);
+    17: LOAD_PERM(17);
+    18: LOAD_PERM(18);
+    19: LOAD_PERM(19);
+    20: LOAD_PERM(20);
+    21: LOAD_PERM(21);
+    22: LOAD_PERM(22);
+    23: LOAD_PERM(23);
+    24: LOAD_PERM(24);
+    25: LOAD_PERM(25);
+    26: LOAD_PERM(26);
+    27: LOAD_PERM(27);
+    28: LOAD_PERM(28);
+    29: LOAD_PERM(29);
+    30: LOAD_PERM(30);
+    31: LOAD_PERM(31);
+    32: LOAD_PERM(32);
+    33: LOAD_PERM(33);
+    34: LOAD_PERM(34);
+    35: LOAD_PERM(35);
+    36: LOAD_PERM(36);
+    37: LOAD_PERM(37);
+    38: LOAD_PERM(38);
+    39: LOAD_PERM(39);
+    40: LOAD_PERM(40);
+    41: LOAD_PERM(41);
+    42: LOAD_PERM(42);
+    43: LOAD_PERM(43);
+    44: LOAD_PERM(44);
+    45: LOAD_PERM(45);
+    46: LOAD_PERM(46);
+    47: LOAD_PERM(47);
+    48: LOAD_PERM(48);
+    49: LOAD_PERM(49);
+    50: LOAD_PERM(50);
+    51: LOAD_PERM(51);
+    52: LOAD_PERM(52);
+    53: LOAD_PERM(53);
+    54: LOAD_PERM(54);
+    55: LOAD_PERM(55);
+    56: LOAD_PERM(56);
+    57: LOAD_PERM(57);
+    58: LOAD_PERM(58);
+    59: LOAD_PERM(59);
+    60: LOAD_PERM(60);
+    61: LOAD_PERM(61);
+    62: LOAD_PERM(62);
+    63: LOAD_PERM(63);
+    64: LOAD_PERM(64);
+    65: LOAD_PERM(65);
+    66: LOAD_PERM(66);
+    67: LOAD_PERM(67);
+    68: LOAD_PERM(68);
+    69: LOAD_PERM(69);
+    70: LOAD_PERM(70);
+    71: LOAD_PERM(71);
+    72: LOAD_PERM(72);
+    73: LOAD_PERM(73);
+    74: LOAD_PERM(74);
+    75: LOAD_PERM(75);
+    76: LOAD_PERM(76);
+    77: LOAD_PERM(77);
+    78: LOAD_PERM(78);
+    79: LOAD_PERM(79);
+    80: LOAD_PERM(80);
+    81: LOAD_PERM(81);
+    82: LOAD_PERM(82);
+    83: LOAD_PERM(83);
+    84: LOAD_PERM(84);
+    85: LOAD_PERM(85);
+    86: LOAD_PERM(86);
+    87: LOAD_PERM(87);
+    88: LOAD_PERM(88);
+    89: LOAD_PERM(89);
+    90: LOAD_PERM(90);
+    91: LOAD_PERM(91);
+    92: LOAD_PERM(92);
+    93: LOAD_PERM(93);
+    94: LOAD_PERM(94);
+    95: LOAD_PERM(95);
+    96: LOAD_PERM(96);
+    97: LOAD_PERM(97);
+    98: LOAD_PERM(98);
+    99: LOAD_PERM(99);
+    100: LOAD_PERM(100);
+    101: LOAD_PERM(101);
+    102: LOAD_PERM(102);
+    103: LOAD_PERM(103);
+    104: LOAD_PERM(104);
+    105: LOAD_PERM(105);
+    106: LOAD_PERM(106);
+    107: LOAD_PERM(107);
+    108: LOAD_PERM(108);
+    109: LOAD_PERM(109);
+    110: LOAD_PERM(110);
+    111: LOAD_PERM(111);
+    112: LOAD_PERM(112);
+    113: LOAD_PERM(113);
+    114: LOAD_PERM(114);
+    115: LOAD_PERM(115);
+    116: LOAD_PERM(116);
+    117: LOAD_PERM(117);
+    118: LOAD_PERM(118);
+    119: LOAD_PERM(119);
+    120: LOAD_PERM(120);
+    121: LOAD_PERM(121);
+    122: LOAD_PERM(122);
+    123: LOAD_PERM(123);
+    124: LOAD_PERM(124);
+    125: LOAD_PERM(125);
+    126: LOAD_PERM(126);
+    127: LOAD_PERM(127);
+    128: LOAD_PERM(128);
+    129: LOAD_PERM(129);
+    130: LOAD_PERM(130);
+    131: LOAD_PERM(131);
+    132: LOAD_PERM(132);
+    133: LOAD_PERM(133);
+    134: LOAD_PERM(134);
+    135: LOAD_PERM(135);
+    136: LOAD_PERM(136);
+    137: LOAD_PERM(137);
+    138: LOAD_PERM(138);
+    139: LOAD_PERM(139);
+    140: LOAD_PERM(140);
+    141: LOAD_PERM(141);
+    142: LOAD_PERM(142);
+    143: LOAD_PERM(143);
+    144: LOAD_PERM(144);
+    145: LOAD_PERM(145);
+    146: LOAD_PERM(146);
+    147: LOAD_PERM(147);
+    148: LOAD_PERM(148);
+    149: LOAD_PERM(149);
+    150: LOAD_PERM(150);
+    151: LOAD_PERM(151);
+    152: LOAD_PERM(152);
+    153: LOAD_PERM(153);
+    154: LOAD_PERM(154);
+    155: LOAD_PERM(155);
+    156: LOAD_PERM(156);
+    157: LOAD_PERM(157);
+    158: LOAD_PERM(158);
+    159: LOAD_PERM(159);
+    160: LOAD_PERM(160);
+    161: LOAD_PERM(161);
+    162: LOAD_PERM(162);
+    163: LOAD_PERM(163);
+    164: LOAD_PERM(164);
+    165: LOAD_PERM(165);
+    166: LOAD_PERM(166);
+    167: LOAD_PERM(167);
+    168: LOAD_PERM(168);
+    169: LOAD_PERM(169);
+    170: LOAD_PERM(170);
+    171: LOAD_PERM(171);
+    172: LOAD_PERM(172);
+    173: LOAD_PERM(173);
+    174: LOAD_PERM(174);
+    175: LOAD_PERM(175);
+    176: LOAD_PERM(176);
+    177: LOAD_PERM(177);
+    178: LOAD_PERM(178);
+    179: LOAD_PERM(179);
+    180: LOAD_PERM(180);
+    181: LOAD_PERM(181);
+    182: LOAD_PERM(182);
+    183: LOAD_PERM(183);
+    184: LOAD_PERM(184);
+    185: LOAD_PERM(185);
+    186: LOAD_PERM(186);
+    187: LOAD_PERM(187);
+    188: LOAD_PERM(188);
+    189: LOAD_PERM(189);
+    190: LOAD_PERM(190);
+    191: LOAD_PERM(191);
+    192: LOAD_PERM(192);
+    193: LOAD_PERM(193);
+    194: LOAD_PERM(194);
+    195: LOAD_PERM(195);
+    196: LOAD_PERM(196);
+    197: LOAD_PERM(197);
+    198: LOAD_PERM(198);
+    199: LOAD_PERM(199);
+    200: LOAD_PERM(200);
+    201: LOAD_PERM(201);
+    202: LOAD_PERM(202);
+    203: LOAD_PERM(203);
+    204: LOAD_PERM(204);
+    205: LOAD_PERM(205);
+    206: LOAD_PERM(206);
+    207: LOAD_PERM(207);
+    208: LOAD_PERM(208);
+    209: LOAD_PERM(209);
+    210: LOAD_PERM(210);
+    211: LOAD_PERM(211);
+    212: LOAD_PERM(212);
+    213: LOAD_PERM(213);
+    214: LOAD_PERM(214);
+    215: LOAD_PERM(215);
+    216: LOAD_PERM(216);
+    217: LOAD_PERM(217);
+    218: LOAD_PERM(218);
+    219: LOAD_PERM(219);
+    220: LOAD_PERM(220);
+    221: LOAD_PERM(221);
+    222: LOAD_PERM(222);
+    223: LOAD_PERM(223);
+    224: LOAD_PERM(224);
+    225: LOAD_PERM(225);
+    226: LOAD_PERM(226);
+    227: LOAD_PERM(227);
+    228: LOAD_PERM(228);
+    229: LOAD_PERM(229);
+    230: LOAD_PERM(230);
+    231: LOAD_PERM(231);
+    232: LOAD_PERM(232);
+    233: LOAD_PERM(233);
+    234: LOAD_PERM(234);
+    235: LOAD_PERM(235);
+    236: LOAD_PERM(236);
+    237: LOAD_PERM(237);
+    238: LOAD_PERM(238);
+    239: LOAD_PERM(239);
+    240: LOAD_PERM(240);
+    241: LOAD_PERM(241);
+    242: LOAD_PERM(242);
+    243: LOAD_PERM(243);
+    244: LOAD_PERM(244);
+    245: LOAD_PERM(245);
+    246: LOAD_PERM(246);
+    247: LOAD_PERM(247);
+    248: LOAD_PERM(248);
+    249: LOAD_PERM(249);
+    250: LOAD_PERM(250);
+    251: LOAD_PERM(251);
+    252: LOAD_PERM(252);
+    253: LOAD_PERM(253);
+    254: LOAD_PERM(254);
+    255: LOAD_PERM(255);
 }
 
 // TEMP_000         :Input cargo number:        [0,1,2]
 // TEMP_001         :Quantity of input cargo    n
 // TEMP_127         :Index                      
 switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, [
-    LOAD_TEMP(1+28*LOAD_TEMP(0)+LOAD_PERM(0), 127),                     // Get register representing production cycle
-    STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_TEMP(1), LOAD_TEMP(127))  // Increment by quantity of input cargo
+    STORE_TEMP(1+28*LOAD_TEMP(0)+LOAD_PERM(0), 127),                     // Get register representing production cycle
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(1), 126),
+    store_perm_variable()
 ]) {
     return;
 }
@@ -678,19 +1142,19 @@ switch(FEAT_INDUSTRIES, SELF, do_cargo_accept_cycle, [
     STORE_TEMP(0, 5),
     STORE_TEMP(0, 0),
     STORE_TEMP(LOAD_TEMP(2), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
     STORE_TEMP(1, 0),
     STORE_TEMP(LOAD_TEMP(3), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
     STORE_TEMP(2, 0),
     STORE_TEMP(LOAD_TEMP(4), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo, 5),
+    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
     LOAD_TEMP(5)
 ]) {
     return LOAD_TEMP(5);
 }
 
-switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multipler, LOAD_PERM(28)) {
+switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multiplier, LOAD_PERM(28)) {
     0..19: return 1;
     20..79: return 2;
     return 4;
@@ -710,9 +1174,9 @@ switch(FEAT_INDUSTRIES, SELF, check_positive, LOAD_TEMP(127)) {
 switch(FEAT_INDUSTRIES, SELF, double_combo_multiplier, [
     STORE_TEMP(0, 7),
     STORE_TEMP(28, 127),
-    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive(), 7),
     STORE_TEMP(56, 127),
-    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive(), 7),
     LOAD_TEMP(7)
 ]) {
     2: return 2;
@@ -722,11 +1186,11 @@ switch(FEAT_INDUSTRIES, SELF, double_combo_multiplier, [
 switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
     STORE_TEMP(0, 7),
     STORE_TEMP(28, 127),
-    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive(), 7),
     STORE_TEMP(56, 127),
-    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive(), 7),
     STORE_TEMP(84, 127),
-    STORE_TEMP(LOAD_TEMP(7)+check_positive, 7),
+    STORE_TEMP(LOAD_TEMP(7)+check_positive(), 7),
     LOAD_TEMP(7)
 ]) {
     3: return 3;
@@ -736,35 +1200,35 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
     STORE_TEMP(LOAD_PERM(28), 256),     // Load the crates supplied in the string register
-    engineering_supplies_multipler
+    engineering_supplies_multiplier()
 ]) {
-    4: return STR_INDUSTRY_LEVEL_STATE_GUNG_HO;
-    2: return STR_INDUSTRY_LEVEL_STATE_ENHANCED;
-    STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS;
+    4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
+    2: return string(STR_INDUSTRY_LEVEL_STATE_ENHANCED);
+    string(STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS);
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
     STORE_TEMP(LOAD_PERM(28), 256),     // Load the crates supplied in the string register
-    fertilizer_multipler
+    fertilizer_multiplier()
 ]) {
-    4: return STR_INDUSTRY_LEVEL_STATE_GUNG_HO;
-    2: return STR_INDUSTRY_LEVEL_STATE_ENHANCED;
-    STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT;
+    4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
+    2: return string(STR_INDUSTRY_LEVEL_STATE_ENHANCED);
+    string(STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT);
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
-    double_combo_multiplier
+    double_combo_multiplier()
 ]) {
-    2: return STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE;
-    STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE;
+    2: return string(STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE);
+    string(STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE);
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
-    triple_combo_multiplier
+    triple_combo_multiplier()
 ]) {
-    3: return STR_INDUSTRY_RATIO_STATE_GUNG_HO;
-    2: return STR_INDUSTRY_RATIO_STATE_ENHANCED_TRIPLE;
-    STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE;
+    3: return string(STR_INDUSTRY_RATIO_STATE_GUNG_HO);
+    2: return string(STR_INDUSTRY_RATIO_STATE_ENHANCED_TRIPLE);
+    string(STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE);
 }
 
 // ----------------------------------------------------------------
@@ -777,7 +1241,7 @@ produce(produce_regular_port,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, production_cycle_tick()) {
     produce_regular_port;
 }
 
@@ -791,7 +1255,7 @@ item (FEAT_INDUSTRIES, industry_port) {
             produce_cargo("ENGS", 0),
             produce_cargo("SALT", 0)
         ];
-        spec_flags: [IND_FLAG_BUILT_ON_WATER];
+        spec_flags: bitmask(IND_FLAG_BUILT_ON_WATER);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PORT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PORT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT);
@@ -821,18 +1285,18 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
     STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5)
+    STORE_TEMP(do_cargo_accept_cycle(), 5)
 ]) {
     produce_accept_quarry;
 }
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: 12*engineering_supplies_multiplier; PTSH: 8*engineering_supplies_multiplier;],
+    [SAND: 12*engineering_supplies_multiplier(); PTSH: 8*engineering_supplies_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_quarry, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_quarry, production_cycle_tick()) {
     produce_regular_quarry;
 }
 
@@ -847,7 +1311,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
             produce_cargo("SAND", 0),
             produce_cargo("PTSH", 0)
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
         closure_msg: string(STR_INDUSTRY_CLOSURE_QUARRY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY);
@@ -879,18 +1343,18 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
     STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
 ]) {
     produce_accept_mineral_mine;
 }
 
 produce(produce_regular_mineral_mine, 
     [], 
-    [MNRL: 16*engineering_supplies_multiplier;],
+    [MNRL: 16*engineering_supplies_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_mineral_mine, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_mineral_mine, production_cycle_tick()) {
     produce_regular_mineral_mine;
 }
 
@@ -904,7 +1368,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
             accept_cargo("ENGS"),
             produce_cargo("MNRL", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_MINERAL_MINE);
         closure_msg: string(STR_INDUSTRY_CLOSURE_MINERAL_MINE);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE);
@@ -936,19 +1400,19 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(fertilizer_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_corn_farm;
 }
 
 produce(produce_regular_corn_farm, 
     [], 
-    [CORN: 16 * fertilizer_multiplier;],
+    [CORN: 16 * fertilizer_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_corn_farm, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_corn_farm, production_cycle_tick()) {
     produce_regular_corn_farm;
 }
 
@@ -962,7 +1426,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
             accept_cargo("FERT"),
             produce_cargo("CORN", 0),
         ];
-        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_CORN_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_CORN_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM);
@@ -994,19 +1458,19 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(fertilizer_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_soy_farm;
 }
 
 produce(produce_regular_soy_farm, 
     [], 
-    [SOYB: 12 * fertilizer_multiplier;],
+    [SOYB: 12 * fertilizer_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_soy_farm, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_soy_farm, production_cycle_tick()) {
     produce_regular_soy_farm;
 }
 
@@ -1020,7 +1484,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
             accept_cargo("FERT"),
             produce_cargo("SOYB", 0),
         ];
-        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_SOY_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_SOY_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM);
@@ -1052,19 +1516,19 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(fertilizer_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_yam_farm;
 }
 
 produce(produce_regular_yam_farm, 
     [], 
-    [YAM: 12 * fertilizer_multiplier;],
+    [YAMS: 12 * fertilizer_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_yam_farm, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_yam_farm, production_cycle_tick()) {
     produce_regular_yam_farm;
 }
 
@@ -1076,9 +1540,9 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         life_type: IND_LIFE_TYPE_ORGANIC;
         cargo_types: [
             accept_cargo("FERT"),
-            produce_cargo("YAM", 0),
+            produce_cargo("YAMS", 0),
         ];
-        spec_flags: [IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT];
+        spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_YAM_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_YAM_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM);
@@ -1103,14 +1567,14 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(2);],
-    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.33; GOOD: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.33;]
+    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6) / 3; GOOD: LOAD_TEMP(5) * LOAD_TEMP(6) / 3;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
     STORE_TEMP(incoming_cargo_waiting("SAND"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_glassworks;
@@ -1122,7 +1586,7 @@ produce(produce_regular_glassworks,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, production_cycle_tick()) {
     produce_regular_glassworks;
 }
 
@@ -1137,7 +1601,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
             produce_cargo("VIAL", 0),
             produce_cargo("GOOD", 0)
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GLASSWORKS);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS);
@@ -1160,26 +1624,26 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
 
 produce(produce_accept_chemical_plant,
     [SALT: LOAD_TEMP(2); PTSH: LOAD_TEMP(3); MNRL: LOAD_TEMP(4);],
-    [FERT: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.25; CHEM: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.25;]
+    [FERT: LOAD_TEMP(5) * LOAD_TEMP(6) / 4; CHEM: LOAD_TEMP(5) * LOAD_TEMP(6) / 4;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
     STORE_TEMP(incoming_cargo_waiting("SALT"), 2),
     STORE_TEMP(incoming_cargo_waiting("PTSH"), 3),
     STORE_TEMP(incoming_cargo_waiting("MNRL"), 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(triple_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_chemical_plant;
 }
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: 6 * triple_combo_multiplier; CHEM: 4 * triple_combo_multiplier;],
+    [FERT: 6 * triple_combo_multiplier(); CHEM: 4 * triple_combo_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_chemical_plant, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_chemical_plant, production_cycle_tick()) {
     produce_regular_chemical_plant;
 }
 
@@ -1196,7 +1660,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
             produce_cargo("FERT", 0),
             produce_cargo("CHEM", 0)
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_CHEMICAL_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT);
@@ -1220,14 +1684,14 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
 
 produce(produce_accept_biolab,
     [CORN: LOAD_TEMP(2);],
-    [VGOL: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [VGOL: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
     STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_biolab;
@@ -1239,7 +1703,7 @@ produce(produce_regular_biolab,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, production_cycle_tick()) {
     produce_regular_biolab;
 }
 
@@ -1253,7 +1717,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
             accept_cargo("CORN"),
             produce_cargo("VGOL", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
         closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB);
@@ -1276,14 +1740,14 @@ item (FEAT_INDUSTRIES, industry_biolab) {
 
 produce(produce_accept_distillery,
     [CORN: LOAD_TEMP(2);],
-    [ALCH: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [ALCH: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
     STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_distillery;
@@ -1295,7 +1759,7 @@ produce(produce_regular_distillery,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_distillery, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_distillery, production_cycle_tick()) {
     produce_regular_distillery;
 }
 
@@ -1309,7 +1773,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
             accept_cargo("CORN"),
             produce_cargo("ALCH", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_DISTILLERY);
         closure_msg: string(STR_INDUSTRY_CLOSURE_DISTILLERY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY);
@@ -1332,15 +1796,15 @@ item (FEAT_INDUSTRIES, industry_distillery) {
 
 produce(produce_accept_processing_plant,
     [SOYB: LOAD_TEMP(2); YAMS: LOAD_TEMP(3); ALCH: LOAD_TEMP(4);],
-    [DIOS: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [DIOS: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
     STORE_TEMP(incoming_cargo_waiting("SOYB"), 2),
     STORE_TEMP(incoming_cargo_waiting("YAMS"), 3),
     STORE_TEMP(incoming_cargo_waiting("ALCH"), 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(triple_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_processing_plant;
 }
@@ -1351,7 +1815,7 @@ produce(produce_regular_processing_plant,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, production_cycle_tick()) {
     produce_regular_processing_plant;
 }
 
@@ -1367,7 +1831,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
             accept_cargo("ALCH"),
             produce_cargo("DIOS", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT);
@@ -1391,15 +1855,15 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
 
 produce(produce_accept_pharmaceutical_plant_e,
     [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
-    [RWES: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [RWES: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
     STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(double_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(double_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmaceutical_plant_e;
 }
@@ -1410,7 +1874,7 @@ produce(produce_regular_pharmaceutical_plant_e,
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_e, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_e, production_cycle_tick()) {
     produce_regular_pharmaceutical_plant_e;
 }
 
@@ -1425,7 +1889,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
             accept_cargo("CHEM"),
             produce_cargo("RWES", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E);
@@ -1450,26 +1914,26 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
 
 produce(produce_accept_pharmaceutical_plant_t,
     [DIOS: LOAD_TEMP(2); CHEM: LOAD_TEMP(3);],
-    [RWTS: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [RWTS: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
     STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(double_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(double_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmaceutical_plant_t;
 }
 
 produce(produce_regular_pharmaceutical_plant_t, 
     [], 
-    [RWTS: 6*double_combo_multiplier;],
+    [RWTS: 6*double_combo_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_t, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_t, production_cycle_tick()) {
     produce_regular_pharmaceutical_plant_t;
 }
 
@@ -1484,7 +1948,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
             accept_cargo("CHEM"),
             produce_cargo("RWTS", 0),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T);
@@ -1509,26 +1973,26 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
 
 produce(produce_accept_pharmacy_e,
     [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWES: LOAD_TEMP(4);],
-    [ESTR: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [ESTR: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
     STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
     STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
     STORE_TEMP(incoming_cargo_waiting("RWES"), 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(triple_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmacy_e;
 }
 
 produce(produce_regular_pharmacy_e, 
     [], 
-    [ESTR: 6*triple_combo_multiplier;],
+    [ESTR: 6*triple_combo_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmacy_e, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmacy_e, production_cycle_tick()) {
     produce_regular_pharmacy_e;
 }
 
@@ -1542,13 +2006,11 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
             accept_cargo("VIAL"),
             accept_cargo("VGOL"),
             accept_cargo("RWES"),
-            produce_cargo("ESTR")
+            produce_cargo("ESTR", 0)
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_E);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E);
         prob_in_game: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
@@ -1570,26 +2032,26 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
 
 produce(produce_accept_pharamacy_t,
     [VIAL: LOAD_TEMP(2); VGOL: LOAD_TEMP(3); RWTS: LOAD_TEMP(4);],
-    [TEST: LOAD_TEMP(5) * LOAD_TEMP(6) * 0.5;]
+    [TEST: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
     STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
     STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
     STORE_TEMP(incoming_cargo_waiting("RWTS"), 4),
-    STORE_TEMP(do_cargo_accept_cycle, 5),
-    STORE_TEMP(triple_combo_multiplier, 6)
+    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_pharamacy_t;
 }
 
 produce(produce_regular_pharamacy_t, 
     [], 
-    [TEST: 6*triple_combo_multiplier;],
+    [TEST: 6*triple_combo_multiplier();],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharamacy_t, production_cycle_tick) {
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharamacy_t, production_cycle_tick()) {
     produce_regular_pharamacy_t;
 }
 
@@ -1603,13 +2065,11 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
             accept_cargo("VIAL"),
             accept_cargo("VGOL"),
             accept_cargo("RWTS"),
-            produce_cargo("TEST")
+            produce_cargo("TEST", 0)
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_T);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T);
         prob_in_game: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
@@ -1642,7 +2102,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         cargo_types: [
             accept_cargo("ESTR"),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
         prob_in_game: 4;
@@ -1676,7 +2136,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         cargo_types: [
             accept_cargo("TEST"),
         ];
-        spec_flags: [];
+
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
         prob_in_game: 4;
