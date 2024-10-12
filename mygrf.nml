@@ -476,6 +476,7 @@ item(FEAT_INDUSTRYTILES, tile_placeholder) {
 }
 
 tilelayout layout_default {
+    rotation: DIRECTION_NORTH;
     0,0: tile_placeholder;
 }
 
@@ -535,74 +536,6 @@ tilelayout layout_default {
 // ----------------------------------------------------------------
 // Industry Scripts
 // ----------------------------------------------------------------
-
-switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers_helper, [
-    STORE_PERM(0, LOAD_TEMP(0)),
-    STORE_TEMP(LOAD_TEMP(0)+1, 0),
-    LOAD_TEMP(0)
-]) {
-    255: return 0;
-    1;
-}
-
-produce(recurse_initialize_industry_registers_helper,
-        [],
-        [],
-        initialize_industry_registers_helper())
-
-switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers, [
-    STORE_TEMP(0, 0)
-]) {
-    recurse_initialize_industry_registers_helper;
-}
-
-// TEMP_000         :Input cargo number
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
-    STORE_PERM(0, LOAD_TEMP(127)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
-]) {
-    return 0;
-}
-
-// TEMP_000         :Input cargo number         [0,1,2]
-// TEMP_001         :Index offset of register to shift  [0..26]
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
-    // Add current offset register to total for this input cargo
-    STORE_PERM(LOAD_PERM(LOAD_TEMP(127))+LOAD_PERM(LOAD_TEMP(127)-28+LOAD_TEMP(1)+1), LOAD_TEMP(127)),
-    STORE_TEMP(LOAD_TEMP(1)+1, 1),              // Increment index offset
-    LOAD_TEMP(1)                                // Make decision based off of index offset
-]) {
-    27: production_cycle_tick_closer;           // If index offset is 27, we're finished
-    1;                // Otherwise, recurse
-}
-
-produce(recurse_production_cycle_tick_cargo,
-        [],
-        [],
-        production_cycle_tick_cargo())
-
-// TEMP_000         :Input cargo number
-// TEMP_001         :Index offset of register to shift
-// TEMP_127         :Index of register containing total
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, [
-    STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
-    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),       // Store index of sum register
-    STORE_PERM(0, LOAD_TEMP(127)),              // Reset total
-    STORE_TEMP(0, 1)                            // Store 0 in offset
-]) {
-    recurse_production_cycle_tick_cargo;                 // Kick off recursive summation
-}
-
-// TEMP_000         :Input cargo number         [0,1,2]
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
-    STORE_TEMP(0, 0),                           // Do input cargo 0
-    production_cycle_tick_helper(),
-    STORE_TEMP(1, 0),                           // Do input cargo 1
-    production_cycle_tick_helper(),
-    STORE_TEMP(2, 0),                           // Do input cargo 2
-    production_cycle_tick_helper()
-]) {
-    return;
-}
 
 switch(FEAT_INDUSTRIES, SELF, store_perm_variable, [
     LOAD_TEMP(127)
@@ -692,177 +625,6 @@ switch(FEAT_INDUSTRIES, SELF, store_perm_variable, [
     82: STORE_PERM(LOAD_TEMP(126), 82);
     83: STORE_PERM(LOAD_TEMP(126), 83);
     84: STORE_PERM(LOAD_TEMP(126), 84);
-    85: STORE_PERM(LOAD_TEMP(126), 85);
-    86: STORE_PERM(LOAD_TEMP(126), 86);
-    87: STORE_PERM(LOAD_TEMP(126), 87);
-    88: STORE_PERM(LOAD_TEMP(126), 88);
-    89: STORE_PERM(LOAD_TEMP(126), 89);
-    90: STORE_PERM(LOAD_TEMP(126), 90);
-    91: STORE_PERM(LOAD_TEMP(126), 91);
-    92: STORE_PERM(LOAD_TEMP(126), 92);
-    93: STORE_PERM(LOAD_TEMP(126), 93);
-    94: STORE_PERM(LOAD_TEMP(126), 94);
-    95: STORE_PERM(LOAD_TEMP(126), 95);
-    96: STORE_PERM(LOAD_TEMP(126), 96);
-    97: STORE_PERM(LOAD_TEMP(126), 97);
-    98: STORE_PERM(LOAD_TEMP(126), 98);
-    99: STORE_PERM(LOAD_TEMP(126), 99);
-    100: STORE_PERM(LOAD_TEMP(126), 100);
-    101: STORE_PERM(LOAD_TEMP(126), 101);
-    102: STORE_PERM(LOAD_TEMP(126), 102);
-    103: STORE_PERM(LOAD_TEMP(126), 103);
-    104: STORE_PERM(LOAD_TEMP(126), 104);
-    105: STORE_PERM(LOAD_TEMP(126), 105);
-    106: STORE_PERM(LOAD_TEMP(126), 106);
-    107: STORE_PERM(LOAD_TEMP(126), 107);
-    108: STORE_PERM(LOAD_TEMP(126), 108);
-    109: STORE_PERM(LOAD_TEMP(126), 109);
-    110: STORE_PERM(LOAD_TEMP(126), 110);
-    111: STORE_PERM(LOAD_TEMP(126), 111);
-    112: STORE_PERM(LOAD_TEMP(126), 112);
-    113: STORE_PERM(LOAD_TEMP(126), 113);
-    114: STORE_PERM(LOAD_TEMP(126), 114);
-    115: STORE_PERM(LOAD_TEMP(126), 115);
-    116: STORE_PERM(LOAD_TEMP(126), 116);
-    117: STORE_PERM(LOAD_TEMP(126), 117);
-    118: STORE_PERM(LOAD_TEMP(126), 118);
-    119: STORE_PERM(LOAD_TEMP(126), 119);
-    120: STORE_PERM(LOAD_TEMP(126), 120);
-    121: STORE_PERM(LOAD_TEMP(126), 121);
-    122: STORE_PERM(LOAD_TEMP(126), 122);
-    123: STORE_PERM(LOAD_TEMP(126), 123);
-    124: STORE_PERM(LOAD_TEMP(126), 124);
-    125: STORE_PERM(LOAD_TEMP(126), 125);
-    126: STORE_PERM(LOAD_TEMP(126), 126);
-    127: STORE_PERM(LOAD_TEMP(126), 127);
-    128: STORE_PERM(LOAD_TEMP(126), 128);
-    129: STORE_PERM(LOAD_TEMP(126), 129);
-    130: STORE_PERM(LOAD_TEMP(126), 130);
-    131: STORE_PERM(LOAD_TEMP(126), 131);
-    132: STORE_PERM(LOAD_TEMP(126), 132);
-    133: STORE_PERM(LOAD_TEMP(126), 133);
-    134: STORE_PERM(LOAD_TEMP(126), 134);
-    135: STORE_PERM(LOAD_TEMP(126), 135);
-    136: STORE_PERM(LOAD_TEMP(126), 136);
-    137: STORE_PERM(LOAD_TEMP(126), 137);
-    138: STORE_PERM(LOAD_TEMP(126), 138);
-    139: STORE_PERM(LOAD_TEMP(126), 139);
-    140: STORE_PERM(LOAD_TEMP(126), 140);
-    141: STORE_PERM(LOAD_TEMP(126), 141);
-    142: STORE_PERM(LOAD_TEMP(126), 142);
-    143: STORE_PERM(LOAD_TEMP(126), 143);
-    144: STORE_PERM(LOAD_TEMP(126), 144);
-    145: STORE_PERM(LOAD_TEMP(126), 145);
-    146: STORE_PERM(LOAD_TEMP(126), 146);
-    147: STORE_PERM(LOAD_TEMP(126), 147);
-    148: STORE_PERM(LOAD_TEMP(126), 148);
-    149: STORE_PERM(LOAD_TEMP(126), 149);
-    150: STORE_PERM(LOAD_TEMP(126), 150);
-    151: STORE_PERM(LOAD_TEMP(126), 151);
-    152: STORE_PERM(LOAD_TEMP(126), 152);
-    153: STORE_PERM(LOAD_TEMP(126), 153);
-    154: STORE_PERM(LOAD_TEMP(126), 154);
-    155: STORE_PERM(LOAD_TEMP(126), 155);
-    156: STORE_PERM(LOAD_TEMP(126), 156);
-    157: STORE_PERM(LOAD_TEMP(126), 157);
-    158: STORE_PERM(LOAD_TEMP(126), 158);
-    159: STORE_PERM(LOAD_TEMP(126), 159);
-    160: STORE_PERM(LOAD_TEMP(126), 160);
-    161: STORE_PERM(LOAD_TEMP(126), 161);
-    162: STORE_PERM(LOAD_TEMP(126), 162);
-    163: STORE_PERM(LOAD_TEMP(126), 163);
-    164: STORE_PERM(LOAD_TEMP(126), 164);
-    165: STORE_PERM(LOAD_TEMP(126), 165);
-    166: STORE_PERM(LOAD_TEMP(126), 166);
-    167: STORE_PERM(LOAD_TEMP(126), 167);
-    168: STORE_PERM(LOAD_TEMP(126), 168);
-    169: STORE_PERM(LOAD_TEMP(126), 169);
-    170: STORE_PERM(LOAD_TEMP(126), 170);
-    171: STORE_PERM(LOAD_TEMP(126), 171);
-    172: STORE_PERM(LOAD_TEMP(126), 172);
-    173: STORE_PERM(LOAD_TEMP(126), 173);
-    174: STORE_PERM(LOAD_TEMP(126), 174);
-    175: STORE_PERM(LOAD_TEMP(126), 175);
-    176: STORE_PERM(LOAD_TEMP(126), 176);
-    177: STORE_PERM(LOAD_TEMP(126), 177);
-    178: STORE_PERM(LOAD_TEMP(126), 178);
-    179: STORE_PERM(LOAD_TEMP(126), 179);
-    180: STORE_PERM(LOAD_TEMP(126), 180);
-    181: STORE_PERM(LOAD_TEMP(126), 181);
-    182: STORE_PERM(LOAD_TEMP(126), 182);
-    183: STORE_PERM(LOAD_TEMP(126), 183);
-    184: STORE_PERM(LOAD_TEMP(126), 184);
-    185: STORE_PERM(LOAD_TEMP(126), 185);
-    186: STORE_PERM(LOAD_TEMP(126), 186);
-    187: STORE_PERM(LOAD_TEMP(126), 187);
-    188: STORE_PERM(LOAD_TEMP(126), 188);
-    189: STORE_PERM(LOAD_TEMP(126), 189);
-    190: STORE_PERM(LOAD_TEMP(126), 190);
-    191: STORE_PERM(LOAD_TEMP(126), 191);
-    192: STORE_PERM(LOAD_TEMP(126), 192);
-    193: STORE_PERM(LOAD_TEMP(126), 193);
-    194: STORE_PERM(LOAD_TEMP(126), 194);
-    195: STORE_PERM(LOAD_TEMP(126), 195);
-    196: STORE_PERM(LOAD_TEMP(126), 196);
-    197: STORE_PERM(LOAD_TEMP(126), 197);
-    198: STORE_PERM(LOAD_TEMP(126), 198);
-    199: STORE_PERM(LOAD_TEMP(126), 199);
-    200: STORE_PERM(LOAD_TEMP(126), 200);
-    201: STORE_PERM(LOAD_TEMP(126), 201);
-    202: STORE_PERM(LOAD_TEMP(126), 202);
-    203: STORE_PERM(LOAD_TEMP(126), 203);
-    204: STORE_PERM(LOAD_TEMP(126), 204);
-    205: STORE_PERM(LOAD_TEMP(126), 205);
-    206: STORE_PERM(LOAD_TEMP(126), 206);
-    207: STORE_PERM(LOAD_TEMP(126), 207);
-    208: STORE_PERM(LOAD_TEMP(126), 208);
-    209: STORE_PERM(LOAD_TEMP(126), 209);
-    210: STORE_PERM(LOAD_TEMP(126), 210);
-    211: STORE_PERM(LOAD_TEMP(126), 211);
-    212: STORE_PERM(LOAD_TEMP(126), 212);
-    213: STORE_PERM(LOAD_TEMP(126), 213);
-    214: STORE_PERM(LOAD_TEMP(126), 214);
-    215: STORE_PERM(LOAD_TEMP(126), 215);
-    216: STORE_PERM(LOAD_TEMP(126), 216);
-    217: STORE_PERM(LOAD_TEMP(126), 217);
-    218: STORE_PERM(LOAD_TEMP(126), 218);
-    219: STORE_PERM(LOAD_TEMP(126), 219);
-    220: STORE_PERM(LOAD_TEMP(126), 220);
-    221: STORE_PERM(LOAD_TEMP(126), 221);
-    222: STORE_PERM(LOAD_TEMP(126), 222);
-    223: STORE_PERM(LOAD_TEMP(126), 223);
-    224: STORE_PERM(LOAD_TEMP(126), 224);
-    225: STORE_PERM(LOAD_TEMP(126), 225);
-    226: STORE_PERM(LOAD_TEMP(126), 226);
-    227: STORE_PERM(LOAD_TEMP(126), 227);
-    228: STORE_PERM(LOAD_TEMP(126), 228);
-    229: STORE_PERM(LOAD_TEMP(126), 229);
-    230: STORE_PERM(LOAD_TEMP(126), 230);
-    231: STORE_PERM(LOAD_TEMP(126), 231);
-    232: STORE_PERM(LOAD_TEMP(126), 232);
-    233: STORE_PERM(LOAD_TEMP(126), 233);
-    234: STORE_PERM(LOAD_TEMP(126), 234);
-    235: STORE_PERM(LOAD_TEMP(126), 235);
-    236: STORE_PERM(LOAD_TEMP(126), 236);
-    237: STORE_PERM(LOAD_TEMP(126), 237);
-    238: STORE_PERM(LOAD_TEMP(126), 238);
-    239: STORE_PERM(LOAD_TEMP(126), 239);
-    240: STORE_PERM(LOAD_TEMP(126), 240);
-    241: STORE_PERM(LOAD_TEMP(126), 241);
-    242: STORE_PERM(LOAD_TEMP(126), 242);
-    243: STORE_PERM(LOAD_TEMP(126), 243);
-    244: STORE_PERM(LOAD_TEMP(126), 244);
-    245: STORE_PERM(LOAD_TEMP(126), 245);
-    246: STORE_PERM(LOAD_TEMP(126), 246);
-    247: STORE_PERM(LOAD_TEMP(126), 247);
-    248: STORE_PERM(LOAD_TEMP(126), 248);
-    249: STORE_PERM(LOAD_TEMP(126), 249);
-    250: STORE_PERM(LOAD_TEMP(126), 250);
-    251: STORE_PERM(LOAD_TEMP(126), 251);
-    252: STORE_PERM(LOAD_TEMP(126), 252);
-    253: STORE_PERM(LOAD_TEMP(126), 253);
-    254: STORE_PERM(LOAD_TEMP(126), 254);
-    255: STORE_PERM(LOAD_TEMP(126), 255);
 }
 
 switch(FEAT_INDUSTRIES, SELF, load_perm_variable, [
@@ -953,177 +715,81 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, [
     82: LOAD_PERM(82);
     83: LOAD_PERM(83);
     84: LOAD_PERM(84);
-    85: LOAD_PERM(85);
-    86: LOAD_PERM(86);
-    87: LOAD_PERM(87);
-    88: LOAD_PERM(88);
-    89: LOAD_PERM(89);
-    90: LOAD_PERM(90);
-    91: LOAD_PERM(91);
-    92: LOAD_PERM(92);
-    93: LOAD_PERM(93);
-    94: LOAD_PERM(94);
-    95: LOAD_PERM(95);
-    96: LOAD_PERM(96);
-    97: LOAD_PERM(97);
-    98: LOAD_PERM(98);
-    99: LOAD_PERM(99);
-    100: LOAD_PERM(100);
-    101: LOAD_PERM(101);
-    102: LOAD_PERM(102);
-    103: LOAD_PERM(103);
-    104: LOAD_PERM(104);
-    105: LOAD_PERM(105);
-    106: LOAD_PERM(106);
-    107: LOAD_PERM(107);
-    108: LOAD_PERM(108);
-    109: LOAD_PERM(109);
-    110: LOAD_PERM(110);
-    111: LOAD_PERM(111);
-    112: LOAD_PERM(112);
-    113: LOAD_PERM(113);
-    114: LOAD_PERM(114);
-    115: LOAD_PERM(115);
-    116: LOAD_PERM(116);
-    117: LOAD_PERM(117);
-    118: LOAD_PERM(118);
-    119: LOAD_PERM(119);
-    120: LOAD_PERM(120);
-    121: LOAD_PERM(121);
-    122: LOAD_PERM(122);
-    123: LOAD_PERM(123);
-    124: LOAD_PERM(124);
-    125: LOAD_PERM(125);
-    126: LOAD_PERM(126);
-    127: LOAD_PERM(127);
-    128: LOAD_PERM(128);
-    129: LOAD_PERM(129);
-    130: LOAD_PERM(130);
-    131: LOAD_PERM(131);
-    132: LOAD_PERM(132);
-    133: LOAD_PERM(133);
-    134: LOAD_PERM(134);
-    135: LOAD_PERM(135);
-    136: LOAD_PERM(136);
-    137: LOAD_PERM(137);
-    138: LOAD_PERM(138);
-    139: LOAD_PERM(139);
-    140: LOAD_PERM(140);
-    141: LOAD_PERM(141);
-    142: LOAD_PERM(142);
-    143: LOAD_PERM(143);
-    144: LOAD_PERM(144);
-    145: LOAD_PERM(145);
-    146: LOAD_PERM(146);
-    147: LOAD_PERM(147);
-    148: LOAD_PERM(148);
-    149: LOAD_PERM(149);
-    150: LOAD_PERM(150);
-    151: LOAD_PERM(151);
-    152: LOAD_PERM(152);
-    153: LOAD_PERM(153);
-    154: LOAD_PERM(154);
-    155: LOAD_PERM(155);
-    156: LOAD_PERM(156);
-    157: LOAD_PERM(157);
-    158: LOAD_PERM(158);
-    159: LOAD_PERM(159);
-    160: LOAD_PERM(160);
-    161: LOAD_PERM(161);
-    162: LOAD_PERM(162);
-    163: LOAD_PERM(163);
-    164: LOAD_PERM(164);
-    165: LOAD_PERM(165);
-    166: LOAD_PERM(166);
-    167: LOAD_PERM(167);
-    168: LOAD_PERM(168);
-    169: LOAD_PERM(169);
-    170: LOAD_PERM(170);
-    171: LOAD_PERM(171);
-    172: LOAD_PERM(172);
-    173: LOAD_PERM(173);
-    174: LOAD_PERM(174);
-    175: LOAD_PERM(175);
-    176: LOAD_PERM(176);
-    177: LOAD_PERM(177);
-    178: LOAD_PERM(178);
-    179: LOAD_PERM(179);
-    180: LOAD_PERM(180);
-    181: LOAD_PERM(181);
-    182: LOAD_PERM(182);
-    183: LOAD_PERM(183);
-    184: LOAD_PERM(184);
-    185: LOAD_PERM(185);
-    186: LOAD_PERM(186);
-    187: LOAD_PERM(187);
-    188: LOAD_PERM(188);
-    189: LOAD_PERM(189);
-    190: LOAD_PERM(190);
-    191: LOAD_PERM(191);
-    192: LOAD_PERM(192);
-    193: LOAD_PERM(193);
-    194: LOAD_PERM(194);
-    195: LOAD_PERM(195);
-    196: LOAD_PERM(196);
-    197: LOAD_PERM(197);
-    198: LOAD_PERM(198);
-    199: LOAD_PERM(199);
-    200: LOAD_PERM(200);
-    201: LOAD_PERM(201);
-    202: LOAD_PERM(202);
-    203: LOAD_PERM(203);
-    204: LOAD_PERM(204);
-    205: LOAD_PERM(205);
-    206: LOAD_PERM(206);
-    207: LOAD_PERM(207);
-    208: LOAD_PERM(208);
-    209: LOAD_PERM(209);
-    210: LOAD_PERM(210);
-    211: LOAD_PERM(211);
-    212: LOAD_PERM(212);
-    213: LOAD_PERM(213);
-    214: LOAD_PERM(214);
-    215: LOAD_PERM(215);
-    216: LOAD_PERM(216);
-    217: LOAD_PERM(217);
-    218: LOAD_PERM(218);
-    219: LOAD_PERM(219);
-    220: LOAD_PERM(220);
-    221: LOAD_PERM(221);
-    222: LOAD_PERM(222);
-    223: LOAD_PERM(223);
-    224: LOAD_PERM(224);
-    225: LOAD_PERM(225);
-    226: LOAD_PERM(226);
-    227: LOAD_PERM(227);
-    228: LOAD_PERM(228);
-    229: LOAD_PERM(229);
-    230: LOAD_PERM(230);
-    231: LOAD_PERM(231);
-    232: LOAD_PERM(232);
-    233: LOAD_PERM(233);
-    234: LOAD_PERM(234);
-    235: LOAD_PERM(235);
-    236: LOAD_PERM(236);
-    237: LOAD_PERM(237);
-    238: LOAD_PERM(238);
-    239: LOAD_PERM(239);
-    240: LOAD_PERM(240);
-    241: LOAD_PERM(241);
-    242: LOAD_PERM(242);
-    243: LOAD_PERM(243);
-    244: LOAD_PERM(244);
-    245: LOAD_PERM(245);
-    246: LOAD_PERM(246);
-    247: LOAD_PERM(247);
-    248: LOAD_PERM(248);
-    249: LOAD_PERM(249);
-    250: LOAD_PERM(250);
-    251: LOAD_PERM(251);
-    252: LOAD_PERM(252);
-    253: LOAD_PERM(253);
-    254: LOAD_PERM(254);
-    255: LOAD_PERM(255);
+}
+
+switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers_helper, [
+    STORE_PERM(0, LOAD_TEMP(0)),
+    STORE_TEMP(LOAD_TEMP(0)+1, 0),
+    LOAD_TEMP(0)
+]) {
+    255: return 0;
+    1;
+}
+
+produce(recurse_initialize_industry_registers_helper,
+        [],
+        [],
+        initialize_industry_registers_helper())
+
+switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers, [
+    STORE_TEMP(0, 0),
+    initialize_industry_registers_helper()
+]) {
+    recurse_initialize_industry_registers_helper;
+}
+
+// TEMP_000         :Input cargo number
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
+    STORE_PERM(0, LOAD_TEMP(127)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
+]) {
+    return 0;
+}
+
+// TEMP_000         :Input cargo number         [0,1,2]
+// TEMP_001         :Index offset of register to shift  [0..26]
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
+    // Add current offset register to total for this input cargo
+    STORE_TEMP(LOAD_TEMP(127), 125),    // cache index in 125
+    STORE_TEMP(LOAD_TEMP(127)-28+LOAD_TEMP(1)+1, 127),  // store sub index to index
+    STORE_TEMP(load_perm_variable(), 124),  // get the perm variable in that index, and store to 124
+    STORE_TEMP(LOAD_TEMP(125), 127),    // put the cached index back in index
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(124), 126),   // add and put in assign variable
+    store_perm_variable(),  // assign value in 126 to 127
+    STORE_TEMP(LOAD_TEMP(1)+1, 1),              // Increment index offset
+    LOAD_TEMP(1)                                // Make decision based off of index offset
+]) {
+    27: production_cycle_tick_closer;           // If index offset is 27, we're finished
+    1;                // Otherwise, recurse
+}
+
+produce(recurse_production_cycle_tick_cargo,
+        [],
+        [],
+        production_cycle_tick_cargo())
+
+// TEMP_000         :Input cargo number
+// TEMP_001         :Index offset of register to shift
+// TEMP_127         :Index of register containing total
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, [
+    STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),       // Store index of sum register
+    STORE_PERM(0, LOAD_TEMP(127)),              // Reset total
+    STORE_TEMP(0, 1),                            // Store 0 in offset
+    production_cycle_tick_cargo()
+]) {
+    recurse_production_cycle_tick_cargo;                 // Kick off recursive summation
+}
+
+// TEMP_000         :Input cargo number         [0,1,2]
+switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
+    STORE_TEMP(0, 0),                           // Do input cargo 0
+    production_cycle_tick_helper(),
+    STORE_TEMP(1, 0),                           // Do input cargo 1
+    production_cycle_tick_helper(),
+    STORE_TEMP(2, 0),                           // Do input cargo 2
+    production_cycle_tick_helper()
+]) {
+    return;
 }
 
 // TEMP_000         :Input cargo number:        [0,1,2]
