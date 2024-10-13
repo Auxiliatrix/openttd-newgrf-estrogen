@@ -1,23 +1,2 @@
-VERSION                                                 :0.1.1
+VERSION                                                 :0.1.2
 TITLE                                                   :OpenTTD Estrogen
-
-STR_INDUSTRY_BOOST_NORMAL                               :{BLACK}Current production level: {WHITE}Normal
-STR_INDUSTRY_BOOST_ENHANCED                             :{BLACK}Current production level: {WHITE}Enhanced
-STR_INDUSTRY_BOOST_GUNG_HO                              :{BLACK}Current production level: {WHITE}Gung-Ho
-
-STR_INDUSTRY_LEVEL_BOOST_INFO_ENGS                      :{BLACK}Production level can be boosted by delivering {WHITE}Engineering Supplies.
-STR_INDUSTRY_LEVEL_BOOST_INFO_FERT                      :{BLACK}Production level can be boosted by delivering {WHITE}Fertilizer.
-
-STR_INDUSTRY_LEVEL_BOOST_INFO_1_UNMET                   :{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 16 crates every three months.
-STR_INDUSTRY_LEVEL_BOOST_INFO_1_MET                     :{BLACK}To maintain this level of production, deliver at least 16 crates every three months.
-STR_INDUSTRY_LEVEL_BOOST_INFO_2_UNMET                   :{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.
-STR_INDUSTRY_LEVEL_BOOST_INFO_2_MET                     :{BLACK}To maintain this level of production, deliver at least 80 crates every three months.
-
-STR_INDUSTRY_LEVEL_BOOST_DELIVERED                      :{BLACK}Crates delivered in the last three months: {STRING}
-
-STR_INDUSTRY_RATIO_BOOST_INFO                           :{BLACK}Production ratio can be boosted by delivering a variety of cargo.
-
-STR_INDUSTRY_RATIO_BOOST_INFO_1_UNMET                   :{BLACK}For {WHITE}Enhanced {BLACK}production, deliver two kinds of accepted cargo at least once every three months.
-STR_INDUSTRY_RATIO_BOOST_INFO_1_MET                     :{BLACK}To maintain this level of production, deliver two kinds of accepted cargo at least once every three months.
-STR_INDUSTRY_RATIO_BOOST_INFO_2_UNMET                   :{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver three kinds of accepted cargo.
-STR_INDUSTRY_RATIO_BOOST_INFO_2_MET                     :{BLACK}To maintain this level of production, deliver at least three kinds of accepted cargo every three months.
