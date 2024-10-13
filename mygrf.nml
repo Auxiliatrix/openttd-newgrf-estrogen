@@ -523,96 +523,6 @@ tilelayout layout_default {
 // Industry Scripts
 // ----------------------------------------------------------------
 
-switch(FEAT_INDUSTRIES, SELF, store_perm_variable, [
-    LOAD_TEMP(127)
-]) {
-    0: STORE_PERM(LOAD_TEMP(126), 0);
-    1: STORE_PERM(LOAD_TEMP(126), 1);
-    2: STORE_PERM(LOAD_TEMP(126), 2);
-    3: STORE_PERM(LOAD_TEMP(126), 3);
-    4: STORE_PERM(LOAD_TEMP(126), 4);
-    5: STORE_PERM(LOAD_TEMP(126), 5);
-    6: STORE_PERM(LOAD_TEMP(126), 6);
-    7: STORE_PERM(LOAD_TEMP(126), 7);
-    8: STORE_PERM(LOAD_TEMP(126), 8);
-    9: STORE_PERM(LOAD_TEMP(126), 9);
-    10: STORE_PERM(LOAD_TEMP(126), 10);
-    11: STORE_PERM(LOAD_TEMP(126), 11);
-    12: STORE_PERM(LOAD_TEMP(126), 12);
-    13: STORE_PERM(LOAD_TEMP(126), 13);
-    14: STORE_PERM(LOAD_TEMP(126), 14);
-    15: STORE_PERM(LOAD_TEMP(126), 15);
-    16: STORE_PERM(LOAD_TEMP(126), 16);
-    17: STORE_PERM(LOAD_TEMP(126), 17);
-    18: STORE_PERM(LOAD_TEMP(126), 18);
-    19: STORE_PERM(LOAD_TEMP(126), 19);
-    20: STORE_PERM(LOAD_TEMP(126), 20);
-    21: STORE_PERM(LOAD_TEMP(126), 21);
-    22: STORE_PERM(LOAD_TEMP(126), 22);
-    23: STORE_PERM(LOAD_TEMP(126), 23);
-    24: STORE_PERM(LOAD_TEMP(126), 24);
-    25: STORE_PERM(LOAD_TEMP(126), 25);
-    26: STORE_PERM(LOAD_TEMP(126), 26);
-    27: STORE_PERM(LOAD_TEMP(126), 27);
-    28: STORE_PERM(LOAD_TEMP(126), 28);
-    29: STORE_PERM(LOAD_TEMP(126), 29);
-    30: STORE_PERM(LOAD_TEMP(126), 30);
-    31: STORE_PERM(LOAD_TEMP(126), 31);
-    32: STORE_PERM(LOAD_TEMP(126), 32);
-    33: STORE_PERM(LOAD_TEMP(126), 33);
-    34: STORE_PERM(LOAD_TEMP(126), 34);
-    35: STORE_PERM(LOAD_TEMP(126), 35);
-    36: STORE_PERM(LOAD_TEMP(126), 36);
-    37: STORE_PERM(LOAD_TEMP(126), 37);
-    38: STORE_PERM(LOAD_TEMP(126), 38);
-    39: STORE_PERM(LOAD_TEMP(126), 39);
-    40: STORE_PERM(LOAD_TEMP(126), 40);
-    41: STORE_PERM(LOAD_TEMP(126), 41);
-    42: STORE_PERM(LOAD_TEMP(126), 42);
-    43: STORE_PERM(LOAD_TEMP(126), 43);
-    44: STORE_PERM(LOAD_TEMP(126), 44);
-    45: STORE_PERM(LOAD_TEMP(126), 45);
-    46: STORE_PERM(LOAD_TEMP(126), 46);
-    47: STORE_PERM(LOAD_TEMP(126), 47);
-    48: STORE_PERM(LOAD_TEMP(126), 48);
-    49: STORE_PERM(LOAD_TEMP(126), 49);
-    50: STORE_PERM(LOAD_TEMP(126), 50);
-    51: STORE_PERM(LOAD_TEMP(126), 51);
-    52: STORE_PERM(LOAD_TEMP(126), 52);
-    53: STORE_PERM(LOAD_TEMP(126), 53);
-    54: STORE_PERM(LOAD_TEMP(126), 54);
-    55: STORE_PERM(LOAD_TEMP(126), 55);
-    56: STORE_PERM(LOAD_TEMP(126), 56);
-    57: STORE_PERM(LOAD_TEMP(126), 57);
-    58: STORE_PERM(LOAD_TEMP(126), 58);
-    59: STORE_PERM(LOAD_TEMP(126), 59);
-    60: STORE_PERM(LOAD_TEMP(126), 60);
-    61: STORE_PERM(LOAD_TEMP(126), 61);
-    62: STORE_PERM(LOAD_TEMP(126), 62);
-    63: STORE_PERM(LOAD_TEMP(126), 63);
-    64: STORE_PERM(LOAD_TEMP(126), 64);
-    65: STORE_PERM(LOAD_TEMP(126), 65);
-    66: STORE_PERM(LOAD_TEMP(126), 66);
-    67: STORE_PERM(LOAD_TEMP(126), 67);
-    68: STORE_PERM(LOAD_TEMP(126), 68);
-    69: STORE_PERM(LOAD_TEMP(126), 69);
-    70: STORE_PERM(LOAD_TEMP(126), 70);
-    71: STORE_PERM(LOAD_TEMP(126), 71);
-    72: STORE_PERM(LOAD_TEMP(126), 72);
-    73: STORE_PERM(LOAD_TEMP(126), 73);
-    74: STORE_PERM(LOAD_TEMP(126), 74);
-    75: STORE_PERM(LOAD_TEMP(126), 75);
-    76: STORE_PERM(LOAD_TEMP(126), 76);
-    77: STORE_PERM(LOAD_TEMP(126), 77);
-    78: STORE_PERM(LOAD_TEMP(126), 78);
-    79: STORE_PERM(LOAD_TEMP(126), 79);
-    80: STORE_PERM(LOAD_TEMP(126), 80);
-    81: STORE_PERM(LOAD_TEMP(126), 81);
-    82: STORE_PERM(LOAD_TEMP(126), 82);
-    83: STORE_PERM(LOAD_TEMP(126), 83);
-    84: STORE_PERM(LOAD_TEMP(126), 84);
-}
-
 switch(FEAT_INDUSTRIES, SELF, load_perm_variable, [
     LOAD_TEMP(127)
 ]) {
@@ -726,48 +636,89 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers, [
 
 // TEMP_000         :Input cargo number
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
-    STORE_PERM(0, LOAD_TEMP(127)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
+    STORE_PERM(0, LOAD_TEMP(125)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
 ]) {
     return 0;
 }
 
-// TEMP_000         :Input cargo number         [0,1,2]
-// TEMP_001         :Index offset of register to shift  [0..26]
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_cargo, [
-    // Add current offset register to total for this input cargo
-    STORE_TEMP(LOAD_TEMP(127), 125),    // cache index in 125
-    STORE_TEMP(LOAD_TEMP(127)-28+LOAD_TEMP(1)+1, 127),  // store sub index to index
-    STORE_TEMP(load_perm_variable(), 124),  // get the perm variable in that index, and store to 124
-    STORE_TEMP(LOAD_TEMP(125), 127),    // put the cached index back in index
-    STORE_TEMP(load_perm_variable()+LOAD_TEMP(124), 126),   // add and put in assign variable
-    store_perm_variable(),  // assign value in 126 to 127
-    STORE_TEMP(LOAD_TEMP(1)+1, 1),              // Increment index offset
-    LOAD_TEMP(1)                                // Make decision based off of index offset
+switch(FEAT_INDUSTRIES, SELF, iterate_production_cycle_tick_cargo, [
+    STORE_TEMP(LOAD_TEMP(127), 125),
+    STORE_TEMP(0, 126),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+1, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+2, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+3, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+4, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+5, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+6, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+7, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+8, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+9, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+10, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+11, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+12, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+13, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+14, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+15, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+16, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+17, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+18, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+19, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+20, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+21, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+22, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+23, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+24, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+25, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+26, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_TEMP(LOAD_TEMP(125)-28+27, 127),
+    STORE_TEMP(load_perm_variable()+LOAD_TEMP(126), 126),
+    STORE_PERM(LOAD_TEMP(126), LOAD_TEMP(125))
 ]) {
-    27: production_cycle_tick_closer;           // If index offset is 27, we're finished
-    1;                // Otherwise, recurse
+    production_cycle_tick_closer;
 }
-
-produce(recurse_production_cycle_tick_cargo,
-        [],
-        [],
-        production_cycle_tick_cargo())
 
 // TEMP_000         :Input cargo number
-// TEMP_001         :Index offset of register to shift
 // TEMP_127         :Index of register containing total
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, [
-    STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
     STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),       // Store index of sum register
-    STORE_PERM(0, LOAD_TEMP(127)),              // Reset total
-    STORE_TEMP(0, 1),                            // Store 0 in offset
-    production_cycle_tick_cargo()
+    STORE_PERM(0, LOAD_TEMP(127)),              // Reset total in sum register
 ]) {
-    recurse_production_cycle_tick_cargo;                 // Kick off recursive summation
+    iterate_production_cycle_tick_cargo;        // Kick off summation
 }
 
+// TODO: somewhere in this code, the register 28 is being set to 0. we need to fix that.
+// in the helper function, we reset the total in STORE_PERM(0, LOAD_TEMP(127))
+// then, we run the production_cycle_tick to get the new sum. this is the issue.
 // TEMP_000         :Input cargo number         [0,1,2]
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
+    STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
     STORE_TEMP(0, 0),                           // Do input cargo 0
     production_cycle_tick_helper(),
     STORE_TEMP(1, 0),                           // Do input cargo 1
@@ -784,7 +735,7 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
 switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, [
     STORE_TEMP(1+28*LOAD_TEMP(0)+LOAD_PERM(0), 127),                     // Get register representing production cycle
     STORE_TEMP(load_perm_variable()+LOAD_TEMP(1), 126),
-    store_perm_variable()
+    STORE_PERM(LOAD_TEMP(126), LOAD_TEMP(127))
 ]) {
     return;
 }
@@ -792,18 +743,27 @@ switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, [
 // Return amount of total cargo consumed
 switch(FEAT_INDUSTRIES, SELF, do_cargo_accept_cycle, [
     STORE_TEMP(0, 5),
+
+    STORE_TEMP(LOAD_TEMP(5) + LOAD_TEMP(2), 5),
+
     STORE_TEMP(0, 0),
     STORE_TEMP(LOAD_TEMP(2), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
+    increment_accepted_cargo(),
+    STORE_PERM(20, 28), // TODO: Remove this debug line
+
+    STORE_TEMP(LOAD_TEMP(5) + LOAD_TEMP(3), 5),
+
     STORE_TEMP(1, 0),
-    STORE_TEMP(LOAD_TEMP(3), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
+    STORE_TEMP(LOAD_TEMP(3), 1),    
+    increment_accepted_cargo(),
+    
+    STORE_TEMP(LOAD_TEMP(5) + LOAD_TEMP(4), 5),
+
     STORE_TEMP(2, 0),
     STORE_TEMP(LOAD_TEMP(4), 1),
-    STORE_TEMP(LOAD_TEMP(5) + increment_accepted_cargo(), 5),
-    LOAD_TEMP(5)
+    increment_accepted_cargo()
 ]) {
-    return LOAD_TEMP(5);
+    return;
 }
 
 switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multiplier, LOAD_PERM(28)) {
@@ -937,7 +897,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
     STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5)
+    do_cargo_accept_cycle()
 ]) {
     produce_accept_quarry;
 }
@@ -995,7 +955,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
     STORE_TEMP(incoming_cargo_waiting("ENGS"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
 ]) {
     produce_accept_mineral_mine;
 }
@@ -1052,7 +1012,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_corn_farm;
@@ -1110,7 +1070,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_soy_farm;
@@ -1168,7 +1128,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
     STORE_TEMP(incoming_cargo_waiting("FERT"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(fertilizer_multiplier(), 6)
 ]) {
     produce_accept_yam_farm;
@@ -1219,14 +1179,14 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(2);],
-    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6);]
+    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6) / 2;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
     STORE_TEMP(incoming_cargo_waiting("SAND"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_glassworks;
@@ -1282,7 +1242,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
     STORE_TEMP(incoming_cargo_waiting("SALT"), 2),
     STORE_TEMP(incoming_cargo_waiting("PTSH"), 3),
     STORE_TEMP(incoming_cargo_waiting("MNRL"), 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_chemical_plant;
@@ -1342,7 +1302,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
     STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_biolab;
@@ -1398,7 +1358,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
     STORE_TEMP(incoming_cargo_waiting("CORN"), 2),
     STORE_TEMP(0, 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(1, 6)
 ]) {
     produce_accept_distillery;
@@ -1454,7 +1414,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
     STORE_TEMP(incoming_cargo_waiting("SOYB"), 2),
     STORE_TEMP(incoming_cargo_waiting("YAMS"), 3),
     STORE_TEMP(incoming_cargo_waiting("ALCH"), 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_processing_plant;
@@ -1513,7 +1473,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
     STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(double_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmaceutical_plant_e;
@@ -1572,7 +1532,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 2),
     STORE_TEMP(incoming_cargo_waiting("CHEM"), 3),
     STORE_TEMP(0, 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(double_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmaceutical_plant_t;
@@ -1631,7 +1591,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
     STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
     STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
     STORE_TEMP(incoming_cargo_waiting("RWES"), 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_pharmacy_e;
@@ -1690,7 +1650,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
     STORE_TEMP(incoming_cargo_waiting("VIAL"), 2),
     STORE_TEMP(incoming_cargo_waiting("VGOL"), 3),
     STORE_TEMP(incoming_cargo_waiting("RWTS"), 4),
-    STORE_TEMP(do_cargo_accept_cycle(), 5),
+    do_cargo_accept_cycle(),
     STORE_TEMP(triple_combo_multiplier(), 6)
 ]) {
     produce_accept_pharamacy_t;
