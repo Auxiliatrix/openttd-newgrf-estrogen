@@ -41,7 +41,7 @@ cargotable {
 
 disable_item(FEAT_CARGOS, 1);
 disable_item(FEAT_CARGOS, 3, 11);
-disable_item(FEAT_INDUSTRIES, 17, 36);
+disable_item(FEAT_INDUSTRIES, 0, 36);
 
 switch (FEAT_INDUSTRIES, SELF, availability_in_estrogen, hormone) {
     0: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
