@@ -1,4 +1,4 @@
-VERSION                                                 :0.1.0
+VERSION                                                 :0.1.1
 TITLE                                                   :OpenTTD Estrogen
 
 STR_INDUSTRY_BOOST_NORMAL                               :{BLACK}Current production level: {WHITE}Normal

@@ -36,26 +36,12 @@ grf {
 // ----------------------------------------------------------------
 
 cargotable {
-    PASS, GOOD, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
+    PASS, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
 }
 
 disable_item(FEAT_CARGOS, 1);
-disable_item(FEAT_CARGOS, 3, 4);
-disable_item(FEAT_CARGOS, 6, 11);
-disable_item(FEAT_INDUSTRIES, 0, 36);
-disable_item(FEAT_TRAINS, 27, 31);
-disable_item(FEAT_TRAINS, 33, 53);
-disable_item(FEAT_TRAINS, 59, 61);
-disable_item(FEAT_TRAINS, 63, 83);
-disable_item(FEAT_TRAINS, 89, 93);
-disable_item(FEAT_TRAINS, 95, 115);
-disable_item(FEAT_ROADVEHS, 7, 9);
-disable_item(FEAT_ROADVEHS, 16, 21);
-disable_item(FEAT_ROADVEHS, 25, 87);
-
-// switch(FEAT_INDUSTRIES, SELF, availability_default, 0) {
-//     CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
-// }
+disable_item(FEAT_CARGOS, 3, 11);
+disable_item(FEAT_INDUSTRIES, 17, 36);
 
 switch (FEAT_INDUSTRIES, SELF, availability_in_estrogen, hormone) {
     0: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
@@ -357,7 +343,7 @@ item (FEAT_CARGOS, item_diosgenin) {
         cargo_label: "DIOS";
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
-        cargo_classes: bitmask(CC_POWDERIZED);
+        cargo_classes: bitmask(CC_HAZARDOUS, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 40;
         price_factor: 170;
@@ -378,7 +364,7 @@ item (FEAT_CARGOS, item_raw_estrone) {
         cargo_label: "RWES";
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
-        cargo_classes: bitmask(CC_POWDERIZED);
+        cargo_classes: bitmask(CC_HAZARDOUS, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 160;
@@ -399,7 +385,7 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         cargo_label: "RWTS";
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
-        cargo_classes: bitmask(CC_POWDERIZED);
+        cargo_classes: bitmask(CC_HAZARDOUS, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 160;
@@ -913,7 +899,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_port, production_cycle_tick()) {
 
 item (FEAT_INDUSTRIES, industry_port) {
     property {
-        substitute: 0x25;
+        substitute: 0x00;
         name: string(STR_INDUSTRY_NAME_PORT);
         nearby_station_name: string(STR_INDUSTRY_STATION_PORT);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
@@ -968,7 +954,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_quarry, production_cycle_tick())
 
 item (FEAT_INDUSTRIES, industry_quarry) {
     property {
-        substitute: 0x26;
+        substitute: 0x01;
         name: string(STR_INDUSTRY_NAME_QUARRY);
         nearby_station_name: string(STR_INDUSTRY_STATION_QUARRY);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
@@ -1026,7 +1012,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_mineral_mine, production_cycle_t
 
 item (FEAT_INDUSTRIES, industry_mineral_mine) {
     property {
-        substitute: 0x27;
+        substitute: 0x02;
         name: string(STR_INDUSTRY_NAME_MINERAL_MINE);
         nearby_station_name: string(STR_INDUSTRY_STATION_MINERAL_MINE);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
@@ -1084,7 +1070,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_corn_farm, production_cycle_tick
 
 item (FEAT_INDUSTRIES, industry_corn_farm) {
     property {
-        substitute: 0x28;
+        substitute: 0x03;
         name: string(STR_INDUSTRY_NAME_CORN_FARM);
         nearby_station_name: string(STR_INDUSTRY_STATION_CORN_FARM);
         life_type: IND_LIFE_TYPE_ORGANIC;
@@ -1142,7 +1128,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_soy_farm, production_cycle_tick(
 
 item (FEAT_INDUSTRIES, industry_soy_farm) {
     property {
-        substitute: 0x29;
+        substitute: 0x04;
         name: string(STR_INDUSTRY_NAME_SOY_FARM);
         nearby_station_name: string(STR_INDUSTRY_STATION_SOY_FARM);
         life_type: IND_LIFE_TYPE_ORGANIC;
@@ -1200,7 +1186,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_yam_farm, production_cycle_tick(
 
 item (FEAT_INDUSTRIES, industry_yam_farm) {
     property {
-        substitute: 0x2A;
+        substitute: 0x05;
         name: string(STR_INDUSTRY_NAME_YAM_FARM);
         nearby_station_name: string(STR_INDUSTRY_STATION_YAM_FARM);
         life_type: IND_LIFE_TYPE_ORGANIC;
@@ -1233,7 +1219,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(2);],
-    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6) / 3; GOOD: LOAD_TEMP(5) * LOAD_TEMP(6) / 3;]
+    [VIAL: LOAD_TEMP(5) * LOAD_TEMP(6);]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
@@ -1248,7 +1234,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [], 
-    [VIAL:6;GOOD:4;],
+    [VIAL:6;],
     0
 )
 
@@ -1258,14 +1244,13 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, production_cycle_tic
 
 item (FEAT_INDUSTRIES, industry_glassworks) {
     property {
-        substitute: 0x2B;
+        substitute: 0x06;
         name: string(STR_INDUSTRY_NAME_GLASSWORKS);
         nearby_station_name: string(STR_INDUSTRY_STATION_GLASSWORKS);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("SAND"),
             produce_cargo("VIAL", 0),
-            produce_cargo("GOOD", 0)
         ];
 
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
@@ -1315,7 +1300,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_chemical_plant, production_cycle
 
 item (FEAT_INDUSTRIES, industry_chemical_plant) {
     property {
-        substitute: 0x2C;
+        substitute: 0x07;
         name: string(STR_INDUSTRY_NAME_CHEMICAL_PLANT);
         nearby_station_name: string(STR_INDUSTRY_STATION_CHEMICAL_PLANT);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1375,7 +1360,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, production_cycle_tick())
 
 item (FEAT_INDUSTRIES, industry_biolab) {
     property {
-        substitute: 0x2D;
+        substitute: 0x08;
         name: string(STR_INDUSTRY_NAME_BIOLAB);
         nearby_station_name: string(STR_INDUSTRY_STATION_BIOLAB);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1431,7 +1416,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_distillery, production_cycle_tic
 
 item (FEAT_INDUSTRIES, industry_distillery) {
     property {
-        substitute: 0x2E;
+        substitute: 0x09;
         name: string(STR_INDUSTRY_NAME_DISTILLERY);
         nearby_station_name: string(STR_INDUSTRY_STATION_DISTILLERY);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1487,7 +1472,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, production_cyc
 
 item (FEAT_INDUSTRIES, industry_processing_plant) {
     property {
-        substitute: 0x2F;
+        substitute: 0x0A;
         name: string(STR_INDUSTRY_NAME_PROCESSING_PLANT);
         nearby_station_name: string(STR_INDUSTRY_STATION_PROCESSING_PLANT);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1546,7 +1531,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_e, producti
 
 item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
     property {
-        substitute: 0x30;
+        substitute: 0x0B;
         name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E);
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1605,7 +1590,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmaceutical_plant_t, producti
 
 item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
     property {
-        substitute: 0x31;
+        substitute: 0x0C;
         name: string(STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T);
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1664,7 +1649,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharmacy_e, production_cycle_tic
 
 item (FEAT_INDUSTRIES, industry_pharmacy_e) {
     property {
-        substitute: 0x32;
+        substitute: 0x0D;
         name: string(STR_INDUSTRY_NAME_PHARMACY_E);
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_E);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1723,7 +1708,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_pharamacy_t, production_cycle_ti
 
 item (FEAT_INDUSTRIES, industry_pharamacy_t) {
     property {
-        substitute: 0x33;
+        substitute: 0x0E;
         name: string(STR_INDUSTRY_NAME_PHARMACY_T);
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_T);
         life_type: IND_LIFE_TYPE_PROCESSING;
@@ -1761,7 +1746,7 @@ produce(produce_accept_gender_clinic_e,
 
 item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
     property {
-        substitute: 0x34;
+        substitute: 0x0F;
         name: string(STR_INDUSTRY_NAME_GENDER_CLINIC_E);
         nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC_E);
         life_type: IND_LIFE_TYPE_BLACK_HOLE;
@@ -1795,7 +1780,7 @@ produce(produce_accept_gender_clinic_t,
 
 item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
     property {
-        substitute: 0x35;
+        substitute: 0x10;
         name: string(STR_INDUSTRY_NAME_GENDER_CLINIC_T);
         nearby_station_name: string(STR_INDUSTRY_STATION_GENDER_CLINIC_T);
         life_type: IND_LIFE_TYPE_BLACK_HOLE;

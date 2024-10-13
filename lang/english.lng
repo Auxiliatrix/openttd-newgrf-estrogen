@@ -148,111 +148,111 @@ STR_INDUSTRY_RATIO_STATE_GUNG_HO                        :{STR_INDUSTRY_BOOST_GUN
 
 STR_INDUSTRY_NAME_PORT                                  :Port
 STR_INDUSTRY_STATION_PORT                               :{STRING} Port
-STR_INDUSTRY_PLANTED_PORT                               :{BIGFONT}{BLACK}New {STRING} being opened}!
+STR_INDUSTRY_PLANTED_PORT                               :{BIGFONT}{BLACK}New {STRING} being opened!
 STR_INDUSTRY_CLOSURE_PORT                               :{BIGFONT}{BLACK}{STRING} is being closed off!
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT                   :{BIGFONT}{BLACK}Industry increases imports! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_PORT                   :{BIGFONT}{BLACK}Industry is suffering from tariffs! (-50% production)
 
 STR_INDUSTRY_NAME_QUARRY                                :Quarry
 STR_INDUSTRY_STATION_QUARRY                             :{STRING} Quarry
-STR_INDUSTRY_PLANTED_QUARRY                             :{BIGFONT}{BLACK}New {STRING} mining operation started}!
+STR_INDUSTRY_PLANTED_QUARRY                             :{BIGFONT}{BLACK}New {STRING} mining operation started!
 STR_INDUSTRY_CLOSURE_QUARRY                             :{BIGFONT}{BLACK}{STRING} has run dry!
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY                 :{BIGFONT}{BLACK}Industry strikes gold (more rocks)! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY                 :{BIGFONT}{BLACK}Industry suffers from a cave-in! (-50% production)
 
 STR_INDUSTRY_NAME_MINERAL_MINE                          :Mineral Mine
 STR_INDUSTRY_STATION_MINERAL_MINE                       :{STRING} Mineral Mine
-STR_INDUSTRY_PLANTED_MINERAL_MINE                       :{BIGFONT}{BLACK}New {STRING} being excavated}!
+STR_INDUSTRY_PLANTED_MINERAL_MINE                       :{BIGFONT}{BLACK}New {STRING} being excavated!
 STR_INDUSTRY_CLOSURE_MINERAL_MINE                       :{BIGFONT}{BLACK}{STRING} has run dry!
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE           :{BIGFONT}{BLACK}Industry craves those minerals! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE           :{BIGFONT}{BLACK}Industry no longer craves those minerals! (-50% production)
 
 STR_INDUSTRY_NAME_CORN_FARM                             :Corn Farm
 STR_INDUSTRY_STATION_CORN_FARM                          :{STRING} Corn Farm
-STR_INDUSTRY_PLANTED_CORN_FARM                          :{BIGFONT}{BLACK}New {STRING} planted}!
+STR_INDUSTRY_PLANTED_CORN_FARM                          :{BIGFONT}{BLACK}New {STRING} planted!
 STR_INDUSTRY_CLOSURE_CORN_FARM                          :{BIGFONT}{BLACK}{STRING} has been sued out of existence by Monsanto!
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM              :{BIGFONT}{BLACK}Industry takes up less ethical farming practices! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM              :{BIGFONT}{BLACK}Industry takes up more ethical farming practices! (-50% production)
 
 STR_INDUSTRY_NAME_SOY_FARM                              :Soy Farm
 STR_INDUSTRY_STATION_SOY_FARM                           :{STRING} Soy Farm
-STR_INDUSTRY_PLANTED_SOY_FARM                           :{BIGFONT}{BLACK}New {STRING} planted}!
+STR_INDUSTRY_PLANTED_SOY_FARM                           :{BIGFONT}{BLACK}New {STRING} planted!
 STR_INDUSTRY_CLOSURE_SOY_FARM                           :{BIGFONT}{BLACK}{STRING} has succumbed to climate change!
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM               :{BIGFONT}{BLACK}Industry implements experimental irrigation techniques! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM               :{BIGFONT}{BLACK}Industry forgets to implement crop rotations! (-50% production)
 
 STR_INDUSTRY_NAME_YAM_FARM                              :Yam Farm
 STR_INDUSTRY_STATION_YAM_FARM                           :{STRING} Yam Farm
-STR_INDUSTRY_PLANTED_YAM_FARM                           :{BIGFONT}{BLACK}New {STRING} planted}!
+STR_INDUSTRY_PLANTED_YAM_FARM                           :{BIGFONT}{BLACK}New {STRING} planted!
 STR_INDUSTRY_CLOSURE_YAM_FARM                           :{BIGFONT}{BLACK}{STRING} loses the right to repair its farm vehicles!
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM               :{BIGFONT}{BLACK}Industry cuts its workers' wages! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM               :{BIGFONT}{BLACK}Industry sees drastic increase in workplace injuries! (-50% production)
 
 STR_INDUSTRY_NAME_GLASSWORKS                            :Glassworks
 STR_INDUSTRY_STATION_GLASSWORKS                         :{STRING} Glassworks
-STR_INDUSTRY_PLANTED_GLASSWORKS                         :{BIGFONT}{BLACK}New {STRING} established}!
+STR_INDUSTRY_PLANTED_GLASSWORKS                         :{BIGFONT}{BLACK}New {STRING} established!
 STR_INDUSTRY_CLOSURE_GLASSWORKS                         :{BIGFONT}{BLACK}{STRING} has been shattered by a nearby opera production!
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS             :{BIGFONT}{BLACK}Industry starts using 50% less glass per glass! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS             :{BIGFONT}{BLACK}Industry lays off safety inspectors! (-50% production)
 
 STR_INDUSTRY_NAME_CHEMICAL_PLANT                        :Chemical Plant
 STR_INDUSTRY_STATION_CHEMICAL_PLANT                     :{STRING} Chemical Plant
-STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                     :{BIGFONT}{BLACK}New {STRING} begins operations}!
+STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                     :{BIGFONT}{BLACK}New {STRING} begins operations!
 STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                     :{BIGFONT}{BLACK}{STRING} undergoes catastrophic meltdown!
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT         :{BIGFONT}{BLACK}Industry discovers a new element! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT         :{BIGFONT}{BLACK}Industry's top scientist has gone mad! (-50% production)
 
 STR_INDUSTRY_NAME_BIOLAB                                :Biolab
 STR_INDUSTRY_STATION_BIOLAB                             :{STRING} Biolab
-STR_INDUSTRY_PLANTED_BIOLAB                             :{BIGFONT}{BLACK}New {STRING} begins operations}!
+STR_INDUSTRY_PLANTED_BIOLAB                             :{BIGFONT}{BLACK}New {STRING} begins operations!
 STR_INDUSTRY_CLOSURE_BIOLAB                             :{BIGFONT}{BLACK}{STRING} has lost all government funding!
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB                 :{BIGFONT}{BLACK}Industry accidentally turns multiple researchers into catgirls! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB                 :{BIGFONT}{BLACK}Industry accidentally turns multiple researchers into catgirls! (-50% production)
 
 STR_INDUSTRY_NAME_DISTILLERY                            :Distillery
 STR_INDUSTRY_STATION_DISTILLERY                         :{STRING} Distillery
-STR_INDUSTRY_PLANTED_DISTILLERY                         :{BIGFONT}{BLACK}New {STRING} opens to much fanfare}!
+STR_INDUSTRY_PLANTED_DISTILLERY                         :{BIGFONT}{BLACK}New {STRING} opens to much fanfare!
 STR_INDUSTRY_CLOSURE_DISTILLERY                         :{BIGFONT}{BLACK}{STRING}'s local government passes Prohibition 2!
 STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY             :{BIGFONT}{BLACK}Industry holds a massive party! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY             :{BIGFONT}{BLACK}Industry promotes drinking on the job! (-50% production)
 
 STR_INDUSTRY_NAME_PROCESSING_PLANT                      :Processing Plant
 STR_INDUSTRY_STATION_PROCESSING_PLANT                   :{STRING} Processing Plant
-STR_INDUSTRY_PLANTED_PROCESSING_PLANT                   :{BIGFONT}{BLACK}New {STRING} begins operations}!
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                   :{BIGFONT}{BLACK}New {STRING} begins operations!
 STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                   :{BIGFONT}{BLACK}{STRING} processes itself in freak accident!
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT       :{BIGFONT}{BLACK}Industry begins using larger blender blades! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT       :{BIGFONT}{BLACK}Industry is being out-competed by local smoothie stores! (-50% production)
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                :Pharmaceutical Plant (Estrogen)
-STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E             :{STRING} Pharmaceutical Plantt (Estrogen)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E             :{BIGFONT}{BLACK}New {STRING} begins operations}!
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E             :{STRING} Pharmaceutical Plant (Estrogen)
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E             :{BIGFONT}{BLACK}New {STRING} begins operations!
 STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E             :{BIGFONT}{BLACK}{STRING} shut down for unethical research practices!
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E :{BIGFONT}{BLACK}Industry increases amount of filler in life-saving pills! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E :{BIGFONT}{BLACK}Industry has research stalled by patent laws! (-50% production)
 
-STR_INDUSTRY_NAME_PHARMACY_E                            :Pharmacyt (Estrogen)
-STR_INDUSTRY_STATION_PHARMACY_E                         :{STRING} Pharmacyt (Estrogen)
-STR_INDUSTRY_PLANTED_PHARMACY_E                         :{BIGFONT}{BLACK}New {STRING} sets up shop}!
+STR_INDUSTRY_NAME_PHARMACY_E                            :Pharmacy (Estrogen)
+STR_INDUSTRY_STATION_PHARMACY_E                         :{STRING} Pharmacy (Estrogen)
+STR_INDUSTRY_PLANTED_PHARMACY_E                         :{BIGFONT}{BLACK}New {STRING} sets up shop!
 STR_INDUSTRY_CLOSURE_PHARMACY_E                         :{BIGFONT}{BLACK}{STRING} announces imminent closure!
 
-STR_INDUSTRY_NAME_GENDER_CLINIC_E                       :Gender Clinict (Estrogen)
-STR_INDUSTRY_STATION_GENDER_CLINIC_E                    :{STRING} Gender Clinict (Estrogen)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                    :{BIGFONT}{BLACK}New {STRING} magically appears}!
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                       :Gender Clinic (Estrogen)
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                    :{STRING} Gender Clinic (Estrogen)
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                    :{BIGFONT}{BLACK}New {STRING} magically appears!
 STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                    :{BIGFONT}{BLACK}{STRING} has finished transing everyone's genders!
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                :Pharmaceutical Plant (Testosterone)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T             :{STRING} Pharmaceutical Plant (Testosterone)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T             :{BIGFONT}{BLACK}New {STRING} begins operations}!
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T             :{BIGFONT}{BLACK}New {STRING} begins operations!
 STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T             :{BIGFONT}{BLACK}{STRING} shut down for unethical research practices!
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T :{BIGFONT}{BLACK}Industry increases amount of filler in life-saving pills! (+50% production)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T :{BIGFONT}{BLACK}Industry has research stalled by patent laws! (-50% production)
 
 STR_INDUSTRY_NAME_PHARMACY_T                            :Pharmacy (Testosterone)
 STR_INDUSTRY_STATION_PHARMACY_T                         :{STRING} Pharmacy (Testosterone)
-STR_INDUSTRY_PLANTED_PHARMACY_T                         :{BIGFONT}{BLACK}New {STRING} sets up shop}!
+STR_INDUSTRY_PLANTED_PHARMACY_T                         :{BIGFONT}{BLACK}New {STRING} sets up shop!
 STR_INDUSTRY_CLOSURE_PHARMACY_T                         :{BIGFONT}{BLACK}{STRING} announces imminent closure!
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                       :Gender Clinic (Testosterone)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                    :{STRING} Gender Clinic (Testosterone)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}New {STRING} magically appears}!
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}New {STRING} magically appears!
 STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}{STRING} has finished transing everyone's genders!
