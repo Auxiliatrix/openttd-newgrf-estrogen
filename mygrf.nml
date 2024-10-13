@@ -613,27 +613,6 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, [
     84: LOAD_PERM(84);
 }
 
-switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers_helper, [
-    STORE_PERM(0, LOAD_TEMP(0)),
-    STORE_TEMP(LOAD_TEMP(0)+1, 0),
-    LOAD_TEMP(0)
-]) {
-    255: return 0;
-    1;
-}
-
-produce(recurse_initialize_industry_registers_helper,
-        [],
-        [],
-        initialize_industry_registers_helper())
-
-switch(FEAT_INDUSTRIES, SELF, initialize_industry_registers, [
-    STORE_TEMP(0, 0),
-    initialize_industry_registers_helper()
-]) {
-    recurse_initialize_industry_registers_helper;
-}
-
 // TEMP_000         :Input cargo number
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, [
     STORE_PERM(0, LOAD_TEMP(125)-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
@@ -882,7 +861,6 @@ item (FEAT_INDUSTRIES, industry_port) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_port;
     }
@@ -938,7 +916,6 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_quarry;
         produce_cargo_arrival: produce_cargo_arrival_quarry;
@@ -995,7 +972,6 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_mineral_mine;
         produce_cargo_arrival: produce_cargo_arrival_mineral_mine;
@@ -1053,7 +1029,6 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_corn_farm;
         produce_cargo_arrival: produce_cargo_arrival_corn_farm;
@@ -1111,7 +1086,6 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_soy_farm;
         produce_cargo_arrival: produce_cargo_arrival_soy_farm;
@@ -1169,7 +1143,6 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_yam_farm;
         produce_cargo_arrival: produce_cargo_arrival_yam_farm;
@@ -1226,7 +1199,6 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
@@ -1285,7 +1257,6 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
@@ -1342,7 +1313,6 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
@@ -1398,7 +1368,6 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
@@ -1456,7 +1425,6 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
@@ -1514,7 +1482,6 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
@@ -1573,7 +1540,6 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
@@ -1631,7 +1597,6 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
@@ -1690,7 +1655,6 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharamacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
@@ -1725,7 +1689,6 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_e;
         construction_probability: availability_in_estrogen;
@@ -1759,7 +1722,6 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         layouts: [layout_default];
     }
     graphics {
-        build_prod_change: initialize_industry_registers;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_t;
         construction_probability: availability_in_testosterone;
