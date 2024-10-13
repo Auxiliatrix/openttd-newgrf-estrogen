@@ -752,8 +752,8 @@ switch(FEAT_INDUSTRIES, SELF, engineering_supplies_multiplier, LOAD_PERM(28)) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, fertilizer_multiplier, LOAD_PERM(28)) {
-    0..13: return 1;
-    14..59: return 2;
+    0..19: return 1;
+    20..79: return 2;
     return 4;
 }
 
