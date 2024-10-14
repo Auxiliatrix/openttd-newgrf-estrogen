@@ -779,6 +779,7 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
     STORE_TEMP(LOAD_PERM(28), 256),     // Load the crates supplied in the string register
+    STORE_TEMP(LOAD_PERM(87)-2, 257),   // Load the production rank in the string register
     engineering_supplies_multiplier()
 ]) {
     4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
@@ -841,13 +842,13 @@ random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
-    STORE_PERM(load_perm_variable(87)-1, 87)
+    STORE_PERM(LOAD_PERM(87)-1, 87)
 ]) {
     return CB_RESULT_IND_PROD_HALF;
 }
 
 switch(FEAT_INDUSTRIES, SELF, double_production, [
-    STORE_PERM(load_perm_variable(87)+1, 87)
+    STORE_PERM(LOAD_PERM(87)+1, 87)
 ]) {
     return CB_RESULT_IND_PROD_DOUBLE;
 }
@@ -974,14 +975,14 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
-    STORE_PERM(load_perm_variable(85)+1, 85),
+    STORE_PERM(LOAD_PERM(85)+1, 85),
     STORE_PERM(0, 86)
 ]) {
     return;
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_progress, [
-    STORE_PERM(load_perm_variable(86)+1, 86),
+    STORE_PERM(LOAD_PERM(86)+1, 86),
     STORE_PERM(0, 85)
 ]) {
     return;
@@ -995,7 +996,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
-    STORE_PERM((load_perm_variable(89)+1)%3, 89),
+    STORE_PERM((LOAD_PERM(89)+1)%3, 89),
     do_seasonal_activity_update(),
     LOAD_PERM(89)
 ]) {
