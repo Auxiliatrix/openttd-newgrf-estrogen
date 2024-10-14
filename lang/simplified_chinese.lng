@@ -1,0 +1,269 @@
+##grflangid 0x56
+##plural 1
+
+# ----------------------------------------------------------------
+# Global
+# ----------------------------------------------------------------
+
+STR_GRF_NAME                                            :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                     :在引入完成版GRF之前的测试GRF
+
+STR_PARAM_NAME_HORMONE                                  :激素
+STR_PARAM_DESC_HORMONE                                  :薯蓣皂苷元可以在制药厂转化的激素种类{}选择【两者】可能让游戏性不平衡。
+
+STR_PARAM_VALUE_HORMONE_ESTROGEN                        :雌酮
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE                    :睾酮
+STR_PARAM_VALUE_HORMONE_BOTH                            :两者
+
+STR_EMPTY                                               :
+
+TTD_STR_CRATES                                          :{COMMA} 箱
+TTD_STR_TONS                                            :{COMMA} 吨
+TTD_STR_LITERS                                          :{COMMA} 升
+
+# ----------------------------------------------------------------
+# Cargos
+# ----------------------------------------------------------------
+
+STR_CARGO_SUPPLIED                                      :{BLACK} （已供应）
+
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                   :工程物资
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                 :工程物资
+STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                   :{TINYFONT}工
+STR_CARGO_LABEL_ENGINEERING_SUPPLIES                    :ENGS
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                     :{COMMA}箱工程物资
+
+STR_CARGO_PLURAL_FERTILIZER                             :肥料
+STR_CARGO_SINGULAR_FERTILIZER                           :肥料
+STR_CARGO_ABBREV_FERTILIZER                             :{TINYFONT}肥
+STR_CARGO_LABEL_FERTILIZER                              :FERT
+STR_CARGO_UNIT_FERTILIZER                               :{WEIGHT}肥料
+
+STR_CARGO_PLURAL_SALT                                   :盐
+STR_CARGO_SINGULAR_SALT                                 :盐
+STR_CARGO_ABBREV_SALT                                   :{TINYFONT}盐
+STR_CARGO_LABEL_SALT                                    :SALT
+STR_CARGO_UNIT_SALT                                     :{WEIGHT}盐
+
+STR_CARGO_PLURAL_POTASH                                 :碳酸钾
+STR_CARGO_SINGULAR_POTASH                               :碳酸钾
+STR_CARGO_ABBREV_POTASH                                 :{TINYFONT}钾
+STR_CARGO_LABEL_POTASH                                  :PTSH
+STR_CARGO_UNIT_POTASH                                   :{WEIGHT}碳酸钾
+
+STR_CARGO_PLURAL_SAND                                   :沙子
+STR_CARGO_SINGULAR_SAND                                 :沙子
+STR_CARGO_ABBREV_SAND                                   :{TINYFONT}沙
+STR_CARGO_LABEL_SAND                                    :SAND
+STR_CARGO_UNIT_SAND                                     :{WEIGHT}沙子
+
+STR_CARGO_PLURAL_MINERALS                               :矿产
+STR_CARGO_SINGULAR_MINERALS                             :矿产
+STR_CARGO_ABBREV_MINERALS                               :{TINYFONT}矿
+STR_CARGO_LABEL_MINERALS                                :MNRL
+STR_CARGO_UNIT_MINERALS                                 :{WEIGHT}矿产
+
+STR_CARGO_PLURAL_CORN                                   :玉米
+STR_CARGO_SINGULAR_CORN                                 :玉米
+STR_CARGO_ABBREV_CORN                                   :{TINYFONT}谷
+STR_CARGO_LABEL_CORN                                    :CORN
+STR_CARGO_UNIT_CORN                                     :{WEIGHT}玉米
+
+STR_CARGO_PLURAL_SOY                                    :大豆
+STR_CARGO_SINGULAR_SOY                                  :大豆
+STR_CARGO_ABBREV_SOY                                    :{TINYFONT}豆
+STR_CARGO_LABEL_SOY                                     :SOYB
+STR_CARGO_UNIT_SOY                                      :{WEIGHT}大豆
+
+STR_CARGO_PLURAL_YAM                                    :薯蓣
+STR_CARGO_SINGULAR_YAM                                  :薯蓣
+STR_CARGO_ABBREV_YAM                                    :{TINYFONT}薯
+STR_CARGO_LABEL_YAM                                     :YAMS
+STR_CARGO_UNIT_YAM                                      :{WEIGHT}薯蓣
+
+STR_CARGO_PLURAL_VIALS                                  :瓶子
+STR_CARGO_SINGULAR_VIALS                                :瓶子
+STR_CARGO_ABBREV_VIALS                                  :{TINYFONT}瓶
+STR_CARGO_LABEL_VIALS                                   :VIAL
+STR_CARGO_UNIT_VIALS                                    :{COMMA}箱瓶子
+
+STR_CARGO_PLURAL_CHEMICALS                              :化学品
+STR_CARGO_SINGULAR_CHEMICALS                            :化学品
+STR_CARGO_ABBREV_CHEMICALS                              :{TINYFONT}化
+STR_CARGO_LABEL_CHEMICALS                               :CHEM
+STR_CARGO_UNIT_CHEMICALS                                :{VOLUME}化学品
+
+STR_CARGO_PLURAL_VEGETABLE_OIL                          :植物油
+STR_CARGO_SINGULAR_VEGETABLE_OIL                        :植物油
+STR_CARGO_ABBREV_VEGETABLE_OIL                          :{TINYFONT}油
+STR_CARGO_LABEL_VEGETABLE_OIL                           :VGOL
+STR_CARGO_UNIT_VEGETABLE_OIL                            :{VOLUME}植物油
+
+STR_CARGO_PLURAL_ALCOHOL                                :酒精
+STR_CARGO_SINGULAR_ALCOHOL                              :酒精
+STR_CARGO_ABBREV_ALCOHOL                                :{TINYFONT}酒
+STR_CARGO_LABEL_ALCOHOL                                 :ALCH
+STR_CARGO_UNIT_ALCOHOL                                  :{VOLUME}酒精
+
+STR_CARGO_PLURAL_DIOSGENIN                              :薯蓣皂苷元
+STR_CARGO_SINGULAR_DIOSGENIN                            :薯蓣皂苷元
+STR_CARGO_ABBREV_DIOSGENIN                              :{TINYFONT}苷
+STR_CARGO_LABEL_DIOSGENIN                               :DIOS
+STR_CARGO_UNIT_DIOSGENIN                                :{COMMA}箱薯蓣皂苷元
+
+STR_CARGO_PLURAL_RAW_ESTRONE                            :雌酮半成品
+STR_CARGO_SINGULAR_RAW_ESTRONE                          :雌酮半成品
+STR_CARGO_ABBREV_RAW_ESTRONE                            :{TINYFONT}姅
+STR_CARGO_LABEL_RAW_ESTRONE                             :RWES
+STR_CARGO_UNIT_RAW_ESTRONE                              :{VOLUME}雌酮半成品
+
+STR_CARGO_PLURAL_RAW_TESTOSTERONE                       :睾酮半成品
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE                     :睾酮半成品
+STR_CARGO_ABBREV_RAW_TESTOSTERONE                       :{TINYFONT}伴
+STR_CARGO_LABEL_RAW_TESTOSTERONE                        :RWTS
+STR_CARGO_UNIT_RAW_TESTOSTERONE                         :{COMMA}箱睾酮半成品
+
+STR_CARGO_PLURAL_ESTROGEN                               :雌酮
+STR_CARGO_SINGULAR_ESTROGEN                             :雌酮
+STR_CARGO_ABBREV_ESTROGEN                               :{TINYFONT}雌
+STR_CARGO_LABEL_ESTROGEN                                :ESTR
+STR_CARGO_UNIT_ESTROGEN                                 :{COMMA}箱雌酮
+
+STR_CARGO_PLURAL_TESTOSTERONE                           :睾酮
+STR_CARGO_SINGULAR_TESTOSTERONE                         :睾酮
+STR_CARGO_ABBREV_TESTOSTERONE                           :{TINYFONT}雄
+STR_CARGO_LABEL_TESTOSTERONE                            :TEST
+STR_CARGO_UNIT_TESTOSTERONE                             :{COMMA}箱睾酮
+
+# ----------------------------------------------------------------
+# Industries
+# ----------------------------------------------------------------
+
+STR_INDUSTRY_POWER_MINIMUM                              :最低
+STR_INDUSTRY_POWER_LOW                                  :低
+STR_INDUSTRY_POWER_DEFAULT                              :标准
+STR_INDUSTRY_POWER_HIGH                                 :高
+STR_INDUSTRY_POWER_VERY_HIGH                            :极高
+STR_INDUSTRY_POWER_MAXIMUM                              :最大
+
+STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS                    :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产量：{WHITE}标准{}{BLACK}可通过交付{WHITE}工程物资提升产量。{}{BLACK}为了到达{WHITE}增强{BLACK}产量，须在三个月内交付至少20箱。{}{BLACK}为了到达{WHITE}工合{BLACK}产量，须至少交付80箱。{}{BLACK}上个三月周期交付的箱数：{1:COMMA}
+STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT                    :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产量：{WHITE}标准{}{BLACK}可通过交付{WHITE}肥料提升产量。{}{BLACK}为了到达{WHITE}增强{BLACK}产量，须在三个月内交付至少20箱。{}{BLACK}为了到达{WHITE}工合{BLACK}产量，须至少交付80箱。{}{BLACK}上个三月周期交付的箱数：{1:COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENHANCED                       :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产量：{WHITE}增强{}{BLACK}为了维持这个产量，须在三个月内持续交付16箱。{}{BLACK}为了到达{WHITE}工合{BLACK}产量，须至少交付80箱。{}{BLACK}上个三月周期交付的箱数：{1:COMMA}
+STR_INDUSTRY_LEVEL_STATE_GUNG_HO                        :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产量：{WHITE}工合{}{BLACK}为了维持这个产量，须在三个月内持续交付80箱。{}{BLACK}上个三月周期交付的箱数：{1:COMMA}
+
+STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE                  :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产率：{WHITE}标准{}{BLACK}产率可以通过交付多种货物来提升。{}{BLACK}为了到达{WHITE}增强{BLACK}产率，在每个三月周期内应至少有一次在一个月内交付两种被该工业所接受的货物。
+STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE                  :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产率：{WHITE}标准{}{BLACK}产率可以通过交付多种货物来提升。{}{BLACK}为了到达{WHITE}增强{BLACK}产率，在每个三月周期内应至少有一次在一个月内交付两种被该工业所接受的货物。{}{BLACK}为了到达{WHITE}工合{BLACK}产率，应交付全部三种货物。
+STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE                :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产率：{WHITE}增强{}{BLACK}为了维持此产率，在每个三月周期内应至少有一次在一个月内交付两种被该工业所接受的货物。
+STR_INDUSTRY_RATIO_STATE_ENHANCED_TRIPLE                :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产率：{WHITE}增强{}{BLACK}为了维持此产率，在每个三月周期内应至少有一次在一个月内交付两种被该工业所接受的货物。{}{BLACK}为了到达{WHITE}工合{BLACK}产率，应交付全部三种货物。
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                        :{BLACK}当前工业能源：{WHITE}{0:STRING}{}{BLACK}当前产率：{WHITE}工合{}{BLACK}为了维持此产率，在每个三月周期内应至少有一次在一个月内交付全部三种被该工业所接受的货物。
+
+STR_INDUSTRY_NAME_PORT                                  :港口
+STR_INDUSTRY_STATION_PORT                               :{STRING}港口
+STR_INDUSTRY_PLANTED_PORT                               :{BIGFONT}{BLACK}新的{STRING}开放！
+STR_INDUSTRY_CLOSURE_PORT                               :{BIGFONT}{BLACK}{STRING}已关闭！
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT                   :{BIGFONT}{BLACK}提升了进口量！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT                   :{BIGFONT}{BLACK}饱受关税折磨！（-50%产量）
+
+STR_INDUSTRY_NAME_QUARRY                                :采石场
+STR_INDUSTRY_STATION_QUARRY                             :{STRING} 采石场
+STR_INDUSTRY_PLANTED_QUARRY                             :{BIGFONT}{BLACK}新的{STRING}开工！
+STR_INDUSTRY_CLOSURE_QUARRY                             :{BIGFONT}{BLACK}{STRING}开采殆尽！
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY                 :{BIGFONT}{BLACK}发现了金矿（和更多的石头）！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY                 :{BIGFONT}{BLACK}遭受塌方事故的牵连！（-50%产量）
+
+STR_INDUSTRY_NAME_MINERAL_MINE                          :矿场
+STR_INDUSTRY_STATION_MINERAL_MINE                       :{STRING}矿场
+STR_INDUSTRY_PLANTED_MINERAL_MINE                       :{BIGFONT}{BLACK}新的{STRING}开工！
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                       :{BIGFONT}{BLACK}{STRING}开采殆尽！
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE           :{BIGFONT}{BLACK}工业界亟需这些矿产（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE           :{BIGFONT}{BLACK}工业界不需要这些矿产了（-50%产量）
+
+STR_INDUSTRY_NAME_CORN_FARM                             :玉米农场
+STR_INDUSTRY_STATION_CORN_FARM                          :{STRING}玉米农场
+STR_INDUSTRY_PLANTED_CORN_FARM                          :{BIGFONT}{BLACK}新的{STRING}开垦！
+STR_INDUSTRY_CLOSURE_CORN_FARM                          :{BIGFONT}{BLACK}{STRING}由于孟山都的起诉而不复存在！
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM              :{BIGFONT}{BLACK}在农业生产中没那么重视道德了！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM              :{BIGFONT}{BLACK}在农业生产中更加重视道德了！（-50%产量）
+
+STR_INDUSTRY_NAME_SOY_FARM                              :大豆农场
+STR_INDUSTRY_STATION_SOY_FARM                           :{STRING}大豆农场
+STR_INDUSTRY_PLANTED_SOY_FARM                           :{BIGFONT}{BLACK}新的{STRING}开垦！
+STR_INDUSTRY_CLOSURE_SOY_FARM                           :{BIGFONT}{BLACK}{STRING}被气候危机压垮！
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM               :{BIGFONT}{BLACK}引入了试验性的灌溉技术！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM               :{BIGFONT}{BLACK}忘记了作物轮作！（-50%产量）
+
+STR_INDUSTRY_NAME_YAM_FARM                              :薯蓣农场
+STR_INDUSTRY_STATION_YAM_FARM                           :{STRING}薯蓣农场
+STR_INDUSTRY_PLANTED_YAM_FARM                           :{BIGFONT}{BLACK}新的{STRING}开垦！
+STR_INDUSTRY_CLOSURE_YAM_FARM                           :{BIGFONT}{BLACK}{STRING}丧失了维修自己的农用车辆的权利！
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM               :{BIGFONT}{BLACK}降薪了！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM               :{BIGFONT}{BLACK}的员工工伤事故数急剧增加（-50%产量）
+
+STR_INDUSTRY_NAME_GLASSWORKS                            :玻璃制品厂
+STR_INDUSTRY_STATION_GLASSWORKS                         :{STRING}玻璃制品厂
+STR_INDUSTRY_PLANTED_GLASSWORKS                         :{BIGFONT}{BLACK}新的{STRING}落成！
+STR_INDUSTRY_CLOSURE_GLASSWORKS                         :{BIGFONT}{BLACK}{STRING}被旁边歌剧院的高音共振碎了！
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS             :{BIGFONT}{BLACK}的每个产品都阉割掉了50%的玻璃用量！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS             :{BIGFONT}{BLACK}裁掉了安全员！（-50%产量）
+
+STR_INDUSTRY_NAME_CHEMICAL_PLANT                        :化工厂
+STR_INDUSTRY_STATION_CHEMICAL_PLANT                     :{STRING}化工厂
+STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                     :{BIGFONT}{BLACK}新的{STRING}开始营业！
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                     :{BIGFONT}{BLACK}{STRING}经历了悲剧般的破产清算！
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT         :{BIGFONT}{BLACK}发现了一种新元素！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT         :{BIGFONT}{BLACK}的首席科学家已经疯了！（-50%产量）
+
+STR_INDUSTRY_NAME_BIOLAB                                :生物实验室
+STR_INDUSTRY_STATION_BIOLAB                             :{STRING}生物实验室
+STR_INDUSTRY_PLANTED_BIOLAB                             :{BIGFONT}{BLACK}新的{STRING}开始营业！
+STR_INDUSTRY_CLOSURE_BIOLAB                             :{BIGFONT}{BLACK}{STRING}失去了所有的政府补助！
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB                 :{BIGFONT}{BLACK}意外将多名研究员变成了猫娘！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB                 :{BIGFONT}{BLACK}意外将多名研究员变成了猫娘！（-50%产量）
+
+STR_INDUSTRY_NAME_DISTILLERY                            :酒精蒸馏厂
+STR_INDUSTRY_STATION_DISTILLERY                         :{STRING}酒精蒸馏厂
+STR_INDUSTRY_PLANTED_DISTILLERY                         :{BIGFONT}{BLACK}新的{STRING}开业大吉！
+STR_INDUSTRY_CLOSURE_DISTILLERY                         :{BIGFONT}{BLACK}{STRING}所在地的政府通过了第二次禁酒令！
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY             :{BIGFONT}{BLACK}开了个大趴体！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY             :{BIGFONT}{BLACK}鼓励员工工作时喝酒（-50%产量）
+
+STR_INDUSTRY_NAME_PROCESSING_PLANT                      :处理设施
+STR_INDUSTRY_STATION_PROCESSING_PLANT                   :{STRING}处理设施
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                   :{BIGFONT}{BLACK}新的{STRING}开始营业！
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                   :{BIGFONT}{BLACK}{STRING}在一次离谱的事故中把它自己给处理了！
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT       :{BIGFONT}{BLACK}开始使用更大的搅拌器！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT       :{BIGFONT}{BLACK}被本地的混合果汁店过度竞争！（-50%产量）
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                :制药厂（雌酮）
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E             :{STRING}制药厂（雌酮）
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E             :{BIGFONT}{BLACK}新的{STRING}开始营业！
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E             :{BIGFONT}{BLACK}{STRING}因为它不道德的研究项目而被勒令关停！
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E :{BIGFONT}{BLACK}增加了每瓶拯救生活的药片的装填量！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E :{BIGFONT}{BLACK}被专利法所困，研究速度变慢了！（-50%产量）
+
+STR_INDUSTRY_NAME_PHARMACY_E                            :药物经销商（雌酮）
+STR_INDUSTRY_STATION_PHARMACY_E                         :{STRING}药物经销商（雌酮）
+STR_INDUSTRY_PLANTED_PHARMACY_E                         :{BIGFONT}{BLACK}新的{STRING}开业！
+STR_INDUSTRY_CLOSURE_PHARMACY_E                         :{BIGFONT}{BLACK}{STRING}宣布将停止营业！
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                       :跨性别诊所（雌酮疗法）
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                    :{STRING}跨性别诊所（雌酮疗法）
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                    :{BIGFONT}{BLACK}新的{STRING}如魔法般出现！
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                    :{BIGFONT}{BLACK}{STRING}已经把所有人都变性了！
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                :制药厂（睾酮）
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T             :{STRING}制药厂（睾酮）
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T             :{BIGFONT}{BLACK}新的{STRING}开始营业！
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T             :{BIGFONT}{BLACK}{STRING}因为它不道德的研究项目而被勒令关停！
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T :{BIGFONT}{BLACK}增加了每瓶拯救生活的药片的装填量！（+50%产量）
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T :{BIGFONT}{BLACK}被专利法所困，研究速度变慢了！（-50%产量）
+
+STR_INDUSTRY_NAME_PHARMACY_T                            :药物经销商（睾酮）
+STR_INDUSTRY_STATION_PHARMACY_T                         :{STRING}药物经销商（睾酮）
+STR_INDUSTRY_PLANTED_PHARMACY_T                         :{BIGFONT}{BLACK}新的{STRING}开业！
+STR_INDUSTRY_CLOSURE_PHARMACY_T                         :{BIGFONT}{BLACK}{STRING}宣布将停止营业！
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_T                       :跨性别诊所（睾酮疗法）
+STR_INDUSTRY_STATION_GENDER_CLINIC_T                    :{STRING}跨性别诊所（睾酮疗法）
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}新的{STRING}如魔法般出现！
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                    :{BIGFONT}{BLACK}{STRING}已经把所有人都变性了！
