@@ -822,6 +822,351 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
     string(STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE);
 }
 
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_engineering_supplies, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES);
+    return string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_fertilizer, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_FERTILIZER);
+    return string(STR_CARGO_PLURAL_FERTILIZER_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_salt, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_SALT);
+    return string(STR_CARGO_PLURAL_SALT_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_potash, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_POTASH);
+    return string(STR_CARGO_PLURAL_POTASH_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_sand, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_SAND);
+    return string(STR_CARGO_PLURAL_SAND_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_minerals, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_MINERALS);
+    return string(STR_CARGO_PLURAL_MINERALS_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_corn, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_CORN);
+    return string(STR_CARGO_PLURAL_CORN_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_soy, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_SOY);
+    return string(STR_CARGO_PLURAL_SOY_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_yam, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_YAM);
+    return string(STR_CARGO_PLURAL_YAM_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_vials, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_VIALS);
+    return string(STR_CARGO_PLURAL_VIALS_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_chemicals, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_CHEMICALS);
+    return string(STR_CARGO_PLURAL_CHEMICALS_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_vegetable_oil, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_VEGETABLE_OIL);
+    return string(STR_CARGO_PLURAL_VEGETABLE_OIL_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_alcohol, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_ALCOHOL);
+    return string(STR_CARGO_PLURAL_ALCOHOL_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_diosgenin, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_DIOSGENIN);
+    return string(STR_CARGO_PLURAL_DIOSGENIN_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_raw_estrone, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_RAW_ESTRONE);
+    return string(STR_CARGO_PLURAL_RAW_ESTRONE_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_raw_testosterone, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_RAW_TESTOSTERONE);
+    return string(STR_CARGO_PLURAL_RAW_TESTOSTERONE_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_estrogen, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_ESTROGEN);
+    return string(STR_CARGO_PLURAL_ESTROGEN_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input_testosterone, [
+    STORE_TEMP(28*(1+LOAD_TEMP(0)), 127),
+    load_perm_variable()
+]) {
+    0: return string(STR_CARGO_PLURAL_TESTOSTERONE);
+    return string(STR_CARGO_PLURAL_TESTOSTERONE_SUPPLIED);
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_port, getbits(extra_callback_info2, 0, 8)) {
+    0: return;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES);
+    4: return string(STR_CARGO_PLURAL_SALT);
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_quarry, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_engineering_supplies;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_SAND);
+    4: return string(STR_CARGO_PLURAL_POTASH);
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_mineral_mine, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_engineering_supplies;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_MINERALS);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_corn_farm, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_fertilizer;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_CORN);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_soy_farm, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_fertilizer;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_SOY);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_yam_farm, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_fertilizer;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_YAM);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_glassworks, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_sand;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_VIALS);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_chemical_plant, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_salt;
+    1: return cargo_subtype_display_input_potash;
+    2: return cargo_subtype_display_input_minerals;
+    3: return string(STR_CARGO_PLURAL_CHEMICALS);
+    4: return string(STR_CARGO_PLURAL_FERTILIZER);
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_biolab, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_corn;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_VEGETABLE_OIL);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_distillery, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_corn;
+    1: return;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_ALCOHOL);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_processing_plant, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_soy;
+    1: return cargo_subtype_display_input_yam;
+    2: return cargo_subtype_display_input_alcohol;
+    3: return string(STR_CARGO_PLURAL_DIOSGENIN);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_pharmaceutical_plant_e, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_diosgenin;
+    1: return cargo_subtype_display_input_chemicals;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_RAW_ESTRONE);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_pharmaceutical_plant_t, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_diosgenin;
+    1: return cargo_subtype_display_input_chemicals;
+    2: return;
+    3: return string(STR_CARGO_PLURAL_RAW_TESTOSTERONE);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_pharmacy_e, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_vials;
+    1: return cargo_subtype_display_input_vegetable_oil;
+    2: return cargo_subtype_display_input_raw_estrone;
+    3: return string(STR_CARGO_PLURAL_ESTROGEN);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_pharmacy_t, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_vials;
+    1: return cargo_subtype_display_input_vegetable_oil;
+    2: return cargo_subtype_display_input_raw_testosterone;
+    3: return string(STR_CARGO_PLURAL_TESTOSTERONE);
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_gender_clinic_e, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_estrogen;
+    1: return;
+    2: return;
+    3: return;
+    4: return;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry_gender_clinic_t, [
+    STORE_TEMP(getbits(extra_callback_info2, 0, 8), 0),
+    LOAD_TEMP(0)
+]) {
+    0: return cargo_subtype_display_input_testosterone;
+    1: return;
+    2: return;
+    3: return;
+    4: return;
+    return;
+}
+
 // ----------------------------------------------------------------
 // Industry Definitions
 // ----------------------------------------------------------------
@@ -863,6 +1208,7 @@ item (FEAT_INDUSTRIES, industry_port) {
     graphics {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_port;
+        cargo_subtype_display: cargo_subtype_display_industry_port;
     }
 }
 
@@ -920,6 +1266,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         produce_256_ticks: produce_256_ticks_quarry;
         produce_cargo_arrival: produce_cargo_arrival_quarry;
         extra_text_industry: extra_text_industry_engineering;
+        cargo_subtype_display: cargo_subtype_display_industry_quarry;
     }
 }
 
@@ -976,6 +1323,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         produce_256_ticks: produce_256_ticks_mineral_mine;
         produce_cargo_arrival: produce_cargo_arrival_mineral_mine;
         extra_text_industry: extra_text_industry_engineering;
+        cargo_subtype_display: cargo_subtype_display_industry_mineral_mine;
     }
 }
 
@@ -1033,6 +1381,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         produce_256_ticks: produce_256_ticks_corn_farm;
         produce_cargo_arrival: produce_cargo_arrival_corn_farm;
         extra_text_industry: extra_text_industry_fertilizer;
+        cargo_subtype_display: cargo_subtype_display_industry_corn_farm;
     }
 }
 
@@ -1090,6 +1439,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         produce_256_ticks: produce_256_ticks_soy_farm;
         produce_cargo_arrival: produce_cargo_arrival_soy_farm;
         extra_text_industry: extra_text_industry_fertilizer;
+        cargo_subtype_display: cargo_subtype_display_industry_soy_farm;
     }
 }
 
@@ -1147,6 +1497,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         produce_256_ticks: produce_256_ticks_yam_farm;
         produce_cargo_arrival: produce_cargo_arrival_yam_farm;
         extra_text_industry: extra_text_industry_fertilizer;
+        cargo_subtype_display: cargo_subtype_display_industry_yam_farm;
     }
 }
 
@@ -1202,6 +1553,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
+        cargo_subtype_display: cargo_subtype_display_industry_glassworks;
     }
 }
 
@@ -1261,6 +1613,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
         extra_text_industry: extra_text_industry_triple;
+        cargo_subtype_display: cargo_subtype_display_industry_chemical_plant;
     }
 }
 
@@ -1316,6 +1669,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
+        cargo_subtype_display: cargo_subtype_display_industry_biolab;
     }
 }
 
@@ -1371,6 +1725,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
+        cargo_subtype_display: cargo_subtype_display_industry_distillery;
     }
 }
 
@@ -1429,6 +1784,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
         extra_text_industry: extra_text_industry_triple;
+        cargo_subtype_display: cargo_subtype_display_industry_processing_plant;
     }
 }
 
@@ -1487,6 +1843,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
         construction_probability: availability_in_estrogen;
         extra_text_industry: extra_text_industry_double;
+        cargo_subtype_display: cargo_subtype_display_industry_pharmaceutical_plant_e;
     }
 }
 
@@ -1545,6 +1902,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
         construction_probability: availability_in_testosterone;
         extra_text_industry: extra_text_industry_double;
+        cargo_subtype_display: cargo_subtype_display_industry_pharmaceutical_plant_t;
     }
 }
 
@@ -1602,6 +1960,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
         construction_probability: availability_in_estrogen;
         extra_text_industry: extra_text_industry_triple;
+        cargo_subtype_display: cargo_subtype_display_industry_pharmacy_e;
     }
 }
 
@@ -1660,6 +2019,7 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
         construction_probability: availability_in_testosterone;
         extra_text_industry: extra_text_industry_triple;
+        cargo_subtype_display: cargo_subtype_display_industry_pharmacy_t;
     }
 }
 
@@ -1692,6 +2052,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_e;
         construction_probability: availability_in_estrogen;
+        cargo_subtype_display: cargo_subtype_display_industry_gender_clinic_e;
     }
 }
 
@@ -1725,5 +2086,6 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_cargo_arrival: produce_accept_gender_clinic_t;
         construction_probability: availability_in_testosterone;
+        cargo_subtype_display: cargo_subtype_display_industry_gender_clinic_t;
     }
 }

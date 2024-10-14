@@ -24,108 +24,126 @@ TTD_STR_LITERS                                          :{COMMA} litre{P "" s}
 # ----------------------------------------------------------------
 
 STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                   :Engineering Supplies
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES_SUPPLIED          :Engineering Supplies {WHITE}(Supplied)
 STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                 :Engineering Supplies
 STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                   :{TINYFONT}EN
 STR_CARGO_LABEL_ENGINEERING_SUPPLIES                    :ENGS
 STR_CARGO_UNIT_ENGINEERING_SUPPLIES                     :{COMMA} crate{P "" s} of engineering supplies
 
 STR_CARGO_PLURAL_FERTILIZER                             :Fertilizer
+STR_CARGO_PLURAL_FERTILIZER_SUPPLIED                    :Fertilizer {WHITE}(Supplied)
 STR_CARGO_SINGULAR_FERTILIZER                           :Fertilizer
 STR_CARGO_ABBREV_FERTILIZER                             :{TINYFONT}FE
 STR_CARGO_LABEL_FERTILIZER                              :FERT
 STR_CARGO_UNIT_FERTILIZER                               :{WEIGHT} of fertilizer
 
 STR_CARGO_PLURAL_SALT                                   :Salt
+STR_CARGO_PLURAL_SALT_SUPPLIED                          :Salt {WHITE}(Supplied)
 STR_CARGO_SINGULAR_SALT                                 :Salt
 STR_CARGO_ABBREV_SALT                                   :{TINYFONT}SL
 STR_CARGO_LABEL_SALT                                    :SALT
 STR_CARGO_UNIT_SALT                                     :{WEIGHT} of salt
 
 STR_CARGO_PLURAL_POTASH                                 :Potash
+STR_CARGO_PLURAL_POTASH_SUPPLIED                        :Potash {WHITE}(Supplied)
 STR_CARGO_SINGULAR_POTASH                               :Potash
 STR_CARGO_ABBREV_POTASH                                 :{TINYFONT}PO
 STR_CARGO_LABEL_POTASH                                  :PTSH
 STR_CARGO_UNIT_POTASH                                   :{WEIGHT} of potash
 
 STR_CARGO_PLURAL_SAND                                   :Sand
+STR_CARGO_PLURAL_SAND_SUPPLIED                          :Sand {WHITE}(Supplied)
 STR_CARGO_SINGULAR_SAND                                 :Sand
 STR_CARGO_ABBREV_SAND                                   :{TINYFONT}SN
 STR_CARGO_LABEL_SAND                                    :SAND
 STR_CARGO_UNIT_SAND                                     :{WEIGHT} of sand
 
 STR_CARGO_PLURAL_MINERALS                               :Minerals
+STR_CARGO_PLURAL_MINERALS_SUPPLIED                      :Minerals {WHITE}(Supplied)
 STR_CARGO_SINGULAR_MINERALS                             :Minerals
 STR_CARGO_ABBREV_MINERALS                               :{TINYFONT}MI
 STR_CARGO_LABEL_MINERALS                                :MNRL
 STR_CARGO_UNIT_MINERALS                                 :{WEIGHT} of minerals
 
 STR_CARGO_PLURAL_CORN                                   :Corn
+STR_CARGO_PLURAL_CORN_SUPPLIED                          :Corn {WHITE}(Supplied)
 STR_CARGO_SINGULAR_CORN                                 :Corn
 STR_CARGO_ABBREV_CORN                                   :{TINYFONT}CO
 STR_CARGO_LABEL_CORN                                    :CORN
 STR_CARGO_UNIT_CORN                                     :{WEIGHT} of corn
 
 STR_CARGO_PLURAL_SOY                                    :Soy
+STR_CARGO_PLURAL_SOY_SUPPLIED                           :Soy {WHITE}(Supplied)
 STR_CARGO_SINGULAR_SOY                                  :Soy
 STR_CARGO_ABBREV_SOY                                    :{TINYFONT}SO
 STR_CARGO_LABEL_SOY                                     :SOYB
 STR_CARGO_UNIT_SOY                                      :{WEIGHT} of soy
 
 STR_CARGO_PLURAL_YAM                                    :Yam
+STR_CARGO_PLURAL_YAM_SUPPLIED                           :Yam {WHITE}(Supplied)
 STR_CARGO_SINGULAR_YAM                                  :Yam
 STR_CARGO_ABBREV_YAM                                    :{TINYFONT}YA
 STR_CARGO_LABEL_YAM                                     :YAMS
 STR_CARGO_UNIT_YAM                                      :{WEIGHT} of yams
 
 STR_CARGO_PLURAL_VIALS                                  :Vials
+STR_CARGO_PLURAL_VIALS_SUPPLIED                         :Vials {WHITE}(Supplied)
 STR_CARGO_SINGULAR_VIALS                                :Vial
 STR_CARGO_ABBREV_VIALS                                  :{TINYFONT}VI
 STR_CARGO_LABEL_VIALS                                   :VIAL
 STR_CARGO_UNIT_VIALS                                    :{COMMA} crate{P "" s} of vials
 
 STR_CARGO_PLURAL_CHEMICALS                              :Chemicals
+STR_CARGO_PLURAL_CHEMICALS_SUPPLIED                     :Chemicals {WHITE}(Supplied)
 STR_CARGO_SINGULAR_CHEMICALS                            :Chemical
 STR_CARGO_ABBREV_CHEMICALS                              :{TINYFONT}CH
 STR_CARGO_LABEL_CHEMICALS                               :CHEM
 STR_CARGO_UNIT_CHEMICALS                                :{VOLUME} of chemicals
 
 STR_CARGO_PLURAL_VEGETABLE_OIL                          :Vegetable Oil
+STR_CARGO_PLURAL_VEGETABLE_OIL_SUPPLIED                 :Vegetable Oil {WHITE}(Supplied)
 STR_CARGO_SINGULAR_VEGETABLE_OIL                        :Vegetable Oil
 STR_CARGO_ABBREV_VEGETABLE_OIL                          :{TINYFONT}VO
 STR_CARGO_LABEL_VEGETABLE_OIL                           :VGOL
 STR_CARGO_UNIT_VEGETABLE_OIL                            :{VOLUME} of vegetable oil
 
 STR_CARGO_PLURAL_ALCOHOL                                :Alcohol
+STR_CARGO_PLURAL_ALCOHOL_SUPPLIED                       :Alcohol {WHITE}(Supplied)
 STR_CARGO_SINGULAR_ALCOHOL                              :Alcohol
 STR_CARGO_ABBREV_ALCOHOL                                :{TINYFONT}AL
 STR_CARGO_LABEL_ALCOHOL                                 :ALCH
 STR_CARGO_UNIT_ALCOHOL                                  :{VOLUME} of alcohol
 
 STR_CARGO_PLURAL_DIOSGENIN                              :Diosgenin
+STR_CARGO_PLURAL_DIOSGENIN_SUPPLIED                     :Diosgenin {WHITE}(Supplied)
 STR_CARGO_SINGULAR_DIOSGENIN                            :Diosgenin
 STR_CARGO_ABBREV_DIOSGENIN                              :{TINYFONT}DI
 STR_CARGO_LABEL_DIOSGENIN                               :DIOS
 STR_CARGO_UNIT_DIOSGENIN                                :{COMMA} crate{P "" s} of diosgenin
 
 STR_CARGO_PLURAL_RAW_ESTRONE                            :Raw Estrone
+STR_CARGO_PLURAL_RAW_ESTRONE_SUPPLIED                   :Raw Estrone {WHITE}(Supplied)
 STR_CARGO_SINGULAR_RAW_ESTRONE                          :Raw Estrone
 STR_CARGO_ABBREV_RAW_ESTRONE                            :{TINYFONT}RE
 STR_CARGO_LABEL_RAW_ESTRONE                             :RWES
 STR_CARGO_UNIT_RAW_ESTRONE                              :{VOLUME} of raw estrone
 
 STR_CARGO_PLURAL_RAW_TESTOSTERONE                       :Raw Testosterone
+STR_CARGO_PLURAL_RAW_TESTOSTERONE_SUPPLIED              :Raw Testosterone {WHITE}(Supplied)
 STR_CARGO_SINGULAR_RAW_TESTOSTERONE                     :Raw Testosterone
 STR_CARGO_ABBREV_RAW_TESTOSTERONE                       :{TINYFONT}RT
 STR_CARGO_LABEL_RAW_TESTOSTERONE                        :RWTS
 STR_CARGO_UNIT_RAW_TESTOSTERONE                         :{COMMA} crate{P "" s} of raw testosterone
 
 STR_CARGO_PLURAL_ESTROGEN                               :Estrogen
+STR_CARGO_PLURAL_ESTROGEN_SUPPLIED                      :Estrogen {WHITE}(Supplied)
 STR_CARGO_SINGULAR_ESTROGEN                             :Estrogen
 STR_CARGO_ABBREV_ESTROGEN                               :{TINYFONT}ES
 STR_CARGO_LABEL_ESTROGEN                                :ESTR
 STR_CARGO_UNIT_ESTROGEN                                 :{COMMA} crate{P "" s} crate{P "" s} of estrogen
 
 STR_CARGO_PLURAL_TESTOSTERONE                           :Testosterone
+STR_CARGO_PLURAL_TESTOSTERONE_SUPPLIED                  :Testosterone {WHITE}(Supplied)
 STR_CARGO_SINGULAR_TESTOSTERONE                         :Testosterone
 STR_CARGO_ABBREV_TESTOSTERONE                           :{TINYFONT}TE
 STR_CARGO_LABEL_TESTOSTERONE                            :TEST
@@ -135,10 +153,10 @@ STR_CARGO_UNIT_TESTOSTERONE                             :{COMMA} crate{P "" s} o
 # Industries
 # ----------------------------------------------------------------
 
-STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS                    :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Engineering Supplies.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {NUM}
-STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT                    :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Fertilizer.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {NUM}
-STR_INDUSTRY_LEVEL_STATE_ENHANCED                       :{BLACK}Current production level: {WHITE}Enhanced{}{BLACK}To maintain this level of production, deliver at least 16 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {NUM}
-STR_INDUSTRY_LEVEL_STATE_GUNG_HO                        :{BLACK}Current production level: {WHITE}Gung-Ho{}{BLACK}To maintain this level of production, deliver at least 80 crates every three months.{}{BLACK}Crates delivered in the last three months:{NUM}
+STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS                    :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Engineering Supplies.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT                    :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Fertilizer.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENHANCED                       :{BLACK}Current production level: {WHITE}Enhanced{}{BLACK}To maintain this level of production, deliver at least 16 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_GUNG_HO                        :{BLACK}Current production level: {WHITE}Gung-Ho{}{BLACK}To maintain this level of production, deliver at least 80 crates every three months.{}{BLACK}Crates delivered in the last three months:{COMMA}
 
 STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE                  :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production ratio can be boosted by delivering a variety of cargo.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver two kinds of accepted cargo at least once every three months.
 STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE                  :{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production ratio can be boosted by delivering a variety of cargo.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver two kinds of accepted cargo at least once every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver three kinds of accepted cargo.
