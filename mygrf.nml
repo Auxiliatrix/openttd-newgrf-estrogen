@@ -777,18 +777,16 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
     return 1;
 }
 
-switch(FEAT_INDUSTRIES, SELF, load_industry_power_text, industry_power, industry_power) {
-    0: return string(STR_INDUSTRY_POWER_MINIMUM);
-    1: return string(STR_INDUSTRY_POWER_LOW);
-    2: return string(STR_INDUSTRY_POWER_DEFAULT);
-    3: return string(STR_INDUSTRY_POWER_HIGH);
-    4: return string(STR_INDUSTRY_POWER_VERY_HIGH);
-    5: return string(STR_INDUSTRY_POWER_MAXIMUM);
-}
-
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
-    STORE_TEMP(LOAD_PERM(28), 257),                             // Load the crates supplied in the string register
-    STORE_TEMP(load_industry_power_text(LOAD_PERM(87)), 256),   // Load industry power in string register
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    LOAD_PERM(28) << 16,
+                    256
+                ),
     engineering_supplies_multiplier()
 ]) {
     4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
@@ -797,7 +795,15 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
-    STORE_TEMP(LOAD_PERM(28), 256),     // Load the crates supplied in the string register
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    LOAD_PERM(28) << 16,
+                    256
+                ),
     fertilizer_multiplier()
 ]) {
     4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
@@ -806,6 +812,14 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+                    256
+                ),
     double_combo_multiplier()
 ]) {
     2: return string(STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE);
@@ -813,6 +827,14 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+                    256
+                ),
     triple_combo_multiplier()
 ]) {
     3: return string(STR_INDUSTRY_RATIO_STATE_GUNG_HO);
@@ -1016,7 +1038,7 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
     STORE_PERM(2, 87)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return 16;
 }
 
 // ----------------------------------------------------------------
