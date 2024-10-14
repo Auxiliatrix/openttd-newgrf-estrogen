@@ -777,9 +777,18 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
     return 1;
 }
 
+switch(FEAT_INDUSTRIES, SELF, load_industry_power_text, industry_power, industry_power) {
+    0: return string(STR_INDUSTRY_POWER_MINIMUM);
+    1: return string(STR_INDUSTRY_POWER_LOW);
+    2: return string(STR_INDUSTRY_POWER_DEFAULT);
+    3: return string(STR_INDUSTRY_POWER_HIGH);
+    4: return string(STR_INDUSTRY_POWER_VERY_HIGH);
+    5: return string(STR_INDUSTRY_POWER_MAXIMUM);
+}
+
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
-    STORE_TEMP(LOAD_PERM(28), 256),     // Load the crates supplied in the string register
-    STORE_TEMP(LOAD_PERM(87)-2, 257),   // Load the production rank in the string register
+    STORE_TEMP(LOAD_PERM(28), 257),                             // Load the crates supplied in the string register
+    STORE_TEMP(load_industry_power_text(LOAD_PERM(87)), 256),   // Load industry power in string register
     engineering_supplies_multiplier()
 ]) {
     4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
@@ -864,70 +873,70 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
     roll_12() + modifier
 ]) {
     1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return halve_production();
+    halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
     roll_12() + modifier
 ]) {
     1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return halve_production();
+    halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
     roll_12() + modifier
 ]) {
     1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return halve_production();
+    halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
     roll_12() + modifier
 ]) {
     1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return halve_production();
+    halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
     roll_12() + modifier
 ]) {
     1..2: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return halve_production();
+    halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_0, modifier, [
     roll_12() + modifier
 ]) {
     1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return double_production();
+    double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
     roll_12() + modifier
 ]) {
     1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return double_production();
+    double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
     roll_12() + modifier
 ]) {
     1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return double_production();
+    double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
     roll_12() + modifier
 ]) {
     1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return double_production();
+    double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
     roll_12() + modifier
 ]) {
     1..15: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return double_production();
+    double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_ruin_update, [
@@ -957,21 +966,21 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_ruin_update, [
     LOAD_PERM(85)
 ]) {
     0..1: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return do_seasonal_ruin_update();
+    do_seasonal_ruin_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_progress_update, [
     LOAD_PERM(86)
 ]) {
     0..1: return CB_RESULT_IND_PROD_NO_CHANGE;
-    return do_seasonal_progress_update();
+    do_seasonal_progress_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, [
     LOAD_PERM(86),
 ]) {
-    0: return check_seasonal_ruin_update();
-    return check_seasonal_progress_update();
+    0: check_seasonal_ruin_update;
+    check_seasonal_progress_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
@@ -1000,14 +1009,14 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
     do_seasonal_activity_update(),
     LOAD_PERM(89)
 ]) {
-    0: do_seasonal_prod_update();
+    0: do_seasonal_prod_update;
     return CB_RESULT_IND_PROD_NO_CHANGE; 
 }
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
     STORE_PERM(2, 87)
 ]) {
-    return;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 // ----------------------------------------------------------------
