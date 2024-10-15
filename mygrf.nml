@@ -22,13 +22,12 @@ grf {
 }
 
 // TODO: figure out uneven production for different produced
-// TODO: extra text for unboostable industries -> ?
-// TODO: make actual updates occur on random tick -> ?
-// TODO: figure out why always at maximum -> ?
+
+// TODO: make production level change based on cargo transported out instead of supplied
 // TODO: make production changes actually have an impact
 // TODO: make industry production values slightly random
-// TODO: figure out why different message
 
+// TODO: figure out why always increasing
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -676,6 +675,18 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
     127: LOAD_PERM(127);
 }
 
+switch(FEAT_INDUSTRIES, SELF, apply_production_multiplier, expected_value, [
+    LOAD_PERM(88)
+]) {
+    1: return (expected_value / 4);
+    2: return (expected_value / 2);
+    3: return expected_value;
+    4: return (expected_value * 2);
+    5: return (expected_value * 4);
+    6: return (expected_value * 8);
+    return expected_value;
+}
+
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, sum_index, [
     STORE_PERM(0, sum_index-28+LOAD_PERM(0)+1)   // Store 0 in this production cycle index's register
 ]) {
@@ -909,19 +920,19 @@ switch(FEAT_INDUSTRIES, SELF, double_production_real, [
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
     STORE_PERM(LOAD_PERM(87)-1, 87)
 ]) {
-    return CB_RESULT_IND_PROD_HALF;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, close_production, [
     STORE_PERM(0, 87)
 ]) {
-    return CB_RESULT_IND_PROD_CLOSE;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, double_production, [
     STORE_PERM(LOAD_PERM(87)+1, 87)
 ]) {
-    return CB_RESULT_IND_PROD_DOUBLE;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
@@ -1078,7 +1089,6 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_0, [
     LOAD_PERM(88)
 ]) {
-    0: return CB_RESULT_IND_PROD_CLOSE;
     1: return CB_RESULT_IND_PROD_CLOSE;
     return halve_production_real;
 }
@@ -1086,47 +1096,47 @@ switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_0, [
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_1, [
     LOAD_PERM(88)
 ]) {
-    0: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1: return CB_RESULT_IND_PROD_NO_CHANGE;
     halve_production_real;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_2, [
     LOAD_PERM(88)
 ]) {
-    0: double_production_real;
-    1: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1: double_production_real;
+    2: return CB_RESULT_IND_PROD_NO_CHANGE;
     halve_production_real;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_3, [
     LOAD_PERM(88)
 ]) {
-    0..1: double_production_real;
-    2: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..2: double_production_real;
+    3: return CB_RESULT_IND_PROD_NO_CHANGE;
     halve_production_real;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_4, [
     LOAD_PERM(88)
 ]) {
-    0..2: double_production_real;
-    3: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..3: double_production_real;
+    4: return CB_RESULT_IND_PROD_NO_CHANGE;
     halve_production_real;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_5, [
     LOAD_PERM(88)
 ]) {
-    0..3: double_production_real;
-    4: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..4: double_production_real;
+    5: return CB_RESULT_IND_PROD_NO_CHANGE;
     halve_production_real;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_6, [
     LOAD_PERM(88)
 ]) {
-    0..4: double_production_real;
-    5: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..5: double_production_real;
+    6: return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_random_prod_update, [
@@ -1154,7 +1164,7 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
 
 produce(produce_regular_port, 
     [],
-    [ENGS:12;SALT:8;],
+    [ENGS:apply_production_multiplier(12);SALT:apply_production_multiplier(8);],
     0
 )
 
@@ -1210,7 +1220,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: 12*engineering_supplies_multiplier(); PTSH: 8*engineering_supplies_multiplier();],
+    [SAND: apply_production_multiplier(12)*engineering_supplies_multiplier(); PTSH: apply_production_multiplier(8)*engineering_supplies_multiplier();],
     0
 )
 
@@ -1268,7 +1278,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
 
 produce(produce_regular_mineral_mine, 
     [], 
-    [MNRL: 16*engineering_supplies_multiplier();],
+    [MNRL: apply_production_multiplier(16)*engineering_supplies_multiplier();],
     0
 )
 
@@ -1326,7 +1336,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
 
 produce(produce_regular_corn_farm, 
     [], 
-    [CORN: 16 * fertilizer_multiplier();],
+    [CORN: apply_production_multiplier(16) * fertilizer_multiplier();],
     0
 )
 
@@ -1384,7 +1394,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
 
 produce(produce_regular_soy_farm, 
     [], 
-    [SOYB: 12 * fertilizer_multiplier();],
+    [SOYB: apply_production_multiplier(12) * fertilizer_multiplier();],
     0
 )
 
@@ -1442,7 +1452,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
 
 produce(produce_regular_yam_farm, 
     [], 
-    [YAMS: 12 * fertilizer_multiplier();],
+    [YAMS: apply_production_multiplier(12) * fertilizer_multiplier();],
     0
 )
 
@@ -1500,7 +1510,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [], 
-    [VIAL:6;],
+    [VIAL:apply_production_multiplier(6);],
     0
 )
 
@@ -1559,7 +1569,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: 6 * triple_combo_multiplier(); CHEM: 4 * triple_combo_multiplier();],
+    [FERT: apply_production_multiplier(6) * triple_combo_multiplier(); CHEM: apply_production_multiplier(4) * triple_combo_multiplier();],
     0
 )
 
@@ -1619,7 +1629,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
 
 produce(produce_regular_biolab, 
     [], 
-    [VGOL:6;],
+    [VGOL:apply_production_multiplier(6);],
     0
 )
 
@@ -1676,7 +1686,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
 
 produce(produce_regular_distillery, 
     [], 
-    [ALCH:6;],
+    [ALCH:apply_production_multiplier(6);],
     0
 )
 
@@ -1735,7 +1745,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
 
 produce(produce_regular_processing_plant, 
     [], 
-    [DIOS: 6;],
+    [DIOS: apply_production_multiplier(6);],
     0
 )
 
@@ -1795,7 +1805,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
 
 produce(produce_regular_pharmaceutical_plant_e, 
     [], 
-    [RWES: 6;],
+    [RWES: apply_production_multiplier(6);],
     0
 )
 
@@ -1855,7 +1865,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
 
 produce(produce_regular_pharmaceutical_plant_t, 
     [], 
-    [RWTS: 6*double_combo_multiplier();],
+    [RWTS: apply_production_multiplier(6)*double_combo_multiplier();],
     0
 )
 
@@ -1916,7 +1926,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
 
 produce(produce_regular_pharmacy_e, 
     [], 
-    [ESTR: 6*triple_combo_multiplier();],
+    [ESTR: apply_production_multiplier(6)*triple_combo_multiplier();],
     0
 )
 
@@ -1977,7 +1987,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
 
 produce(produce_regular_pharamacy_t, 
     [], 
-    [TEST: 6*triple_combo_multiplier();],
+    [TEST: apply_production_multiplier(6)*triple_combo_multiplier();],
     0
 )
 
