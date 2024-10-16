@@ -256,6 +256,8 @@ STR_INDUSTRY_NAME_PHARMACY_E                            :Pharmacy (Estrogen)
 STR_INDUSTRY_STATION_PHARMACY_E                         :{STRING} Pharmacy (Estrogen)
 STR_INDUSTRY_PLANTED_PHARMACY_E                         :{BIGFONT}{BLACK}A new {0:STRING}has set up shop near {1:STRING}!
 STR_INDUSTRY_CLOSURE_PHARMACY_E                         :{BIGFONT}{BLACK}{STRING} Pharmacy has announced imminent closure! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E             :{BIGFONT}{BLACK}{STRING} Pharmacy lobbies for higher medical costs! (+50% production)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E             :{BIGFONT}{BLACK}{STRING} Pharmacy mislabels every drug in their inventory again! (-50% production)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_E                       :Gender Clinic (Estrogen)
 STR_INDUSTRY_STATION_GENDER_CLINIC_E                    :{STRING} Gender Clinic (Estrogen)
@@ -273,6 +275,8 @@ STR_INDUSTRY_NAME_PHARMACY_T                            :Pharmacy (Testosterone)
 STR_INDUSTRY_STATION_PHARMACY_T                         :{STRING} Pharmacy (Testosterone)
 STR_INDUSTRY_PLANTED_PHARMACY_T                         :{BIGFONT}{BLACK}A new {0:STRING} has set up shop near {1:STRING}!
 STR_INDUSTRY_CLOSURE_PHARMACY_T                         :{BIGFONT}{BLACK}{STRING} Pharmacy has announced imminent closure! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T             :{BIGFONT}{BLACK}{STRING} Pharmacy lobbies for higher medical costs! (+50% production)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T             :{BIGFONT}{BLACK}{STRING} Pharmacy mislabels every drug in their inventory again! (-50% production)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                       :Gender Clinic (Testosterone)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                    :{STRING} Gender Clinic (Testosterone)
