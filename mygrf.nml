@@ -24,10 +24,9 @@ grf {
 // TODO: figure out uneven production for different produced
 
 // TODO: make production level change based on cargo transported out instead of supplied
-// TODO: make production changes actually have an impact
 // TODO: make industry production values slightly random
 
-// TODO: figure out why always increasing
+// TODO: maybe reset the counter once production changes
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -528,8 +527,8 @@ tilelayout layout_default {
 // PERM_057..084    :Input Cargo 2 delivered last 27 cycles (+1 sum @ PERM_084)
 // PERM_085         :Seasons without cargo
 // PERM_086         :Seasons with consistent cargo
-// PERM_087         :Expected production level (0: Closed; 1: Ruin -2; 2: Ruin -1; 3: Default; 4: Progress +1; 5: Progress +2; 6: Progress +3)
-// PERM_088         :Actual production level
+// PERM_087         :Production level (0: Closed; 1: Ruin -2; 2: Ruin -1; 3: Default; 4: Progress +1; 5: Progress +2; 6: Progress +3)
+// PERM_088         :Unassigned
 // PERM_089         :Season (0..3)
 // PERM_090..127    :Unassigned
 //
@@ -676,7 +675,7 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, apply_production_multiplier, expected_value, [
-    LOAD_PERM(88)
+    LOAD_PERM(87)
 ]) {
     1: return (expected_value / 4);
     2: return (expected_value / 2);
@@ -798,12 +797,12 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_generic, [
-    STORE_TEMP(     ((LOAD_PERM(88) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(88) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(88) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(88) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(88) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(88) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
                     256
                 ),
 ]) {
@@ -811,12 +810,12 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_generic, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
-    STORE_TEMP(     ((LOAD_PERM(88) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(88) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(88) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(88) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(88) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(88) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
                     LOAD_PERM(28) << 16,
                     256
                 ),
@@ -828,12 +827,12 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
-    STORE_TEMP(     ((LOAD_PERM(88) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(88) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(88) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(88) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(88) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(88) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
                     LOAD_PERM(28) << 16,
                     256
                 ),
@@ -845,12 +844,12 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
-    STORE_TEMP(     ((LOAD_PERM(88) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(88) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(88) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(88) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(88) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(88) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
                     256
                 ),
     double_combo_multiplier()
@@ -860,12 +859,12 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
-    STORE_TEMP(     ((LOAD_PERM(88) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(88) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(88) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(88) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(88) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(88) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
+                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
+                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
+                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
                     256
                 ),
     triple_combo_multiplier()
@@ -905,34 +904,22 @@ random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
     1: return 12;
 }
 
-switch(FEAT_INDUSTRIES, SELF, halve_production_real, [
-    STORE_PERM(LOAD_PERM(88)-1, 88)
-]) {
-    return CB_RESULT_IND_PROD_HALF;
-}
-
-switch(FEAT_INDUSTRIES, SELF, double_production_real, [
-    STORE_PERM(LOAD_PERM(88)+1, 88)
-]) {
-    return CB_RESULT_IND_PROD_DOUBLE;
-}
-
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
     STORE_PERM(LOAD_PERM(87)-1, 87)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return CB_RESULT_IND_PROD_HALF;
 }
 
 switch(FEAT_INDUSTRIES, SELF, close_production, [
     STORE_PERM(0, 87)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return CB_RESULT_IND_PROD_CLOSE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, double_production, [
     STORE_PERM(LOAD_PERM(87)+1, 87)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return CB_RESULT_IND_PROD_DOUBLE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
@@ -1066,7 +1053,7 @@ switch(FEAT_INDUSTRIES, SELF, increment_progress, [
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
     triple_combo_multiplier()
 ]) {
-    0: increment_ruin;
+    1: increment_ruin;
     increment_progress;
 }
 
@@ -1084,71 +1071,6 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
 ]) {
     0: do_seasonal_prod_update;
     return CB_RESULT_IND_PROD_NO_CHANGE; 
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_0, [
-    LOAD_PERM(88)
-]) {
-    1: return CB_RESULT_IND_PROD_CLOSE;
-    return halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_1, [
-    LOAD_PERM(88)
-]) {
-    1: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_2, [
-    LOAD_PERM(88)
-]) {
-    1: double_production_real;
-    2: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_3, [
-    LOAD_PERM(88)
-]) {
-    1..2: double_production_real;
-    3: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_4, [
-    LOAD_PERM(88)
-]) {
-    1..3: double_production_real;
-    4: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_5, [
-    LOAD_PERM(88)
-]) {
-    1..4: double_production_real;
-    5: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production_real;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update_6, [
-    LOAD_PERM(88)
-]) {
-    1..5: double_production_real;
-    6: return CB_RESULT_IND_PROD_NO_CHANGE;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_random_prod_update, [
-    LOAD_PERM(87)
-]) {
-    0: check_random_prod_update_0;
-    1: check_random_prod_update_1;
-    2: check_random_prod_update_2;
-    3: check_random_prod_update_3;
-    4: check_random_prod_update_4;
-    5: check_random_prod_update_5;
-    6: check_random_prod_update_6;
 }
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
@@ -1544,7 +1466,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
         cargo_subtype_display: cargo_subtype_display_industry;
@@ -1606,7 +1528,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
         extra_text_industry: extra_text_industry_triple;
@@ -1663,7 +1585,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
         cargo_subtype_display: cargo_subtype_display_industry;
@@ -1720,7 +1642,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
         cargo_subtype_display: cargo_subtype_display_industry;
@@ -1781,7 +1703,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
         extra_text_industry: extra_text_industry_triple;
@@ -1840,7 +1762,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
         construction_probability: availability_in_estrogen;
@@ -1900,7 +1822,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
         construction_probability: availability_in_testosterone;
@@ -1960,7 +1882,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
         construction_probability: availability_in_estrogen;
@@ -2021,7 +1943,7 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
     graphics {
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update;
-        random_prod_change: check_random_prod_update;
+        random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharamacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
         construction_probability: availability_in_testosterone;
