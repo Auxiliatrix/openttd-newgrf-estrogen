@@ -19,6 +19,39 @@ grf {
             };
         }
     }
+    param 1 {
+        industry_decay {
+            type: bool;
+            name: string(STR_PARAM_NAME_INDUSTRY_DECAY);
+            desc: string(STR_PARAM_DESC_INDUSTRY_DECAY);
+            def_value: 0;
+        }
+    }
+    param 2 {
+        industry_growth {
+            type: bool;
+            name: string(STR_PARAM_NAME_INDUSTRY_GROWTH);
+            desc: string(STR_PARAM_DESC_INDUSTRY_GROWTH);
+            def_value: 1;
+        }
+    }
+    param 3 {
+        industry_starting_power {
+            type: int;
+            name: string(STR_PARAM_NAME_INDUSTRY_STARTING_POWER);
+            desc: string(STR_PARAM_DESC_INDUSTRY_STARTING_POWER);
+            min_value: 1;
+            max_value: 5;
+            def_value: 3;
+            names: {
+                1: string(STR_INDUSTRY_POWER_MINIMUM);
+                2: string(STR_INDUSTRY_POWER_LOW);
+                3: string(STR_INDUSTRY_POWER_DEFAULT);
+                4: string(STR_INDUSTRY_POWER_HIGH);
+                5: string(STR_INDUSTRY_POWER_MAXIMUM);
+            };
+        }
+    }
 }
 
 // TODO: figure out uneven production for different produced
@@ -26,7 +59,10 @@ grf {
 // TODO: make production level change based on cargo transported out instead of supplied
 // TODO: make industry production values slightly random
 
-// TODO: maybe reset the counter once production changes
+// TODO: maybe have production only increase, and then decrease back down to normal
+// or maybe have a minimum it can go down to or something
+// basically we dont want random industries shutting down
+// should industries even shut down ?
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -677,12 +713,13 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
 switch(FEAT_INDUSTRIES, SELF, apply_production_multiplier, expected_value, [
     LOAD_PERM(87)
 ]) {
+    0: return (expected_value / 4);
     1: return (expected_value / 4);
     2: return (expected_value / 2);
     3: return expected_value;
-    4: return (expected_value * 2);
-    5: return (expected_value * 4);
-    6: return (expected_value * 8);
+    4: return (expected_value * 3 / 2);
+    5: return (expected_value * 9 / 4);
+    6: return (expected_value * 27 / 8);
     return expected_value;
 }
 
@@ -797,7 +834,8 @@ switch(FEAT_INDUSTRIES, SELF, triple_combo_multiplier, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_generic, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
@@ -810,7 +848,8 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_generic, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
@@ -827,7 +866,8 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
@@ -844,7 +884,8 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
@@ -859,7 +900,8 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
+                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
@@ -905,21 +947,38 @@ random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
-    STORE_PERM(LOAD_PERM(87)-1, 87)
+    STORE_PERM(LOAD_PERM(87)-1, 87),
+    STORE_PERM(0, 85),
 ]) {
     return CB_RESULT_IND_PROD_HALF;
 }
 
-switch(FEAT_INDUSTRIES, SELF, close_production, [
-    STORE_PERM(0, 87)
-]) {
-    return CB_RESULT_IND_PROD_CLOSE;
-}
-
 switch(FEAT_INDUSTRIES, SELF, double_production, [
-    STORE_PERM(LOAD_PERM(87)+1, 87)
+    STORE_PERM(LOAD_PERM(87)+1, 87),
+    STORE_PERM(0, 86)
 ]) {
     return CB_RESULT_IND_PROD_DOUBLE;
+}
+
+switch(FEAT_INDUSTRIES, SELF, close_production, [
+    (STORE_PERM(0, 87) == 1) * industry_decay,
+]) {
+    1: return CB_RESULT_IND_PROD_CLOSE;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+switch(FEAT_INDUSTRIES, SELF, decay_production, [
+    industry_decay * (LOAD_PERM(87) > industry_starting_power)
+]) {
+    1: halve_production;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+switch(FEAT_INDUSTRIES, SELF, grow_production, [
+    industry_growth * (LOAD_PERM(87) < industry_starting_power)
+]) {
+    1: double_production;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
@@ -933,70 +992,70 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
     roll_12() + modifier
 ]) {
     1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production;
+    decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
     roll_12() + modifier
 ]) {
     1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production;
+    decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
     roll_12() + modifier
 ]) {
     1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production;
+    decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
     roll_12() + modifier
 ]) {
     1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production;
+    decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_6, modifier, [
     roll_12() + modifier
 ]) {
     1..2: return CB_RESULT_IND_PROD_NO_CHANGE;
-    halve_production;
+    decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
     roll_12() + modifier
 ]) {
     1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
-    double_production;
+    grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
     roll_12() + modifier
 ]) {
     1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
-    double_production;
+    grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
     roll_12() + modifier
 ]) {
     1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
-    double_production;
+    grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
     roll_12() + modifier
 ]) {
     1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
-    double_production;
+    grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_5, modifier, [
     roll_12() + modifier
 ]) {
     1..15: return CB_RESULT_IND_PROD_NO_CHANGE;
-    double_production;
+    grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_ruin_update, [
@@ -1074,8 +1133,7 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
-    STORE_PERM(3, 87),
-    STORE_PERM(3, 88)
+    STORE_PERM(industry_starting_power, 87),
 ]) {
     return 16;
 }
