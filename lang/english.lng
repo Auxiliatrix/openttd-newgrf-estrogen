@@ -15,6 +15,15 @@ STR_PARAM_VALUE_HORMONE_ESTROGEN                        :Estrogen
 STR_PARAM_VALUE_HORMONE_TESTOSTERONE                    :Testosterone
 STR_PARAM_VALUE_HORMONE_BOTH                            :Both
 
+STR_PARAM_NAME_INDUSTRY_DECAY                           :Industry Decay
+STR_PARAM_DESC_INDUSTRY_DECAY                           :Whether untouched industries decay below their default production level.
+
+STR_PARAM_NAME_INDUSTRY_GROWTH                          :Industry Growth
+STR_PARAM_DESC_INDUSTRY_GROWTH                          :Whether frequented industries grow beyond their default production level.
+
+STR_PARAM_NAME_INDUSTRY_STARTING_POWER                  :Industry Starting Power
+STR_PARAM_DESC_INDUSTRY_STARTING_POWER                  :Level of production industries should start at.
+
 STR_EMPTY                                               :
 
 TTD_STR_CRATES                                          :{COMMA} crate{P "" s}
