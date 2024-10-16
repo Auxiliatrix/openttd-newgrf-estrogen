@@ -56,7 +56,6 @@ grf {
 }
 
 // TODO: make production level change based on cargo transported out instead of supplied
-// TODO: make industry production values slightly random
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -734,13 +733,13 @@ switch(FEAT_INDUSTRIES, SELF, combo_multiplier, [
 switch(FEAT_INDUSTRIES, SELF, apply_production_modifiers, expected_value, multiplier, [
     LOAD_PERM(87)
 ]) {
-    0: return ((expected_value * multiplier) / 4);
-    1: return ((expected_value * multiplier) / 4);
-    2: return ((expected_value * multiplier) / 2);
-    3: return (expected_value * multiplier);
-    4: return ((expected_value * multiplier * 3) / 2);
-    5: return ((expected_value * multiplier * 9) / 4);
-    6: return ((expected_value * multiplier * 27) / 8);
+    0: return ((expected_value * multiplier * LOAD_PERM(88)) / (4 * 10));
+    1: return ((expected_value * multiplier * LOAD_PERM(88)) / (4 * 10));
+    2: return ((expected_value * multiplier * LOAD_PERM(88)) / (2 * 10));
+    3: return (expected_value * multiplier * LOAD_PERM(88)) / 10;
+    4: return ((expected_value * multiplier * LOAD_PERM(88) * 3) / (2 * 10));
+    5: return ((expected_value * multiplier * LOAD_PERM(88) * 9) / (4 * 10));
+    6: return ((expected_value * multiplier * LOAD_PERM(88) * 27) / (8 * 10));
     return expected_value;
 }
 
@@ -1157,7 +1156,7 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
 
 produce(produce_regular_port, 
     [],
-    [ENGS:12;SALT:8;],
+    [ENGS:apply_production_modifiers(12, 1);SALT:apply_production_modifiers(8, 1);],
     0
 )
 
@@ -1213,7 +1212,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: 12*LOAD_PERM(90); PTSH: 8*LOAD_PERM(90);],
+    [SAND: apply_production_modifiers(12, LOAD_PERM(90)); PTSH: apply_production_modifiers(8,LOAD_PERM(90));],
     0
 )
 
@@ -1271,7 +1270,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
 
 produce(produce_regular_mineral_mine, 
     [], 
-    [MNRL: 16*LOAD_PERM(90);],
+    [MNRL: apply_production_modifiers(16, LOAD_PERM(90));],
     0
 )
 
@@ -1328,7 +1327,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
 
 produce(produce_regular_corn_farm, 
     [], 
-    [CORN: 16 * LOAD_PERM(90);],
+    [CORN: apply_production_modifiers(16, LOAD_PERM(90));],
     0
 )
 
@@ -1385,7 +1384,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
 
 produce(produce_regular_soy_farm, 
     [], 
-    [SOYB: 12 * LOAD_PERM(90);],
+    [SOYB: apply_production_modifiers(12, LOAD_PERM(90));],
     0
 )
 
@@ -1442,7 +1441,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
 
 produce(produce_regular_yam_farm, 
     [], 
-    [YAMS: 12 * LOAD_PERM(90);],
+    [YAMS: apply_production_modifiers(12, LOAD_PERM(90));],
     0
 )
 
@@ -1499,7 +1498,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [], 
-    [VIAL:6;],
+    [VIAL:apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1557,7 +1556,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: 6* LOAD_PERM(91); CHEM: 4* LOAD_PERM(91);],
+    [FERT: apply_production_modifiers(6, LOAD_PERM(91)); CHEM: apply_production_modifiers(4, LOAD_PERM(91));],
     0
 )
 
@@ -1616,7 +1615,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
 
 produce(produce_regular_biolab, 
     [], 
-    [VGOL:6;],
+    [VGOL:apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1672,7 +1671,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
 
 produce(produce_regular_distillery, 
     [], 
-    [ALCH:6;],
+    [ALCH:apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1730,7 +1729,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
 
 produce(produce_regular_processing_plant, 
     [], 
-    [DIOS: 6;],
+    [DIOS: apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1789,7 +1788,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
 
 produce(produce_regular_pharmaceutical_plant_e, 
     [], 
-    [RWES: 6;],
+    [RWES: apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1848,7 +1847,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
 
 produce(produce_regular_pharmaceutical_plant_t, 
     [], 
-    [RWTS: 6 * LOAD_PERM(91);],
+    [RWTS: apply_production_modifiers(6, LOAD_PERM(91));],
     0
 )
 
@@ -1908,7 +1907,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
 
 produce(produce_regular_pharmacy_e, 
     [], 
-    [ESTR: 6 * LOAD_PERM(91);],
+    [ESTR: apply_production_modifiers(6, LOAD_PERM(91));],
     0
 )
 
@@ -1968,7 +1967,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
 
 produce(produce_regular_pharamacy_t, 
     [], 
-    [TEST: 6 * LOAD_PERM(91);],
+    [TEST: apply_production_modifiers(6, LOAD_PERM(91));],
     0
 )
 
