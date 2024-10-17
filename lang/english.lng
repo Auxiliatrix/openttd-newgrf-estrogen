@@ -21,6 +21,9 @@ STR_PARAM_DESC_INDUSTRY_DECAY                           :Whether untouched indus
 STR_PARAM_NAME_INDUSTRY_GROWTH                          :Industry Growth
 STR_PARAM_DESC_INDUSTRY_GROWTH                          :Whether frequented industries grow beyond their default production level.
 
+STR_PARAM_NAME_INDUSTRY_CLOSE                           :Industry Close
+STR_PARAM_DESC_INDUSTRY_CLOSE                           :Whether Industry Decay can cause an industry to close.
+
 STR_PARAM_NAME_INDUSTRY_STARTING_POWER                  :Industry Starting Power
 STR_PARAM_DESC_INDUSTRY_STARTING_POWER                  :Level of production industries should start at.
 
@@ -155,18 +158,21 @@ STR_INDUSTRY_POWER_HIGH                                 :High
 STR_INDUSTRY_POWER_VERY_HIGH                            :Very High
 STR_INDUSTRY_POWER_MAXIMUM                              :Maximum
 
-STR_INDUSTRY_LEVEL_STATE_NORMAL_GENERIC                 :{BLACK}Current industry power: {WHITE}{STRING}
+STR_INDUSTRY_RATIO_STATE_NORMAL                         :Normal
+STR_INDUSTRY_RATIO_STATE_ENHANCED                       :Enhanced
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                        :Gung-Ho
 
-STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS                    :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Engineering Supplies.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
-STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT                    :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production level: {WHITE}Normal{}{BLACK}Production level can be boosted by delivering {WHITE}Fertilizer.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver at least 20 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
-STR_INDUSTRY_LEVEL_STATE_ENHANCED                       :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production level: {WHITE}Enhanced{}{BLACK}To maintain this level of production, deliver at least 16 crates every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver at least 80 crates.{}{BLACK}Crates delivered in the last three months: {COMMA}
-STR_INDUSTRY_LEVEL_STATE_GUNG_HO                        :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production level: {WHITE}Gung-Ho{}{BLACK}To maintain this level of production, deliver at least 80 crates every three months.{}{BLACK}Crates delivered in the last three months:{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons of cargo transported: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING               :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons without cargo transported: {COMMA}
 
-STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE                  :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production ratio: {WHITE}Normal{}{BLACK}Production ratio can be boosted by delivering a variety of cargo.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver two kinds of accepted cargo at least once every three months.
-STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE                  :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production ratio: {WHITE}Normal{}{BLACK}Production ratio can be boosted by delivering a variety of cargo.{}{BLACK}For {WHITE}Enhanced {BLACK}production, deliver two kinds of accepted cargo at least once every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver three kinds of accepted cargo.
-STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE                :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production ratio: {WHITE}Enhanced{}{BLACK}To maintain this ratio of production, deliver two kinds of accepted cargo at least once every three months.
-STR_INDUSTRY_RATIO_STATE_ENHANCED_TRIPLE                :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production ratio: {WHITE}Enhanced{}{BLACK}To maintain this ratio of production, deliver two kinds of accepted cargo at least once every three months.{}{BLACK}For {WHITE}Gung-Ho {BLACK}production, deliver three kinds of accepted cargo.
-STR_INDUSTRY_RATIO_STATE_GUNG_HO                        :{BLACK}Current industry power: {WHITE}{STRING}{}{BLACK}Current production ratio: {WHITE}Gung-Ho{}{BLACK}To maintain this ratio of production, deliver at least three kinds of accepted cargo every three months.
+STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                   :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons of cargo transported: {COMMA}{}{}Extraction Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying crates of engineering supplies each season.{}{WHITE}Enhanced: {BLACK}20/season | {WHITE}Gung-Ho: {BLACK}80/season{}Crates supplied last month: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                  :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons without cargo transported: {COMMA}{}{}Extraction Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying crates of engineering supplies each season.{}{WHITE}Enhanced: {BLACK}20/season | {WHITE}Gung-Ho: {BLACK}80/season{}Crates supplied last month: {COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                   :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons of cargo transported: {COMMA}{}{}Extraction Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying crates of fertilizer each season.{}{WHITE}Enhanced: {BLACK}20/season | {WHITE}Gung-Ho: {BLACK}80/season{}Crates supplied last month: {COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                  :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons without cargo transported: {COMMA}{}{}Extraction Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying crates of fertilizer each season.{}{WHITE}Enhanced: {BLACK}20/season | {WHITE}Gung-Ho: {BLACK}80/season{}Crates supplied last month: {COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                  :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons of cargo transported: {COMMA}{}{}Conversion Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying more kinds of cargos each season.
+STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                 :{BLACK}Production Level: {WHITE}{STRING}{}{BLACK}Fluctuates randomly depending on consecutive seasons of {WHITE}transporting {BLACK}cargo.{}Consecutive seasons without cargo transported: {COMMA}{}{}Conversion Ratio: {WHITE}{STRING}{}{BLACK}Can be increased by supplying more kinds of cargos each season.
 
 STR_INDUSTRY_NAME_PORT                                  :Port
 STR_INDUSTRY_STATION_PORT                               :{STRING} Port
