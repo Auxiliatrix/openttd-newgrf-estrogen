@@ -36,6 +36,14 @@ grf {
         }
     }
     param 3 {
+        industry_close {
+            type: bool;
+            name: string(STR_PARAM_NAME_INDUSTRY_CLOSE);
+            desc: string(STR_PARAM_DESC_INDUSTRY_CLOSE);
+            def_value: 0;
+        }
+    }
+    param 4 {
         industry_starting_power {
             type: int;
             name: string(STR_PARAM_NAME_INDUSTRY_STARTING_POWER);
@@ -54,6 +62,9 @@ grf {
         }
     }
 }
+
+// TODO: update extra text
+// TODO: option for no close
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -704,12 +715,6 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
     127: LOAD_PERM(127);
 }
 
-switch(FEAT_INDUSTRIES, SELF, get_level, LOAD_PERM(28)) {
-    0..19: return 1;
-    20..79: return 2;
-    return 3;
-}
-
 switch(FEAT_INDUSTRIES, SELF, supplied_multiplier, LOAD_PERM(28)) {
     0..19: return 1;
     20..79: return 2;
@@ -829,18 +834,21 @@ switch(FEAT_INDUSTRIES, SELF, do_cargo_accept_cycle, cargo_quantity_0, cargo_qua
     return cargo_quantity_0 + cargo_quantity_1 + cargo_quantity_2;
 }
 
-switch(FEAT_INDUSTRIES, SELF, extra_text_generic, [
+switch(FEAT_INDUSTRIES, SELF, extra_text_industry_generic, [
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
+    LOAD_PERM(85)
 ]) {
-    return string(STR_INDUSTRY_LEVEL_STATE_NORMAL_GENERIC);
+    0: return string(STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING);
+    return string(STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING);
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
@@ -851,14 +859,19 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
-                    LOAD_PERM(28) << 16,
+                    ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
-    get_level()
+    STORE_TEMP(     (((LOAD_PERM(90) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
+                    ((LOAD_PERM(90) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
+                    ((LOAD_PERM(90) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
+                    257
+                ),
+    STORE_TEMP(LOAD_PERM(28), 258),
+    LOAD_PERM(85)
 ]) {
-    3: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
-    2: return string(STR_INDUSTRY_LEVEL_STATE_ENHANCED);
-    return string(STR_INDUSTRY_LEVEL_STATE_NORMAL_ENGS);
+    0: return string(STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING);
+    return string(STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING);
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
@@ -869,47 +882,42 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
-                    LOAD_PERM(28) << 16,
+                    ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
-    get_level()
+    STORE_TEMP(     (((LOAD_PERM(90) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
+                    ((LOAD_PERM(90) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
+                    ((LOAD_PERM(90) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
+                    257
+                ),
+    STORE_TEMP(LOAD_PERM(28), 258),
+    LOAD_PERM(85)
 ]) {
-    4: return string(STR_INDUSTRY_LEVEL_STATE_GUNG_HO);
-    2: return string(STR_INDUSTRY_LEVEL_STATE_ENHANCED);
-    return string(STR_INDUSTRY_LEVEL_STATE_NORMAL_FERT);
+    0: return string(STR_INDUSTRY_LEVEL_STATE_FERT_GROWING);
+    return string(STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING);
 }
 
-switch(FEAT_INDUSTRIES, SELF, extra_text_industry_double, [
+switch(FEAT_INDUSTRIES, SELF, extra_text_industry_combo, [
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
                     ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
+                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
-    (check_positive(28) + check_positive(56) + check_positive(84))
-]) {
-    2: return string(STR_INDUSTRY_RATIO_STATE_ENHANCED_DOUBLE);
-    return string(STR_INDUSTRY_RATIO_STATE_NORMAL_DOUBLE);
-}
-
-switch(FEAT_INDUSTRIES, SELF, extra_text_industry_triple, [
-    STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
-                    ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
-                    ((LOAD_PERM(87) == 3) * string(STR_INDUSTRY_POWER_DEFAULT)      ) +
-                    ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
-                    ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
-                    ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ),
-                    256
+    STORE_TEMP(     (((LOAD_PERM(91) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
+                    ((LOAD_PERM(91) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
+                    ((LOAD_PERM(91) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
+                    257
                 ),
-    (check_positive(28) + check_positive(56) + check_positive(84))
+    STORE_TEMP(LOAD_PERM(28), 258),
+    LOAD_PERM(85)
 ]) {
-    3: return string(STR_INDUSTRY_RATIO_STATE_GUNG_HO);
-    2: return string(STR_INDUSTRY_RATIO_STATE_ENHANCED_TRIPLE);
-    return string(STR_INDUSTRY_RATIO_STATE_NORMAL_TRIPLE);
+    0: return string(STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING);
+    return string(STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING);
 }
 
 switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input, cargo_index, [
@@ -959,7 +967,7 @@ switch(FEAT_INDUSTRIES, SELF, double_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, close_production, [
-    (LOAD_PERM(87) == 1) * industry_decay
+    (LOAD_PERM(87) == 1) * industry_decay * industry_close
 ]) {
     1: return CB_RESULT_IND_PROD_CLOSE;
     return CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1198,7 +1206,7 @@ item (FEAT_INDUSTRIES, industry_port) {
     graphics {
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT), (last_month_transported("ENGS")+last_month_transported("SALT")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        extra_text_industry: extra_text_generic;
+        extra_text_industry: extra_text_industry_generic;
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_port;
         cargo_subtype_display: cargo_subtype_display_industry;
@@ -1543,7 +1551,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
         cargo_subtype_display: cargo_subtype_display_industry;
-        extra_text_industry: extra_text_generic;
+        extra_text_industry: extra_text_industry_generic;
     }
 }
 
@@ -1563,7 +1571,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: apply_production_modifiers(6, LOAD_PERM(91)); CHEM: apply_production_modifiers(4, LOAD_PERM(91));],
+    [FERT: apply_production_modifiers(6, 1); CHEM: apply_production_modifiers(4, 1);],
     0
 )
 
@@ -1603,7 +1611,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
-        extra_text_industry: extra_text_industry_triple;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
@@ -1660,7 +1668,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
         cargo_subtype_display: cargo_subtype_display_industry;
-        extra_text_industry: extra_text_generic;
+        extra_text_industry: extra_text_industry_generic;
     }
 }
 
@@ -1716,7 +1724,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
         cargo_subtype_display: cargo_subtype_display_industry;
-        extra_text_industry: extra_text_generic;
+        extra_text_industry: extra_text_industry_generic;
     }
 }
 
@@ -1775,7 +1783,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
-        extra_text_industry: extra_text_industry_triple;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
@@ -1834,7 +1842,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
         construction_probability: availability_in_estrogen;
-        extra_text_industry: extra_text_industry_double;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
@@ -1854,7 +1862,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
 
 produce(produce_regular_pharmaceutical_plant_t, 
     [], 
-    [RWTS: apply_production_modifiers(6, LOAD_PERM(91));],
+    [RWTS: apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1893,7 +1901,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
         construction_probability: availability_in_testosterone;
-        extra_text_industry: extra_text_industry_double;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
@@ -1914,7 +1922,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
 
 produce(produce_regular_pharmacy_e, 
     [], 
-    [ESTR: apply_production_modifiers(6, LOAD_PERM(91));],
+    [ESTR: apply_production_modifiers(6, 1);],
     0
 )
 
@@ -1952,7 +1960,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
         construction_probability: availability_in_estrogen;
-        extra_text_industry: extra_text_industry_triple;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
@@ -1974,7 +1982,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharamacy_t, [
 
 produce(produce_regular_pharamacy_t, 
     [], 
-    [TEST: apply_production_modifiers(6, LOAD_PERM(91));],
+    [TEST: apply_production_modifiers(6, 1);],
     0
 )
 
@@ -2012,7 +2020,7 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
         produce_256_ticks: produce_256_ticks_pharamacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
         construction_probability: availability_in_testosterone;
-        extra_text_industry: extra_text_industry_triple;
+        extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
