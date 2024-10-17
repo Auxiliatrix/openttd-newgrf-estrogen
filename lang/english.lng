@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------
 
 STR_GRF_NAME                                            :{TITLE} {VERSION}
-STR_GRF_DESCRIPTION                                     :Test GRF before implementing actual GRF
+STR_GRF_DESCRIPTION                                     :Industry replacement set that emulates the real-world logistics of producing HRT. Made by autistic transfems, for autistic transfems.
 
 STR_PARAM_NAME_HORMONE                                  :Hormone
 STR_PARAM_DESC_HORMONE                                  :Hormone that diosgenin can be turned into at pharmaceutical plants.{}Selecting Both may result in unbalanced gameplay.
