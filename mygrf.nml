@@ -63,8 +63,7 @@ grf {
     }
 }
 
-// TODO: update extra text
-// TODO: option for no close
+// TODO: fix bug with increase where it shouldnt
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -1133,7 +1132,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, [
 switch(FEAT_INDUSTRIES, SELF, update_recently_extracted, total_extracted, [
     total_extracted
 ]) {
-    0: return LOAD_PERM(92-1);
+    0: return LOAD_PERM(92)-1;
     return 3;
 }
 
