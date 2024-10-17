@@ -950,116 +950,114 @@ random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
-    STORE_TEMP(LOAD_TEMP(127), 256),
     STORE_PERM(LOAD_PERM(87)-1, 87),
     STORE_PERM(0, 85)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE || bitmask(8);
+    return 1;
 }
 
 switch(FEAT_INDUSTRIES, SELF, double_production, [
-    STORE_TEMP(LOAD_TEMP(126), 256),
     STORE_PERM(LOAD_PERM(87)+1, 87),
     STORE_PERM(0, 86)
 ]) {
-    return CB_RESULT_IND_PROD_NO_CHANGE || bitmask(8);
+    return 2;
 }
 
 switch(FEAT_INDUSTRIES, SELF, close_production, [
     (LOAD_PERM(87) == 1) * industry_decay * industry_close
 ]) {
-    1: return CB_RESULT_IND_PROD_CLOSE;
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    1: return 3;
+    return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, decay_production, [
     (industry_decay + (LOAD_PERM(87) > industry_starting_power))
 ]) {
-    0: return CB_RESULT_IND_PROD_NO_CHANGE;
+    0: return 0;
     halve_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, grow_production, [
     (industry_growth + (LOAD_PERM(87) < industry_starting_power))
 ]) {
-    0: return CB_RESULT_IND_PROD_NO_CHANGE;
+    0: return 0;
     double_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
     roll_12() + modifier
 ]) {
-    1..15: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..15: return 0;
     close_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
     roll_12() + modifier
 ]) {
-    1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..14: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
     roll_12() + modifier
 ]) {
-    1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..11: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
     roll_12() + modifier
 ]) {
-    1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..8: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
     roll_12() + modifier
 ]) {
-    1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..4: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_6, modifier, [
     roll_12() + modifier
 ]) {
-    1..2: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..2: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
     roll_12() + modifier
 ]) {
-    1..4: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..4: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
     roll_12() + modifier
 ]) {
-    1..8: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..8: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
     roll_12() + modifier
 ]) {
-    1..11: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..11: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
     roll_12() + modifier
 ]) {
-    1..14: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..14: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_5, modifier, [
     roll_12() + modifier
 ]) {
-    1..15: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..15: return 0;
     grow_production;
 }
 
@@ -1072,7 +1070,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_ruin_update, [
     4: roll_ruin_4(LOAD_PERM(85)-1);
     5: roll_ruin_5(LOAD_PERM(85)-1);
     6: roll_ruin_6(LOAD_PERM(85)-1);
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
@@ -1083,20 +1081,20 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
     3: roll_progress_3(LOAD_PERM(86)-1);
     4: roll_progress_4(LOAD_PERM(86)-1);
     5: roll_progress_5(LOAD_PERM(86)-1);
-    return CB_RESULT_IND_PROD_NO_CHANGE;
+    return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_ruin_update, [
     LOAD_PERM(85)
 ]) {
-    0..1: return CB_RESULT_IND_PROD_NO_CHANGE;
+    0..1: return 0;
     do_seasonal_ruin_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_progress_update, [
     LOAD_PERM(86)
 ]) {
-    0..1: return CB_RESULT_IND_PROD_NO_CHANGE;
+    0..1: return 0;
     do_seasonal_progress_update;
 }
 
@@ -1121,7 +1119,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
     increment_progress;
 }
 
-switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, [
+switch(FEAT_INDUSTRIES, SELF, update_industry, [
     do_seasonal_activity_update(),
     LOAD_PERM(86)
 ]) {
@@ -1129,21 +1127,43 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, [
     check_seasonal_progress_update;
 }
 
+switch(FEAT_INDUSTRIES, SELF, floor_decrement_counter, [
+    LOAD_PERM(92)
+]) {
+    0: return 0;
+    return LOAD_PERM(92)-1;
+}
+
 switch(FEAT_INDUSTRIES, SELF, update_recently_extracted, total_extracted, [
     total_extracted
 ]) {
-    0: return LOAD_PERM(92)-1;
+    0: return floor_decrement_counter();
     return 3;
 }
 
+switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg, dec_msg, selection, [
+    STORE_TEMP(     ((selection == 1) * dec_msg +
+                    (selection == 2) * inc_msg
+            ), 256),
+    selection
+]) {
+    0: return CB_RESULT_IND_PROD_NO_CHANGE;
+    1..2: return CB_RESULT_IND_PROD_NO_CHANGE | bitmask(8);
+    return CB_RESULT_IND_PROD_CLOSE;
+}
+
+switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg, dec_msg, [
+    STORE_TEMP(update_industry(), 124)
+]) {
+    select_message(inc_msg, dec_msg, LOAD_TEMP(124));
+}
+
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg, dec_msg, total_extracted, [
-    STORE_TEMP(inc_msg, 126),
-    STORE_TEMP(dec_msg, 127),
     STORE_PERM(update_recently_extracted(total_extracted), 92),
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
     LOAD_PERM(89)
 ]) {
-    0: do_seasonal_prod_update;
+    0: do_seasonal_prod_update(inc_msg, dec_msg);
     return CB_RESULT_IND_PROD_NO_CHANGE; 
 }
 
