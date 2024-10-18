@@ -1237,7 +1237,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: apply_production_modifiers(12, LOAD_PERM(90)); PTSH: apply_production_modifiers(8,LOAD_PERM(90));],
+    [PTSH: apply_production_modifiers(8,LOAD_PERM(90));SAND: apply_production_modifiers(12*LOAD_PERM(90),1);],
     0
 )
 
