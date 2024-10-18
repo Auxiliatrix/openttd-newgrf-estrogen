@@ -570,6 +570,7 @@ tilelayout layout_default {
 // PERM_090         :Supplied multiplier
 // PERM_091         :Combo multiplier
 // PERM_092         :Months left of "recently extracted' state 
+// PERM_093..095    :Seasonal service
 // PERM_092..127    :Unassigned
 //
 // TEMP_000..031    :Parameter argument registers
@@ -1084,20 +1085,6 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
     return 0;
 }
 
-switch(FEAT_INDUSTRIES, SELF, check_seasonal_ruin_update, [
-    LOAD_PERM(85)
-]) {
-    0..1: return 0;
-    do_seasonal_ruin_update;
-}
-
-switch(FEAT_INDUSTRIES, SELF, check_seasonal_progress_update, [
-    LOAD_PERM(86)
-]) {
-    0..1: return 0;
-    do_seasonal_progress_update;
-}
-
 switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
     STORE_PERM(LOAD_PERM(85)+1, 85),
     STORE_PERM(0, 86)
@@ -1112,33 +1099,35 @@ switch(FEAT_INDUSTRIES, SELF, increment_progress, [
     return;
 }
 
-switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
-    LOAD_PERM(92)
+switch(FEAT_INDUSTRIES, SELF, reset_progress, [
+    STORE_PERM(0, 86),
+    STORE_PERM(0, 85)
 ]) {
-    0: increment_ruin;
-    increment_progress;
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
+    ((LOAD_PERM(93) + LOAD_PERM(94) + LOAD_PERM(95)) / 3)
+]) {
+    0..39: increment_ruin;
+    40..60: reset_progress;
+    61..100: increment_progress;
+}
+
+switch(FEAT_INDUSTRIES, SELF, update_industry_helper, [
+    LOAD_PERM(85)
+]) {
+    0..1: return 0;
+    do_seasonal_ruin_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, update_industry, [
     do_seasonal_activity_update(),
     LOAD_PERM(86)
 ]) {
-    0: check_seasonal_ruin_update;
-    check_seasonal_progress_update;
-}
-
-switch(FEAT_INDUSTRIES, SELF, floor_decrement_counter, [
-    LOAD_PERM(92)
-]) {
-    0: return 0;
-    return LOAD_PERM(92)-1;
-}
-
-switch(FEAT_INDUSTRIES, SELF, update_recently_extracted, total_extracted, [
-    total_extracted
-]) {
-    0: return floor_decrement_counter();
-    return 3;
+    0: update_industry_helper;
+    1: return 0;
+    do_seasonal_progress_update;
 }
 
 switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg, dec_msg, selection, [
@@ -1158,9 +1147,9 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg, dec_msg, [
     select_message(inc_msg, dec_msg, LOAD_TEMP(124));
 }
 
-switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg, dec_msg, total_extracted, [
-    STORE_PERM(update_recently_extracted(total_extracted), 92),
+switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg, dec_msg, best_service, [
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
+    STORE_PERM(best_service, (93+LOAD_PERM(89))),
     LOAD_PERM(89)
 ]) {
     0: do_seasonal_prod_update(inc_msg, dec_msg);
@@ -1225,7 +1214,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         layouts: [layout_default];
     }
     graphics {
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT), (last_month_transported("ENGS")+last_month_transported("SALT")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT), max(transported_last_month_pct("ENGS"),transported_last_month_pct("SALT")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         extra_text_industry: extra_text_industry_generic;
         build_prod_change: initialize_industry;
@@ -1283,7 +1272,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY), (last_month_transported("SAND")+last_month_transported("PTSH")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY), max(transported_last_month_pct("SAND"),transported_last_month_pct("PTSH")));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_quarry;
         produce_cargo_arrival: produce_cargo_arrival_quarry;
@@ -1628,7 +1617,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT), (last_month_transported("FERT")+last_month_transported("CHEM")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT), max(transported_last_month_pct("FERT"),transported_last_month_pct("CHEM")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
