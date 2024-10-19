@@ -105,6 +105,10 @@ switch (FEAT_INDUSTRIES, SELF, availability_in_testosterone, hormone) {
 // Cargo Definitions
 // ----------------------------------------------------------------
 
+spriteset(sprite_engineering_supplies, "./gfx/engineering_supplies.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
 item (FEAT_CARGOS, item_engineering_supplies) {
     property {
         number: 12;
@@ -121,9 +125,15 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_engineering_supplies;
+    }
+}
+
+spriteset(sprite_fertilizer, "./gfx/fertilizer.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_fertilizer) {
@@ -142,9 +152,15 @@ item (FEAT_CARGOS, item_fertilizer) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_fertilizer;
+    }
+}
+
+spriteset(sprite_salt, "./gfx/salt.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_salt) {
@@ -163,9 +179,15 @@ item (FEAT_CARGOS, item_salt) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_salt;
+    }
+}
+
+spriteset(sprite_potash, "./gfx/potash.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_potash) {
@@ -184,9 +206,15 @@ item (FEAT_CARGOS, item_potash) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_potash;
+    }
+}
+
+spriteset(sprite_sand, "./gfx/sand.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_sand) {
@@ -205,9 +233,15 @@ item (FEAT_CARGOS, item_sand) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_sand;
+    }
+}
+
+spriteset(sprite_minerals, "./gfx/minerals.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_minerals) {
@@ -226,9 +260,15 @@ item (FEAT_CARGOS, item_minerals) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_minerals;
+    }
+}
+
+spriteset(sprite_corn, "./gfx/corn.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_corn) {
@@ -247,9 +287,15 @@ item (FEAT_CARGOS, item_corn) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_corn;
+    }
+}
+
+spriteset(sprite_soybeans, "./gfx/soybeans.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_soy) {
@@ -268,9 +314,15 @@ item (FEAT_CARGOS, item_soy) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_soybeans;
+    }
+}
+
+spriteset(sprite_yams, "./gfx/yams.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_yam) {
@@ -289,9 +341,15 @@ item (FEAT_CARGOS, item_yam) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_yams;
+    }
+}
+
+spriteset(sprite_vials, "./gfx/vials.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_vials) {
@@ -310,9 +368,15 @@ item (FEAT_CARGOS, item_vials) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_vials;
+    }
+}
+
+spriteset(sprite_chemicals, "./gfx/chemicals.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_chemicals) {
@@ -331,9 +395,15 @@ item (FEAT_CARGOS, item_chemicals) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_chemicals;
+    }
+}
+
+spriteset(sprite_vegetable_oil, "./gfx/vegetable_oil.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_vegetable_oil) {
@@ -352,9 +422,15 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_vegetable_oil;
+    }
+}
+
+spriteset(sprite_alcohol, "./gfx/alcohol.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_alcohol) {
@@ -373,9 +449,15 @@ item (FEAT_CARGOS, item_alcohol) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_alcohol;
+    }
+}
+
+spriteset(sprite_diosgenin, "./gfx/diosgenin.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_diosgenin) {
@@ -394,9 +476,15 @@ item (FEAT_CARGOS, item_diosgenin) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_diosgenin;
+    }
+}
+
+spriteset(sprite_raw_estrone, "./gfx/raw_estrone.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_raw_estrone) {
@@ -415,9 +503,15 @@ item (FEAT_CARGOS, item_raw_estrone) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_raw_estrone;
+    }
+}
+
+spriteset(sprite_raw_testosterone, "./gfx/raw_testosterone.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_raw_testosterone) {
@@ -436,9 +530,15 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
     }
-    
+    graphics {
+        default: sprite_raw_testosterone;
+    }
+}
+
+spriteset(sprite_estrogen, "./gfx/estrogen.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_estrogen) {
@@ -457,9 +557,16 @@ item (FEAT_CARGOS, item_estrogen) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+        default: sprite_estrogen;
     }
     
+}
+
+spriteset(sprite_testosterone, "./gfx/testosterone.png") {
+    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_testosterone) {
@@ -478,7 +585,10 @@ item (FEAT_CARGOS, item_testosterone) {
         weight: 1.0;
         is_freight: 1.0;
         capacity_multiplier: 1;
-        sprite: 4311;
+        sprite: NEW_CARGO_SPRITE;
+    }
+    graphics {
+        default: sprite_testosterone;
     }
 }
 
