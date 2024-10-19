@@ -769,22 +769,64 @@ item(FEAT_INDUSTRYTILES, tile_placeholder_beach) {
     }
 }
 
+item(FEAT_INDUSTRYTILES, tile_replace_33) {
+    property {
+        substitute: 33;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_34) {
+    property {
+        substitute: 34;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_35) {
+    property {
+        substitute: 35;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_36) {
+    property {
+        substitute: 36;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_37) {
+    property {
+        substitute: 37;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_38) {
+    property {
+        substitute: 38;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
 tilelayout layout_farm_vertical {
-    0,0: 33;
-    0,1: 34;
-    1,0: 35;
-    1,1: 36;
-    2,0: 37;
-    2,1: 38;
+    0,0: tile_replace_33;
+    0,1: tile_replace_34;
+    1,0: tile_replace_35;
+    1,1: tile_replace_36;
+    2,0: tile_replace_37;
+    2,1: tile_replace_38;
 }
 
 tilelayout layout_farm_horizontal {
-    0,0: 33;
-    0,1: 34;
-    0,2: 35;
-    1,0: 36;
-    2,1: 37;
-    2,2: 38;
+    0,0: tile_replace_33;
+    0,1: tile_replace_34;
+    0,2: tile_replace_35;
+    1,0: tile_replace_36;
+    2,1: tile_replace_37;
+    2,2: tile_replace_38;
 }
 
 tilelayout layout_default {
@@ -846,80 +888,312 @@ tilelayout layout_coast_west {
     1,3: tile_placeholder_beach;
 }
 
+item(FEAT_INDUSTRYTILES, tile_replace_110) {
+    property {
+        substitute: 110;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
 tilelayout layout_quarry {
-    0,0: 110;
-    1,0: 110;
-    2,0: 110;
-    0,1: 110;
-    1,1: 110;
-    2,1: 110;
-    0,2: 110;
-    1,2: 110;
-    2,2: 110;
+    0,0: tile_replace_110;
+    1,0: tile_replace_110;
+    2,0: tile_replace_110;
+    0,1: tile_replace_110;
+    1,1: tile_replace_110;
+    2,1: tile_replace_110;
+    0,2: tile_replace_110;
+    1,2: tile_replace_110;
+    2,2: tile_replace_110;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_101) {
+    property {
+        substitute: 101;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_102) {
+    property {
+        substitute: 102;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_104) {
+    property {
+        substitute: 104;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_106) {
+    property {
+        substitute: 106;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_108) {
+    property {
+        substitute: 108;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_109) {
+    property {
+        substitute: 109;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_mineral_mine {
-    0,1: 101;
-    0,2: 102;
-    1,1: 104;
-    1,2: 106;
-    2,1: 108;
-    2,2: 109;
+    0,1: tile_replace_101;
+    0,2: tile_replace_102;
+    1,1: tile_replace_104;
+    1,2: tile_replace_106;
+    2,1: tile_replace_108;
+    2,2: tile_replace_109;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_39) {
+    property {
+        substitute: 39;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_40) {
+    property {
+        substitute: 40;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_41) {
+    property {
+        substitute: 41;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_42) {
+    property {
+        substitute: 42;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_glassworks {
-    0,0: 39;
-    0,1: 40;
-    1,0: 41;
-    1,1: 42;
+    0,0: tile_replace_39;
+    0,1: tile_replace_40;
+    1,0: tile_replace_41;
+    1,1: tile_replace_42;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_18) {
+    property {
+        substitute: 18;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_19) {
+    property {
+        substitute: 19;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_20) {
+    property {
+        substitute: 20;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_21) {
+    property {
+        substitute: 21;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_22) {
+    property {
+        substitute: 22;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_23) {
+    property {
+        substitute: 23;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_chemical_plant {
-    0,0: 18;
-    0,1: 19;
-    1,0: 20;
-    1,1: 21;
-    2,0: 22;
-    2,1: 23;
+    0,0: tile_replace_18;
+    0,1: tile_replace_19;
+    1,0: tile_replace_20;
+    1,1: tile_replace_21;
+    2,0: tile_replace_22;
+    2,1: tile_replace_23;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_121) {
+    property {
+        substitute: 121;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_122) {
+    property {
+        substitute: 122;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_123) {
+    property {
+        substitute: 123;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_124) {
+    property {
+        substitute: 124;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_biolab {
-    0,0: 121;
-    0,1: 122;
-    1,0: 123;
-    1,1: 124;
+    0,0: tile_replace_121;
+    0,1: tile_replace_122;
+    1,0: tile_replace_123;
+    1,1: tile_replace_124;
 }
 
+item(FEAT_INDUSTRYTILES, tile_replace_120) {
+    property {
+        substitute: 120;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+
 tilelayout layout_distillery {
-    0,0: 120;
-    0,1: 120;
-    1,0: 120;
-    1,1: 120;
+    0,0: tile_replace_120;
+    0,1: tile_replace_120;
+    1,0: tile_replace_120;
+    1,1: tile_replace_120;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_60) {
+    property {
+        substitute: 60;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_61) {
+    property {
+        substitute: 61;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_62) {
+    property {
+        substitute: 62;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_63) {
+    property {
+        substitute: 63;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_processing_plant {
-    0,0: 60;
-    0,1: 61;
-    1,0: 62;
-    1,1: 63;
+    0,0: tile_replace_60;
+    0,1: tile_replace_61;
+    1,0: tile_replace_62;
+    1,1: tile_replace_63;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_52) {
+    property {
+        substitute: 52;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_53) {
+    property {
+        substitute: 53;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_54) {
+    property {
+        substitute: 54;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_55) {
+    property {
+        substitute: 55;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_pharmaceutical_plant {
-    0,0: 52;
-    0,1: 53;
-    1,0: 54;
-    1,1: 55;
-    2,0: 52;
-    2,1: 53;
+    0,0: tile_replace_52;
+    0,1: tile_replace_53;
+    1,0: tile_replace_54;
+    1,1: tile_replace_55;
+    2,0: tile_replace_52;
+    2,1: tile_replace_53;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_58) {
+    property {
+        substitute: 58;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_59) {
+    property {
+        substitute: 59;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_pharmacy {
-    0,0: 58;
-    1,0: 59;
+    0,0: tile_replace_58;
+    1,0: tile_replace_59;
+}
+
+item(FEAT_INDUSTRYTILES, tile_replace_60) {
+    property {
+        substitute: 60;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
 }
 
 tilelayout layout_gender_clinic {
-    0,0: 60;
+    0,0: tile_replace_60;
 }
 
 // ----------------------------------------------------------------
@@ -1080,6 +1354,31 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
     125: LOAD_PERM(125);
     126: LOAD_PERM(126);
     127: LOAD_PERM(127);
+}
+
+switch(FEAT_INDUSTRIES, SELF, is_isolated, radius, [
+    (   (industry_distance(0) > radius) *
+        (industry_distance(1) > radius) *
+        (industry_distance(2) > radius) *
+        (industry_distance(3) > radius) *
+        (industry_distance(4) > radius) *
+        (industry_distance(5) > radius) *
+        (industry_distance(6) > radius) *
+        (industry_distance(7) > radius) *
+        (industry_distance(8) > radius) *
+        (industry_distance(9) > radius) *
+        (industry_distance(10) > radius) *
+        (industry_distance(11) > radius) *
+        (industry_distance(12) > radius) *
+        (industry_distance(13) > radius) *
+        (industry_distance(14) > radius) *
+        (industry_distance(15) > radius) *
+        (industry_distance(16) > radius)
+    )
+]) {
+    1: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+
 }
 
 switch(FEAT_INDUSTRIES, SELF, supplied_multiplier, LOAD_PERM(28)) {
@@ -1585,6 +1884,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         layouts: [layout_coast_north,layout_coast_south,layout_coast_east,layout_coast_west];
     }
     graphics {
+        location_check: is_isolated(16);
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT), max(transported_last_month_pct("ENGS"),transported_last_month_pct("SALT")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         extra_text_industry: extra_text_industry_generic;
@@ -1631,7 +1931,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
             produce_cargo("SAND", 0),
             produce_cargo("PTSH", 0)
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
         closure_msg: string(STR_INDUSTRY_CLOSURE_QUARRY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY);
@@ -1646,6 +1946,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         layouts: [layout_quarry];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY), max(transported_last_month_pct("SAND"),transported_last_month_pct("PTSH")));
         build_prod_change: initialize_industry;
@@ -1691,7 +1992,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
             accept_cargo("ENGS"),
             produce_cargo("MNRL", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_MINERAL_MINE);
         closure_msg: string(STR_INDUSTRY_CLOSURE_MINERAL_MINE);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE);
@@ -1706,6 +2007,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         layouts: [layout_mineral_mine];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE), string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE), transported_last_month_pct("MNRL"));
         build_prod_change: initialize_industry;
@@ -1766,6 +2068,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM), transported_last_month_pct("CORN"));
         build_prod_change: initialize_industry;
@@ -1826,6 +2129,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM), transported_last_month_pct("SOYB"));
         build_prod_change: initialize_industry;
@@ -1886,6 +2190,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM), transported_last_month_pct("YAMS"));
         build_prod_change: initialize_industry;
@@ -1931,7 +2236,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
             accept_cargo("SAND"),
             produce_cargo("VIAL", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GLASSWORKS);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS);
@@ -1945,6 +2250,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         layouts: [layout_glassworks];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS), transported_last_month_pct("VIAL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1996,7 +2302,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
             produce_cargo("FERT", 0),
             produce_cargo("CHEM", 0)
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_CHEMICAL_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT);
@@ -2010,6 +2316,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         layouts: [layout_chemical_plant];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT), max(transported_last_month_pct("FERT"),transported_last_month_pct("CHEM")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2055,7 +2362,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
             accept_cargo("CORN"),
             produce_cargo("VGOL", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
         closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB);
@@ -2069,6 +2376,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         layouts: [layout_biolab];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB), transported_last_month_pct("VGOL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2114,7 +2422,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
             accept_cargo("CORN"),
             produce_cargo("ALCH", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_DISTILLERY);
         closure_msg: string(STR_INDUSTRY_CLOSURE_DISTILLERY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY);
@@ -2128,6 +2436,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         layouts: [layout_distillery];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY), transported_last_month_pct("ALCH"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2177,7 +2486,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
             accept_cargo("ALCH"),
             produce_cargo("DIOS", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT);
@@ -2191,6 +2500,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         layouts: [layout_processing_plant];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT), transported_last_month_pct("DIOS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2238,7 +2548,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
             accept_cargo("CHEM"),
             produce_cargo("RWES", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E);
@@ -2252,6 +2562,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         layouts: [layout_pharmaceutical_plant];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E), transported_last_month_pct("RWES"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2300,7 +2611,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
             accept_cargo("CHEM"),
             produce_cargo("RWTS", 0),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T);
@@ -2314,6 +2625,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         layouts: [layout_pharmaceutical_plant];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T), transported_last_month_pct("RWTS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2364,7 +2676,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
             accept_cargo("RWES"),
             produce_cargo("ESTR", 0)
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_E);
         prob_in_game: 6;
@@ -2376,6 +2688,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         layouts: [layout_pharmacy];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_E), string(STR_INDUSTRY_CLOSURE_PHARMACY_E), transported_last_month_pct("ESTR"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2427,7 +2740,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
             accept_cargo("RWTS"),
             produce_cargo("TEST", 0)
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_T);
         prob_in_game: 6;
@@ -2439,6 +2752,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
         layouts: [layout_pharmacy];
     }
     graphics {
+        location_check: is_isolated(16);
         build_prod_change: initialize_industry;
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_T), string(STR_INDUSTRY_CLOSURE_PHARMACY_T), transported_last_month_pct("TEST"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2464,7 +2778,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         cargo_types: [
             accept_cargo("ESTR"),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
         prob_in_game: 4;
@@ -2476,6 +2790,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         layouts: [layout_gender_clinic];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         build_prod_change: initialize_industry;
@@ -2500,7 +2815,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         cargo_types: [
             accept_cargo("TEST"),
         ];
-
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
         prob_in_game: 4;
@@ -2512,6 +2827,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         layouts: [layout_gender_clinic];
     }
     graphics {
+        location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         monthly_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         build_prod_change: initialize_industry;
