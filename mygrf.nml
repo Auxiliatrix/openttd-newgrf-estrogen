@@ -1329,7 +1329,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE), string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE), last_month_transported("MNRL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE), string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE), transported_last_month_pct("MNRL"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_mineral_mine;
         produce_cargo_arrival: produce_cargo_arrival_mineral_mine;
@@ -1386,7 +1386,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM), last_month_transported("CORN"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM), transported_last_month_pct("CORN"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_corn_farm;
         produce_cargo_arrival: produce_cargo_arrival_corn_farm;
@@ -1443,7 +1443,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM), last_month_transported("SOYB"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM), transported_last_month_pct("SOYB"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_soy_farm;
         produce_cargo_arrival: produce_cargo_arrival_soy_farm;
@@ -1500,7 +1500,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM), last_month_transported("YAMS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM), transported_last_month_pct("YAMS"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_yam_farm;
         produce_cargo_arrival: produce_cargo_arrival_yam_farm;
@@ -1556,7 +1556,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS), last_month_transported("VIAL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS), transported_last_month_pct("VIAL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
@@ -1673,7 +1673,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB), last_month_transported("VGOL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB), transported_last_month_pct("VGOL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_biolab;
         produce_cargo_arrival: produce_cargo_arrival_biolab;
@@ -1729,7 +1729,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY), last_month_transported("ALCH"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY), transported_last_month_pct("ALCH"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
@@ -1789,7 +1789,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT), last_month_transported("DIOS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT), transported_last_month_pct("DIOS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
@@ -1847,7 +1847,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E), last_month_transported("RWES"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E), transported_last_month_pct("RWES"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
@@ -1906,7 +1906,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T), last_month_transported("RWTS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T), transported_last_month_pct("RWTS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
@@ -1965,7 +1965,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_E), string(STR_INDUSTRY_CLOSURE_PHARMACY_E), last_month_transported("ESTR"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_E), string(STR_INDUSTRY_CLOSURE_PHARMACY_E), transported_last_month_pct("ESTR"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
@@ -2025,7 +2025,7 @@ item (FEAT_INDUSTRIES, industry_pharamacy_t) {
     }
     graphics {
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_T), string(STR_INDUSTRY_CLOSURE_PHARMACY_T), last_month_transported("TEST"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PLANTED_PHARMACY_T), string(STR_INDUSTRY_CLOSURE_PHARMACY_T), transported_last_month_pct("TEST"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharamacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharamacy_t;
