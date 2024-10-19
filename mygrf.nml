@@ -486,7 +486,139 @@ item (FEAT_CARGOS, item_testosterone) {
 // Tiles
 // ----------------------------------------------------------------
 
-spritelayout spritelayout_placeholder {
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_level, [
+    (   (nearby_tile_height(0,0) == nearby_tile_height(-1,-1)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(-1,0)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(-1,1)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(0,-1)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(0,1)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(1,-1)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(1,0)) *
+        (nearby_tile_height(0,0) == nearby_tile_height(1,1))
+    )
+]) {
+    1: CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_water, [
+    nearby_tile_class(0,0)
+]) {
+    TILE_CLASS_WATER: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_immersed, [
+    (   (nearby_tile_class(-1,-1) == TILE_CLASS_WATER) *
+        (nearby_tile_class(-1,0) == TILE_CLASS_WATER) *
+        (nearby_tile_class(-1,1) == TILE_CLASS_WATER) *
+        (nearby_tile_class(0,-1) == TILE_CLASS_WATER) *
+        (nearby_tile_class(0,1) == TILE_CLASS_WATER) *
+        (nearby_tile_class(1,-1) == TILE_CLASS_WATER) *
+        (nearby_tile_class(1,0) == TILE_CLASS_WATER) *
+        (nearby_tile_class(1,1) == TILE_CLASS_WATER)
+    )
+]) {
+    1: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_adjacent_ground, [
+    (   (nearby_tile_class(-1,-1) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(-1,0) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(-1,1) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(0,-1) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(0,1) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(1,-1) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(1,0) == TILE_CLASS_GROUND) +
+        (nearby_tile_class(1,1) == TILE_CLASS_GROUND)
+    )
+]) {
+    1: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_adjacent_water, [
+    (   (nearby_tile_class(-1,-1) == TILE_CLASS_WATER) +
+        (nearby_tile_class(-1,0) == TILE_CLASS_WATER) +
+        (nearby_tile_class(-1,1) == TILE_CLASS_WATER) +
+        (nearby_tile_class(0,-1) == TILE_CLASS_WATER) +
+        (nearby_tile_class(0,1) == TILE_CLASS_WATER) +
+        (nearby_tile_class(1,-1) == TILE_CLASS_WATER) +
+        (nearby_tile_class(1,0) == TILE_CLASS_WATER) +
+        (nearby_tile_class(1,1) == TILE_CLASS_WATER)
+    )
+]) {
+    1: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_coast, [
+    tile_check_is_adjacent_water()
+]) {
+    CB_RESULT_LOCATION_ALLOW: tile_check_is_adjacent_ground;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_water, [
+    tile_check_is_level()
+]) {
+    CB_RESULT_LOCATION_ALLOW: tile_check_is_water;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_deep_water, [
+    tile_check_is_immersed()
+]) {
+    CB_RESULT_LOCATION_ALLOW: tile_check_is_water;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_ground, [
+    nearby_tile_class(0,0)
+]) {
+    TILE_CLASS_GROUND: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_ground, [
+    tile_check_is_level()
+]) {
+    CB_RESULT_LOCATION_ALLOW: tile_check_is_ground;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+spritelayout spritelayout_placeholder_water {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_placeholder_water) {
+    property {
+        substitute: 0;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+        land_shape_flags: bitmask(LSF_ALLOW_ON_WATER);
+    }
+    graphics {
+        default: spritelayout_placeholder_water;
+        tile_check: tile_check_level_water;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_placeholder_deep_water) {
+    property {
+        substitute: 0;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+        land_shape_flags: bitmask(LSF_ALLOW_ON_WATER);
+    }
+    graphics {
+        default: spritelayout_placeholder_water;
+        tile_check: tile_check_deep_water;
+    }
+}
+
+spritelayout spritelayout_placeholder_ground {
     ground {
         sprite: GROUNDSPRITE_NORMAL;
     }
@@ -495,65 +627,190 @@ spritelayout spritelayout_placeholder {
     }
 }
 
-item(FEAT_INDUSTRYTILES, tile_placeholder) {
+spritelayout spritelayout_placeholder_beach {
+    ground {
+        sprite: GROUNDSPRITE_NORMAL;
+    }
+    building {
+        sprite: 2174;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_placeholder_ground) {
+    property {
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+        land_shape_flags: bitmask(LSF_ONLY_ON_FLAT_LAND);
+    }
+    graphics {
+        default: spritelayout_placeholder_ground;
+        tile_check: tile_check_level_ground;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, tile_placeholder_beach) {
     property {
         substitute: 0;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+        land_shape_flags: bitmask(LSF_ALLOW_ON_WATER);
     }
     graphics {
-        default: spritelayout_placeholder;
+        default: spritelayout_placeholder_beach;
+        tile_check: tile_check_is_adjacent_ground;
     }
+}
+
+tilelayout layout_farm_vertical {
+    0,0: 33;
+    0,1: 34;
+    1,0: 35;
+    1,1: 36;
+    2,0: 37;
+    2,1: 38;
+}
+
+tilelayout layout_farm_horizontal {
+    0,0: 33;
+    0,1: 34;
+    0,2: 35;
+    1,0: 36;
+    2,1: 37;
+    2,2: 38;
 }
 
 tilelayout layout_default {
-    rotation: DIRECTION_NORTH;
-    0,0: tile_placeholder;
+    0,0: tile_placeholder_ground;
+    0,1: tile_placeholder_ground;
+    0,2: tile_placeholder_ground;
+    1,0: tile_placeholder_ground;
+    1,1: tile_placeholder_ground;
+    1,2: tile_placeholder_ground;
+    2,0: tile_placeholder_ground;
+    2,1: tile_placeholder_ground;
+    2,2: tile_placeholder_ground;
+    3,0: tile_placeholder_ground;
+    3,1: tile_placeholder_ground;
+    3,2: tile_placeholder_ground;
 }
 
-// spritelayout spritelayout_port_coast {
-//     ground {
-//         sprite:GROUNDSPRITE_NORMAL;
-//     }
-//     building {
-//         sprite:XXXX;
-//     }
-// }
+tilelayout layout_coast_north {
+    0,0: tile_placeholder_beach;
+    0,1: tile_placeholder_beach;
+    1,0: tile_placeholder_water;
+    1,1: tile_placeholder_water;
+    2,0: tile_placeholder_deep_water;
+    2,1: tile_placeholder_deep_water;
+    3,0: tile_placeholder_deep_water;
+    3,1: tile_placeholder_deep_water;
+}
 
-// spritelayout spritelayout_port_water {
-//     ground {
-//         sprite:GROUNDSPRITE_WATER;
-//     }
-//     building {
-//         sprite:XXXX;
-//     }
-// }
+tilelayout layout_coast_south {
+    0,0: tile_placeholder_deep_water;
+    0,1: tile_placeholder_deep_water;
+    1,0: tile_placeholder_deep_water;
+    1,1: tile_placeholder_deep_water;
+    2,0: tile_placeholder_water;
+    2,1: tile_placeholder_water;
+    3,0: tile_placeholder_beach;
+    3,1: tile_placeholder_beach;
+}
 
-// item(FEAT_INDUSTRYTILES, tile_port_coast) {
-//     property {
-//         substitute: 0;
-//         land_shape_flags: bitmask(LSF_ONLY_ON_FLAT_LAND);
-//         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
-//     }
-//     graphics {
-//         default: spritelayout_port_coast;
-//     }
-// }
+tilelayout layout_coast_east {
+    0,0: tile_placeholder_beach;
+    1,0: tile_placeholder_beach;
+    0,1: tile_placeholder_water;
+    1,1: tile_placeholder_water;
+    0,2: tile_placeholder_deep_water;
+    1,2: tile_placeholder_deep_water;
+    0,3: tile_placeholder_deep_water;
+    1,3: tile_placeholder_deep_water;
+}
 
-// item(FEAT_INDUSTRYTILES, tile_port_water) {
-//     property {
-//         substitute: 0;
-//         land_shape_flags: bitmask(LSF_ALLOW_ON_WATER);
-//         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
-//     }
-//     graphics {
-//         default: spritelayout_port_water;
-//     }
-// }
+tilelayout layout_coast_west {
+    0,0: tile_placeholder_deep_water;
+    1,0: tile_placeholder_deep_water;
+    0,1: tile_placeholder_water;
+    1,1: tile_placeholder_water;
+    0,2: tile_placeholder_water;
+    1,2: tile_placeholder_water;
+    0,3: tile_placeholder_beach;
+    1,3: tile_placeholder_beach;
+}
 
-// tilelayout layout_port_north {
-//     rotation: DIRECTION_NORTH;
-//     0,0: tile_port_coast;
-// }
+tilelayout layout_quarry {
+    0,0: 110;
+    1,0: 110;
+    2,0: 110;
+    0,1: 110;
+    1,1: 110;
+    2,1: 110;
+    0,2: 110;
+    1,2: 110;
+    2,2: 110;
+}
+
+tilelayout layout_mineral_mine {
+    0,1: 101;
+    0,2: 102;
+    1,1: 104;
+    1,2: 106;
+    2,1: 108;
+    2,2: 109;
+}
+
+tilelayout layout_glassworks {
+    0,0: 39;
+    0,1: 40;
+    1,0: 41;
+    1,1: 42;
+}
+
+tilelayout layout_chemical_plant {
+    0,0: 18;
+    0,1: 19;
+    1,0: 20;
+    1,1: 21;
+    2,0: 22;
+    2,1: 23;
+}
+
+tilelayout layout_biolab {
+    0,0: 121;
+    0,1: 122;
+    1,0: 123;
+    1,1: 124;
+}
+
+tilelayout layout_distillery {
+    0,0: 120;
+    0,1: 120;
+    1,0: 120;
+    1,1: 120;
+}
+
+tilelayout layout_processing_plant {
+    0,0: 60;
+    0,1: 61;
+    1,0: 62;
+    1,1: 63;
+}
+
+tilelayout layout_pharmaceutical_plant {
+    0,0: 52;
+    0,1: 53;
+    1,0: 54;
+    1,1: 55;
+    2,0: 52;
+    2,1: 53;
+}
+
+tilelayout layout_pharmacy {
+    0,0: 58;
+    1,0: 59;
+}
+
+tilelayout layout_gender_clinic {
+    0,0: 60;
+}
 
 // ----------------------------------------------------------------
 // Industry Addressing Reference
@@ -1203,7 +1460,7 @@ item (FEAT_INDUSTRIES, industry_port) {
             produce_cargo("ENGS", 0),
             produce_cargo("SALT", 0)
         ];
-        spec_flags: bitmask(IND_FLAG_BUILT_ON_WATER);
+        spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PORT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PORT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT);
@@ -1215,7 +1472,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         map_colour: 146;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_coast_north,layout_coast_south,layout_coast_east,layout_coast_west];
     }
     graphics {
         monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT), max(transported_last_month_pct("ENGS"),transported_last_month_pct("SALT")));
@@ -1276,7 +1533,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         map_colour: 33;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_quarry];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1336,7 +1593,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         map_colour: 41;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_mineral_mine];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1396,7 +1653,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         map_colour: 66;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1456,7 +1713,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         map_colour: 71;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1516,7 +1773,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         map_colour: 75;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_farm_vertical,layout_farm_horizontal];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -1575,7 +1832,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         map_colour: 135;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_glassworks];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1640,7 +1897,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         map_colour: 185;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_chemical_plant];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1699,7 +1956,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         map_colour: 206;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_biolab];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1758,7 +2015,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         map_colour: 192;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_distillery];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1821,7 +2078,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         map_colour: 174;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_processing_plant];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1882,7 +2139,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         map_colour: 152;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_pharmaceutical_plant];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -1944,7 +2201,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         map_colour: 103;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_pharmaceutical_plant];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -2006,7 +2263,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         map_colour: 150;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_pharmacy];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -2069,7 +2326,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
         map_colour: 101;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_pharmacy];
     }
     graphics {
         build_prod_change: initialize_industry;
@@ -2106,7 +2363,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         map_colour: 49;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_gender_clinic];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
@@ -2142,7 +2399,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         map_colour: 48;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_default];
+        layouts: [layout_gender_clinic];
     }
     graphics {
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
