@@ -64,8 +64,6 @@ grf {
 }
 
 // TODO: cargo flow graph colors too similar
-// TODO: quarry doesn't seem to be increasing progress?
-// TODO: gender clinic and pharmacies spawn near towns
 // TODO: figure out airplanes?
 // TODO: bump port spawn rate
 
@@ -2102,7 +2100,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         closure_msg: string(STR_INDUSTRY_CLOSURE_PORT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A);
-        prob_in_game: 2;
+        prob_in_game: 3;
         prob_map_gen: 4;
         fund_cost_multiplier: 150;
         prospect_chance: 0.75;
@@ -2904,7 +2902,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
             accept_cargo("RWES"),
             produce_cargo("ESTR", 0)
         ];
-        spec_flags: bitmask();
+        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_E);
         prob_in_game: 6;
@@ -2968,7 +2966,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
             accept_cargo("RWTS"),
             produce_cargo("TEST", 0)
         ];
-        spec_flags: bitmask();
+        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_T);
         prob_in_game: 6;
@@ -3006,7 +3004,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         cargo_types: [
             accept_cargo("ESTR"),
         ];
-        spec_flags: bitmask();
+        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
         prob_in_game: 4;
@@ -3043,7 +3041,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         cargo_types: [
             accept_cargo("TEST"),
         ];
-        spec_flags: bitmask();
+        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
         prob_in_game: 4;
