@@ -63,11 +63,9 @@ grf {
     }
 }
 
-// TODO: cargo flow graph colors too similar
 // TODO: figure out airplanes?
-// TODO: bump port spawn rate
-
-// TODO: fix bug with increase where it shouldnt
+// TODO: fix passengers
+// TODO: refactor for better organization
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -120,6 +118,8 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         unit_name: string(STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES);
         type_abbreviation: string(STR_CARGO_ABBREV_ENGINEERING_SUPPLIES);
         cargo_label: "ENGS";
+        station_list_colour: 146;
+        cargo_payment_list_colour: 146;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -174,6 +174,8 @@ item (FEAT_CARGOS, item_salt) {
         unit_name: string(STR_CARGO_SINGULAR_SALT);
         type_abbreviation: string(STR_CARGO_ABBREV_SALT);
         cargo_label: "SALT";
+        station_list_colour: 48;
+        cargo_payment_list_colour: 48;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SALT);
         cargo_classes: bitmask(CC_BULK);
@@ -201,6 +203,8 @@ item (FEAT_CARGOS, item_potash) {
         unit_name: string(STR_CARGO_SINGULAR_POTASH);
         type_abbreviation: string(STR_CARGO_ABBREV_POTASH);
         cargo_label: "PTSH";
+        station_list_colour: 13;
+        cargo_payment_list_colour: 13;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_POTASH);
         cargo_classes: bitmask(CC_BULK);
@@ -228,6 +232,8 @@ item (FEAT_CARGOS, item_sand) {
         unit_name: string(STR_CARGO_SINGULAR_SAND);
         type_abbreviation: string(STR_CARGO_ABBREV_SAND);
         cargo_label: "SAND";
+        station_list_colour: 42;
+        cargo_payment_list_colour: 42;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SAND);
         cargo_classes: bitmask(CC_BULK);
@@ -255,6 +261,8 @@ item (FEAT_CARGOS, item_minerals) {
         unit_name: string(STR_CARGO_SINGULAR_MINERALS);
         type_abbreviation: string(STR_CARGO_ABBREV_MINERALS);
         cargo_label: "MNRL";
+        station_list_colour: 41;
+        cargo_payment_list_colour: 41;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS);
         cargo_classes: bitmask(CC_BULK);
@@ -282,6 +290,8 @@ item (FEAT_CARGOS, item_corn) {
         unit_name: string(STR_CARGO_SINGULAR_CORN);
         type_abbreviation: string(STR_CARGO_ABBREV_CORN);
         cargo_label: "CORN";
+        station_list_colour: 66;
+        cargo_payment_list_colour: 66;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_CORN);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -309,6 +319,8 @@ item (FEAT_CARGOS, item_soy) {
         unit_name: string(STR_CARGO_SINGULAR_SOY);
         type_abbreviation: string(STR_CARGO_ABBREV_SOY);
         cargo_label: "SOYB";
+        station_list_colour: 71;
+        cargo_payment_list_colour: 71;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SOY);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -336,6 +348,8 @@ item (FEAT_CARGOS, item_yam) {
         unit_name: string(STR_CARGO_SINGULAR_YAM);
         type_abbreviation: string(STR_CARGO_ABBREV_YAM);
         cargo_label: "YAMS";
+        station_list_colour: 75;
+        cargo_payment_list_colour: 75;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_YAM);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
@@ -363,6 +377,8 @@ item (FEAT_CARGOS, item_vials) {
         unit_name: string(STR_CARGO_SINGULAR_VIALS);
         type_abbreviation: string(STR_CARGO_ABBREV_VIALS);
         cargo_label: "VIAL";
+        station_list_colour: 135;
+        cargo_payment_list_colour: 135;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_VIALS);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -390,6 +406,8 @@ item (FEAT_CARGOS, item_chemicals) {
         unit_name: string(STR_CARGO_SINGULAR_CHEMICALS);
         type_abbreviation: string(STR_CARGO_ABBREV_CHEMICALS);
         cargo_label: "CHEM";
+        station_list_colour: 185;
+        cargo_payment_list_colour: 185;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS);
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
@@ -417,6 +435,8 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         unit_name: string(STR_CARGO_SINGULAR_VEGETABLE_OIL);
         type_abbreviation: string(STR_CARGO_ABBREV_VEGETABLE_OIL);
         cargo_label: "VGOL";
+        station_list_colour: 206;
+        cargo_payment_list_colour: 206;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL);
         cargo_classes: bitmask(CC_LIQUID);
@@ -444,6 +464,8 @@ item (FEAT_CARGOS, item_alcohol) {
         unit_name: string(STR_CARGO_SINGULAR_ALCOHOL);
         type_abbreviation: string(STR_CARGO_ABBREV_ALCOHOL);
         cargo_label: "ALCH";
+        station_list_colour: 192;
+        cargo_payment_list_colour: 192;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL);
         cargo_classes: bitmask(CC_LIQUID);
@@ -471,6 +493,8 @@ item (FEAT_CARGOS, item_diosgenin) {
         unit_name: string(STR_CARGO_SINGULAR_DIOSGENIN);
         type_abbreviation: string(STR_CARGO_ABBREV_DIOSGENIN);
         cargo_label: "DIOS";
+        station_list_colour: 133;
+        cargo_payment_list_colour: 133;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
         cargo_classes: bitmask(CC_POWDERIZED, CC_BULK);
@@ -498,6 +522,8 @@ item (FEAT_CARGOS, item_raw_estrone) {
         unit_name: string(STR_CARGO_SINGULAR_RAW_ESTRONE);
         type_abbreviation: string(STR_CARGO_ABBREV_RAW_ESTRONE);
         cargo_label: "RWES";
+        station_list_colour: 152;
+        cargo_payment_list_colour: 152;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
         cargo_classes: bitmask(CC_POWDERIZED, CC_BULK);
@@ -525,6 +551,8 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         unit_name: string(STR_CARGO_SINGULAR_RAW_TESTOSTERONE);
         type_abbreviation: string(STR_CARGO_ABBREV_RAW_TESTOSTERONE);
         cargo_label: "RWTS";
+        station_list_colour: 103;
+        cargo_payment_list_colour: 103;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
         cargo_classes: bitmask(CC_POWDERIZED, CC_BULK);
@@ -552,6 +580,8 @@ item (FEAT_CARGOS, item_estrogen) {
         unit_name: string(STR_CARGO_SINGULAR_ESTROGEN);
         type_abbreviation: string(STR_CARGO_ABBREV_ESTROGEN);
         cargo_label: "ESTR";
+        station_list_colour: 150;
+        cargo_payment_list_colour: 150;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN);
         cargo_classes: bitmask(CC_PIECE_GOODS);
@@ -580,6 +610,8 @@ item (FEAT_CARGOS, item_testosterone) {
         unit_name: string(STR_CARGO_SINGULAR_TESTOSTERONE);
         type_abbreviation: string(STR_CARGO_ABBREV_TESTOSTERONE);
         cargo_label: "TEST";
+        station_list_colour: 101;
+        cargo_payment_list_colour: 101;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
         cargo_classes: bitmask(CC_PIECE_GOODS);
