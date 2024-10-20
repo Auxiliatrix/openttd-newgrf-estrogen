@@ -63,6 +63,12 @@ grf {
     }
 }
 
+// TODO: cargo flow graph colors too similar
+// TODO: quarry doesn't seem to be increasing progress?
+// TODO: gender clinic and pharmacies spawn near towns
+// TODO: figure out airplanes?
+// TODO: bump port spawn rate
+
 // TODO: fix bug with increase where it shouldnt
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
@@ -596,6 +602,89 @@ item (FEAT_CARGOS, item_testosterone) {
 // Tiles
 // ----------------------------------------------------------------
 
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_0, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_1, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_2, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_3, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_4, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_5, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_6, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
+    independent: randomize_bit_5;
+    1: return 0;
+    1: return 1;
+}
+
+random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_7, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
+    independent: randomize_bit_5;
+    independent: randomize_bit_6;
+    1: return 0;
+    1: return 1;
+}
+
+switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, [
+    STORE_PERM(     (randomize_bit_0() * 128) +
+                    (randomize_bit_1() * 64) +
+                    (randomize_bit_2() * 32) +
+                    (randomize_bit_3() * 16) +
+                    (randomize_bit_4() * 8) +
+                    (randomize_bit_5() * 4) +
+                    (randomize_bit_6() * 2) +
+                    (randomize_bit_7() * 1),
+                    96
+    )
+]) {
+    return 0;
+}
+
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_level, [
     (   (nearby_tile_height(0,0) == nearby_tile_height(-1,-1)) *
         (nearby_tile_height(0,0) == nearby_tile_height(-1,0)) *
@@ -691,6 +780,7 @@ item(FEAT_INDUSTRYTILES, tile_placeholder_water) {
     graphics {
         default: spritelayout_placeholder_water;
         tile_check: tile_check_level_water;
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -703,6 +793,7 @@ item(FEAT_INDUSTRYTILES, tile_placeholder_deep_water) {
     graphics {
         default: spritelayout_placeholder_water;
         tile_check: tile_check_deep_water;
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -732,6 +823,7 @@ item(FEAT_INDUSTRYTILES, tile_placeholder_ground) {
     graphics {
         default: spritelayout_placeholder_ground;
         tile_check: tile_check_level_ground;
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -744,6 +836,7 @@ item(FEAT_INDUSTRYTILES, tile_placeholder_beach) {
     graphics {
         default: spritelayout_placeholder_beach;
         tile_check: tile_check_is_adjacent_ground;
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -752,12 +845,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_33) {
         substitute: 33;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_34) {
     property {
         substitute: 34;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -766,12 +865,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_35) {
         substitute: 35;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_36) {
     property {
         substitute: 36;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -780,12 +885,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_37) {
         substitute: 37;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_38) {
     property {
         substitute: 38;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -871,6 +982,9 @@ item(FEAT_INDUSTRYTILES, tile_replace_110) {
         substitute: 110;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 tilelayout layout_quarry {
@@ -890,12 +1004,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_101) {
         substitute: 101;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_102) {
     property {
         substitute: 102;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -904,12 +1024,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_104) {
         substitute: 104;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_106) {
     property {
         substitute: 106;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -918,12 +1044,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_108) {
         substitute: 108;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_109) {
     property {
         substitute: 109;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -941,12 +1073,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_39) {
         substitute: 39;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_40) {
     property {
         substitute: 40;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -955,12 +1093,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_41) {
         substitute: 41;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_42) {
     property {
         substitute: 42;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -976,12 +1120,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_18) {
         substitute: 18;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_19) {
     property {
         substitute: 19;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -990,12 +1140,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_20) {
         substitute: 20;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_21) {
     property {
         substitute: 21;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1004,12 +1160,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_22) {
         substitute: 22;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_23) {
     property {
         substitute: 23;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1027,12 +1189,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_121) {
         substitute: 121;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_122) {
     property {
         substitute: 122;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1041,12 +1209,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_123) {
         substitute: 123;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_124) {
     property {
         substitute: 124;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1061,6 +1235,9 @@ item(FEAT_INDUSTRYTILES, tile_replace_120) {
     property {
         substitute: 120;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1077,12 +1254,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_60) {
         substitute: 60;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_61) {
     property {
         substitute: 61;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1091,12 +1274,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_62) {
         substitute: 62;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_63) {
     property {
         substitute: 63;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1112,12 +1301,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_52) {
         substitute: 52;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_53) {
     property {
         substitute: 53;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1126,12 +1321,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_54) {
         substitute: 54;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_55) {
     property {
         substitute: 55;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1149,12 +1350,18 @@ item(FEAT_INDUSTRYTILES, tile_replace_58) {
         substitute: 58;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
 }
 
 item(FEAT_INDUSTRYTILES, tile_replace_59) {
     property {
         substitute: 59;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1167,6 +1374,9 @@ item(FEAT_INDUSTRYTILES, tile_replace_60) {
     property {
         substitute: 60;
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
     }
 }
 
@@ -1190,7 +1400,8 @@ tilelayout layout_gender_clinic {
 // PERM_091         :Combo multiplier
 // PERM_092         :Months left of "recently extracted' state 
 // PERM_093..095    :Seasonal service
-// PERM_092..127    :Unassigned
+// PERM_096         :Random bits
+// PERM_104..127    :Unassigned
 //
 // TEMP_000..031    :Parameter argument registers
 // TEMP_032..063    :Parameter return registers
@@ -1579,7 +1790,7 @@ switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry, [
     return CB_RESULT_IND_NO_TEXT_NO_AMOUNT;
 }
 
-random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
+random_switch(FEAT_INDUSTRIES, SELF, seed_d12) {
     1: return 1;
     1: return 2;
     1: return 3;
@@ -1592,6 +1803,21 @@ random_switch(FEAT_INDUSTRIES, SELF, roll_12) {
     1: return 10;
     1: return 11;
     1: return 12;
+}
+
+switch(FEAT_INDUSTRIES, SELF, roll_12, (((LOAD_PERM(96) % 12) + seed_d12()) % 12)) {
+    0: return 1;
+    1: return 2;
+    2: return 3;
+    3: return 4;
+    4: return 5;
+    5: return 6;
+    6: return 7;
+    7: return 8;
+    8: return 9;
+    9: return 10;
+    10: return 11;
+    11: return 12;
 }
 
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
@@ -1774,11 +2000,19 @@ switch(FEAT_INDUSTRIES, SELF, update_industry, [
     do_seasonal_progress_update;
 }
 
-random_switch(FEAT_INDUSTRIES, SELF, roll_d4) {
+random_switch(FEAT_INDUSTRIES, SELF, seed_d4) {
+    independent: seed_d12;
     1: return 1;
     1: return 2;
     1: return 3;
     1: return 4;
+}
+
+switch(FEAT_INDUSTRIES, SELF, roll_d4, (((LOAD_PERM(96) % 4) + seed_d4()) % 4)) {
+    0: return 1;
+    1: return 2;
+    2: return 3;
+    3: return 4;
 }
 
 switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, selection, text_no, [
@@ -1815,6 +2049,8 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, 
 }
 
 random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
+    independent: seed_d4;
+    independent: seed_d12;
     2: return 6;
     6: return 7;
     10: return 8;
