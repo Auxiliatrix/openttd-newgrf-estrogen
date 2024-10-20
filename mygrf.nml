@@ -82,11 +82,12 @@ grf {
 // ----------------------------------------------------------------
 
 cargotable {
-    PASS, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
+    PASS, MAIL, GOOD, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
 }
 
 disable_item(FEAT_CARGOS, 1);
-disable_item(FEAT_CARGOS, 3, 11);
+disable_item(FEAT_CARGOS, 3, 4);
+disable_item(FEAT_CARGOS, 6, 11);
 disable_item(FEAT_INDUSTRIES, 0, 36);
 
 switch (FEAT_INDUSTRIES, SELF, availability_in_estrogen, hormone) {
@@ -106,6 +107,75 @@ switch (FEAT_INDUSTRIES, SELF, availability_in_testosterone, hormone) {
 // ----------------------------------------------------------------
 // Cargo Definitions
 // ----------------------------------------------------------------
+
+item (FEAT_CARGOS, item_passengers) {
+    property {
+        number: 0;
+        type_name: TTD_STR_CARGO_PLURAL_PASSENGERS;
+        unit_name: TTD_STR_CARGO_SINGULAR_PASSENGER;
+        type_abbreviation: TTD_STR_ABBREV_PASSENGERS;
+        cargo_label: "PASS";
+        units_of_cargo: TTD_STR_PASSENGERS;
+        items_of_cargo: TTD_STR_QUANTITY_PASSENGERS;
+        cargo_classes: bitmask(CC_PASSENGERS);
+        penalty_lowerbound: 0;
+        single_penalty_length: 22;
+        price_factor: 137;
+        weight: 0.0625;
+        is_freight: 0;
+        capacity_multiplier: 4;
+        sprite: NEW_CARGO_SPRITE;
+        town_growth_effect: TOWNGROWTH_PASSENGERS;
+        town_growth_multiplier: 1.0;
+        sprite: 4297;
+    }
+}
+
+item (FEAT_CARGOS, item_mail) {
+    property {
+        number: 2;
+        type_name: TTD_STR_CARGO_PLURAL_MAIL;
+        unit_name: TTD_STR_CARGO_SINGULAR_MAIL;
+        type_abbreviation: TTD_STR_ABBREV_MAIL;
+        cargo_label: "MAIL";
+        units_of_cargo: TTD_STR_BAGS;
+        items_of_cargo: TTD_STR_QUANTITY_MAIL;
+        cargo_classes: bitmask(CC_MAIL);
+        penalty_lowerbound: 6;
+        single_penalty_length: 24;
+        price_factor: 167;
+        weight: 0.25;
+        is_freight: 0;
+        capacity_multiplier: 2;
+        town_growth_effect: TOWNGROWTH_MAIL;
+        town_growth_multiplier: 1.0;
+        sprite: 4299;
+    }
+}
+
+item (FEAT_CARGOS, item_goods) {
+    property {
+        number: 5;
+        type_name: TTD_STR_CARGO_PLURAL_GOODS;
+        unit_name: TTD_STR_CARGO_SINGULAR_GOODS;
+        type_abbreviation: TTD_STR_ABBREV_GOODS;
+        cargo_label: "GOOD";
+        station_list_colour: 63;
+        cargo_payment_list_colour: 63;
+        units_of_cargo: TTD_STR_CRATES;
+        items_of_cargo: TTD_STR_QUANTITY_GOODS;
+        cargo_classes: bitmask(CC_EXPRESS, CC_PIECE_GOODS);
+        penalty_lowerbound: 16;
+        single_penalty_length: 64;
+        price_factor: 117;
+        weight: 0.5;
+        is_freight: 1;
+        capacity_multiplier: 2;
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        sprite: 4302;
+    }
+}
 
 spriteset(sprite_engineering_supplies, "./gfx/engineering_supplies.png") {
     [0, 0, 8, 8, 0, 0]
@@ -232,8 +302,8 @@ item (FEAT_CARGOS, item_sand) {
         unit_name: string(STR_CARGO_SINGULAR_SAND);
         type_abbreviation: string(STR_CARGO_ABBREV_SAND);
         cargo_label: "SAND";
-        station_list_colour: 42;
-        cargo_payment_list_colour: 42;
+        station_list_colour: 64;
+        cargo_payment_list_colour: 64;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SAND);
         cargo_classes: bitmask(CC_BULK);
@@ -2461,7 +2531,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(0);],
-    [VIAL: LOAD_TEMP(4) * 8 / 16;]
+    [VIAL: LOAD_TEMP(4) * 6 / 16; GOOD: LOAD_TEMP(4) * 6 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
@@ -2473,13 +2543,14 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [],
-    [VIAL: LOAD_TEMP(6);],
+    [VIAL: LOAD_TEMP(6); GOOD: LOAD_TEMP(7);],
     0
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(8, 1), 6)
+    STORE_TEMP(apply_production_modifiers(4, 1), 6),
+    STORE_TEMP(apply_production_modifiers(4, 1), 7)
 ]) {
     produce_regular_glassworks;
 }
@@ -2493,6 +2564,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         cargo_types: [
             accept_cargo("SAND"),
             produce_cargo("VIAL", 0),
+            produce_cargo("GOOD", 0),
         ];
         spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
