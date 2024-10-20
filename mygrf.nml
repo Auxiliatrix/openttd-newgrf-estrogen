@@ -63,8 +63,6 @@ grf {
     }
 }
 
-// TODO: figure out airplanes?
-// TODO: fix passengers
 // TODO: refactor for better organization
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
