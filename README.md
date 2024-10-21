@@ -8,3 +8,5 @@ Mod (and this README, clearly) are WIP.
 Sprites are placeholders and frankensteined from the OpenTTD base graphics set.
 
 Compilation command: `nmlc --grf mygrf.grf mygrf.nml`
+
+![cargo_flow](https://github.com/user-attachments/assets/53ae4c01-0eb7-4c0c-8040-02443f2185a8)
