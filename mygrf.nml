@@ -1322,7 +1322,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_124) {
     }
 }
 
-tilelayout layout_biolab {
+tilelayout layout_processing_plant {
     0,0: tile_replace_121;
     0,1: tile_replace_122;
     1,0: tile_replace_123;
@@ -1387,7 +1387,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_63) {
     }
 }
 
-tilelayout layout_processing_plant {
+tilelayout layout_biolab {
     0,0: tile_replace_60;
     0,1: tile_replace_61;
     1,0: tile_replace_62;
@@ -1499,7 +1499,8 @@ tilelayout layout_gender_clinic {
 // PERM_092         :Months left of "recently extracted' state 
 // PERM_093..095    :Seasonal service
 // PERM_096         :Random bits
-// PERM_104..127    :Unassigned
+// PERM_097         :Whether this industry has ever been serviced.
+// PERM_098..127    :Unassigned
 //
 // TEMP_000..031    :Parameter argument registers
 // TEMP_032..063    :Parameter return registers
@@ -2053,18 +2054,32 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
     return 0;
 }
 
-switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
+switch(FEAT_INDUSTRIES, SELF, increment_ruin_helper, [
     STORE_PERM(LOAD_PERM(85)+1, 85),
     STORE_PERM(0, 86)
 ]) {
     return;
 }
 
-switch(FEAT_INDUSTRIES, SELF, increment_progress, [
+switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
+    LOAD_PERM(97)
+]) {
+    1: increment_ruin_helper;
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, increment_progress_helper, [
     STORE_PERM(LOAD_PERM(86)+1, 86),
     STORE_PERM(0, 85)
 ]) {
     return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, increment_progress, [
+    LOAD_PERM(97)
+]) {
+    1: increment_progress_helper;
+    return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, reset_progress, [
@@ -2113,6 +2128,20 @@ switch(FEAT_INDUSTRIES, SELF, roll_d4, (((LOAD_PERM(96) % 4) + seed_d4()) % 4)) 
     3: return 4;
 }
 
+random_switch(FEAT_INDUSTRIES, SELF, seed_d3) {
+    independent: seed_d12;
+    independent: seed_d4;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+}
+
+switch(FEAT_INDUSTRIES, SELF, roll_d3, (((LOAD_PERM(96) % 3) + seed_d3()) % 3)) {
+    0: return 1;
+    1: return 2;
+    2: return 3;
+}
+
 switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, selection, text_no, [
     STORE_TEMP(     ((selection == 1) * (text_no == 1) * dec_msg_a +
                     (selection == 1) * (text_no == 2) * dec_msg_b +
@@ -2139,8 +2168,10 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, best_service, [
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
+    STORE_PERM((best_service != 0), 97),
     STORE_PERM(best_service, (93+LOAD_PERM(89))),
-    LOAD_PERM(89)
+    // LOAD_PERM(89)   // every third season
+    (roll_d3()-1)   // 33% of the time
 ]) {
     0: do_seasonal_prod_update(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, );
     return CB_RESULT_IND_PROD_NO_CHANGE; 
@@ -2149,6 +2180,7 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, 
 random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
     independent: seed_d4;
     independent: seed_d12;
+    independent: seed_d3;
     2: return 6;
     6: return 7;
     10: return 8;
@@ -2655,61 +2687,61 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
     }
 }
 
-produce(produce_accept_biolab,
+produce(produce_accept_processing_plant,
     [CORN: LOAD_TEMP(0);],
     [VGOL: LOAD_TEMP(4) * 8 / 16;]
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
     STORE_TEMP(incoming_cargo_waiting("CORN"), 0),
     STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("CORN"), 0, 0), 4),
 ]) {
-    produce_accept_biolab;
+    produce_accept_processing_plant;
 }
 
-produce(produce_regular_biolab, 
+produce(produce_regular_processing_plant, 
     [], 
     [VGOL: LOAD_TEMP(6);],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, [
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, [
     production_cycle_tick(),
     STORE_TEMP(apply_production_modifiers(8, 1), 6)
 ]) {
-    produce_regular_biolab;
+    produce_regular_processing_plant;
 }
 
-item (FEAT_INDUSTRIES, industry_biolab) {
+item (FEAT_INDUSTRIES, industry_processing_plant) {
     property {
         substitute: 0x08;
-        name: string(STR_INDUSTRY_NAME_BIOLAB);
-        nearby_station_name: string(STR_INDUSTRY_STATION_BIOLAB);
+        name: string(STR_INDUSTRY_NAME_PROCESSING_PLANT);
+        nearby_station_name: string(STR_INDUSTRY_STATION_PROCESSING_PLANT);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("CORN"),
             produce_cargo("VGOL", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A);
         prob_in_game: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
         map_colour: 206;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_biolab];
+        layouts: [layout_processing_plant];
     }
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D), transported_last_month_pct("VGOL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D), transported_last_month_pct("VGOL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        produce_256_ticks: produce_256_ticks_biolab;
-        produce_cargo_arrival: produce_cargo_arrival_biolab;
+        produce_256_ticks: produce_256_ticks_processing_plant;
+        produce_cargo_arrival: produce_cargo_arrival_processing_plant;
         cargo_subtype_display: cargo_subtype_display_industry;
         extra_text_industry: extra_text_industry_generic;
     }
@@ -2775,38 +2807,38 @@ item (FEAT_INDUSTRIES, industry_distillery) {
     }
 }
 
-produce(produce_accept_processing_plant,
+produce(produce_accept_biolab,
     [SOYB: LOAD_TEMP(0); YAMS: LOAD_TEMP(1); ALCH: LOAD_TEMP(2);],
     [DIOS: LOAD_TEMP(4) * LOAD_PERM(91) * 2 / 16;]
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
+switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
     STORE_TEMP(incoming_cargo_waiting("SOYB"), 0),
     STORE_TEMP(incoming_cargo_waiting("YAMS"), 1),
     STORE_TEMP(incoming_cargo_waiting("ALCH"), 2),
     STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("SOYB"), incoming_cargo_waiting("YAMS"), incoming_cargo_waiting("ALCH")), 4),
 ]) {
-    produce_accept_processing_plant;
+    produce_accept_biolab;
 }
 
-produce(produce_regular_processing_plant, 
+produce(produce_regular_biolab, 
     [], 
     [DIOS: LOAD_TEMP(6);],
     0
 )
 
-switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, [
+switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_biolab, [
     production_cycle_tick(),
     STORE_TEMP(apply_production_modifiers(4, 1), 6)
 ]) {
-    produce_regular_processing_plant;
+    produce_regular_biolab;
 }
 
-item (FEAT_INDUSTRIES, industry_processing_plant) {
+item (FEAT_INDUSTRIES, industry_biolab) {
     property {
         substitute: 0x0A;
-        name: string(STR_INDUSTRY_NAME_PROCESSING_PLANT);
-        nearby_station_name: string(STR_INDUSTRY_STATION_PROCESSING_PLANT);
+        name: string(STR_INDUSTRY_NAME_BIOLAB);
+        nearby_station_name: string(STR_INDUSTRY_STATION_BIOLAB);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("SOYB"),
@@ -2815,25 +2847,25 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
             produce_cargo("DIOS", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A);
         prob_in_game: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
         map_colour: 174;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_processing_plant];
+        layouts: [layout_biolab];
     }
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D), transported_last_month_pct("DIOS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D), transported_last_month_pct("DIOS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        produce_256_ticks: produce_256_ticks_processing_plant;
-        produce_cargo_arrival: produce_cargo_arrival_processing_plant;
+        produce_256_ticks: produce_256_ticks_biolab;
+        produce_cargo_arrival: produce_cargo_arrival_biolab;
         extra_text_industry: extra_text_industry_combo;
         cargo_subtype_display: cargo_subtype_display_industry;
     }
