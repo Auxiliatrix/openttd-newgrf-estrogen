@@ -2168,7 +2168,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, best_service, [
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
-    STORE_PERM((best_service != 0), 97),
+    STORE_PERM(max((best_service != 0), LOAD_PERM(97)), 97),
     STORE_PERM(best_service, (93+LOAD_PERM(89))),
     // LOAD_PERM(89)   // every third season
     (roll_d3()-1)   // 33% of the time
