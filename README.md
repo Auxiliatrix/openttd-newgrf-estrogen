@@ -11,7 +11,7 @@
 ✨ A new reliability-focused game mechanic<br>
 
 ![cargo_flow](https://github.com/user-attachments/assets/993ad0e6-af19-44dc-af1d-29515ea4fdb0)<br>
-*Cargo flow*<br><br>
+*New cargo flow*<br><br>
 
 
 ![demo_industries](https://github.com/user-attachments/assets/02757c61-49c4-48a2-bfc9-6b226e1e14e8)<br>
@@ -20,6 +20,10 @@
 
 ![demo_cargo](https://github.com/user-attachments/assets/6cb9db2a-248e-474a-8f63-b84effaa97ce)<br>
 *New cargo types*<br><br>
+
+
+![demo_news_down](https://github.com/user-attachments/assets/626d1af7-896e-4932-b7e0-57c64f3f3557)<br>
+*New news*<br><br>
 
 
 This mod is intended to serve as a full industry replacement set for the game [OpenTTD](https://www.openttd.org/).<br>
@@ -34,7 +38,7 @@ To compile the NewGRF yourself, follow [the installation tutorial](https://www.t
 
 ### Production Level
 
-![demo_mechanic](https://github.com/user-attachments/assets/7f826aa1-02ed-4077-884d-88110b830cc3)
+![demo_production_half](https://github.com/user-attachments/assets/e9f2884c-5981-4488-a21d-83d829c31773)
 
 In the base game, industries can increase or decrease production based on their monthly `cargo transported` percentage.<br>
 
@@ -48,7 +52,7 @@ By utilizing **consecutive** seasons (~3 months) of service, this mod rewards **
 
 ### Extraction Ratio (Primary Industries)
 
-![demo_yam_farm](https://github.com/user-attachments/assets/ef29fa39-51ef-4145-a6ed-1ce1b05f404e)
+![demo_primary_half](https://github.com/user-attachments/assets/3880a996-0313-4417-856c-a996ee035ef0)
 
 For those unfamiliar with FIRS's **Engineering Supplies / Farming Supplies** game mechanic, primary industries can have their production boosted by supplying special cargos.<br> 
 
@@ -58,7 +62,7 @@ This boost last for one season, and rewards well-timed distribution of these sup
 
 ### Conversion Ratio (Secondary Industries)
 
-![demo_chemical_plant](https://github.com/user-attachments/assets/7ade6b55-c5fc-4c7e-a8f6-d20f28d4e31f)
+![demo_secondary_half](https://github.com/user-attachments/assets/a23eb561-4c60-4cd9-9aaf-8db5071eb564)
 
 Instead of an *Extraction Ratio*, **secondary** industries have a **conversion** ratio, which affects the rate at which input cargo is converted into output.<br>
 The exact rate varies, but generally, the more **kinds** of input are supplied per season, the more **output per unit of input** the industry will produce.<br>
@@ -80,3 +84,6 @@ the code available in multiple separate files. I'll get around to refactoring it
 ### Accreditations:
 * Primary industry supplies mechanic blatantly copied from the [FIRS NewGRF by @andythenorth](https://github.com/andythenorth/firs).<br>
 * Industry sprites currently frankensteined almagmations available in the base game.
+
+![demo_news](https://github.com/user-attachments/assets/bdae4bb3-3375-4c96-beb0-ce8914262f05)
+
