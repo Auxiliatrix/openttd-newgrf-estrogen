@@ -28,7 +28,7 @@
 
 This mod is intended to serve as a full industry replacement set for the game [OpenTTD](https://www.openttd.org/).<br>
 
-While this mod is still currently a work in progress, the gameplay is more or less complete, and is [actively hosted and updated on BaNaNaS](https://bananas.openttd.org/manager/newgrf/414b3031).<br>
+While this mod is still currently a work in progress, the gameplay is more or less complete, and is [actively hosted and updated on BaNaNaS](https://bananas.openttd.org/package/newgrf/414b3031).<br>
 As such, you can now search for, download, and sync this mod as a NewGRF in the OpenTTD client.<br>
 
 To compile the NewGRF yourself, follow [the installation tutorial](https://www.tt-wiki.net/wiki/NMLTutorial/Installation), and run the following command from the repository's root directory:<br>
