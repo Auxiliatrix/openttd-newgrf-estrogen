@@ -7,17 +7,20 @@
 ✨ A mildly accurate industry chain<br>
 ✨ 17 new industries<br>
 ✨ 18 new cargoes<br>
-✨ Primary industry supplies mechanic<br>
+✨ FIRS's primary industry supplies mechanic<br>
 ✨ A new reliability-focused game mechanic<br>
 
 ![cargo_flow](https://github.com/user-attachments/assets/993ad0e6-af19-44dc-af1d-29515ea4fdb0)<br>
-*Cargo flow*
+*Cargo flow*<br><br>
+
 
 ![demo_industries](https://github.com/user-attachments/assets/02757c61-49c4-48a2-bfc9-6b226e1e14e8)<br>
-*New industries*
+*New industries*<br><br>
+
 
 ![demo_cargo](https://github.com/user-attachments/assets/6cb9db2a-248e-474a-8f63-b84effaa97ce)<br>
-*New cargo types*
+*New cargo types*<br><br>
+
 
 This mod is intended to serve as a full industry replacement set for the game [OpenTTD](https://www.openttd.org/).<br>
 
@@ -29,7 +32,7 @@ To compile the NewGRF yourself, follow [the installation tutorial](https://www.t
 
 ## Game Mechanics
 
-### Production Level Game Mechanic
+### Production Level
 
 ![demo_mechanic](https://github.com/user-attachments/assets/7f826aa1-02ed-4077-884d-88110b830cc3)
 
@@ -41,30 +44,30 @@ This mechanic is similar, but has a few key differences:<br>
 3. At **Minimum** production, industries operate at 25%. At **Maximum** production, industries operate at 338%.
 4. Industry production only begins to fluctuate after it has first been serviced.
 
-By utilizing **consecutive** seasons (~three months) of service, this mod rewards **consistent service without major drops**, encouraging **reliability** instead of just **throughput**.<br>
+By utilizing **consecutive** seasons (~3 months) of service, this mod rewards **consistent service without major drops**, encouraging **reliability** instead of just **throughput**.<br>
 
-### Primary Industry Supply Game Mechanic
+### Extraction Ratio (Primary Industries)
 
 ![demo_yam_farm](https://github.com/user-attachments/assets/ef29fa39-51ef-4145-a6ed-1ce1b05f404e)
 
-For those unfamiliar with FIRS's Engineering / Farming Supplies game mechanic, **Primary Industry Supply** creates "boost" cargo that enhances production of primary industries.<br> 
+For those unfamiliar with FIRS's **Engineering Supplies / Farming Supplies** game mechanic, primary industries can have their production boosted by supplying special cargos.<br> 
 
 By delivering **20 crates** of such supplies to the appropriate industry, production is doubled, and then quadruled once **80 crates** have been delivered.<br> 
 
-This boost last for one season (three months), and rewards well-timed distribution of these supplies throughout your network.<br> 
+This boost last for one season, and rewards well-timed distribution of these supplies throughout your network.<br> 
 
-### Secondary Industry Combo Game Mechanic
+### Conversion Ratio (Secondary Industries)
 
 ![demo_chemical_plant](https://github.com/user-attachments/assets/7ade6b55-c5fc-4c7e-a8f6-d20f28d4e31f)
 
-Instead of an "Extraction Ratio", **secondary** industries have a **conversion** ratio, which affects the rate at which input cargo is converted into output.<br>
-This varies depending on the number of inputs, but the general rule is, the more unique inputs you provide per season, the more output the industry will produce.<br>
+Instead of an *Extraction Ratio*, **secondary** industries have a **conversion** ratio, which affects the rate at which input cargo is converted into output.<br>
+The exact rate varies, but generally, the more **kinds** of input are supplied per season, the more **output per unit of input** the industry will produce.<br>
 
 In this mod, secondary industries produce very little on their own, but their cargo delivery payouts are much higher to compensate, ensuring two things:
-1. You can start from any industry and connect it to either end of its chain, and you will make approximately the same amount of money
+1. You can start **anywhere** in the industry chain and still make a decent amount of money.
 2. In order to exploit secondary industries to their full potential, you **must** complete their entire industry chain.
 
-This motivates players to expand their networks beyond one single cargo type, and rewards the breadth of a network in addition to its throughput.
+This motivates players to expand their networks beyond one single cargo type, and rewards the **breadth** of a network instead of just its **throughput**.
 
 ## Final Notes
 
