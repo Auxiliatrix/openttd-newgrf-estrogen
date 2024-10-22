@@ -1683,7 +1683,7 @@ switch(FEAT_INDUSTRIES, SELF, check_positive, sum_index, load_perm_variable(sum_
 switch(FEAT_INDUSTRIES, SELF, combo_multiplier, [
     check_positive(28) + check_positive(56) + check_positive(84)
 ]) {
-    3: return 3;
+    3: return 4;
     2: return 2;
     return 1;
 }
