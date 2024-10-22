@@ -80,7 +80,7 @@ grf {
 // ----------------------------------------------------------------
 
 cargotable {
-    PASS, MAIL, GOOD, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
+    PASS, MAIL, GOOD, ENSP, FERT, SALT, POTA, SAND, MNRL, MAIZ, BEAN, TATO, MNSP, RFPR, EOIL, BEER, DIOS, RWES, RWTS, ESTR, TEST
 }
 
 disable_item(FEAT_CARGOS);
@@ -183,7 +183,7 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         type_name: string(STR_CARGO_PLURAL_ENGINEERING_SUPPLIES);
         unit_name: string(STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES);
         type_abbreviation: string(STR_CARGO_ABBREV_ENGINEERING_SUPPLIES);
-        cargo_label: "ENGS";
+        cargo_label: "ENSP";
         station_list_colour: 146;
         cargo_payment_list_colour: 146;
         units_of_cargo: string(TTD_STR_CRATES);
@@ -268,7 +268,7 @@ item (FEAT_CARGOS, item_potash) {
         type_name: string(STR_CARGO_PLURAL_POTASH);
         unit_name: string(STR_CARGO_SINGULAR_POTASH);
         type_abbreviation: string(STR_CARGO_ABBREV_POTASH);
-        cargo_label: "PTSH";
+        cargo_label: "POTA";
         station_list_colour: 13;
         cargo_payment_list_colour: 13;
         units_of_cargo: string(TTD_STR_TONS);
@@ -355,7 +355,7 @@ item (FEAT_CARGOS, item_corn) {
         type_name: string(STR_CARGO_PLURAL_CORN);
         unit_name: string(STR_CARGO_SINGULAR_CORN);
         type_abbreviation: string(STR_CARGO_ABBREV_CORN);
-        cargo_label: "CORN";
+        cargo_label: "MAIZ";
         station_list_colour: 66;
         cargo_payment_list_colour: 66;
         units_of_cargo: string(TTD_STR_TONS);
@@ -384,7 +384,7 @@ item (FEAT_CARGOS, item_soy) {
         type_name: string(STR_CARGO_PLURAL_SOY);
         unit_name: string(STR_CARGO_SINGULAR_SOY);
         type_abbreviation: string(STR_CARGO_ABBREV_SOY);
-        cargo_label: "SOYB";
+        cargo_label: "BEAN";
         station_list_colour: 71;
         cargo_payment_list_colour: 71;
         units_of_cargo: string(TTD_STR_TONS);
@@ -413,7 +413,7 @@ item (FEAT_CARGOS, item_yam) {
         type_name: string(STR_CARGO_PLURAL_YAM);
         unit_name: string(STR_CARGO_SINGULAR_YAM);
         type_abbreviation: string(STR_CARGO_ABBREV_YAM);
-        cargo_label: "YAMS";
+        cargo_label: "TATO";
         station_list_colour: 75;
         cargo_payment_list_colour: 75;
         units_of_cargo: string(TTD_STR_TONS);
@@ -442,7 +442,7 @@ item (FEAT_CARGOS, item_vials) {
         type_name: string(STR_CARGO_PLURAL_VIALS);
         unit_name: string(STR_CARGO_SINGULAR_VIALS);
         type_abbreviation: string(STR_CARGO_ABBREV_VIALS);
-        cargo_label: "VIAL";
+        cargo_label: "MNSP";
         station_list_colour: 135;
         cargo_payment_list_colour: 135;
         units_of_cargo: string(TTD_STR_CRATES);
@@ -471,7 +471,7 @@ item (FEAT_CARGOS, item_chemicals) {
         type_name: string(STR_CARGO_PLURAL_CHEMICALS);
         unit_name: string(STR_CARGO_SINGULAR_CHEMICALS);
         type_abbreviation: string(STR_CARGO_ABBREV_CHEMICALS);
-        cargo_label: "CHEM";
+        cargo_label: "RFPR";
         station_list_colour: 185;
         cargo_payment_list_colour: 185;
         units_of_cargo: string(TTD_STR_LITERS);
@@ -500,7 +500,7 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         type_name: string(STR_CARGO_PLURAL_VEGETABLE_OIL);
         unit_name: string(STR_CARGO_SINGULAR_VEGETABLE_OIL);
         type_abbreviation: string(STR_CARGO_ABBREV_VEGETABLE_OIL);
-        cargo_label: "VGOL";
+        cargo_label: "EOIL";
         station_list_colour: 206;
         cargo_payment_list_colour: 206;
         units_of_cargo: string(TTD_STR_LITERS);
@@ -529,7 +529,7 @@ item (FEAT_CARGOS, item_alcohol) {
         type_name: string(STR_CARGO_PLURAL_ALCOHOL);
         unit_name: string(STR_CARGO_SINGULAR_ALCOHOL);
         type_abbreviation: string(STR_CARGO_ABBREV_ALCOHOL);
-        cargo_label: "ALCH";
+        cargo_label: "BEER";
         station_list_colour: 192;
         cargo_payment_list_colour: 192;
         units_of_cargo: string(TTD_STR_LITERS);
@@ -2203,7 +2203,7 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
 
 produce(produce_regular_port,
     [],
-    [ENGS: LOAD_TEMP(6); SALT: LOAD_TEMP(7);],
+    [ENSP: LOAD_TEMP(6); SALT: LOAD_TEMP(7);],
     0
 )
 
@@ -2222,7 +2222,7 @@ item (FEAT_INDUSTRIES, industry_port) {
         nearby_station_name: string(STR_INDUSTRY_STATION_PORT);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
         cargo_types: [
-            produce_cargo("ENGS", 0),
+            produce_cargo("ENSP", 0),
             produce_cargo("SALT", 0)
         ];
         spec_flags: bitmask();
@@ -2241,7 +2241,7 @@ item (FEAT_INDUSTRIES, industry_port) {
     }
     graphics {
         location_check: is_isolated(16);
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D), max(transported_last_month_pct("ENGS"),transported_last_month_pct("SALT")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D), max(transported_last_month_pct("ENSP"),transported_last_month_pct("SALT")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         extra_text_industry: extra_text_industry_generic;
         build_prod_change: initialize_industry;
@@ -2251,20 +2251,20 @@ item (FEAT_INDUSTRIES, industry_port) {
 }
 
 produce(produce_accept_quarry,
-    [ENGS: LOAD_TEMP(0);],
+    [ENSP: LOAD_TEMP(0);],
     []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_quarry, [
-    STORE_TEMP(incoming_cargo_waiting("ENGS"), 0),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("ENGS"), 0, 0), 4)
+    STORE_TEMP(incoming_cargo_waiting("ENSP"), 0),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("ENSP"), 0, 0), 4)
 ]) {
     produce_accept_quarry;
 }
 
 produce(produce_regular_quarry, 
     [],
-    [SAND: LOAD_TEMP(6); PTSH: LOAD_TEMP(7);],
+    [SAND: LOAD_TEMP(6); POTA: LOAD_TEMP(7);],
     0
 )
 
@@ -2283,9 +2283,9 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         nearby_station_name: string(STR_INDUSTRY_STATION_QUARRY);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
         cargo_types: [
-            accept_cargo("ENGS"),
+            accept_cargo("ENSP"),
             produce_cargo("SAND", 0),
-            produce_cargo("PTSH", 0)
+            produce_cargo("POTA", 0)
         ];
         spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
@@ -2304,7 +2304,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
     graphics {
         location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D), max(transported_last_month_pct("SAND"),transported_last_month_pct("PTSH")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D), max(transported_last_month_pct("SAND"),transported_last_month_pct("POTA")));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_quarry;
         produce_cargo_arrival: produce_cargo_arrival_quarry;
@@ -2314,13 +2314,13 @@ item (FEAT_INDUSTRIES, industry_quarry) {
 }
 
 produce(produce_accept_mineral_mine,
-    [ENGS: LOAD_TEMP(0);],
+    [ENSP: LOAD_TEMP(0);],
     []
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_mineral_mine, [
-    STORE_TEMP(incoming_cargo_waiting("ENGS"), 0),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("ENGS"), 0, 0), 4)
+    STORE_TEMP(incoming_cargo_waiting("ENSP"), 0),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("ENSP"), 0, 0), 4)
 ]) {
     produce_accept_mineral_mine;
 }
@@ -2345,7 +2345,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         nearby_station_name: string(STR_INDUSTRY_STATION_MINERAL_MINE);
         life_type: IND_LIFE_TYPE_EXTRACTIVE;
         cargo_types: [
-            accept_cargo("ENGS"),
+            accept_cargo("ENSP"),
             produce_cargo("MNRL", 0),
         ];
         spec_flags: bitmask();
@@ -2388,7 +2388,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_corn_farm, [
 
 produce(produce_regular_corn_farm, 
     [],
-    [CORN: LOAD_TEMP(6);],
+    [MAIZ: LOAD_TEMP(6);],
     0
 )
 
@@ -2407,7 +2407,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         life_type: IND_LIFE_TYPE_ORGANIC;
         cargo_types: [
             accept_cargo("FERT"),
-            produce_cargo("CORN", 0),
+            produce_cargo("MAIZ", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_CORN_FARM);
@@ -2426,7 +2426,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
     graphics {
         location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D), transported_last_month_pct("CORN"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D), transported_last_month_pct("MAIZ"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_corn_farm;
         produce_cargo_arrival: produce_cargo_arrival_corn_farm;
@@ -2449,7 +2449,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_soy_farm, [
 
 produce(produce_regular_soy_farm, 
     [],
-    [SOYB: LOAD_TEMP(6);],
+    [BEAN: LOAD_TEMP(6);],
     0
 )
 
@@ -2468,7 +2468,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         life_type: IND_LIFE_TYPE_ORGANIC;
         cargo_types: [
             accept_cargo("FERT"),
-            produce_cargo("SOYB", 0),
+            produce_cargo("BEAN", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_SOY_FARM);
@@ -2487,7 +2487,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
     graphics {
         location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D), transported_last_month_pct("SOYB"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D), transported_last_month_pct("BEAN"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_soy_farm;
         produce_cargo_arrival: produce_cargo_arrival_soy_farm;
@@ -2510,7 +2510,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_yam_farm, [
 
 produce(produce_regular_yam_farm, 
     [],
-    [YAMS: LOAD_TEMP(6);],
+    [TATO: LOAD_TEMP(6);],
     0
 )
 
@@ -2529,7 +2529,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         life_type: IND_LIFE_TYPE_ORGANIC;
         cargo_types: [
             accept_cargo("FERT"),
-            produce_cargo("YAMS", 0),
+            produce_cargo("TATO", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_YAM_FARM);
@@ -2548,7 +2548,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
     graphics {
         location_check: is_isolated(16);
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D), transported_last_month_pct("YAMS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D), transported_last_month_pct("TATO"));
         build_prod_change: initialize_industry;
         produce_256_ticks: produce_256_ticks_yam_farm;
         produce_cargo_arrival: produce_cargo_arrival_yam_farm;
@@ -2559,7 +2559,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(0);],
-    [VIAL: LOAD_TEMP(4) * 6 / 16; GOOD: LOAD_TEMP(4) * 6 / 16;]
+    [MNSP: LOAD_TEMP(4) * 6 / 16; GOOD: LOAD_TEMP(4) * 6 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
@@ -2571,7 +2571,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
 
 produce(produce_regular_glassworks, 
     [],
-    [VIAL: LOAD_TEMP(6); GOOD: LOAD_TEMP(7);],
+    [MNSP: LOAD_TEMP(6); GOOD: LOAD_TEMP(7);],
     0
 )
 
@@ -2591,7 +2591,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("SAND"),
-            produce_cargo("VIAL", 0),
+            produce_cargo("MNSP", 0),
             produce_cargo("GOOD", 0),
         ];
         spec_flags: bitmask();
@@ -2610,7 +2610,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D), transported_last_month_pct("VIAL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D), transported_last_month_pct("MNSP"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_glassworks;
         produce_cargo_arrival: produce_cargo_arrival_glassworks;
@@ -2620,22 +2620,22 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
 }
 
 produce(produce_accept_chemical_plant,
-    [SALT: LOAD_TEMP(0); PTSH: LOAD_TEMP(1); MNRL: LOAD_TEMP(2);],
-    [FERT: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16; CHEM: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16;]
+    [SALT: LOAD_TEMP(0); POTA: LOAD_TEMP(1); MNRL: LOAD_TEMP(2);],
+    [FERT: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16; RFPR: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
     STORE_TEMP(incoming_cargo_waiting("SALT"), 0),
-    STORE_TEMP(incoming_cargo_waiting("PTSH"), 1),
+    STORE_TEMP(incoming_cargo_waiting("POTA"), 1),
     STORE_TEMP(incoming_cargo_waiting("MNRL"), 2),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("SALT"), incoming_cargo_waiting("PTSH"), incoming_cargo_waiting("MNRL")), 4),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("SALT"), incoming_cargo_waiting("POTA"), incoming_cargo_waiting("MNRL")), 4),
 ]) {
     produce_accept_chemical_plant;
 }
 
 produce(produce_regular_chemical_plant, 
     [], 
-    [FERT: LOAD_TEMP(6); CHEM: LOAD_TEMP(7);],
+    [FERT: LOAD_TEMP(6); RFPR: LOAD_TEMP(7);],
     0
 )
 
@@ -2655,10 +2655,10 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("SALT"),
-            accept_cargo("PTSH"),
+            accept_cargo("POTA"),
             accept_cargo("MNRL"),
             produce_cargo("FERT", 0),
-            produce_cargo("CHEM", 0)
+            produce_cargo("RFPR", 0)
         ];
         spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_CHEMICAL_PLANT);
@@ -2676,7 +2676,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D), max(transported_last_month_pct("FERT"),transported_last_month_pct("CHEM")));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D), max(transported_last_month_pct("FERT"),transported_last_month_pct("RFPR")));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_chemical_plant;
         produce_cargo_arrival: produce_cargo_arrival_chemical_plant;
@@ -2686,20 +2686,20 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
 }
 
 produce(produce_accept_processing_plant,
-    [CORN: LOAD_TEMP(0);],
-    [VGOL: LOAD_TEMP(4) * 8 / 16;]
+    [MAIZ: LOAD_TEMP(0);],
+    [EOIL: LOAD_TEMP(4) * 8 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_processing_plant, [
-    STORE_TEMP(incoming_cargo_waiting("CORN"), 0),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("CORN"), 0, 0), 4),
+    STORE_TEMP(incoming_cargo_waiting("MAIZ"), 0),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("MAIZ"), 0, 0), 4),
 ]) {
     produce_accept_processing_plant;
 }
 
 produce(produce_regular_processing_plant, 
     [], 
-    [VGOL: LOAD_TEMP(6);],
+    [EOIL: LOAD_TEMP(6);],
     0
 )
 
@@ -2717,8 +2717,8 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         nearby_station_name: string(STR_INDUSTRY_STATION_PROCESSING_PLANT);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
-            accept_cargo("CORN"),
-            produce_cargo("VGOL", 0),
+            accept_cargo("MAIZ"),
+            produce_cargo("EOIL", 0),
         ];
         spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
@@ -2736,7 +2736,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D), transported_last_month_pct("VGOL"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D), transported_last_month_pct("EOIL"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_processing_plant;
         produce_cargo_arrival: produce_cargo_arrival_processing_plant;
@@ -2746,20 +2746,20 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
 }
 
 produce(produce_accept_distillery,
-    [CORN: LOAD_TEMP(0);],
-    [ALCH: LOAD_TEMP(4) * 8 / 16;]
+    [MAIZ: LOAD_TEMP(0);],
+    [BEER: LOAD_TEMP(4) * 8 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_distillery, [
-    STORE_TEMP(incoming_cargo_waiting("CORN"), 0),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("CORN"), 0, 0), 4),
+    STORE_TEMP(incoming_cargo_waiting("MAIZ"), 0),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("MAIZ"), 0, 0), 4),
 ]) {
     produce_accept_distillery;
 }
 
 produce(produce_regular_distillery, 
     [], 
-    [ALCH: LOAD_TEMP(6);],
+    [BEER: LOAD_TEMP(6);],
     0
 )
 
@@ -2777,8 +2777,8 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         nearby_station_name: string(STR_INDUSTRY_STATION_DISTILLERY);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
-            accept_cargo("CORN"),
-            produce_cargo("ALCH", 0),
+            accept_cargo("MAIZ"),
+            produce_cargo("BEER", 0),
         ];
         spec_flags: bitmask();
         new_ind_msg: string(STR_INDUSTRY_PLANTED_DISTILLERY);
@@ -2796,7 +2796,7 @@ item (FEAT_INDUSTRIES, industry_distillery) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D), transported_last_month_pct("ALCH"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D), transported_last_month_pct("BEER"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_distillery;
         produce_cargo_arrival: produce_cargo_arrival_distillery;
@@ -2806,15 +2806,15 @@ item (FEAT_INDUSTRIES, industry_distillery) {
 }
 
 produce(produce_accept_biolab,
-    [SOYB: LOAD_TEMP(0); YAMS: LOAD_TEMP(1); ALCH: LOAD_TEMP(2);],
+    [BEAN: LOAD_TEMP(0); TATO: LOAD_TEMP(1); BEER: LOAD_TEMP(2);],
     [DIOS: LOAD_TEMP(4) * LOAD_PERM(91) * 2 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_biolab, [
-    STORE_TEMP(incoming_cargo_waiting("SOYB"), 0),
-    STORE_TEMP(incoming_cargo_waiting("YAMS"), 1),
-    STORE_TEMP(incoming_cargo_waiting("ALCH"), 2),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("SOYB"), incoming_cargo_waiting("YAMS"), incoming_cargo_waiting("ALCH")), 4),
+    STORE_TEMP(incoming_cargo_waiting("BEAN"), 0),
+    STORE_TEMP(incoming_cargo_waiting("TATO"), 1),
+    STORE_TEMP(incoming_cargo_waiting("BEER"), 2),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("BEAN"), incoming_cargo_waiting("TATO"), incoming_cargo_waiting("BEER")), 4),
 ]) {
     produce_accept_biolab;
 }
@@ -2839,9 +2839,9 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         nearby_station_name: string(STR_INDUSTRY_STATION_BIOLAB);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
-            accept_cargo("SOYB"),
-            accept_cargo("YAMS"),
-            accept_cargo("ALCH"),
+            accept_cargo("BEAN"),
+            accept_cargo("TATO"),
+            accept_cargo("BEER"),
             produce_cargo("DIOS", 0),
         ];
         spec_flags: bitmask();
@@ -2870,14 +2870,14 @@ item (FEAT_INDUSTRIES, industry_biolab) {
 }
 
 produce(produce_accept_pharmaceutical_plant_e,
-    [DIOS: LOAD_TEMP(0); CHEM: LOAD_TEMP(1);],
+    [DIOS: LOAD_TEMP(0); RFPR: LOAD_TEMP(1);],
     [RWES: LOAD_TEMP(4) * LOAD_PERM(91) * 4 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_e, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 0),
-    STORE_TEMP(incoming_cargo_waiting("CHEM"), 1),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("DIOS"), incoming_cargo_waiting("CHEM"), 0), 4),
+    STORE_TEMP(incoming_cargo_waiting("RFPR"), 1),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("DIOS"), incoming_cargo_waiting("RFPR"), 0), 4),
 ]) {
     produce_accept_pharmaceutical_plant_e;
 }
@@ -2903,7 +2903,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("DIOS"),
-            accept_cargo("CHEM"),
+            accept_cargo("RFPR"),
             produce_cargo("RWES", 0),
         ];
         spec_flags: bitmask();
@@ -2933,14 +2933,14 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
 }
 
 produce(produce_accept_pharmaceutical_plant_t,
-    [DIOS: LOAD_TEMP(0); CHEM: LOAD_TEMP(1);],
+    [DIOS: LOAD_TEMP(0); RFPR: LOAD_TEMP(1);],
     [RWTS: LOAD_TEMP(4) * LOAD_PERM(91) * 4 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmaceutical_plant_t, [
     STORE_TEMP(incoming_cargo_waiting("DIOS"), 0),
-    STORE_TEMP(incoming_cargo_waiting("CHEM"), 1),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("DIOS"), incoming_cargo_waiting("CHEM"), 0), 4),
+    STORE_TEMP(incoming_cargo_waiting("RFPR"), 1),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("DIOS"), incoming_cargo_waiting("RFPR"), 0), 4),
 ]) {
     produce_accept_pharmaceutical_plant_t;
 }
@@ -2966,7 +2966,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
             accept_cargo("DIOS"),
-            accept_cargo("CHEM"),
+            accept_cargo("RFPR"),
             produce_cargo("RWTS", 0),
         ];
         spec_flags: bitmask();
@@ -2996,15 +2996,15 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
 }
 
 produce(produce_accept_pharmacy_e,
-    [VIAL: LOAD_TEMP(0); VGOL: LOAD_TEMP(1); RWES: LOAD_TEMP(2);],
+    [MNSP: LOAD_TEMP(0); EOIL: LOAD_TEMP(1); RWES: LOAD_TEMP(2);],
     [ESTR: LOAD_TEMP(4) * LOAD_PERM(91) * 2 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_e, [
-    STORE_TEMP(incoming_cargo_waiting("VIAL"), 0),
-    STORE_TEMP(incoming_cargo_waiting("VGOL"), 1),
+    STORE_TEMP(incoming_cargo_waiting("MNSP"), 0),
+    STORE_TEMP(incoming_cargo_waiting("EOIL"), 1),
     STORE_TEMP(incoming_cargo_waiting("RWES"), 2),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("VIAL"), incoming_cargo_waiting("VGOL"), incoming_cargo_waiting("RWES")), 4),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("MNSP"), incoming_cargo_waiting("EOIL"), incoming_cargo_waiting("RWES")), 4),
 ]) {
     produce_accept_pharmacy_e;
 }
@@ -3029,8 +3029,8 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_E);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
-            accept_cargo("VIAL"),
-            accept_cargo("VGOL"),
+            accept_cargo("MNSP"),
+            accept_cargo("EOIL"),
             accept_cargo("RWES"),
             produce_cargo("ESTR", 0)
         ];
@@ -3060,15 +3060,15 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
 
 
 produce(produce_accept_pharmacy_t,
-    [VIAL: LOAD_TEMP(0); VGOL: LOAD_TEMP(1); RWTS: LOAD_TEMP(2);],
+    [MNSP: LOAD_TEMP(0); EOIL: LOAD_TEMP(1); RWTS: LOAD_TEMP(2);],
     [TEST: LOAD_TEMP(4) * LOAD_PERM(91) * 2 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_t, [
-    STORE_TEMP(incoming_cargo_waiting("VIAL"), 0),
-    STORE_TEMP(incoming_cargo_waiting("VGOL"), 1),
+    STORE_TEMP(incoming_cargo_waiting("MNSP"), 0),
+    STORE_TEMP(incoming_cargo_waiting("EOIL"), 1),
     STORE_TEMP(incoming_cargo_waiting("RWES"), 2),
-    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("VIAL"), incoming_cargo_waiting("VGOL"), incoming_cargo_waiting("RWTS")), 4),
+    STORE_TEMP(do_cargo_accept_cycle(incoming_cargo_waiting("MNSP"), incoming_cargo_waiting("EOIL"), incoming_cargo_waiting("RWTS")), 4),
 ]) {
     produce_accept_pharmacy_t;
 }
@@ -3093,8 +3093,8 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
         nearby_station_name: string(STR_INDUSTRY_STATION_PHARMACY_T);
         life_type: IND_LIFE_TYPE_PROCESSING;
         cargo_types: [
-            accept_cargo("VIAL"),
-            accept_cargo("VGOL"),
+            accept_cargo("MNSP"),
+            accept_cargo("EOIL"),
             accept_cargo("RWTS"),
             produce_cargo("TEST", 0)
         ];
