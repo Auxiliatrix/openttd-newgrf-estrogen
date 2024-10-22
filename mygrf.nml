@@ -83,10 +83,8 @@ cargotable {
     PASS, MAIL, GOOD, ENGS, FERT, SALT, PTSH, SAND, MNRL, CORN, SOYB, YAMS, VIAL, CHEM, VGOL, ALCH, DIOS, RWES, RWTS, ESTR, TEST
 }
 
-disable_item(FEAT_CARGOS, 1);
-disable_item(FEAT_CARGOS, 3, 4);
-disable_item(FEAT_CARGOS, 6, 11);
-disable_item(FEAT_INDUSTRIES, 0, 36);
+disable_item(FEAT_CARGOS);
+disable_item(FEAT_INDUSTRIES);
 
 switch (FEAT_INDUSTRIES, SELF, availability_in_estrogen, hormone) {
     0: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
