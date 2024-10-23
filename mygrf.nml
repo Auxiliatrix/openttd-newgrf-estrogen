@@ -63,7 +63,7 @@ grf {
     }
 }
 
-// TODO: refactor for better organization
+// TODO: dont accept cargo if <16 total units of input
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -105,6 +105,86 @@ switch (FEAT_INDUSTRIES, SELF, availability_in_testosterone, hormone) {
 // ----------------------------------------------------------------
 // Cargo Definitions
 // ----------------------------------------------------------------
+
+// --------------------------------
+// Cargo Sprites
+// --------------------------------
+
+spriteset(sprite_engineering_supplies, "./gfx/engineering_supplies.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_fertilizer, "./gfx/fertilizer.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_salt, "./gfx/salt.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_potash, "./gfx/potash.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_sand, "./gfx/sand.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_minerals, "./gfx/minerals.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_corn, "./gfx/corn.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_soybeans, "./gfx/soybeans.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_yams, "./gfx/yams.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_vials, "./gfx/vials.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_vegetable_oil, "./gfx/vegetable_oil.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_chemicals, "./gfx/chemicals.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_alcohol, "./gfx/alcohol.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_diosgenin, "./gfx/diosgenin.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_raw_estrone, "./gfx/raw_estrone.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_raw_testosterone, "./gfx/raw_testosterone.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_estrogen, "./gfx/estrogen.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+spriteset(sprite_testosterone, "./gfx/testosterone.png") {
+    [0, 0, 8, 8, 0, 0]
+}
+
+// --------------------------------
+// Cargo Items
+// --------------------------------
 
 item (FEAT_CARGOS, item_passengers) {
     property {
@@ -175,10 +255,6 @@ item (FEAT_CARGOS, item_goods) {
     }
 }
 
-spriteset(sprite_engineering_supplies, "./gfx/engineering_supplies.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_engineering_supplies) {
     property {
         number: 12;
@@ -204,10 +280,6 @@ item (FEAT_CARGOS, item_engineering_supplies) {
     }
 }
 
-spriteset(sprite_fertilizer, "./gfx/fertilizer.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_fertilizer) {
     property {
         number: 13;
@@ -229,10 +301,6 @@ item (FEAT_CARGOS, item_fertilizer) {
     graphics {
         default: sprite_fertilizer;
     }
-}
-
-spriteset(sprite_salt, "./gfx/salt.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_salt) {
@@ -260,10 +328,6 @@ item (FEAT_CARGOS, item_salt) {
     }
 }
 
-spriteset(sprite_potash, "./gfx/potash.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_potash) {
     property {
         number: 15;
@@ -287,10 +351,6 @@ item (FEAT_CARGOS, item_potash) {
     graphics {
         default: sprite_potash;
     }
-}
-
-spriteset(sprite_sand, "./gfx/sand.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_sand) {
@@ -318,10 +378,6 @@ item (FEAT_CARGOS, item_sand) {
     }
 }
 
-spriteset(sprite_minerals, "./gfx/minerals.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_minerals) {
     property {
         number: 17;
@@ -345,10 +401,6 @@ item (FEAT_CARGOS, item_minerals) {
     graphics {
         default: sprite_minerals;
     }
-}
-
-spriteset(sprite_corn, "./gfx/corn.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_corn) {
@@ -376,10 +428,6 @@ item (FEAT_CARGOS, item_corn) {
     }
 }
 
-spriteset(sprite_soybeans, "./gfx/soybeans.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_soy) {
     property {
         number: 19;
@@ -403,10 +451,6 @@ item (FEAT_CARGOS, item_soy) {
     graphics {
         default: sprite_soybeans;
     }
-}
-
-spriteset(sprite_yams, "./gfx/yams.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_yam) {
@@ -434,10 +478,6 @@ item (FEAT_CARGOS, item_yam) {
     }
 }
 
-spriteset(sprite_vials, "./gfx/vials.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_vials) {
     property {
         number: 21;
@@ -461,10 +501,6 @@ item (FEAT_CARGOS, item_vials) {
     graphics {
         default: sprite_vials;
     }
-}
-
-spriteset(sprite_chemicals, "./gfx/chemicals.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_chemicals) {
@@ -492,10 +528,6 @@ item (FEAT_CARGOS, item_chemicals) {
     }
 }
 
-spriteset(sprite_vegetable_oil, "./gfx/vegetable_oil.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_vegetable_oil) {
     property {
         number: 23;
@@ -519,10 +551,6 @@ item (FEAT_CARGOS, item_vegetable_oil) {
     graphics {
         default: sprite_vegetable_oil;
     }
-}
-
-spriteset(sprite_alcohol, "./gfx/alcohol.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_alcohol) {
@@ -550,10 +578,6 @@ item (FEAT_CARGOS, item_alcohol) {
     }
 }
 
-spriteset(sprite_diosgenin, "./gfx/diosgenin.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_diosgenin) {
     property {
         number: 25;
@@ -577,10 +601,6 @@ item (FEAT_CARGOS, item_diosgenin) {
     graphics {
         default: sprite_diosgenin;
     }
-}
-
-spriteset(sprite_raw_estrone, "./gfx/raw_estrone.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_raw_estrone) {
@@ -608,10 +628,6 @@ item (FEAT_CARGOS, item_raw_estrone) {
     }
 }
 
-spriteset(sprite_raw_testosterone, "./gfx/raw_testosterone.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_raw_testosterone) {
     property {
         number: 27;
@@ -635,10 +651,6 @@ item (FEAT_CARGOS, item_raw_testosterone) {
     graphics {
         default: sprite_raw_testosterone;
     }
-}
-
-spriteset(sprite_estrogen, "./gfx/estrogen.png") {
-    [0, 0, 8, 8, 0, 0]
 }
 
 item (FEAT_CARGOS, item_estrogen) {
@@ -667,10 +679,6 @@ item (FEAT_CARGOS, item_estrogen) {
     
 }
 
-spriteset(sprite_testosterone, "./gfx/testosterone.png") {
-    [0, 0, 8, 8, 0, 0]
-}
-
 item (FEAT_CARGOS, item_testosterone) {
     property {
         number: 29;
@@ -697,9 +705,14 @@ item (FEAT_CARGOS, item_testosterone) {
 }
 
 // ----------------------------------------------------------------
-// Tiles
+// ||||||||||||||||||||| Industry Definitions |||||||||||||||||||||
 // ----------------------------------------------------------------
+// Industry Tiles
+// --------------------------------
 
+
+// Randomize FEAT_INDUSTRY PERM Register 96 using FEAT_INDUSTRYTILES randomization every 256 ticks
+// --------------------------------
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_0, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
     1: return 0;
     1: return 1;
@@ -769,6 +782,10 @@ random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_7, bitmask(TRIGGER_INDUSTR
 }
 
 switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, [
+    // Generate an independently randomized bit and store it
+    // into each bit of FEAT_INDUSTRIES PERM Register 96.
+    // :return: Arbitrary number to satisfy trigger callback
+
     STORE_PERM(     (randomize_bit_0() * 128) +
                     (randomize_bit_1() * 64) +
                     (randomize_bit_2() * 32) +
@@ -782,8 +799,35 @@ switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, [
 ]) {
     return 0;
 }
+// --------------------------------
+
+
+// Define tile check functions to determine industry spawn validity
+// ----------------------------------------------------------------
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_water, [
+    // Check to see if the current tile is a water tile.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
+    nearby_tile_class(0,0)
+]) {
+    TILE_CLASS_WATER: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_ground, [
+    // Check to see if the current tile is a ground tile.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
+    nearby_tile_class(0,0)
+]) {
+    TILE_CLASS_GROUND: return CB_RESULT_LOCATION_ALLOW;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
 
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_level, [
+    // Iterate through each neighboring tile and ensure that they are the same height.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
     (   (nearby_tile_height(0,0) == nearby_tile_height(-1,-1)) *
         (nearby_tile_height(0,0) == nearby_tile_height(-1,0)) *
         (nearby_tile_height(0,0) == nearby_tile_height(-1,1)) *
@@ -798,14 +842,10 @@ switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_level, [
     return CB_RESULT_LOCATION_DISALLOW;
 }
 
-switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_water, [
-    nearby_tile_class(0,0)
-]) {
-    TILE_CLASS_WATER: return CB_RESULT_LOCATION_ALLOW;
-    return CB_RESULT_LOCATION_DISALLOW;
-}
-
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_immersed, [
+    // Check to see if the current tile is surrounded by water tiles.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
     (   (nearby_tile_class(-1,-1) == TILE_CLASS_WATER) *
         (nearby_tile_class(-1,0) == TILE_CLASS_WATER) *
         (nearby_tile_class(-1,1) == TILE_CLASS_WATER) *
@@ -821,6 +861,9 @@ switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_immersed, [
 }
 
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_adjacent_ground, [
+    // Check to see if the current tile is adjacent to a ground tile.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
     (   (nearby_tile_class(-1,-1) == TILE_CLASS_GROUND) +
         (nearby_tile_class(-1,0) == TILE_CLASS_GROUND) +
         (nearby_tile_class(-1,1) == TILE_CLASS_GROUND) +
@@ -835,7 +878,20 @@ switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_adjacent_ground, [
     return CB_RESULT_LOCATION_DISALLOW;
 }
 
+switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_ground, [
+    // Check to see if the current tile is level and ground.
+    // :return: CB_RESULT_LOCATION_ALOW if location satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
+    tile_check_is_level()
+]) {
+    CB_RESULT_LOCATION_ALLOW: tile_check_is_ground;
+    return CB_RESULT_LOCATION_DISALLOW;
+}
+
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_water, [
+    // Check to see if the current tile is water and level.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
     tile_check_is_level()
 ]) {
     CB_RESULT_LOCATION_ALLOW: tile_check_is_water;
@@ -843,26 +899,18 @@ switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_water, [
 }
 
 switch(FEAT_INDUSTRYTILES, SELF, tile_check_deep_water, [
+    // Check to see if the current tile is water and surrounded by water.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition satisfied, CB_RESULT_LOCATION_DISALLOW if not.
+
     tile_check_is_immersed()
 ]) {
     CB_RESULT_LOCATION_ALLOW: tile_check_is_water;
     return CB_RESULT_LOCATION_DISALLOW;
 }
+// ----------------------------------------------------------------
 
-switch(FEAT_INDUSTRYTILES, SELF, tile_check_is_ground, [
-    nearby_tile_class(0,0)
-]) {
-    TILE_CLASS_GROUND: return CB_RESULT_LOCATION_ALLOW;
-    return CB_RESULT_LOCATION_DISALLOW;
-}
-
-switch(FEAT_INDUSTRYTILES, SELF, tile_check_level_ground, [
-    tile_check_is_level()
-]) {
-    CB_RESULT_LOCATION_ALLOW: tile_check_is_ground;
-    return CB_RESULT_LOCATION_DISALLOW;
-}
-
+// Define tiles and layouts that make up the industries.
+// ----------------------------------------------------------------
 spritelayout spritelayout_placeholder_water {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -1481,25 +1529,31 @@ item(FEAT_INDUSTRYTILES, tile_replace_60) {
 tilelayout layout_gender_clinic {
     0,0: tile_replace_60;
 }
+// --------------------------------
+
 
 // ----------------------------------------------------------------
+// Industry Scripts
+// --------------------------------
+
+
 // Industry Addressing Reference
 // ----------------------------------------------------------------
-// PERM_000         :Production cycle index                                         [0..26]
+// PERM_000         :Production cycle index (0..26)
 // PERM_001..028    :Input Cargo 0 delivered last 27 cycles (+1 sum @ PERM_028)
 // PERM_029..056    :Input Cargo 1 delivered last 27 cycles (+1 sum @ PERM_056)
 // PERM_057..084    :Input Cargo 2 delivered last 27 cycles (+1 sum @ PERM_084)
 // PERM_085         :Seasons without cargo
 // PERM_086         :Seasons with consistent cargo
-// PERM_087         :Production level (0: Closed; 1: Ruin -2; 2: Ruin -1; 3: Default; 4: Progress +1; 5: Progress +2; 6: Progress +3)
+// PERM_087         :Production level       {0: Closed; 1: Ruin -2; 2: Ruin -1; 3: Default; 4: Progress +1; 5: Progress +2; 6: Progress +3}
 // PERM_088         :Random production variance
-// PERM_089         :Season (0..3)
-// PERM_090         :Supplied multiplier
-// PERM_091         :Combo multiplier
-// PERM_092         :Months left of "recently extracted' state 
-// PERM_093..095    :Seasonal service
-// PERM_096         :Random bits
-// PERM_097         :Whether this industry has ever been serviced.
+// PERM_089         :Season                 (0..3)
+// PERM_090         :Supplied multiplier    {1, 2, 4}
+// PERM_091         :Combo multiplier       {1, 2, 4}
+// PERM_092         :Months left of "recently extracted' state      (0..3)
+// PERM_093..095    :Seasonal service       (0..100)
+// PERM_096         :Random bits            (0..256)
+// PERM_097         :Whether this industry has ever been serviced.  {0, 1}
 // PERM_098..127    :Unassigned
 //
 // TEMP_000..031    :Parameter argument registers
@@ -1507,13 +1561,14 @@ tilelayout layout_gender_clinic {
 // TEMP_064..0127   :Internal registers for in-function calculations
 // TEMP_128..255    :Unassigned
 // TEMP_256..275    :Textstack
-
-
-// ----------------------------------------------------------------
-// Industry Scripts
-// ----------------------------------------------------------------
+// --------------------------------
 
 switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
+    // Only possible method to LOAD a variable address from PERM Registers.
+    // I don't like it either.
+    // :param index: PERM Register address to access (0..127)
+    // :return: value within specified PERM Register
+
     0: LOAD_PERM(0);
     1: LOAD_PERM(1);
     2: LOAD_PERM(2);
@@ -1645,6 +1700,12 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, is_isolated, radius, [
+    // Tags: #hardcoded
+    //
+    // Determine if this industry is far enough away from all other industries.
+    // :param radius: Minimum distance required to be considered isolated.
+    // :return: CB_RESULT_LOCATION_ALLOW if condition met, CB_RESULT_LOCATION_DISALLOW if not.
+
     (   (industry_distance(0) > radius) *
         (industry_distance(1) > radius) *
         (industry_distance(2) > radius) *
@@ -1669,19 +1730,30 @@ switch(FEAT_INDUSTRIES, SELF, is_isolated, radius, [
 
 }
 
-switch(FEAT_INDUSTRIES, SELF, supplied_multiplier, LOAD_PERM(28)) {
+switch(FEAT_INDUSTRIES, SELF, check_nonzero, index, load_perm_variable(index)) {
+    // Determine if the value within the specified PERM Register is nonzero.
+    // :param index: PERM Register address to check.
+    // :return: 0 if 0, 1 if not.
+    
+    0: return 0;
+    return 1;
+}
+
+switch(FEAT_INDUSTRIES, SELF, extraction_ratio, LOAD_PERM(28)) {
+    // PERM 028: Total Input Cargo 0 delivered in the last season.
+    //
+    // Get a Primary Industry's Extraction Ratio.
+    // :return: Ratio to multiply this industry's monthly production by.
+
     0..19: return 1;
     20..79: return 2;
     return 4;
 }
 
-switch(FEAT_INDUSTRIES, SELF, check_positive, sum_index, load_perm_variable(sum_index)) {
-    0: return 0;
-    return 1;
-}
-
-switch(FEAT_INDUSTRIES, SELF, combo_multiplier, [
-    check_positive(28) + check_positive(56) + check_positive(84)
+switch(FEAT_INDUSTRIES, SELF, conversion_ratio, [
+    // Get a Secondary Industry's Conversion Ratio based on unique cargoes supplied last season.
+    // :return: Ratio to multiply this industry's conversion rate by.
+    check_nonzero(28) + check_nonzero(56) + check_nonzero(84)
 ]) {
     3: return 4;
     2: return 2;
@@ -1689,6 +1761,14 @@ switch(FEAT_INDUSTRIES, SELF, combo_multiplier, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, apply_production_modifiers, expected_value, multiplier, [
+    // Tags: #hardcoded
+    // PERM 087: Current Production Level
+    //
+    // Apply the Production Level boost and Multiplier to the expected cargo output.
+    // :param expected_value: Units of cargo to generate at base level.
+    // :param multiplier: Extraction or Conversion Ratio to apply.
+    // :return: Adjusted value.
+
     LOAD_PERM(87)
 ]) {
     0: return ((expected_value * multiplier * LOAD_PERM(88) * 44) / 1000);
@@ -1698,32 +1778,47 @@ switch(FEAT_INDUSTRIES, SELF, apply_production_modifiers, expected_value, multip
     4: return ((expected_value * multiplier * LOAD_PERM(88) * 150) / 1000);
     5: return ((expected_value * multiplier * LOAD_PERM(88) * 225) / 1000);
     6: return ((expected_value * multiplier * LOAD_PERM(88) * 338) / 1000);
-    return expected_value;
+    return expected_value;  // Fallback to expected value
 }
 
-switch(FEAT_INDUSTRIES, SELF, update_supplied_multiplier, sum_index, [
-    STORE_PERM(supplied_multiplier(), 90),
-    STORE_PERM(combo_multiplier(), 91)
-]) {
-    return 0;
-}
+// Update cargos received last season and recompute multipliers.
+// ----------------------------------------------------------------
+switch(FEAT_INDUSTRIES, SELF, update_extraction_ratio, [
+    // PERM 090: Current Extraction Ratio
+    // PERM 091: Current Conversion Ratio
+    //
+    // Recalculate and store the current Extraction and Conversion Ratios.
+    // :return: 0, signifying no change.
 
-switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_closer, sum_index, [
-    STORE_PERM(0, sum_index-28+LOAD_PERM(0)+1),   // Store 0 in this production cycle index's register
-    sum_index
+    STORE_PERM(extraction_ratio(), 90),
+    STORE_PERM(conversion_ratio(), 91)
 ]) {
-    28: update_supplied_multiplier(sum_index);
     return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, iterate_production_cycle_tick_cargo_helper, sum_index, sub_index, [
+    // TEMP 032: Current sum
+    // Tags: #helper
+    // 
+    // Update the current sum with value in the current permanent register.
+    // :param sum_index: PERM Register marking the end of the array.
+    // :param sub_index: PERM Register marking the array offset.
+    
     STORE_TEMP(LOAD_TEMP(32) + load_perm_variable(sum_index-28+sub_index), 32)
 ]) {
     return;
 }
 
 switch(FEAT_INDUSTRIES, SELF, iterate_production_cycle_tick_cargo, sum_index, [
-    STORE_TEMP(0, 32),
+    // TEMP 032: Current sum
+    // Tags: #iterator
+    //
+    // Calculate the sum of cargo delivered last season, and store it in the sum index.
+    // :param sum_index: PERM Register containing this season's sum of cargo delivered.
+    // :return: 0, signifying no change.
+
+    STORE_TEMP(0, 32),      // Reset sum
+    // Iterate through each index in the array
     iterate_production_cycle_tick_cargo_helper(sum_index, 1),
     iterate_production_cycle_tick_cargo_helper(sum_index, 2),
     iterate_production_cycle_tick_cargo_helper(sum_index, 3),
@@ -1751,18 +1846,33 @@ switch(FEAT_INDUSTRIES, SELF, iterate_production_cycle_tick_cargo, sum_index, [
     iterate_production_cycle_tick_cargo_helper(sum_index, 25),
     iterate_production_cycle_tick_cargo_helper(sum_index, 26),
     iterate_production_cycle_tick_cargo_helper(sum_index, 27),
-    STORE_PERM(LOAD_TEMP(32), sum_index)
+    STORE_PERM(LOAD_TEMP(32), sum_index),           // Store the calculated total in the sum_index
+    STORE_PERM(0, sum_index-28+LOAD_PERM(0)+1),     // Store 0 in this production cycle index's register
+    sum_index                                       // Switch on sum_index
 ]) {
-    production_cycle_tick_closer(sum_index);
+    28: update_extraction_ratio();                  // If we just updated the first cargo, then update the extraction ratio.
+    return 0;
 }
  
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick_helper, cargo_index, [
-    STORE_TEMP(28*(1+cargo_index), 127),       // Store index of sum register
+    // Tags: #helper
+    // TEMP 127: PERM Register address containing the sum for the specified cargo.
+    //
+    // Update the sum of cargo delivered for the specified cargo.
+    // :param cargo_index: Index of input cargo to summate. {0, 1, 2}
+    // :return 0, signifying no change.
+
+    STORE_TEMP(28*(1+cargo_index), 127),                        // Store index of sum register
 ]) {
     iterate_production_cycle_tick_cargo(LOAD_TEMP(127));        // Kick off summation
 }
 
 switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
+    // Tags: #iterator
+    // PERM 000: Current cycle out of 27 in this season.
+    //
+    // Update the cycle in the season, and re-evaluate each cargo's total delivered sum.
+
     STORE_PERM((LOAD_PERM(0)+1)%27, 0),         // Load production cycle index, increment, and mod 27
     production_cycle_tick_helper(0),
     production_cycle_tick_helper(1),
@@ -1770,25 +1880,56 @@ switch(FEAT_INDUSTRIES, SELF, production_cycle_tick, [
 ]) {
     return;
 }
+// --------------------------------
 
+// Accept incoming input cargoes.
+// ----------------------------------------------------------------
 switch(FEAT_INDUSTRIES, SELF, increment_accepted_cargo, cargo_index, cargo_quantity, [
+    // Tags: #helper
+    // PERM 000: Current day in this season
+    // TEMP 064: Address of PERM Register containing the delivered cargo for the current cycle in this season
+    //
+    // Update the amount of cargo delivered this production cycle.
+    // :param cargo_index: Index of input cargo being accepted. {0, 1, 2}
+    // :param cargo_quantity: Amount of cargo being accepted.
+    
     STORE_TEMP(1+28*cargo_index+LOAD_PERM(0), 64),                     // Get register representing production cycle
-    STORE_TEMP(load_perm_variable(LOAD_TEMP(64))+cargo_quantity, 65),
-    STORE_PERM(LOAD_TEMP(65), LOAD_TEMP(64))
+    STORE_PERM(load_perm_variable(LOAD_TEMP(64))+cargo_quantity, LOAD_TEMP(64))
 ]) {
     return;
 }
 
-// Return amount of total cargo consumed
 switch(FEAT_INDUSTRIES, SELF, do_cargo_accept_cycle, cargo_quantity_0, cargo_quantity_1, cargo_quantity_2, [
+    // Tags: #iterator
+    //
+    // Increment each accepted cargo, then calculate the total accepted this shipment.
+    // :param cargo_quantity_0: Amount of input cargo 0 to accept.
+    // :param cargo_quantity_1: Amount of input cargo 1 to accept.
+    // :param cargo_quantity_2: Amount of input cargo 2 to accept.
+    // :return: Total units of cargo accepted.
+
     increment_accepted_cargo(0, cargo_quantity_0),
     increment_accepted_cargo(1, cargo_quantity_1),
     increment_accepted_cargo(2, cargo_quantity_2)
 ]) {
     return cargo_quantity_0 + cargo_quantity_1 + cargo_quantity_2;
 }
+// --------------------------------
 
+// Generate extra text for each industry.
+// ----------------------------------------------------------------
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_generic, [
+    // Tags: #bitmath #textstack
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 086: Consecutive seasons of good service.
+    // PERM 087: Current production level.
+    // TEMP 256: Textstack.
+    //
+    // Add Production Level and consecutive seasons of good/poor service to textstack.
+    // Then, return the appropriate industry text.
+    // :return: String message to display.
+
+                    // Store Production Level at bytes 0..1
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
@@ -1796,6 +1937,7 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_generic, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    // Store consecutive seasons at bytes 2..6
                     ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
@@ -1806,6 +1948,22 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_generic, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
+    // Tags: #bitmath #textstack
+    // PERM 028: Total amount of input cargo 0 received last season.
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 085: Consecutive seasons of good service.
+    // PERM 087: Current production level.
+    // PERM 090: Extraction Ratio.
+    // TEMP 256: Textstack.
+    // TEMP 257: Textstack.
+    // TEMP 258: Textstack.
+    //
+    // Add Production Level and consecutive seasons of good/poor service to textstack.
+    // Also add Extraction Ratio from Engineering Supplies to textstack.
+    // Then, return the appropriate industry text.
+    // :return: String message to display.
+
+                    // Store Production Level at bytes 0..1
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
@@ -1813,14 +1971,17 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    // Store consecutive seasons at bytes 2..6
                     ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
+                    // Store Extraction Ratio at bytes 7..8
     STORE_TEMP(     (((LOAD_PERM(90) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
                     ((LOAD_PERM(90) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
                     ((LOAD_PERM(90) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
                     257
                 ),
+                    // Store Engineering Supplies delivered last season at bytes 9..12
     STORE_TEMP(LOAD_PERM(28), 258),
     LOAD_PERM(85)
 ]) {
@@ -1829,6 +1990,22 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_engineering, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
+    // Tags: #bitmath #textstack
+    // PERM 028: Total amount of input cargo 0 received last season.
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 085: Consecutive seasons of good service.
+    // PERM 087: Current production level.
+    // PERM 090: Extraction Ratio.
+    // TEMP 256: Textstack.
+    // TEMP 257: Textstack.
+    // TEMP 258: Textstack.
+    //
+    // Add Production Level and consecutive seasons of good/poor service to textstack.
+    // Also add Extraction Ratio from Fertilizer to textstack.
+    // Then, return the appropriate industry text.
+    // :return: String message to display.
+
+                    // Store Production Level at bytes 0..1
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
@@ -1836,14 +2013,17 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    // Store consecutive seasons at bytes 2..6
                     ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
+                    // Store Extraction Ratio at bytes 7..8
     STORE_TEMP(     (((LOAD_PERM(90) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
                     ((LOAD_PERM(90) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
                     ((LOAD_PERM(90) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
                     257
                 ),
+                    // Store Fertilizer delivered last season at bytes 9..12
     STORE_TEMP(LOAD_PERM(28), 258),
     LOAD_PERM(85)
 ]) {
@@ -1852,6 +2032,20 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_fertilizer, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, extra_text_industry_combo, [
+    // Tags: #bitmath #textstack
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 085: Consecutive seasons of good service.
+    // PERM 087: Current production level.
+    // PERM 091: Conversion Ratio.
+    // TEMP 256: Textstack.
+    // TEMP 257: Textstack.
+    //
+    // Add Production Level and consecutive seasons of good/poor service to textstack.
+    // Also add Conversion Ratio to textstack.
+    // Then, return the appropriate industry text.
+    // :return: String message to display.
+
+                    // Store Production Level at bytes 0..1
     STORE_TEMP(     ((LOAD_PERM(87) == 0) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 1) * string(STR_INDUSTRY_POWER_MINIMUM)      ) +
                     ((LOAD_PERM(87) == 2) * string(STR_INDUSTRY_POWER_LOW)          ) +
@@ -1859,15 +2053,16 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_combo, [
                     ((LOAD_PERM(87) == 4) * string(STR_INDUSTRY_POWER_HIGH)         ) +
                     ((LOAD_PERM(87) == 5) * string(STR_INDUSTRY_POWER_VERY_HIGH)    ) +
                     ((LOAD_PERM(87) == 6) * string(STR_INDUSTRY_POWER_MAXIMUM)      ) |
+                    // Store consecutive seasons at bytes 2..6
                     ((LOAD_PERM(85)+LOAD_PERM(86)) << 16),
                     256
                 ),
+                    // Store Conversion Ratio at bytes 7..8
     STORE_TEMP(     (((LOAD_PERM(91) == 1) * string(STR_INDUSTRY_RATIO_STATE_NORMAL)     ) +
                     ((LOAD_PERM(91) == 2) * string(STR_INDUSTRY_RATIO_STATE_ENHANCED)   ) +
                     ((LOAD_PERM(91) == 4) * string(STR_INDUSTRY_RATIO_STATE_GUNG_HO)    )) << 16,
                     257
                 ),
-    STORE_TEMP(LOAD_PERM(28), 258),
     LOAD_PERM(85)
 ]) {
     0: return string(STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING);
@@ -1875,21 +2070,91 @@ switch(FEAT_INDUSTRIES, SELF, extra_text_industry_combo, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input, cargo_index, [
+    // Tags: #helper
+    //
+    // Construct cargo subtype to display.
+    // :param cargo_index: Input cargo index. {0, 1, 2}
+    // :return: Empty string if no cargo delivered last season, supplied message otherwise.
+
     load_perm_variable(28*(1+cargo_index))
 ]) {
+    // 0x3800 clears extra information from cargo subtype
     0: return (0x3800 + string(STR_EMPTY));
     return 0x3800 + string(STR_CARGO_SUPPLIED);
 }
 
 switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry, [
+    // TEMP 064: Input cargo index. {0, 1, 2}
+    //
+    // Construct cargo subtype to display.
+    // :return: Cargo subtype display, or no text.
     STORE_TEMP(getbits(extra_callback_info2, 0, 8), 64),
     LOAD_TEMP(64)
 ]) {
     0..2: return cargo_subtype_display_input(LOAD_TEMP(64));
     return CB_RESULT_IND_NO_TEXT_NO_AMOUNT;
 }
+// --------------------------------
+
+// Randomization functions that seed using industry random bits first, then update using FEAT_INDUSTRYTILES.
+// ----------------------------------------------------------------
+random_switch(FEAT_INDUSTRIES, SELF, seed_d3) {
+    // Tags: #random
+    //
+    // Initial seed before INDUSTRYTILES have updated and while this industry's random bits are unused.
+    // :return: Random in (1..3)
+
+    1: return 1;
+    1: return 2;
+    1: return 3;
+}
+
+switch(FEAT_INDUSTRIES, SELF, roll_d3, (((LOAD_PERM(96) % 3) + seed_d3()) % 3)) {
+    // Tags: #random
+    // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
+    //
+    // Roll a d3 using random bits sourced from INDUSTRYTILES and this industry's initial random bits.
+    // :return: Random in (1..3)
+
+    0: return 1;
+    1: return 2;
+    2: return 3;
+}
+
+random_switch(FEAT_INDUSTRIES, SELF, seed_d4) {
+    // Tags: #random
+    //
+    // Initial seed before INDUSTRYTILES have updated and while INDUSTRY random bits are unused.
+    // :return: Random in (1..4)
+
+    independent: seed_d3;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+    1: return 4;
+}
+
+switch(FEAT_INDUSTRIES, SELF, roll_d4, (((LOAD_PERM(96) % 4) + seed_d4()) % 4)) {
+    // Tags: #random
+    // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
+    //
+    // Roll a d4 using random bits sourced from INDUSTRYTILES and this industry's initial random bits.
+    // :return: Random in (1..4)
+
+    0: return 1;
+    1: return 2;
+    2: return 3;
+    3: return 4;
+}
 
 random_switch(FEAT_INDUSTRIES, SELF, seed_d12) {
+    // Tags: #random
+    //
+    // Initial seed before INDUSTRYTILES have updated and while INDUSTRY random bits are unused.
+    // :return: Random in (1..12)
+
+    independent: seed_d3;
+    independent: seed_d4;
     1: return 1;
     1: return 2;
     1: return 3;
@@ -1904,7 +2169,13 @@ random_switch(FEAT_INDUSTRIES, SELF, seed_d12) {
     1: return 12;
 }
 
-switch(FEAT_INDUSTRIES, SELF, roll_12, (((LOAD_PERM(96) % 12) + seed_d12()) % 12)) {
+switch(FEAT_INDUSTRIES, SELF, roll_d12, (((LOAD_PERM(96) % 12) + seed_d12()) % 12)) {
+    // Tags: #random
+    // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
+    //
+    // Roll a d12 using random bits sourced from INDUSTRYTILES and this industry's initial random bits.
+    // :return: Random in (1..12)
+
     0: return 1;
     1: return 2;
     2: return 3;
@@ -1918,8 +2189,17 @@ switch(FEAT_INDUSTRIES, SELF, roll_12, (((LOAD_PERM(96) % 12) + seed_d12()) % 12
     10: return 11;
     11: return 12;
 }
+// --------------------------------
 
+// Update an industry's Production Level based on the consecutive seasons of poor/good service.
+// ----------------------------------------------------------------
 switch(FEAT_INDUSTRIES, SELF, halve_production, [
+    // PERM 087: The current Production Level.
+    // PERM 085: Consecutive seasons of poor service.
+    //
+    // Reduce production level and reset counter.
+    // :return: 1, signifying that production has decreased.
+
     STORE_PERM(LOAD_PERM(87)-1, 87),
     STORE_PERM(0, 85)
 ]) {
@@ -1927,6 +2207,12 @@ switch(FEAT_INDUSTRIES, SELF, halve_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, double_production, [
+    // PERM 087: The current Production Level.
+    // PERM 086: Consecutive seasons of good service.
+    //
+    // Reduce production level and reset counter.
+    // :return: 2, signifying that production has increased.
+
     STORE_PERM(LOAD_PERM(87)+1, 87),
     STORE_PERM(0, 86)
 ]) {
@@ -1934,6 +2220,11 @@ switch(FEAT_INDUSTRIES, SELF, double_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, close_production, [
+    // PERM 087: The current Production Level.
+    //
+    // Close the industry if allowed.
+    // :return: 3 if close possible, signifying that production has decreased, else 0, signifying no change.
+
     (LOAD_PERM(87) == 1) * industry_decay * industry_close
 ]) {
     1: return 3;
@@ -1941,6 +2232,11 @@ switch(FEAT_INDUSTRIES, SELF, close_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, decay_production, [
+    // PERM 087: The current Production Level.
+    //
+    // Reduce production level if allowed.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
+
     (industry_decay + (LOAD_PERM(87) > industry_starting_power))
 ]) {
     0: return 0;
@@ -1948,6 +2244,11 @@ switch(FEAT_INDUSTRIES, SELF, decay_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, grow_production, [
+    // PERM 087: The current Production Level.
+    //
+    // Raise production level if allowed.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
+
     (industry_growth + (LOAD_PERM(87) < industry_starting_power))
 ]) {
     0: return 0;
@@ -1955,83 +2256,133 @@ switch(FEAT_INDUSTRIES, SELF, grow_production, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at Minimum.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 3 if industry closed.
+
+    roll_d12() + modifier
 ]) {
     1..15: return 0;
     close_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at Low.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production decreased.
+
+    roll_d12() + modifier
 ]) {
     1..14: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at Default.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production decreased.
+
+    roll_d12() + modifier
 ]) {
     1..11: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at High.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production decreased.
+
+    roll_d12() + modifier
 ]) {
     1..8: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at Very High.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production decreased.
+
+    roll_d12() + modifier
 ]) {
     1..4: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_ruin_6, modifier, [
-    roll_12() + modifier
+    // Determine whether to reduce production when at Maximum.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production decreased.
+
+    roll_d12() + modifier
 ]) {
     1..2: return 0;
     decay_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
-    roll_12() + modifier
+    // Determine whether to raise production when at Minimum.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production increased.
+
+    roll_d12() + modifier
 ]) {
     1..4: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
-    roll_12() + modifier
+    // Determine whether to raise production when at Low.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production increased.
+
+    roll_d12() + modifier
 ]) {
     1..8: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
-    roll_12() + modifier
+    // Determine whether to raise production when at Default.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production increased.
+
+    roll_d12() + modifier
 ]) {
     1..11: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
-    roll_12() + modifier
+    // Determine whether to raise production when at High.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production increased.
+
+    roll_d12() + modifier
 ]) {
     1..14: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_progress_5, modifier, [
-    roll_12() + modifier
+    // Determine whether to raise production when at Very High.
+    // :param modifier: Amount to increase odds by due to consecutive seasons.
+    // :return: 0 if no change, 1 if production increased.
+
+    roll_d12() + modifier
 ]) {
     1..15: return 0;
     grow_production;
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_ruin_update, [
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 087: Current Production Level.
+    // 
+    // Randomly decrease production based on Production Level and conseuctive seasons.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
+
     LOAD_PERM(87)
 ]) {
     1: roll_ruin_1(LOAD_PERM(85)-1);
@@ -2044,6 +2395,12 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_ruin_update, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
+    // PERM 086: Consecutive seasons of good service.
+    // PERM 087: Current Production Level.
+    // 
+    // Randomly increase production based on Production Level and conseuctive seasons.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased.
+    
     LOAD_PERM(87)
 ]) {
     1: roll_progress_1(LOAD_PERM(86)-1);
@@ -2054,7 +2411,25 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_progress_update, [
     return 0;
 }
 
+switch(FEAT_INDUSTRIES, SELF, reset_progress, [
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 086: Consecutive seasons of good service.
+    //
+    // Reset consecutive seasons of good and poor service.
+    
+    STORE_PERM(0, 86),
+    STORE_PERM(0, 85)
+]) {
+    return;
+}
+
 switch(FEAT_INDUSTRIES, SELF, increment_ruin_helper, [
+    // Tags: #helper
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 086: Consecutive seasons of good service.
+    //
+    // Increment seasons of poor service and reset good service.
+
     STORE_PERM(LOAD_PERM(85)+1, 85),
     STORE_PERM(0, 86)
 ]) {
@@ -2062,6 +2437,11 @@ switch(FEAT_INDUSTRIES, SELF, increment_ruin_helper, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
+    // PERM 097: Whether this industry has ever been serviced.
+    //
+    // If this industry has been serviced, proceed with updating ruin.
+    // :return: 0, signifying no change.
+    
     LOAD_PERM(97)
 ]) {
     1: increment_ruin_helper;
@@ -2069,6 +2449,12 @@ switch(FEAT_INDUSTRIES, SELF, increment_ruin, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_progress_helper, [
+    // Tags: #helper
+    // PERM 085: Consecutive seasons of poor service.
+    // PERM 086: Consecutive seasons of good service.
+    //
+    // Increment seasons of good service and reset poor service.
+
     STORE_PERM(LOAD_PERM(86)+1, 86),
     STORE_PERM(0, 85)
 ]) {
@@ -2076,20 +2462,25 @@ switch(FEAT_INDUSTRIES, SELF, increment_progress_helper, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, increment_progress, [
+    // PERM 097: Whether this industry has ever been serviced.
+    //
+    // If this industry has been serviced, proceed with updating growth.
+    // :return: 0, signifying no change.
+
     LOAD_PERM(97)
 ]) {
     1: increment_progress_helper;
     return 0;
 }
 
-switch(FEAT_INDUSTRIES, SELF, reset_progress, [
-    STORE_PERM(0, 86),
-    STORE_PERM(0, 85)
-]) {
-    return;
-}
-
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
+    // PERM 093: Highest average service two months ago.
+    // PERM 094: Highest average service one month ago.
+    // PERM 095: Highest average service this past month.
+    //
+    // Take the average of the past season of service,
+    // and update consecutive service accordingly.
+
     ((LOAD_PERM(93) + LOAD_PERM(94) + LOAD_PERM(95)) / 3)
 ]) {
     0..39: increment_ruin;
@@ -2098,6 +2489,12 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, update_industry_helper, [
+    // Tags: #helper
+    // PERM 085: Consecutive seasons of poor service
+    //
+    // If service has been poor for multiple seasons, update ruin.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
+
     LOAD_PERM(85)
 ]) {
     0..1: return 0;
@@ -2105,6 +2502,12 @@ switch(FEAT_INDUSTRIES, SELF, update_industry_helper, [
 }
 
 switch(FEAT_INDUSTRIES, SELF, update_industry, [
+    // PERM 086: Consecutive seasons of good service
+    //
+    // Update cargo received this season, then determine if industry should
+    // grow, decay, or stay the same.
+    // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
+
     do_seasonal_activity_update(),
     LOAD_PERM(86)
 ]) {
@@ -2113,36 +2516,19 @@ switch(FEAT_INDUSTRIES, SELF, update_industry, [
     do_seasonal_progress_update;
 }
 
-random_switch(FEAT_INDUSTRIES, SELF, seed_d4) {
-    independent: seed_d12;
-    1: return 1;
-    1: return 2;
-    1: return 3;
-    1: return 4;
-}
-
-switch(FEAT_INDUSTRIES, SELF, roll_d4, (((LOAD_PERM(96) % 4) + seed_d4()) % 4)) {
-    0: return 1;
-    1: return 2;
-    2: return 3;
-    3: return 4;
-}
-
-random_switch(FEAT_INDUSTRIES, SELF, seed_d3) {
-    independent: seed_d12;
-    independent: seed_d4;
-    1: return 1;
-    1: return 2;
-    1: return 3;
-}
-
-switch(FEAT_INDUSTRIES, SELF, roll_d3, (((LOAD_PERM(96) % 3) + seed_d3()) % 3)) {
-    0: return 1;
-    1: return 2;
-    2: return 3;
-}
-
 switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, selection, text_no, [
+    // Return a random industry message depending on if growth increased, changed, or stayed the same.
+    // :param inc_msg_a: Increase message A.
+    // :param inc_msg_b: Increase message B.
+    // :param inc_msg_c: Increase message C.
+    // :param inc_msg_d: Increase message D.
+    // :param dec_msg_a: Decrease message A.
+    // :param dec_msg_b: Decrease message B.
+    // :param dec_msg_c: Decrease message C.
+    // :param dec_msg_d: Decrease message D.
+    // :param selection: Industry change. {0, 1, 2, 3}
+    // :return: Callback message.
+
     STORE_TEMP(     ((selection == 1) * (text_no == 1) * dec_msg_a +
                     (selection == 1) * (text_no == 2) * dec_msg_b +
                     (selection == 1) * (text_no == 3) * dec_msg_c +
@@ -2160,6 +2546,20 @@ switch(FEAT_INDUSTRIES, SELF, select_message, inc_msg_a, inc_msg_b, inc_msg_c, i
 }
 
 switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, [
+    // TEMP 123: Random number. {1, 2, 3, 4}
+    // TEMP 124: How the industry has changed {0, 1, 2, 3}
+    //
+    // Update the industry's cargo and growth, then randomly return an appropriate callback message.
+    // :param inc_msg_a: Increase message A.
+    // :param inc_msg_b: Increase message B.
+    // :param inc_msg_c: Increase message C.
+    // :param inc_msg_d: Increase message D.
+    // :param dec_msg_a: Decrease message A.
+    // :param dec_msg_b: Decrease message B.
+    // :param dec_msg_c: Decrease message C.
+    // :param dec_msg_d: Decrease message D.
+    // :return: Callback message.
+    
     STORE_TEMP(update_industry(), 124),
     STORE_TEMP(roll_d4(), 123)
 ]) {
@@ -2167,6 +2567,21 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, best_service, [
+    // PERM 089: Month of season {1, 2, 3}
+    // PERM 097: Best average service this month.
+    //
+    // Randomly decide whether to update the industry's cargo and growth, 
+    // then randomly return an appropriate callback message.
+    // :param inc_msg_a: Increase message A.
+    // :param inc_msg_b: Increase message B.
+    // :param inc_msg_c: Increase message C.
+    // :param inc_msg_d: Increase message D.
+    // :param dec_msg_a: Decrease message A.
+    // :param dec_msg_b: Decrease message B.
+    // :param dec_msg_c: Decrease message C.
+    // :param dec_msg_d: Decrease message D.
+    // :return: Callback message.
+
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
     STORE_PERM(max((best_service != 0), LOAD_PERM(97)), 97),
     STORE_PERM(best_service, (93+LOAD_PERM(89))),
@@ -2176,8 +2591,12 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, 
     0: do_seasonal_prod_update(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, );
     return CB_RESULT_IND_PROD_NO_CHANGE; 
 }
+// --------------------------------
 
 random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
+    // Randomly set this industry's base production rate.
+    // :return: Production rate over 10.
+
     independent: seed_d4;
     independent: seed_d12;
     independent: seed_d3;
@@ -2193,6 +2612,12 @@ random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
 }
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
+    // PERM 087: Starting production level of this industry
+    // PERM 088: Randomized production of this industry.
+    //
+    // Initialize industry production variables.
+    // :return: 16 for arbitrary callback purposes.
+
     STORE_PERM(industry_starting_power, 87),
     STORE_PERM(randomize_production(), 88)
 ]) {
@@ -2200,8 +2625,17 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
 }
 
 // ----------------------------------------------------------------
-// Industry Definitions
+// Industry Items
 // ----------------------------------------------------------------
+
+
+// Port
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL
+// ACCEPTS:
+// PRODUCES: 12 ENGS, 8 SALT ($2092/cycle)
+// CONVERTS:
 
 produce(produce_regular_port,
     [],
@@ -2251,6 +2685,15 @@ item (FEAT_INDUSTRIES, industry_port) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Quarry
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL, EXTRACTION_RATIO (ENGS)
+// ACCEPTS: ENGS
+// PRODUCES: 12 SAND, 8 PTSH ($2000/cycle)
+// CONVERTS:
 
 produce(produce_accept_quarry,
     [ENGS: LOAD_TEMP(0);],
@@ -2314,6 +2757,15 @@ item (FEAT_INDUSTRIES, industry_quarry) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Mineral Mine
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL, EXTRACTION_RATIO (ENGS)
+// ACCEPTS: ENGS
+// PRODUCES: 16 MNRL ($1600/cycle)
+// CONVERTS:
 
 produce(produce_accept_mineral_mine,
     [ENGS: LOAD_TEMP(0);],
@@ -2375,6 +2827,15 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Corn Farm
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL, EXTRACTION_RATIO (FERT)
+// ACCEPTS: FERT
+// PRODUCES: 16 CORN ($1440/cycle)
+// CONVERTS:
 
 produce(produce_accept_corn_farm,
     [FERT: LOAD_TEMP(0);],
@@ -2436,6 +2897,15 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Soy Farm
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL, EXTRACTION_RATIO (FERT)
+// ACCEPTS: FERT
+// PRODUCES: 14 SOYB ($1540/cycle)
+// CONVERTS:
 
 produce(produce_accept_soy_farm,
     [FERT: LOAD_TEMP(0);],
@@ -2457,7 +2927,7 @@ produce(produce_regular_soy_farm,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_soy_farm, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(12,LOAD_PERM(90)), 6)
+    STORE_TEMP(apply_production_modifiers(14,LOAD_PERM(90)), 6)
 ]) {
     produce_regular_soy_farm;
 }
@@ -2497,6 +2967,15 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Yam Farm
+// ----------------------------------------------------------------
+// CLASS: PRIMARY
+// MULTIPLIERS: PRODUCTION_LEVEL, EXTRACTION_RATIO (FERT)
+// ACCEPTS: FERT
+// PRODUCES: 14 YAMS ($1540/cycle)
+// CONVERTS:
 
 produce(produce_accept_yam_farm,
     [FERT: LOAD_TEMP(0);],
@@ -2518,7 +2997,7 @@ produce(produce_regular_yam_farm,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_yam_farm, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(12,LOAD_PERM(90)), 6)
+    STORE_TEMP(apply_production_modifiers(14,LOAD_PERM(90)), 6)
 ]) {
     produce_regular_yam_farm;
 }
@@ -2558,10 +3037,19 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Glassworks
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL
+// ACCEPTS: SAND
+// PRODUCES: 9 VIAL, 9 GOOD                 ($2106/cycle)
+// CONVERTS: 16 SAND -> 4 VIAL + 4 GOOD     ($58.50/unit of input)
 
 produce(produce_accept_glassworks,
     [SAND: LOAD_TEMP(0);],
-    [VIAL: LOAD_TEMP(4) * 6 / 16; GOOD: LOAD_TEMP(4) * 6 / 16;]
+    [VIAL: LOAD_TEMP(4) * 4 / 16; GOOD: LOAD_TEMP(4) * 4 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_glassworks, [
@@ -2579,8 +3067,8 @@ produce(produce_regular_glassworks,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_glassworks, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(4, 1), 6),
-    STORE_TEMP(apply_production_modifiers(4, 1), 7)
+    STORE_TEMP(apply_production_modifiers(9, 1), 6),
+    STORE_TEMP(apply_production_modifiers(9, 1), 7)
 ]) {
     produce_regular_glassworks;
 }
@@ -2620,10 +3108,19 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
         extra_text_industry: extra_text_industry_generic;
     }
 }
+// --------------------------------
+
+// Chemical Plant
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: SALT, PTSH, MNRL
+// PRODUCES: 7 FERT, 5 CHEM                                                 ($2047/cycle)
+// CONVERTS: 16 (SALT + PTSH + MNRL) -> {3, 6, 12} FERT + {2, 4, 8} CHEM   ({$53.06, $106.13, $212.26}/unit of input)
 
 produce(produce_accept_chemical_plant,
     [SALT: LOAD_TEMP(0); PTSH: LOAD_TEMP(1); MNRL: LOAD_TEMP(2);],
-    [FERT: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16; CHEM: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16;]
+    [FERT: LOAD_TEMP(4) * LOAD_PERM(91) * 3 / 16; CHEM: LOAD_TEMP(4) * LOAD_PERM(91) * 2 / 16;]
 )
 
 switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_chemical_plant, [
@@ -2643,8 +3140,8 @@ produce(produce_regular_chemical_plant,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_chemical_plant, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(6, 1), 6),
-    STORE_TEMP(apply_production_modifiers(4, 1), 7)
+    STORE_TEMP(apply_production_modifiers(7, 1), 6),
+    STORE_TEMP(apply_production_modifiers(5, 1), 7)
 ]) {
     produce_regular_chemical_plant;
 }
@@ -2686,6 +3183,15 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Processing Plant
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL
+// ACCEPTS: CORN
+// PRODUCES: 14 VGOL             ($1540/cycle)
+// CONVERTS: 16 CORN -> 8 VGOL  ($55/unit of input)
 
 produce(produce_accept_processing_plant,
     [CORN: LOAD_TEMP(0);],
@@ -2707,7 +3213,7 @@ produce(produce_regular_processing_plant,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_processing_plant, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(8, 1), 6)
+    STORE_TEMP(apply_production_modifiers(14, 1), 6)
 ]) {
     produce_regular_processing_plant;
 }
@@ -2746,6 +3252,15 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
         extra_text_industry: extra_text_industry_generic;
     }
 }
+// --------------------------------
+
+// Distillery
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL
+// ACCEPTS: CORN
+// PRODUCES: 14 ALCH             ($1540/cycle)
+// CONVERTS: 16 CORN -> 8 ALCH  ($55/unit of input)
 
 produce(produce_accept_distillery,
     [CORN: LOAD_TEMP(0);],
@@ -2767,7 +3282,7 @@ produce(produce_regular_distillery,
 
 switch(FEAT_INDUSTRIES, SELF, produce_256_ticks_distillery, [
     production_cycle_tick(),
-    STORE_TEMP(apply_production_modifiers(8, 1), 6),
+    STORE_TEMP(apply_production_modifiers(14, 1), 6),
 ]) {
     produce_regular_distillery;
 }
@@ -2806,6 +3321,15 @@ item (FEAT_INDUSTRIES, industry_distillery) {
         extra_text_industry: extra_text_industry_generic;
     }
 }
+// --------------------------------
+
+// Biolab
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: SOYB, YAMS, ALCH
+// PRODUCES: 4 DIOS                                     ($1440/cycle)
+// CONVERTS: 16 (SOYB + YAMS + ALCH) -> {2, 4, 8} DIOS  ({$45, $90, $180}/unit of inptu)
 
 produce(produce_accept_biolab,
     [SOYB: LOAD_TEMP(0); YAMS: LOAD_TEMP(1); ALCH: LOAD_TEMP(2);],
@@ -2870,6 +3394,15 @@ item (FEAT_INDUSTRIES, industry_biolab) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Pharmaceutical Plant (Estrogen)
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: DIOS, CHEM
+// PRODUCES: 8 RWES                             ($1440/cycle)
+// CONVERTS: 16 (DIOS + CHEM) -> {4, 8} RWES    ({$45, $90}/unit of input)
 
 produce(produce_accept_pharmaceutical_plant_e,
     [DIOS: LOAD_TEMP(0); CHEM: LOAD_TEMP(1);],
@@ -2933,6 +3466,15 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Pharmaceutical Plant (Testosterone)
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: DIOS, CHEM
+// PRODUCES: 8 RWTS                             ($1440/cycle)
+// CONVERTS: 16 (DIOS + CHEM) -> {4, 8} RWTS    ({$45, $90}/unit of input)
 
 produce(produce_accept_pharmaceutical_plant_t,
     [DIOS: LOAD_TEMP(0); CHEM: LOAD_TEMP(1);],
@@ -2996,6 +3538,15 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Pharmacy (Estrogen)
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: VIAL, VGOL, RWES
+// PRODUCES: 4 ESTR                                     ($1520/cycle)
+// CONVERTS: 16 (VIAL + VGOL + RWES) -> {2, 4, 8} ESTR  ({$47.50, $95, $190}/unit of input)
 
 produce(produce_accept_pharmacy_e,
     [VIAL: LOAD_TEMP(0); VGOL: LOAD_TEMP(1); RWES: LOAD_TEMP(2);],
@@ -3059,7 +3610,15 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
 
+// Pharmacy (Testosterone)
+// ----------------------------------------------------------------
+// CLASS: SECONDARY
+// MULTIPLIERS: PRODUCTION_LEVEL, CONVERSION RATIO
+// ACCEPTS: VIAL, VGOL, RWTS
+// PRODUCES: 4 TEST                                     ($1520/cycle)
+// CONVERTS: 16 (VIAL + VGOL + RWTS) -> {2, 4, 8} TEST  ({$47.50, $95, $190}/unit of input)
 
 produce(produce_accept_pharmacy_t,
     [VIAL: LOAD_TEMP(0); VGOL: LOAD_TEMP(1); RWTS: LOAD_TEMP(2);],
@@ -3077,7 +3636,7 @@ switch(FEAT_INDUSTRIES, SELF, produce_cargo_arrival_pharmacy_t, [
 
 produce(produce_regular_pharmacy_t, 
     [], 
-    [TEST: LOAD_TEMP(6);],
+    [TEST: LOAD_TEMP(4);],
     0
 )
 
@@ -3123,6 +3682,15 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+// Gender Clinic (Estrogen)
+// ----------------------------------------------------------------
+// CLASS: TERTIARY
+// MULTIPLIERS:
+// ACCEPTS: ESTR
+// PRODUCES:
+// CONVERTS:
 
 produce(produce_accept_gender_clinic_e,
     [ESTR: incoming_cargo_waiting("ESTR");],
@@ -3159,7 +3727,15 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
 
+// Gender Clinic (Testosterone)
+// ----------------------------------------------------------------
+// CLASS: TERTIARY
+// MULTIPLIERS:
+// ACCEPTS: TEST
+// PRODUCES:
+// CONVERTS:
 
 produce(produce_accept_gender_clinic_t,
     [TEST: incoming_cargo_waiting("TEST");],
@@ -3196,3 +3772,9 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         cargo_subtype_display: cargo_subtype_display_industry;
     }
 }
+// --------------------------------
+
+
+// ----------------------------------------------------------------
+// What a mess. Truly sorry you had to see this.
+// ----------------------------------------------------------------

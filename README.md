@@ -45,7 +45,7 @@ In the base game, industries can increase or decrease production based on their 
 This mechanic is similar, but has a few key differences:<br>
 1. Industries grow and shrink production based on **consecutive** seasons of good (>60%) or bad (<40%) service.
 2. Industry production level is **quantized**, and spans the range of **Minimum**, **Low**, **Default**, **High**, **Very High**, and **Maximum**.
-3. At **Minimum** production, industries operate at 25%. At **Maximum** production, industries operate at 338%.
+3. At **Minimum** production, industries operate at 44%. At **Maximum** production, industries operate at 338%.
 4. Industry production only begins to fluctuate after it has first been serviced.
 
 By utilizing **consecutive** seasons (~3 months) of service, this mod rewards **consistent service without major drops**, encouraging **reliability** instead of just **throughput**.<br>
