@@ -24,7 +24,7 @@ grf {
             type: bool;
             name: string(STR_PARAM_NAME_INDUSTRY_DECAY);
             desc: string(STR_PARAM_DESC_INDUSTRY_DECAY);
-            def_value: 0;
+            def_value: 1;
         }
     }
     param 2 {
