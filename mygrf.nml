@@ -3706,7 +3706,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         cargo_types: [
             accept_cargo("ESTR"),
         ];
-        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
+        spec_flags: bitmask(IND_FLAG_ONLY_IN_TOWNS);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
         prob_in_game: 4;
@@ -3751,7 +3751,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         cargo_types: [
             accept_cargo("TEST"),
         ];
-        spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
+        spec_flags: bitmask(IND_FLAG_ONLY_IN_TOWNS);
         new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
         closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
         prob_in_game: 4;
