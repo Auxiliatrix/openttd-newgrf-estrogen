@@ -64,6 +64,7 @@ grf {
 }
 
 // TODO: dont accept cargo if <16 total units of input
+// TODO: randomization broken again
 
 // Listen. Yes, this is all in one file. That's just how openttd NML works, for some reason.
 // Yes, I could build a basic templating program to do actual compartmentalization,
@@ -719,69 +720,71 @@ random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_0, bitmask(TRIGGER_INDUSTR
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_1, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
+    dependent: randomize_bit_0;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_2, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_3, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
-    independent: randomize_bit_2;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
+    dependent: randomize_bit_2;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_4, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
-    independent: randomize_bit_2;
-    independent: randomize_bit_3;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
+    dependent: randomize_bit_2;
+    dependent: randomize_bit_3;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_5, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
-    independent: randomize_bit_2;
-    independent: randomize_bit_3;
-    independent: randomize_bit_4;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
+    dependent: randomize_bit_2;
+    dependent: randomize_bit_3;
+    dependent: randomize_bit_4;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_6, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
-    independent: randomize_bit_2;
-    independent: randomize_bit_3;
-    independent: randomize_bit_4;
-    independent: randomize_bit_5;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
+    dependent: randomize_bit_2;
+    dependent: randomize_bit_3;
+    dependent: randomize_bit_4;
+    dependent: randomize_bit_5;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_7, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    independent: randomize_bit_0;
-    independent: randomize_bit_1;
-    independent: randomize_bit_2;
-    independent: randomize_bit_3;
-    independent: randomize_bit_4;
-    independent: randomize_bit_5;
-    independent: randomize_bit_6;
+    dependent: randomize_bit_0;
+    dependent: randomize_bit_1;
+    dependent: randomize_bit_2;
+    dependent: randomize_bit_3;
+    dependent: randomize_bit_4;
+    dependent: randomize_bit_5;
+    dependent: randomize_bit_6;
     1: return 0;
     1: return 1;
 }
 
-switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, [
+switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits_helper, [
+    // Tags: #random #helper
+    //
     // Generate an independently randomized bit and store it
     // into each bit of FEAT_INDUSTRIES PERM Register 96.
     // :return: Arbitrary number to satisfy trigger callback
@@ -798,6 +801,10 @@ switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, [
     )
 ]) {
     return 0;
+}
+
+random_switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
+    1: trigger_randomize_bits_helper;
 }
 // --------------------------------
 
@@ -1552,9 +1559,11 @@ tilelayout layout_gender_clinic {
 // PERM_091         :Combo multiplier       {1, 2, 4}
 // PERM_092         :Months left of "recently extracted' state      (0..3)
 // PERM_093..095    :Seasonal service       (0..100)
-// PERM_096         :Random bits            (0..256)
+// PERM_096         :Random industrytiles bits      (0..255)
 // PERM_097         :Whether this industry has ever been serviced.  {0, 1}
-// PERM_098..127    :Unassigned
+// PERM_098         :Linear Shift Feedback Register
+// PERM_099         :Psuedo-random bits     (0..255)
+// PERM_100..127    :Unassigned
 //
 // TEMP_000..031    :Parameter argument registers
 // TEMP_032..063    :Parameter return registers
@@ -1697,6 +1706,168 @@ switch(FEAT_INDUSTRIES, SELF, load_perm_variable, index, index) {
     125: LOAD_PERM(125);
     126: LOAD_PERM(126);
     127: LOAD_PERM(127);
+}
+
+// Generate pseudo-random 8-bit numbers using a Linear Shift Feedback Register.
+// ----------------------------------------------------------------
+random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_1) {
+    // Tags: #random #helper
+    //
+    // Use the iniitally generated random bits in the industry to seed the LSF Register.
+    // :return: Random nibble
+
+    1: return 0;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+    1: return 4;
+    1: return 5;
+    1: return 6;
+    1: return 7;
+    1: return 8;
+    1: return 9;
+    1: return 10;
+    1: return 11;
+    1: return 12;
+    1: return 13;
+    1: return 14;
+    1: return 15;
+}
+
+random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_2) {
+    // Tags: #random #helper
+    //
+    // Use the iniitally generated random bits in the industry to seed the LSF Register.
+    // :return: Random nibble
+
+    dependent: init_rand_nibble_1;
+    1: return 0;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+    1: return 4;
+    1: return 5;
+    1: return 6;
+    1: return 7;
+    1: return 8;
+    1: return 9;
+    1: return 10;
+    1: return 11;
+    1: return 12;
+    1: return 13;
+    1: return 14;
+    1: return 15;
+}
+
+random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_3) {
+    // Tags: #random #helper
+    //
+    // Use the iniitally generated random bits in the industry to seed the LSF Register.
+    // :return: Random nibble
+
+    dependent: init_rand_nibble_1;
+    dependent: init_rand_nibble_2;
+    1: return 0;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+    1: return 4;
+    1: return 5;
+    1: return 6;
+    1: return 7;
+    1: return 8;
+    1: return 9;
+    1: return 10;
+    1: return 11;
+    1: return 12;
+    1: return 13;
+    1: return 14;
+    1: return 15;
+}
+
+random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_4) {
+    // Tags: #random #helper
+    //
+    // Use the iniitally generated random bits in the industry to seed the LSF Register.
+    // :return: Random nibble
+
+    dependent: init_rand_nibble_1;
+    dependent: init_rand_nibble_2;
+    dependent: init_rand_nibble_3;
+    1: return 0;
+    1: return 1;
+    1: return 2;
+    1: return 3;
+    1: return 4;
+    1: return 5;
+    1: return 6;
+    1: return 7;
+    1: return 8;
+    1: return 9;
+    1: return 10;
+    1: return 11;
+    1: return 12;
+    1: return 13;
+    1: return 14;
+    1: return 15;
+}
+
+switch(FEAT_INDUSTRIES, SELF, init_lsfr, [
+    // Tags: #random
+    // PERM 098: Linear Shift Feedback Register
+    //
+    // Use the iniitally generated random bits in the industry to seed the LSF Register.
+    // :return: Randomized 16 bits
+
+    STORE_PERM(
+                (init_rand_nibble_1() << 0) |
+                (init_rand_nibble_2() << 4) |
+                (init_rand_nibble_3() << 8) |
+                (init_rand_nibble_4() << 12)
+        , 98)
+]) {
+    return LOAD_PERM(98);
+}
+
+switch(FEAT_INDUSTRIES, SELF, lsfr_stream, [
+    // Tags: #random
+    // TEMP 064: XOR'd tap bits
+    // PERM 098: Linear Shift Feedback Register
+    //
+    // Generate a stream of pseudo-random bits each time called
+    // :return: Pseudo-random bits
+
+    STORE_TEMP(
+            ((LOAD_PERM(98) >> 0) ^ 
+            (LOAD_PERM(98) >> 2) ^ 
+            (LOAD_PERM(98) >> 3) ^ 
+            (LOAD_PERM(98) >> 5)) & 1
+        , 64),
+    STORE_PERM((LOAD_PERM(98) >> 1) | (LOAD_TEMP(64) << 15), 98)
+]) {
+    return LOAD_PERM(98) & 1;
+}
+
+switch(FEAT_INDUSTRIES, SELF, lsfr_byte_stream, [
+    // Tags: #random
+    // TEMP 064: XOR'd tap bits
+    // PERM 099: Pseudorandom byte
+    //
+    // Generate a stream of pseudo-random bytes each time called
+    // :return: Pseudo-random byte
+
+    STORE_PERM(
+            ((lsfr_stream() << 0) |
+            (lsfr_stream() << 1) |
+            (lsfr_stream() << 2) |
+            (lsfr_stream() << 3) |
+            (lsfr_stream() << 4) |
+            (lsfr_stream() << 5) |
+            (lsfr_stream() << 6) |
+            (lsfr_stream() << 7)) & 255
+        , 99)
+]) {
+    return LOAD_PERM(99);
 }
 
 switch(FEAT_INDUSTRIES, SELF, is_isolated, radius, [
@@ -2109,7 +2280,7 @@ random_switch(FEAT_INDUSTRIES, SELF, seed_d3) {
     1: return 3;
 }
 
-switch(FEAT_INDUSTRIES, SELF, roll_d3, (((LOAD_PERM(96) % 3) + seed_d3()) % 3)) {
+switch(FEAT_INDUSTRIES, SELF, roll_d3, ((lsfr_byte_stream() + seed_d3()) % 3)) {
     // Tags: #random
     // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
     //
@@ -2134,7 +2305,7 @@ random_switch(FEAT_INDUSTRIES, SELF, seed_d4) {
     1: return 4;
 }
 
-switch(FEAT_INDUSTRIES, SELF, roll_d4, (((LOAD_PERM(96) % 4) + seed_d4()) % 4)) {
+switch(FEAT_INDUSTRIES, SELF, roll_d4, ((lsfr_byte_stream() + seed_d4()) % 4)) {
     // Tags: #random
     // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
     //
@@ -2169,7 +2340,7 @@ random_switch(FEAT_INDUSTRIES, SELF, seed_d12) {
     1: return 12;
 }
 
-switch(FEAT_INDUSTRIES, SELF, roll_d12, (((LOAD_PERM(96) % 12) + seed_d12()) % 12)) {
+switch(FEAT_INDUSTRIES, SELF, roll_d12, ((lsfr_byte_stream() + seed_d12()) % 12)) {
     // Tags: #random
     // PERM 096: Random bits updated every 256 ticks by INDUSTRYTILES triggers.
     //
@@ -2617,7 +2788,7 @@ switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
     //
     // Initialize industry production variables.
     // :return: 16 for arbitrary callback purposes.
-
+    init_lsfr(),
     STORE_PERM(industry_starting_power, 87),
     STORE_PERM(randomize_production(), 88)
 ]) {
