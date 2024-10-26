@@ -718,64 +718,64 @@ random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_0, bitmask(TRIGGER_INDUSTR
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_1, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
+    independent: randomize_bit_0;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_2, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_3, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
-    dependent: randomize_bit_2;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_4, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
-    dependent: randomize_bit_2;
-    dependent: randomize_bit_3;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_5, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
-    dependent: randomize_bit_2;
-    dependent: randomize_bit_3;
-    dependent: randomize_bit_4;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_6, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
-    dependent: randomize_bit_2;
-    dependent: randomize_bit_3;
-    dependent: randomize_bit_4;
-    dependent: randomize_bit_5;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
+    independent: randomize_bit_5;
     1: return 0;
     1: return 1;
 }
 
 random_switch(FEAT_INDUSTRYTILES, SELF, randomize_bit_7, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    dependent: randomize_bit_0;
-    dependent: randomize_bit_1;
-    dependent: randomize_bit_2;
-    dependent: randomize_bit_3;
-    dependent: randomize_bit_4;
-    dependent: randomize_bit_5;
-    dependent: randomize_bit_6;
+    independent: randomize_bit_0;
+    independent: randomize_bit_1;
+    independent: randomize_bit_2;
+    independent: randomize_bit_3;
+    independent: randomize_bit_4;
+    independent: randomize_bit_5;
+    independent: randomize_bit_6;
     1: return 0;
     1: return 1;
 }
@@ -1762,7 +1762,7 @@ random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_2) {
     // Use the iniitally generated random bits in the industry to seed the LSF Register.
     // :return: Random nibble
 
-    dependent: init_rand_nibble_1;
+    independent: init_rand_nibble_1;
     1: return 0;
     1: return 1;
     1: return 2;
@@ -1787,8 +1787,8 @@ random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_3) {
     // Use the iniitally generated random bits in the industry to seed the LSF Register.
     // :return: Random nibble
 
-    dependent: init_rand_nibble_1;
-    dependent: init_rand_nibble_2;
+    independent: init_rand_nibble_1;
+    independent: init_rand_nibble_2;
     1: return 0;
     1: return 1;
     1: return 2;
@@ -1813,9 +1813,9 @@ random_switch(FEAT_INDUSTRIES, SELF, init_rand_nibble_4) {
     // Use the iniitally generated random bits in the industry to seed the LSF Register.
     // :return: Random nibble
 
-    dependent: init_rand_nibble_1;
-    dependent: init_rand_nibble_2;
-    dependent: init_rand_nibble_3;
+    independent: init_rand_nibble_1;
+    independent: init_rand_nibble_2;
+    independent: init_rand_nibble_3;
     1: return 0;
     1: return 1;
     1: return 2;
