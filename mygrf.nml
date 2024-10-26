@@ -1222,6 +1222,7 @@ tilelayout layout_mineral_mine {
 item(FEAT_INDUSTRYTILES, tile_replace_39) {
     property {
         substitute: 39;
+        accepted_cargos: [[SAND, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1232,6 +1233,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_39) {
 item(FEAT_INDUSTRYTILES, tile_replace_40) {
     property {
         substitute: 40;
+        accepted_cargos: [[SAND, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1242,6 +1244,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_40) {
 item(FEAT_INDUSTRYTILES, tile_replace_41) {
     property {
         substitute: 41;
+        accepted_cargos: [[SAND, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1252,6 +1255,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_41) {
 item(FEAT_INDUSTRYTILES, tile_replace_42) {
     property {
         substitute: 42;
+        accepted_cargos: [[SAND, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1403,6 +1407,7 @@ tilelayout layout_distillery {
 item(FEAT_INDUSTRYTILES, tile_replace_60) {
     property {
         substitute: 60;
+        accepted_cargos: [[BEAN, 8], [TATO, 8], [BEER, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1413,6 +1418,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_60) {
 item(FEAT_INDUSTRYTILES, tile_replace_61) {
     property {
         substitute: 61;
+        accepted_cargos: [[BEAN, 8], [TATO, 8], [BEER, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1423,6 +1429,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_61) {
 item(FEAT_INDUSTRYTILES, tile_replace_62) {
     property {
         substitute: 62;
+        accepted_cargos: [[BEAN, 8], [TATO, 8], [BEER, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1433,6 +1440,7 @@ item(FEAT_INDUSTRYTILES, tile_replace_62) {
 item(FEAT_INDUSTRYTILES, tile_replace_63) {
     property {
         substitute: 63;
+        accepted_cargos: [[BEAN, 8], [TATO, 8], [BEER, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1521,9 +1529,10 @@ tilelayout layout_pharmacy {
     1,0: tile_replace_59;
 }
 
-item(FEAT_INDUSTRYTILES, tile_replace_60) {
+item(FEAT_INDUSTRYTILES, tile_replace_60_e) {
     property {
         substitute: 60;
+        accepted_cargos: [[ESTR, 8]];
         special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
     }
     graphics {
@@ -1531,8 +1540,23 @@ item(FEAT_INDUSTRYTILES, tile_replace_60) {
     }
 }
 
-tilelayout layout_gender_clinic {
-    0,0: tile_replace_60;
+item(FEAT_INDUSTRYTILES, tile_replace_60_t) {
+    property {
+        substitute: 60;
+        accepted_cargos: [[TEST, 8]];
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+    graphics {
+        random_trigger: trigger_randomize_bits;
+    }
+}
+
+tilelayout layout_gender_clinic_e {
+    0,0: tile_replace_60_e;
+}
+
+tilelayout layout_gender_clinic_t {
+    0,0: tile_replace_60_t;
 }
 // --------------------------------
 
@@ -3884,7 +3908,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
         map_colour: 49;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_gender_clinic];
+        layouts: [layout_gender_clinic_e];
     }
     graphics {
         location_check: is_isolated(16);
@@ -3929,7 +3953,7 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
         map_colour: 48;
         min_cargo_distr: 1;
         conflicting_ind_types: [];
-        layouts: [layout_gender_clinic];
+        layouts: [layout_gender_clinic_t];
     }
     graphics {
         location_check: is_isolated(16);
