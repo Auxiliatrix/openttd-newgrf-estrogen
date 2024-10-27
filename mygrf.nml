@@ -194,7 +194,7 @@ item (FEAT_CARGOS, item_passengers) {
         cargo_label: "PASS";
         units_of_cargo: TTD_STR_PASSENGERS;
         items_of_cargo: TTD_STR_QUANTITY_PASSENGERS;
-        cargo_classes: bitmask(CC_PASSENGERS);
+        cargo_classes: bitmask();
         penalty_lowerbound: 0;
         single_penalty_length: 22;
         price_factor: 137;
@@ -217,7 +217,7 @@ item (FEAT_CARGOS, item_mail) {
         cargo_label: "MAIL";
         units_of_cargo: TTD_STR_BAGS;
         items_of_cargo: TTD_STR_QUANTITY_MAIL;
-        cargo_classes: bitmask(CC_MAIL);
+        cargo_classes: bitmask();
         penalty_lowerbound: 6;
         single_penalty_length: 24;
         price_factor: 167;
@@ -241,7 +241,7 @@ item (FEAT_CARGOS, item_goods) {
         cargo_payment_list_colour: 63;
         units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: TTD_STR_QUANTITY_GOODS;
-        cargo_classes: bitmask(CC_EXPRESS, CC_PIECE_GOODS);
+        cargo_classes: bitmask(, CC_PIECE_GOODS);
         penalty_lowerbound: 16;
         single_penalty_length: 64;
         price_factor: 117;
@@ -265,7 +265,7 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         cargo_payment_list_colour: 146;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES);
-        cargo_classes: bitmask(CC_EXPRESS,CC_PIECE_GOODS);
+        cargo_classes: bitmask(,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
         single_penalty_length: 40;
         price_factor: 110;
@@ -288,7 +288,7 @@ item (FEAT_CARGOS, item_fertilizer) {
         cargo_label: "FERT";
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER);
-        cargo_classes: bitmask(CC_BULK,CC_PIECE_GOODS);
+        cargo_classes: bitmask(,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
         single_penalty_length: 40;
         price_factor: 151;
@@ -313,7 +313,7 @@ item (FEAT_CARGOS, item_salt) {
         cargo_payment_list_colour: 48;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SALT);
-        cargo_classes: bitmask(CC_BULK);
+        cargo_classes: bitmask();
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
@@ -338,7 +338,7 @@ item (FEAT_CARGOS, item_potash) {
         cargo_payment_list_colour: 13;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_POTASH);
-        cargo_classes: bitmask(CC_BULK,CC_COVERED);
+        cargo_classes: bitmask(,CC_COVERED);
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
@@ -363,7 +363,7 @@ item (FEAT_CARGOS, item_sand) {
         cargo_payment_list_colour: 64;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SAND);
-        cargo_classes: bitmask(CC_BULK);
+        cargo_classes: bitmask();
         penalty_lowerbound: 40;
         single_penalty_length: 255;
         price_factor: 100;
@@ -388,7 +388,7 @@ item (FEAT_CARGOS, item_minerals) {
         cargo_payment_list_colour: 41;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS);
-        cargo_classes: bitmask(CC_BULK);
+        cargo_classes: bitmask();
         penalty_lowerbound: 30;
         single_penalty_length: 255;
         price_factor: 100;
@@ -413,7 +413,7 @@ item (FEAT_CARGOS, item_corn) {
         cargo_payment_list_colour: 66;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_CORN);
-        cargo_classes: bitmask(CC_COVERED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 12;
         single_penalty_length: 40;
         price_factor: 90;
@@ -438,7 +438,7 @@ item (FEAT_CARGOS, item_soy) {
         cargo_payment_list_colour: 71;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_SOY);
-        cargo_classes: bitmask(CC_COVERED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 8;
         single_penalty_length: 24;
         price_factor: 110;
@@ -463,7 +463,7 @@ item (FEAT_CARGOS, item_yam) {
         cargo_payment_list_colour: 75;
         units_of_cargo: string(TTD_STR_TONS);
         items_of_cargo: string(STR_CARGO_UNIT_YAM);
-        cargo_classes: bitmask(CC_COVERED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 8;
         single_penalty_length: 24;
         price_factor: 110;
@@ -488,7 +488,7 @@ item (FEAT_CARGOS, item_vials) {
         cargo_payment_list_colour: 135;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_VIALS);
-        cargo_classes: bitmask(CC_PIECE_GOODS);
+        cargo_classes: bitmask();
         penalty_lowerbound: 16;
         single_penalty_length: 160;
         price_factor: 117;
@@ -513,7 +513,7 @@ item (FEAT_CARGOS, item_chemicals) {
         cargo_payment_list_colour: 185;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS);
-        cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
+        cargo_classes: bitmask(, CC_HAZARDOUS);
         penalty_lowerbound: 24;
         single_penalty_length: 48;
         price_factor: 198;
@@ -538,7 +538,7 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         cargo_payment_list_colour: 206;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL);
-        cargo_classes: bitmask(CC_LIQUID);
+        cargo_classes: bitmask();
         penalty_lowerbound: 8;
         single_penalty_length: 36;
         price_factor: 110;
@@ -563,7 +563,7 @@ item (FEAT_CARGOS, item_alcohol) {
         cargo_payment_list_colour: 192;
         units_of_cargo: string(TTD_STR_LITERS);
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL);
-        cargo_classes: bitmask(CC_LIQUID);
+        cargo_classes: bitmask();
         penalty_lowerbound: 12;
         single_penalty_length: 40;
         price_factor: 110;
@@ -588,7 +588,7 @@ item (FEAT_CARGOS, item_diosgenin) {
         cargo_payment_list_colour: 133;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
-        cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 40;
         price_factor: 360;
@@ -613,7 +613,7 @@ item (FEAT_CARGOS, item_raw_estrone) {
         cargo_payment_list_colour: 152;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
-        cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 180;
@@ -638,7 +638,7 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         cargo_payment_list_colour: 103;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
-        cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
+        cargo_classes: bitmask(, CC_BULK);
         penalty_lowerbound: 32;
         single_penalty_length: 140;
         price_factor: 180;
@@ -663,7 +663,7 @@ item (FEAT_CARGOS, item_estrogen) {
         cargo_payment_list_colour: 150;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN);
-        cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
+        cargo_classes: bitmask(, CC_REFRIGERATED);
         penalty_lowerbound: 12;
         single_penalty_length: 32;
         price_factor: 380;
@@ -689,7 +689,7 @@ item (FEAT_CARGOS, item_testosterone) {
         cargo_payment_list_colour: 101;
         units_of_cargo: string(TTD_STR_CRATES);
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
-        cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
+        cargo_classes: bitmask(, CC_REFRIGERATED);
         penalty_lowerbound: 13;
         single_penalty_length: 32;
         price_factor: 380;
