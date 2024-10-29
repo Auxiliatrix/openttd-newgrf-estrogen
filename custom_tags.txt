@@ -1,2 +1,2 @@
-VERSION                                                 :0.3.18
+VERSION                                                 :0.3.18-dev
 TITLE                                                   :OpenHRT Estrogen

@@ -802,7 +802,8 @@ switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits_helper, [
 }
 
 random_switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    1: trigger_randomize_bits_helper;
+    1: return 0;
+    127: return 1;
 }
 // --------------------------------
 
@@ -2453,7 +2454,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 3 if industry closed.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..15: return 0;
     close_production;
@@ -2464,7 +2465,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..14: return 0;
     decay_production;
@@ -2475,7 +2476,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..11: return 0;
     decay_production;
@@ -2486,7 +2487,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..8: return 0;
     decay_production;
@@ -2497,7 +2498,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..4: return 0;
     decay_production;
@@ -2508,7 +2509,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_6, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..2: return 0;
     decay_production;
@@ -2519,7 +2520,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..4: return 0;
     grow_production;
@@ -2530,7 +2531,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..8: return 0;
     grow_production;
@@ -2541,7 +2542,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..11: return 0;
     grow_production;
@@ -2552,7 +2553,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..14: return 0;
     grow_production;
@@ -2563,7 +2564,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_5, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    roll_d12() + modifier
+    seed_d12() + modifier
 ]) {
     1..15: return 0;
     grow_production;
@@ -2666,7 +2667,9 @@ switch(FEAT_INDUSTRIES, SELF, increment_progress, [
     return 0;
 }
 
-switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
+switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update_helper, [
+    // Tags: #helper
+    //
     // PERM 093: Highest average service two months ago.
     // PERM 094: Highest average service one month ago.
     // PERM 095: Highest average service this past month.
@@ -2679,6 +2682,16 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
     0..39: increment_ruin;
     40..60: reset_progress;
     61..100: increment_progress;
+}
+
+switch(FEAT_INDUSTRIES, SELF, do_seasonal_activity_update, [
+    // PERM 089: Current season. {0, 1, 2}
+    //
+    // Every third season, update seasonal progress.
+    LOAD_PERM(89)
+]) {
+    0: do_seasonal_activity_update_helper;
+    return 0;
 }
 
 switch(FEAT_INDUSTRIES, SELF, update_industry_helper, [
@@ -2701,7 +2714,6 @@ switch(FEAT_INDUSTRIES, SELF, update_industry, [
     // grow, decay, or stay the same.
     // :return: 0 if no change, 1 if production decreased, 2 if production increased, 3 if industry closed.
 
-    do_seasonal_activity_update(),
     LOAD_PERM(86)
 ]) {
     0: update_industry_helper;
@@ -2754,14 +2766,14 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc
     // :return: Callback message.
     
     STORE_TEMP(update_industry(), 124),
-    STORE_TEMP(roll_d4(), 123)
+    STORE_TEMP(seed_d4(), 123)
 ]) {
     select_message(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, LOAD_TEMP(124), LOAD_TEMP(123));
 }
 
 switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, best_service, [
     // PERM 089: Month of season {1, 2, 3}
-    // PERM 097: Best average service this month.
+    // PERM 097: Whether service has occurred at this industry.
     //
     // Randomly decide whether to update the industry's cargo and growth, 
     // then randomly return an appropriate callback message.
@@ -2778,10 +2790,10 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, 
     STORE_PERM((LOAD_PERM(89)+1)%3, 89),
     STORE_PERM(max((best_service != 0), LOAD_PERM(97)), 97),
     STORE_PERM(best_service, (93+LOAD_PERM(89))),
-    // LOAD_PERM(89)   // every third season
-    (roll_d3()-1)   // 33% of the time
+    do_seasonal_activity_update(),
+    (seed_d3()-1)   // 33% of the time
 ]) {
-    0: do_seasonal_prod_update(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, );
+    0: do_seasonal_prod_update(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d);
     return CB_RESULT_IND_PROD_NO_CHANGE; 
 }
 // --------------------------------
