@@ -802,8 +802,11 @@ switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits_helper, [
 }
 
 random_switch(FEAT_INDUSTRYTILES, PARENT, trigger_randomize_bits, bitmask(TRIGGER_INDUSTRYTILE_256_TICKS)) {
-    1: return 0;
-    127: return 1;
+    // Tags: #random
+    //
+    // Randomize industrytile bits and load new random byte.
+    1: trigger_randomize_bits_helper;
+    1: trigger_randomize_bits_helper;
 }
 // --------------------------------
 
@@ -2292,15 +2295,35 @@ switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_industry, [
 
 // Randomization functions that seed using industry random bits first, then update using FEAT_INDUSTRYTILES.
 // ----------------------------------------------------------------
+random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
+    // Tags: #random
+    // Bits: 5
+    //
+    // Randomly set this industry's base production rate.
+    // :return: Production rate over 10.
+
+    1: return 6;
+    2: return 7;
+    3: return 8;
+    5: return 9;
+    10: return 10;
+    5: return 11;
+    3: return 12;
+    2: return 13;
+    1: return 14;
+}
+
 random_switch(FEAT_INDUSTRIES, SELF, seed_d3) {
     // Tags: #random
+    // Bits: 4
     //
     // Initial seed before INDUSTRYTILES have updated and while this industry's random bits are unused.
     // :return: Random in (1..3)
 
-    1: return 1;
-    1: return 2;
-    1: return 3;
+    independent: randomize_production;
+    6: return 1;
+    5: return 2;
+    5: return 3;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_d3, ((lsfr_byte_stream() + seed_d3()) % 3)) {
@@ -2317,10 +2340,12 @@ switch(FEAT_INDUSTRIES, SELF, roll_d3, ((lsfr_byte_stream() + seed_d3()) % 3)) {
 
 random_switch(FEAT_INDUSTRIES, SELF, seed_d4) {
     // Tags: #random
+    // Bits: 2
     //
     // Initial seed before INDUSTRYTILES have updated and while INDUSTRY random bits are unused.
     // :return: Random in (1..4)
 
+    independent: randomize_production;
     independent: seed_d3;
     1: return 1;
     1: return 2;
@@ -2343,24 +2368,26 @@ switch(FEAT_INDUSTRIES, SELF, roll_d4, ((lsfr_byte_stream() + seed_d4()) % 4)) {
 
 random_switch(FEAT_INDUSTRIES, SELF, seed_d12) {
     // Tags: #random
+    // Bits: 5
     //
     // Initial seed before INDUSTRYTILES have updated and while INDUSTRY random bits are unused.
     // :return: Random in (1..12)
 
+    independent: randomize_production;
     independent: seed_d3;
     independent: seed_d4;
-    1: return 1;
-    1: return 2;
-    1: return 3;
-    1: return 4;
-    1: return 5;
-    1: return 6;
-    1: return 7;
-    1: return 8;
-    1: return 9;
-    1: return 10;
-    1: return 11;
-    1: return 12;
+    2: return 1;
+    2: return 2;
+    3: return 3;
+    3: return 4;
+    3: return 5;
+    3: return 6;
+    3: return 7;
+    3: return 8;
+    3: return 9;
+    3: return 10;
+    2: return 11;
+    2: return 12;
 }
 
 switch(FEAT_INDUSTRIES, SELF, roll_d12, ((lsfr_byte_stream() + seed_d12()) % 12)) {
@@ -2454,7 +2481,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_1, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 3 if industry closed.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..15: return 0;
     close_production;
@@ -2465,7 +2492,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_2, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..14: return 0;
     decay_production;
@@ -2476,7 +2503,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_3, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..11: return 0;
     decay_production;
@@ -2487,7 +2514,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_4, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..8: return 0;
     decay_production;
@@ -2498,7 +2525,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_5, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..4: return 0;
     decay_production;
@@ -2509,7 +2536,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_ruin_6, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production decreased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..2: return 0;
     decay_production;
@@ -2520,7 +2547,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_1, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..4: return 0;
     grow_production;
@@ -2531,7 +2558,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_2, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..8: return 0;
     grow_production;
@@ -2542,7 +2569,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_3, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..11: return 0;
     grow_production;
@@ -2553,7 +2580,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_4, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..14: return 0;
     grow_production;
@@ -2564,7 +2591,7 @@ switch(FEAT_INDUSTRIES, SELF, roll_progress_5, modifier, [
     // :param modifier: Amount to increase odds by due to consecutive seasons.
     // :return: 0 if no change, 1 if production increased.
 
-    seed_d12() + modifier
+    roll_d12() + modifier
 ]) {
     1..15: return 0;
     grow_production;
@@ -2766,7 +2793,7 @@ switch(FEAT_INDUSTRIES, SELF, do_seasonal_prod_update, inc_msg_a, inc_msg_b, inc
     // :return: Callback message.
     
     STORE_TEMP(update_industry(), 124),
-    STORE_TEMP(seed_d4(), 123)
+    STORE_TEMP(roll_d4(), 123)
 ]) {
     select_message(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d, LOAD_TEMP(124), LOAD_TEMP(123));
 }
@@ -2791,30 +2818,12 @@ switch(FEAT_INDUSTRIES, SELF, check_seasonal_prod_update, inc_msg_a, inc_msg_b, 
     STORE_PERM(max((best_service != 0), LOAD_PERM(97)), 97),
     STORE_PERM(best_service, (93+LOAD_PERM(89))),
     do_seasonal_activity_update(),
-    (seed_d3()-1)   // 33% of the time
+    (roll_d3()-1)   // 33% of the time
 ]) {
     0: do_seasonal_prod_update(inc_msg_a, inc_msg_b, inc_msg_c, inc_msg_d, dec_msg_a, dec_msg_b, dec_msg_c, dec_msg_d);
     return CB_RESULT_IND_PROD_NO_CHANGE; 
 }
 // --------------------------------
-
-random_switch(FEAT_INDUSTRIES, SELF, randomize_production) {
-    // Randomly set this industry's base production rate.
-    // :return: Production rate over 10.
-
-    independent: seed_d4;
-    independent: seed_d12;
-    independent: seed_d3;
-    2: return 6;
-    6: return 7;
-    10: return 8;
-    16: return 9;
-    32: return 10;
-    16: return 11;
-    10: return 12;
-    6: return 13;
-    2: return 14;
-}
 
 switch(FEAT_INDUSTRIES, SELF, initialize_industry, [
     // PERM 087: Starting production level of this industry
