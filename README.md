@@ -85,5 +85,5 @@ the code available in multiple separate files. I'll get around to refactoring it
 * Primary industry supplies mechanic blatantly copied from the [FIRS NewGRF by @andythenorth](https://github.com/andythenorth/firs).<br>
 * Industry sprites currently frankensteined almagmations available in the base game.
 
-![demo_news](https://github.com/user-attachments/assets/bdae4bb3-3375-4c96-beb0-ce8914262f05)
+![demo_news](https://github.com/user-attachments/assets/652aeacd-5881-46c3-b8f8-60c86c8d0462)
 
