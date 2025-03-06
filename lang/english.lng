@@ -139,7 +139,7 @@ STR_CARGO_PLURAL_ESTROGEN                                   :Estrogen
 STR_CARGO_SINGULAR_ESTROGEN                                 :Estrogen
 STR_CARGO_ABBREV_ESTROGEN                                   :{TINYFONT}ES
 STR_CARGO_LABEL_ESTROGEN                                    :ESTR
-STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} crate{P "" s} crate{P "" s} of estrogen
+STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} crate{P "" s} of estrogen
 
 STR_CARGO_PLURAL_TESTOSTERONE                               :Testosterone
 STR_CARGO_SINGULAR_TESTOSTERONE                             :Testosterone
