@@ -294,7 +294,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{ST
 
 STR_INDUSTRY_NAME_DISTILLERY                                :Distillery
 STR_INDUSTRY_STATION_DISTILLERY                             :{STRING} Distillery
-STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; alocholics celebrate!
+STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; alcoholics celebrate!
 STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}{STRING} Distillery's local government brings back The Prohibition! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Distillery dismantles local AA groups! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Distillery begins expanding into school cafeterias! (production increased)
@@ -340,7 +340,8 @@ STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Pharmacy conducts study proving you need to buy more drugs! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sales skyrocket as nearby town catches the flu! (production increased)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Pharmacy fails to lobby for higher medical costs! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Pharmacy loses prescriptions due to clerical error! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Pharmacy loses prescriptions due to client Bobby Tables! (production decreased)
+# https://xkcd.com/327/
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Pharmacy loses millions in sales as scientists cure deadly disease! (production decreased)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sued for malpractice in class-action lawsuit! (production decreased)
 
