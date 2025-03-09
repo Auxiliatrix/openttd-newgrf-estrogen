@@ -1,0 +1,378 @@
+##grflangid 0x37
+##plural 0
+
+# ----------------------------------------------------------------
+# Global
+# ----------------------------------------------------------------
+
+STR_GRF_NAME                                                :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                         :Conjuto de subistituição de industrias que emula as logisticas reais de produção dos medicamentos usados em TRH (Terapia de Reposição Hormônal). Feito por autistas transgênero, para autistas transgênero.
+
+STR_PARAM_NAME_HORMONE                                      :Hormônio
+STR_PARAM_DESC_HORMONE                                      :Hormônio no qual a diosgenina se transforma em uma planta farmacêutica.{} Selecionar ambos pode resultar em desbalanceamento.
+
+STR_PARAM_VALUE_HORMONE_ESTROGEN                            :Estrogênio
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE                        :Testosterona
+STR_PARAM_VALUE_HORMONE_BOTH                                :Ambos
+
+STR_PARAM_NAME_INDUSTRY_DECAY                               :Decaimento de Industria
+STR_PARAM_DESC_INDUSTRY_DECAY                               :Permite que industrias recaiam a um nivel de produção abaixo do padrão caso não supridas por jogadores.
+
+STR_PARAM_NAME_INDUSTRY_GROWTH                              :Crescimento de Industria
+STR_PARAM_DESC_INDUSTRY_GROWTH                              :Permite que industrias frequentadas aumentem sua produção para alem do valor padrão.
+
+STR_PARAM_NAME_INDUSTRY_CLOSE                               :Fechamento de Industria.
+STR_PARAM_DESC_INDUSTRY_CLOSE                               :Se o decaimento excessivo da produção de uma industria pode fazer com que ela feche.
+
+STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Poder de Produção Inicial.
+STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Nivel de produção no qual industrias devem começar.
+
+STR_EMPTY                                                   :
+
+TTD_STR_CRATES                                              :{COMMA} caixas{P "" s}
+TTD_STR_TONS                                                :{COMMA} toneladas{P "" s}
+TTD_STR_LITERS                                              :{COMMA} litros{P "" s}
+
+# ----------------------------------------------------------------
+# Cargos
+# ----------------------------------------------------------------
+
+STR_CARGO_SUPPLIED                                          :{BLACK} (Suprida)
+
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                       :Peças
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                     :Peças
+STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                       :{TINYFONT}PC
+STR_CARGO_LABEL_ENGINEERING_SUPPLIES                        :PECS
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                         :{COMMA} caixa{P "" s} de peças
+
+STR_CARGO_PLURAL_FERTILIZER                                 :Fertilizantes
+STR_CARGO_SINGULAR_FERTILIZER                               :Fertilizantes
+STR_CARGO_ABBREV_FERTILIZER                                 :{TINYFONT}FE
+STR_CARGO_LABEL_FERTILIZER                                  :FERT
+STR_CARGO_UNIT_FERTILIZER                                   :{WEIGHT} de fertilizantes
+
+STR_CARGO_PLURAL_SALT                                       :Sal
+STR_CARGO_SINGULAR_SALT                                     :Sal
+STR_CARGO_ABBREV_SALT                                       :{TINYFONT}SL
+STR_CARGO_LABEL_SALT                                        :SAL
+STR_CARGO_UNIT_SALT                                         :{WEIGHT} de sal
+
+STR_CARGO_PLURAL_POTASH                                     :Potassa
+STR_CARGO_SINGULAR_POTASH                                   :Potassa
+STR_CARGO_ABBREV_POTASH                                     :{TINYFONT}PO
+STR_CARGO_LABEL_POTASH                                      :PTSA
+STR_CARGO_UNIT_POTASH                                       :{WEIGHT} de potassa
+
+STR_CARGO_PLURAL_SAND                                       :Areia
+STR_CARGO_SINGULAR_SAND                                     :Areia
+STR_CARGO_ABBREV_SAND                                       :{TINYFONT}AR
+STR_CARGO_LABEL_SAND                                        :AREI
+STR_CARGO_UNIT_SAND                                         :{WEIGHT} de areia
+
+STR_CARGO_PLURAL_MINERALS                                   :Minerais
+STR_CARGO_SINGULAR_MINERALS                                 :Minerais
+STR_CARGO_ABBREV_MINERALS                                   :{TINYFONT}MI
+STR_CARGO_LABEL_MINERALS                                    :MNRA
+STR_CARGO_UNIT_MINERALS                                     :{WEIGHT} de minerais
+
+STR_CARGO_PLURAL_CORN                                       :Milho
+STR_CARGO_SINGULAR_CORN                                     :Milho
+STR_CARGO_ABBREV_CORN                                       :{TINYFONT}MI
+STR_CARGO_LABEL_CORN                                        :MILH
+STR_CARGO_UNIT_CORN                                         :{WEIGHT} de milho
+
+STR_CARGO_PLURAL_SOY                                        :Soja
+STR_CARGO_SINGULAR_SOY                                      :Soja
+STR_CARGO_ABBREV_SOY                                        :{TINYFONT}SO
+STR_CARGO_LABEL_SOY                                         :SOJA
+STR_CARGO_UNIT_SOY                                          :{WEIGHT} de soja
+
+STR_CARGO_PLURAL_YAM                                        :Inhame
+STR_CARGO_SINGULAR_YAM                                      :Inhame
+STR_CARGO_ABBREV_YAM                                        :{TINYFONT}IN
+STR_CARGO_LABEL_YAM                                         :YAME
+STR_CARGO_UNIT_YAM                                          :{WEIGHT} de inhame
+
+STR_CARGO_PLURAL_VIALS                                      :Ampolas
+STR_CARGO_SINGULAR_VIALS                                    :Ampola
+STR_CARGO_ABBREV_VIALS                                      :{TINYFONT}AP
+STR_CARGO_LABEL_VIALS                                       :AMPL
+STR_CARGO_UNIT_VIALS                                        :{COMMA} caixa{P "" s} de ampolas
+
+STR_CARGO_PLURAL_CHEMICALS                                  :Produtos Químicos
+STR_CARGO_SINGULAR_CHEMICALS                                :Produto Químico
+STR_CARGO_ABBREV_CHEMICALS                                  :{TINYFONT}PQ
+STR_CARGO_LABEL_CHEMICALS                                   :QUIM
+STR_CARGO_UNIT_CHEMICALS                                    :{VOLUME} de produtos químicos
+
+STR_CARGO_PLURAL_VEGETABLE_OIL                              :Óleo vegetal
+STR_CARGO_SINGULAR_VEGETABLE_OIL                            :Óleo vegetal
+STR_CARGO_ABBREV_VEGETABLE_OIL                              :{TINYFONT}OV
+STR_CARGO_LABEL_VEGETABLE_OIL                               :OVGT
+STR_CARGO_UNIT_VEGETABLE_OIL                                :{VOLUME} de óleo vegetal
+
+STR_CARGO_PLURAL_ALCOHOL                                    :Álcool
+STR_CARGO_SINGULAR_ALCOHOL                                  :Álcool
+STR_CARGO_ABBREV_ALCOHOL                                    :{TINYFONT}AC
+STR_CARGO_LABEL_ALCOHOL                                     :ALCO
+STR_CARGO_UNIT_ALCOHOL                                      :{VOLUME} de álcool
+
+STR_CARGO_PLURAL_DIOSGENIN                                  :Diosgenina
+STR_CARGO_SINGULAR_DIOSGENIN                                :Diosgenina
+STR_CARGO_ABBREV_DIOSGENIN                                  :{TINYFONT}DI
+STR_CARGO_LABEL_DIOSGENIN                                   :DIOS
+STR_CARGO_UNIT_DIOSGENIN                                    :{COMMA} caixa{P "" s} de diosgenina
+
+STR_CARGO_PLURAL_RAW_ESTRONE                                :Estrona Bruta
+STR_CARGO_SINGULAR_RAW_ESTRONE                              :Estrona Bruta
+STR_CARGO_ABBREV_RAW_ESTRONE                                :{TINYFONT}EB
+STR_CARGO_LABEL_RAW_ESTRONE                                 :ESTB
+STR_CARGO_UNIT_RAW_ESTRONE                                  :{VOLUME} de estrona bruta
+
+STR_CARGO_PLURAL_RAW_TESTOSTERONE                           :Testosterona Bruta
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE                         :Testosterona Bruta
+STR_CARGO_ABBREV_RAW_TESTOSTERONE                           :{TINYFONT}TB
+STR_CARGO_LABEL_RAW_TESTOSTERONE                            :TSTB
+STR_CARGO_UNIT_RAW_TESTOSTERONE                             :{COMMA} caixa{P "" s} de testosterona bruta
+
+STR_CARGO_PLURAL_ESTROGEN                                   :Estrogênio
+STR_CARGO_SINGULAR_ESTROGEN                                 :Estrogênio
+STR_CARGO_ABBREV_ESTROGEN                                   :{TINYFONT}ES
+STR_CARGO_LABEL_ESTROGEN                                    :ESTR
+STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} caixa{P "" s} de estrogênio
+
+STR_CARGO_PLURAL_TESTOSTERONE                               :Testosterona
+STR_CARGO_SINGULAR_TESTOSTERONE                             :Testosterona
+STR_CARGO_ABBREV_TESTOSTERONE                               :{TINYFONT}TE
+STR_CARGO_LABEL_TESTOSTERONE                                :TEST
+STR_CARGO_UNIT_TESTOSTERONE                                 :{COMMA} caixa{P "" s} de testosterona
+
+# ----------------------------------------------------------------
+# Industries
+# ----------------------------------------------------------------
+
+STR_INDUSTRY_POWER_MINIMUM                                  :Mínimo
+STR_INDUSTRY_POWER_LOW                                      :Baixo
+STR_INDUSTRY_POWER_DEFAULT                                  :Padrão
+STR_INDUSTRY_POWER_HIGH                                     :Alto
+STR_INDUSTRY_POWER_VERY_HIGH                                :Muito Alto
+STR_INDUSTRY_POWER_MAXIMUM                                  :Máximo
+
+STR_INDUSTRY_RATIO_STATE_NORMAL                             :Normal
+STR_INDUSTRY_RATIO_STATE_ENHANCED                           :Melhorada
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                            :Astronômica
+
+STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                    :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {GREEN}bom: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING                   :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK} Temporadas de {BLACK}serviço {RED}ruim: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                       :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {GREEN}bom: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir essa industria com caixas de peças. {}{YELLOW}Melhorada: {BLACK}20 caixas por temporada{}{YELLOW}Astronômica: {BLACK}80 caixas por temporada{}{}Caixas supridas mês passado: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                      :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {RED}ruim: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir essa industria com caixas de peças. {}{YELLOW}Melhorada: {BLACK}20 caixas por temporada{}{YELLOW}Astronômica: {BLACK}80 caixas por temporada{}{}Caixas supridas mês passado: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                       :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {GREEN}bom: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir essa industria com caixas de fertilizantes. {}{YELLOW}Melhorada: {BLACK}20 caixas por temporada{}{YELLOW}Astronômica: {BLACK}80 caixas por temporada{}{}Caixas supridas mês passado: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                      :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {RED}ruim: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir essa industria com caixas de fertilizantes. {}{YELLOW}Melhorada: {BLACK}20 caixas por temporada{}{YELLOW}Astronômica: {BLACK}80 caixas por temporada{}{}Caixas supridas mês passado: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                      :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {GREEN}bom: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir mais tipos de carga a essa industria cada temporada.
+STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Nível de produção: {YELLOW}{STRING}{}{WHITE}Varia dependendo em temporadas seguidas de serviço bom/ruim.{}{}{BLACK}Temporadas de {BLACK}serviço {RED}ruim: {YELLOW}{COMMA}{}{}{BLACK}Taxa de extração: {YELLOW}{STRING}{}{WHITE}Pode ser melhorado ao suprir mais tipos de carga a essa industria cada temporada.
+
+STR_INDUSTRY_NAME_PORT                                      :Porto
+STR_INDUSTRY_STATION_PORT                                   :{STRING} Porto
+STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} abre perto de {1:STRING}!
+STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}{STRING} Porto inundado por aumento no nivel do mar! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Porto ganha mais contratos de importação! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Porto constrói guindaste maior, trasportando mais carga! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Porto constrói guindaste menor, transportando carga mais rapido! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Porto continua usando o mesmo guindaste, cortando custos! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Porto sofre com impostos! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Porto devastou a vida marinha local com pesca excessiva! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Porto afetado por crise nas cadeias de suprimento! (produção diminuiu)    
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Porto inventa novos formatos de container! (produção diminuiu)
+
+
+STR_INDUSTRY_NAME_QUARRY                                    :Pedreira
+STR_INDUSTRY_STATION_QUARRY                                 :{STRING} Pedreira
+STR_INDUSTRY_PLANTED_QUARRY                                 :{BIGFONT}{BLACK}{0:STRING} começa operações perto de {1:STRING}!
+STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}{STRING} Pedreira se torna inviavel! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Pedreira abre cidade corporativa ilegal! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Pedreira expandida por terremoto conveniente! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Pedreira cava mais fundo! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Pedreira acaba com sindicato de trabalhadores! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Pedreira faz piada que só funciona em inglês! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Pedreira atinge veia de minerio brilhante inutiu ao invez de valiosa areia! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Pedreira ficando sem pedras! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Pedreira cava na direção errada, criando arranha-céu! (produção diminuiu)
+
+STR_INDUSTRY_NAME_MINERAL_MINE                              :Mina
+STR_INDUSTRY_STATION_MINERAL_MINE                           :{STRING} Mina
+STR_INDUSTRY_PLANTED_MINERAL_MINE                           :{BIGFONT}{BLACK}{0:STRING} começou a escavar perto de {1:STRING}!
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}{STRING} Mina se torna inviavel! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Mina anseia por mais! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Mina torna a definição de "mineral" mais vaga! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Mina torna definição de "mina" mais vaga! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Mina descobre deus adormecido, trabalhadores abençoados! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Mina esta satisfeita com o que tem! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Mina oferece compensação ao seus operários! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Mina atinge petróleo, forçado a circular substacia inutil! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Mina causa acidente fatal, forçado a pagar compensação a famílias! (produção diminuiu)
+
+STR_INDUSTRY_NAME_CORN_FARM                                 :Milharal
+STR_INDUSTRY_STATION_CORN_FARM                              :{STRING} Milhareira
+STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} plantado em {1:STRING}!
+STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}{STRING} Milharal pega fogo! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Milharal piora situações de trabalho! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Milharal emprega espadas como arados! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Milharal extingue peste; ecossitema local em colapso! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Milharal emprega mudanças geneticas ao milho e aos trabalhadores! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Milharal esquece de replantar milho! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Milharal insulta semi-deus local; pragas! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Milharal atingido situação Orwelliana! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Milharal sofre as consequencias da monocultura! (produção diminuiu)
+
+STR_INDUSTRY_NAME_SOY_FARM                                  :Fazenda de Soja
+STR_INDUSTRY_STATION_SOY_FARM                               :{STRING} Fazenda de Soja
+STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} plantada perto de {1:STRING}!
+STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}{STRING} Fazenda de soja fechada por mudança climatica! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja piora situações de trabalho! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja emprega espadas como arados! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja extingue peste; ecossitema local em colapso! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja emprega mudanças geneticas ao milho e aos trabalhadores! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja esquece de replantar a soja! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja insulta semi-deus local; pragas! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja atingida por situação Orwelliana! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Fazenda de soja sofre as consequencias da monocultura! (produção diminuiu)
+
+STR_INDUSTRY_NAME_YAM_FARM                                  :Fazenda de Inhame
+STR_INDUSTRY_STATION_YAM_FARM                               :{STRING} Fazenda de Inhame
+STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} planted near {1:STRING}!
+STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame perde direitos de reparo dos própios vehiculos! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame piora situações de trabalho! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame emprega espadas como arados! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame extingue peste; ecossitema local em colapso! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame emprega mudanças geneticas ao milho e aos trabalhadores! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame esquece de replantar a soja! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Fazenda de insulta semi-deus local; pragas! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame atingida por situação Orwelliana! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Fazenda de Inhame sofre as consequencias da monocultura! (produção diminuiu)
+
+STR_INDUSTRY_NAME_GLASSWORKS                                :Vidraria
+STR_INDUSTRY_STATION_GLASSWORKS                             :{STRING} Vidraria
+STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} estabelecida em {1:STRING}!
+STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}{STRING} Vidraria estilhaçada por opera! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Vidraria começa usar 50% menos vidro por vidro! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Vidraria vende produtos como "artesanato"! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Vidraria convence investidore plastico tambem é vidro! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Vidraria aponta laser nos olhos dos clientes, demanda por óculos bate recordes! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Vidraria demite inspetores de segurança! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Vidraria faz vidro tão tranparente que não pode ser visto! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Vidraria faz piada que só funciona em inglês! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Vidraria em prejuizo após cidade se torna cronicamente online! (produção diminuiu)
+
+STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :Química
+STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :Química {STRING}
+STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} abre operações perto de {1:STRING}!
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{STRING} Química passa por acidente catastrófico! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Química discobre novo elemento! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Química contrata alguem com um diploma de verdade! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Química inventa novo sabor artificial! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Química começa a vender água como um produto químico! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Química perde melhor ciêntista para o álcool! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Química acidentalmente transforma ouro em chumbo! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Química volta a experimentar com alquimia! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Química tenta e falha em encontrar uso para petróleo! (produção diminuiu)
+
+STR_INDUSTRY_NAME_BIOLAB                                    :Bio-laboratório
+STR_INDUSTRY_STATION_BIOLAB                                 :{STRING} Bio-laboratório
+STR_INDUSTRY_PLANTED_BIOLAB                                 :{BIGFONT}{BLACK}{0:STRING} abre operações em {1:STRING}!
+STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}{STRING} Laboratório perde verba do governo! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratório faz com que garotas palhaço se torna raça real de pessoa! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratório recebe custeamento militar! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratório modifica genética de genéticistas, criando geneticistas geneticamente melhores em genética! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratório clona melhores cientistas! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratório desiste de plano de criar garotas-gato na vida real; perde investimento de agência furry! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratório cria super-vírus "pelo meme"; 156 mortos! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratório evacua cidade por motivos misteriosos! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratório perde voluntarios humanos! (produção diminuiu)
+
+STR_INDUSTRY_NAME_DISTILLERY                                :Destilaria
+STR_INDUSTRY_STATION_DISTILLERY                             :{STRING} Destilaria
+STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} abre perto de {1:STRING}; alcoólatras celebram!
+STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}{STRING} Destilaria entra na ilegalidade devido a Proibição! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Destilaria acaba com grupo de alcoólatras anônimos! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Destilaria abre unidade em refeitório escolar! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Destilaria transforma hospital em bar! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Destilaria usa vodka na produção de álcool em gel! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Destilaria sofrem com popularidade de cerveja zero! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Destilaria perde mercado para vapes! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Destilaria insultada por bancada evangélica! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Destilaria acidentalmente mostra ator ingerindo álcool em propaganda! (produção diminuiu)
+
+STR_INDUSTRY_NAME_PROCESSING_PLANT                          :Planta de Processamento
+STR_INDUSTRY_STATION_PROCESSING_PLANT                       :{STRING} Planta de Processamento
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{0:STRING} abre operações em {1:STRING}!
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{STRING} Planta de Processamento sofre processos! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Planta de Processamento compra processadores maiores! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Planta de Processamento preprocessa produto de processamento, procegindo com processamento pelo protocolo! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Planta de Processamento espalha misinformação sobre alimentos processados! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Planta de Processamento automatiza empregos, demitindo milhares! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Planta de Processamento esquece de afiar laminas dos processadores! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Planta de Processamento compra processadores da Intel! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Planta de Processamento esquece como fazer trava-liguas envolvendo processamento! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Planta de Processamento acidentalmente espalha informação verdadeira! (produção diminuiu)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :Planta Farmacêutica (Estrogênio)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :{STRING} Planta Farmacêutica (Estrogênio)
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} começa operações em {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica fechada pela existencia do SUS! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica vende pirulas de efeito placebo! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica aproveita a falta de um Sistema Unico de Saúde! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica invents a new disease to sell medicine for! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica aproveita epidemia de bacteria resistente a penicilina! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica perde contrato de pesquisa devido a conflito de patentes! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica forçada a cumprir com regulamentação! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica perde clientes para óleos essenciais! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica forçada a começar a fazer "drogas de verdade"! (produção diminuiu)
+
+STR_INDUSTRY_NAME_PHARMACY_E                                :Farmácia (Estrogênio)
+STR_INDUSTRY_STATION_PHARMACY_E                             :{STRING} Farmácia (Estrogênio)
+STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} abre em  {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}{STRING} Farmácia fechada pela existencia do SUS! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Farmácia diagnostica e prescreve medicicamento diretamente no balcão! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Farmácia dilui medicamentos, causando epidemia e recorde de lucros! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Farmácia conduz estudo que manda você comprar mais medicamentos! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Farmácia lucra com epidemia de gripe! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Farmácia sofrem com medicamentos genéricos! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Farmácia perde prescrições de clientes! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Farmácia perde milhões em vendas após acidentalmente erradicar doença! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Farmácia processada por negligência médica! (produção diminuiu)
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :Clínica de Gênero (Estrogênio)
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :{STRING} Clínica de Gênero (Estrogênio)
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} magicamente aparece em {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{STRING} Clínica de Gênero termina de transicionar o gênero de toda cidade! (fechou)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :Planta Farmacêutica (Testosterona)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :{STRING} Planta Farmacêutica (Testosterona)
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} começa operações em {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica fechada pela existencia do SUS! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica vende pirulas de efeito placebo! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica aproveita a falta de um Sistema Unico de Saúde! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica invents a new disease to sell medicine for! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica aproveita epidemia de bacteria resistente a penicilina! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica perde contrato de pesquisa devido a conflito de patentes! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica forçada a cumprir com regulamentação! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica perde clientes para óleos essenciais! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica forçada a começar a fazer "drogas de verdade"! (produção diminuiu)
+
+STR_INDUSTRY_NAME_PHARMACY_T                                :Farmácia (Testosterona)
+STR_INDUSTRY_STATION_PHARMACY_T                             :{STRING} Farmácia (Testosterona)
+STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}{0:STRING} abre em  {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}{STRING} Farmácia fechada pela existencia do SUS! (fechou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Farmácia diagnostica e prescreve medicicamento diretamente no balcão! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Farmácia dilui medicamentos, causando epidemia e recorde de lucros! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Farmácia conduz estudo que manda você comprar mais medicamentos! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Farmácia lucra com epidemia de gripe! (produção aumentou)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Farmácia sofrem com medicamentos genéricos! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Farmácia perde prescrições de clientes! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Farmácia perde milhões em vendas após acidentalmente erradicar doença! (produção diminuiu)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Farmácia processada por negligência médica! (produção diminuiu)
+STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :Clínica de Gênero (Testosterona)
+STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :{STRING} Clínica de Gênero (Testosterona)
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} magicamente aparece em {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{STRING} Clínica de Gênero termina de transicionar o gênero de toda cidade! (fechou)
