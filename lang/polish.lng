@@ -390,150 +390,150 @@ STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Poziom produ
 STR_INDUSTRY_NAME_PORT                                      :{G=m}Port
 STR_INDUSTRY_NAME_PORT.d                                    :portu
 STR_INDUSTRY_STATION_PORT                                   :{STRING} Port
-STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}{STRING} Port zatopiony przez rosnący poziom mórz! (zamknięty)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Port zwiększa import! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Port zwiększa dźwigi, by przenosić większe skrzynie! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Port zmniejsza dźwigi, by szybciej przenosić skrzynie! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Port nie zmienia absolutnie niczego, oszczędzając na koszcie dźwigów! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Port dotknięty cłami! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Port zdziesiątkował populację ryb przez nadmierny połów! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Port dotknięty przez braki w łańcuchu dostaw! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Port produkuje kontenery w nowym i ekscytującym kształcie! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}Port {STRING} zatopiony przez rosnący poziom mórz! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}Port {STRING} zwiększa import! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}Port {STRING} zwiększa dźwigi, by przenosić większe skrzynie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}Port {STRING} zmniejsza dźwigi, by szybciej przenosić skrzynie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}Port {STRING} nie zmienia absolutnie niczego, oszczędzając na koszcie dźwigów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}Port {STRING} dotknięty cłami! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}Port {STRING} zdziesiątkował populację ryb przez nadmierny połów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}Port {STRING} dotknięty przez braki w łańcuchu dostaw! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}Port {STRING} produkuje kontenery w nowym i ekscytującym kształcie! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_QUARRY                                    :{G=m}Kamieniołom
 STR_INDUSTRY_NAME_QUARRY.d                                  :kamieniołomu
 STR_INDUSTRY_STATION_QUARRY                                 :{STRING} Kamieniołom
-STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}{STRING} Kamieniołom się wyczerpał! (zamknięty)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Kamieniołom otwiera nielegalne miasteczko firmowe! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Kamieniołom zwiększył się przez pomocne trzęsienie ziemi! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Kamieniołom po prostu kopie głębiej! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Kamieniołom rozwiązuje związki zawodowe! (produkcja zwiększona)
-# changed a pun
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Kamieniołom zatrudnia piłkarzy zamiast kopaczy! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Kamieniołom trafia na żyłę bezużytecznych „lśniących kamieni” zamiast w miarę wartościowego piasku! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Kamieniołomowi kończą się skały do kopania! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Kamieniołom kopie w złą stronę; tworzy wieżowiec! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}Kamieniołom {STRING} się wyczerpał! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}Kamieniołom {STRING} otwiera nielegalne miasteczko firmowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}Kamieniołom {STRING} zwiększył się przez pomocne trzęsienie ziemi! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}Kamieniołom {STRING} po prostu kopie głębiej! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}Kamieniołom {STRING} rozwiązuje związki zawodowe! (produkcja zwiększona)
+# changed a pun                                                                           
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}Kamieniołom {STRING} zatrudnia piłkarzy zamiast kopaczy! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}Kamieniołom {STRING} trafia na żyłę bezużytecznych „lśniących kamieni” zamiast w miarę wartościowego piasku! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}Kamieniołomowi {STRING} kończą się skały do kopania! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}Kamieniołom {STRING} kopie w złą stronę; tworzy wieżowiec! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_MINERAL_MINE                              :{G=f}Kopalnia minerałów
 STR_INDUSTRY_NAME_MINERAL_MINE.d                            :kopalni minerałów
 STR_INDUSTRY_STATION_MINERAL_MINE                           :{STRING} Kopalnia minerałów
-STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}{STRING} Kopalnia się wyczerpała! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Kopalnia pragnie tych minerałów! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Kopalnia poszerza definicję „minerałów”! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Kopalnia poszerza definicję „kopalni”! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Kopalnia przekopuje się do sąsiedztwa; miasta wywłaszczone! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Kopalnia już nie pragnie tych minerałów! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Kopalnia zaczyna oferować pracownikom rekompensaty! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Kopalnia trafia na olej; jest zmuszona wydobywać kolejną bezużyteczną substancję! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Kopalnia traci wielu pracowników w wypadku w szybie; zmuszona wypłacać ubezpieczenia na życie! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}Kopalnia {STRING} się wyczerpała! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Kopalnia {STRING} pragnie tych minerałów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Kopalnia {STRING} poszerza definicję „minerałów”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Kopalnia {STRING} poszerza definicję „kopalni”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Kopalnia {STRING} przekopuje się do sąsiedztwa; miasta wywłaszczone! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Kopalnia {STRING} już nie pragnie tych minerałów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Kopalnia {STRING} zaczyna oferować pracownikom rekompensaty! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Kopalnia {STRING} trafia na olej; jest zmuszona wydobywać kolejną bezużyteczną substancję! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Kopalnia {STRING} traci wielu pracowników w wypadku w szybie; zmuszona wypłacać ubezpieczenia na życie! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_CORN_FARM                                 :{G=f}Farma kukurydzy
 STR_INDUSTRY_NAME_CORN_FARM.d                               :farmy kukurydzy
 STR_INDUSTRY_STATION_CORN_FARM                              :{STRING} Farma kukurydzy
-STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}{STRING} Farma kukurydzy doprowadzona do bankructwa przez pozwy Monsanto!
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy obcina zarobki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy przekuwa miecze na lemiesze! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy genetycznie modyfikuje rolników! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy zapomina o płodozmianie! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}Farma kukurydzy {STRING} doprowadzona do bankructwa przez pozwy Monsanto!
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_SOY_FARM                                  :{G=f}Farma soi
 STR_INDUSTRY_NAME_SOY_FARM.d                                :farmy soi
 STR_INDUSTRY_STATION_SOY_FARM                               :{STRING} Farma soi
-STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}{STRING} Farma soi uległa zmianie klimatu! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma soi obcina zarobki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma soi przekuwa miecze na lemiesze! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Farma soi sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Farma soi genetycznie modyfikuje rolników! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma soi zapomina o płodozmianie! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma soi wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Farma soi dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Farma soi odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}Farma soi {STRING} uległa zmianie klimatu! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Farma soi {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Farma soi {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Farma soi {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Farma soi {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Farma soi {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Farma soi {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Farma soi {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Farma soi {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_YAM_FARM                                  :{G=f}Farma jamu
 STR_INDUSTRY_NAME_YAM_FARM.d                                :farmy jamu
 STR_INDUSTRY_STATION_YAM_FARM                               :{STRING} Farma jamu
-STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}{STRING} Farma jamu traci prawa do naprawy swoich maszyn rolniczych! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma jamu obcina zarobki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma jamu przekuwa miecze na lemiesze! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Farma jamu sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Farma jamu genetycznie modyfikuje rolników! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma jamu zapomina o płodozmianie! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma jamu wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Farma jamu dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Farma jamu odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}Farma jamu {STRING} traci prawa do naprawy swoich maszyn rolniczych! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Farma jamu {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Farma jamu {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Farma jamu {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Farma jamu {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Farma jamu {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Farma jamu {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Farma jamu {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Farma jamu {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_GLASSWORKS                                :{G=f}Huta szkła
 STR_INDUSTRY_NAME_GLASSWORKS.d                              :huty szkła
 STR_INDUSTRY_STATION_GLASSWORKS                             :{STRING} Huta szkła
-STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}{STRING} Huta szkła zbita przez pobliską operę! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Huta szkła zaczyna używać 50% mniej szkła w szkle! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Huta szkła nazywa więcej produktów „rzemieślniczymi”! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Huta szkła przekonuje udziałowców, że puste powietrze „to po prostu bardzo przezroczyste szkło”! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Huta szkła świeci laserami w oczy ludziom; zapotrzebowanie na okulary szybuje! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Huta szkła zwalnia inspektorów bezpieczeństwa! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Huta szkła tworzy tak przezroczyste szkło, że nie mogą go znaleźć! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}Huta szkła {STRING} zbita przez pobliską operę! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Huta szkła {STRING} zaczyna używać 50% mniej szkła w szkle! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Huta szkła {STRING} nazywa więcej produktów „rzemieślniczymi”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Huta szkła {STRING} przekonuje udziałowców, że puste powietrze „to po prostu bardzo przezroczyste szkło”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Huta szkła {STRING} świeci laserami w oczy ludziom; zapotrzebowanie na okulary szybuje! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Huta szkła {STRING} zwalnia inspektorów bezpieczeństwa! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Huta szkła {STRING} tworzy tak przezroczyste szkło, że nie mogą go znaleźć! (produkcja zmniejszona)
 # the English string accidentally made a reference to Polish literature (Przedwiośnie) and the stone part doesn't make sense in that context
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Huta szkła tworzy szklane domy! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Huta szkła w rozsypce, bo pobliskie miasto uznaje, że światło słoneczne jest przereklamowane! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Huta szkła {STRING} tworzy szklane domy! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Huta szkła {STRING} w rozsypce, bo pobliskie miasto uznaje, że światło słoneczne jest przereklamowane! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=m}Zakład chemiczny
 STR_INDUSTRY_NAME_CHEMICAL_PLANT.d                          :zakładu chemicznego
 STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :{STRING} Zakład chemiczny
-STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{STRING} Katastrofalne stopienie reaktora w zakładzie chemicznym! (zamknięty)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny odkrywa nowy pierwiastek! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny zatrudnia kogoś z faktycznym tytułem z chemii! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny wynalazł kolejny sztuczny smak! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny zaczyna sprzedaż wody; „technicznie rzecz biorąc, substancja”! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Czołowy naukowiec zakładu chemicznego wpada w szał! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny zamienia złoto w ołów; marnuje miliony w grantach! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny znowu próbuje alchemii - „może tym razem zadziała”! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny nieskutecznie próbuje znaleźć zastosowanie dla oleju! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}Katastrofalne stopienie reaktora w zakładzie chemicznym {STRING}! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} odkrywa nowy pierwiastek! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zatrudnia kogoś z faktycznym tytułem z chemii! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} wynalazł kolejny sztuczny smak! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zaczyna sprzedaż wody; „technicznie rzecz biorąc, substancja”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Czołowy naukowiec zakładu chemicznego {STRING} wpada w szał! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zamienia złoto w ołów; marnuje miliony w grantach! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} znowu próbuje alchemii - „może tym razem zadziała”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} nieskutecznie próbuje znaleźć zastosowanie dla oleju! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_BIOLAB                                    :{G=n}Laboratorium biologiczne
 STR_INDUSTRY_NAME_BIOLAB.d                                  :laboratorium biologicznego
 STR_INDUSTRY_STATION_BIOLAB                                 :{STRING} Laboratorium biologiczne
-STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}{STRING} Laboratorium traci wszelkie finansowanie z rządu! (zamknięte)
-# me :3
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratorium przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratorium nagle dostaje potężne finansowanie wojskowe! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratorium poddaje naukowców w działanie CRISPR, by byli lepsi w badaniach! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratorium tworzy klony czołowych naukowców! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratorium przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratorium tworzy superwirusa „dla zabawy”; natychmiast wydostaje się na świat! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratorium ewakuowane w tajemniczych okolicznościach! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratorium zmuszone do zmniejszenia liczby ludzkich obiektów doświadczalnych! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}Laboratorium {STRING} traci wszelkie finansowanie z rządu! (zamknięte)
+# me :3                                                                                   
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Laboratorium {STRING} przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Laboratorium {STRING} nagle dostaje potężne finansowanie wojskowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Laboratorium {STRING} poddaje naukowców w działanie CRISPR, by byli lepsi w badaniach! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Laboratorium {STRING} tworzy klony czołowych naukowców! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Laboratorium {STRING} przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Laboratorium {STRING} tworzy superwirusa „dla zabawy”; natychmiast wydostaje się na świat! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Laboratorium {STRING} ewakuowane w tajemniczych okolicznościach! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Laboratorium {STRING} zmuszone do zmniejszenia liczby ludzkich obiektów doświadczalnych! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_DISTILLERY                                :{G=f}Gorzelnia
 STR_INDUSTRY_NAME_DISTILLERY.d                              :gorzelni
 STR_INDUSTRY_STATION_DISTILLERY                             :{STRING} Gorzelnia
 STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} otwiera się w pobliżu {1:STRING}; alkoholicy świętują!
-STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}{STRING} Lokalny rząd gorzelni przywraca prohibicję! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Gorzelnia demontuje lokalne grupy AA! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Gorzelnia rozpoczyna ekspansję w szkolnych stołówkach! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Gorzelnia zamienia lokalne szpitale w bary! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Gorzelnia opakowuje wódkę jako środek do dezynfekcji! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Gorzelnia zwiększa produkcję piw IPA! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Gorzelnia traci udziały w rynku na rzecz e-papierosów! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Gorzelnia unikana przez lokalnych purystów! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Gorzelnia „nie jest tak fajna jak kiedyś”! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}Lokalny rząd {STRING} gorzelni przywraca prohibicję! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Gorzelnia {STRING} demontuje lokalne grupy AA! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Gorzelnia {STRING} rozpoczyna ekspansję w szkolnych stołówkach! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Gorzelnia {STRING} zamienia lokalne szpitale w bary! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Gorzelnia {STRING} opakowuje wódkę jako środek do dezynfekcji! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Gorzelnia {STRING} zwiększa produkcję piw IPA! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Gorzelnia {STRING} traci udziały w rynku na rzecz e-papierosów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Gorzelnia {STRING} unikana przez lokalnych purystów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Gorzelnia {STRING} „nie jest tak fajna jak kiedyś”! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_PROCESSING_PLANT                          :{G=f}Przetwórnia
 STR_INDUSTRY_NAME_PROCESSING_PLANT.d                        :przetwórni
 STR_INDUSTRY_STATION_PROCESSING_PLANT                       :{STRING} Przetwórnia
-STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{STRING} Przetwórnia przetwarza sama siebie w dziwacznym wypadku! (zamknięta)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Przetwórnia zaczyna używać większych blenderów! (produkcja zwiększona)
-# this sucks, I copied the idea for decrease C from pt_BR xD
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Przetwórnia przetwarza produkty przetwórcze, przetwarzając sprzecznie z protokołem! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Przetwórnia lobbuje EMA, by oznaczać przetworzone jedzenie jako zdrowe! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Przetwórnia automatyzuje pracę; zwalnia setki osób! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Przetwórnia zapomina naostrzyć blendery! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Przetwórnia ma problem z przetworzeniem swojego istnienia! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Przetwórnia zapomina, jak robić łamańce językowe ze słowem dotyczące przetwarzania! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Przetwórnia dotknięta nowymi badaniami łączącymi przetworzone jedzenie i raka! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}Przetwórnia {STRING} przetwarza sama siebie w dziwacznym wypadku! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Przetwórnia {STRING} zaczyna używać większych blenderów! (produkcja zwiększona)
+# this sucks, I copied the idea for decrease C from pt_BR xD                             
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Przetwórnia {STRING} przetwarza produkty przetwórcze, przetwarzając sprzecznie z protokołem! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Przetwórnia {STRING} lobbuje EMA, by oznaczać przetworzone jedzenie jako zdrowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Przetwórnia {STRING} automatyzuje pracę; zwalnia setki osób! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Przetwórnia {STRING} zapomina naostrzyć blendery! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Przetwórnia {STRING} ma problem z przetworzeniem swojego istnienia! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Przetwórnia {STRING} zapomina, jak robić łamańce językowe dotyczące przetwarzania! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Przetwórnia {STRING} dotknięta nowymi badaniami łączącymi przetworzone jedzenie i raka! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=m}Zakład farmaceutyczny (estrogen)
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E.d                  :zakładu farmaceutycznego (estrogen)
@@ -560,25 +560,25 @@ STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=f}Klinika płci 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T.d                         :kliniki płci (testosteron)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :{STRING} Klinika płci (testosteron)
 
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zamknięty z powodu nieetycznych metod badawczych!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny rozpoczął nową epidemię opioidów! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}{STRING} Badania zakładu farmaceutycznego zatrzymane przez prawa patentowe! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zamknięty z powodu nieetycznych metod badawczych!
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} rozpoczął nową epidemię opioidów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Badania zakładu farmaceutycznego {STRING} zatrzymane przez prawa patentowe! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
 
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}{STRING} Apteka wystawia recepty na siebie! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}{STRING} Apteka zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}{STRING} Apteka przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}{STRING} Sprzedaż apteki szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}{STRING} Aptece nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}{STRING} Apteka traci recepty z powodu klienta Bobby Tables! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apteka {STRING} wystawia recepty na siebie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apteka {STRING} zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apteka {STRING} przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Sprzedaż apteki {STRING} szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Aptece {STRING} nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apteka {STRING} traci recepty z powodu klienta Bobby Tables! (produkcja zmniejszona)
 # https://xkcd.com/327/
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}{STRING} Apteka traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}{STRING} Apteka posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apteka {STRING} traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apteka {STRING} posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
 
 STR_INDUSTRY_PLANTED_GENDER_CLINIC                          :{BIGFONT}{BLACK}{0:STRING} magicznie pojawia się w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}{STRING} Klinika płci skończyła transować wszystkim płcie! (zamknięta)
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}Klinika płci {STRING} skończyła transować wszystkim płcie! (zamknięta)
