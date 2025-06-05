@@ -5,372 +5,339 @@
 # Global
 # ----------------------------------------------------------------
 
-STR_GRF_NAME                                                :{TITLE} {VERSION}
-STR_GRF_DESCRIPTION                                         :Industry replacement set that emulates the real-world logistics of producing HRT. Made by autistic transfems, for autistic transfems.
+STR_GRF_NAME                                              :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                       :Industry replacement set that emulates the real-world logistics of producing HRT. Made by autistic transfems, for autistic transfems.
 
-STR_PARAM_NAME_HORMONE                                      :Hormone
-STR_PARAM_DESC_HORMONE                                      :Hormone that diosgenin can be turned into at pharmaceutical plants.{}Selecting Both may result in unbalanced gameplay.
+STR_PARAM_NAME_HORMONE                                    :Hormone
+STR_PARAM_DESC_HORMONE                                    :Hormone that diosgenin can be turned into at pharmaceutical plants.{}Selecting Both may result in unbalanced gameplay.
 
-STR_PARAM_VALUE_HORMONE_ESTROGEN                            :Estrogen
-STR_PARAM_VALUE_HORMONE_TESTOSTERONE                        :Testosterone
-STR_PARAM_VALUE_HORMONE_BOTH                                :Both
+STR_PARAM_VALUE_HORMONE_ESTROGEN                          :Estrogen
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE                      :Testosterone
+STR_PARAM_VALUE_HORMONE_BOTH                              :Both
 
-STR_PARAM_NAME_INDUSTRY_DECAY                               :Industry Decay
-STR_PARAM_DESC_INDUSTRY_DECAY                               :Whether untouched industries decay below their default production level.
+STR_PARAM_NAME_INDUSTRY_DECAY                             :Industry Decay
+STR_PARAM_DESC_INDUSTRY_DECAY                             :Whether untouched industries decay below their default production level.
 
-STR_PARAM_NAME_INDUSTRY_GROWTH                              :Industry Growth
-STR_PARAM_DESC_INDUSTRY_GROWTH                              :Whether frequented industries grow beyond their default production level.
+STR_PARAM_NAME_INDUSTRY_GROWTH                            :Industry Growth
+STR_PARAM_DESC_INDUSTRY_GROWTH                            :Whether frequented industries grow beyond their default production level.
 
-STR_PARAM_NAME_INDUSTRY_CLOSE                               :Industry Close
-STR_PARAM_DESC_INDUSTRY_CLOSE                               :Whether Industry Decay can cause an industry to close.
+STR_PARAM_NAME_INDUSTRY_CLOSE                             :Industry Close
+STR_PARAM_DESC_INDUSTRY_CLOSE                             :Whether Industry Decay can cause an industry to close.
 
-STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Industry Starting Power
-STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Level of production industries should start at.
+STR_PARAM_NAME_INDUSTRY_STARTING_POWER                    :Industry Starting Power
+STR_PARAM_DESC_INDUSTRY_STARTING_POWER                    :Level of production industries should start at.
 
 # ----------------------------------------------------------------
 # Cargos
 # ----------------------------------------------------------------
 
-STR_CARGO_SUPPLIED                                          :{BLACK} (Supplied)
+STR_CARGO_SUPPLIED                                        :{BLACK} (Supplied)
 
-STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                       :Engineering Supplies
-STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                     :Engineering Supplies
-STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                       :{TINYFONT}EN
-STR_CARGO_LABEL_ENGINEERING_SUPPLIES                        :ENGS
-STR_CARGO_UNIT_ENGINEERING_SUPPLIES                         :{COMMA} crate{P "" s} of engineering supplies
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                     :Engineering Supplies
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                   :Engineering Supplies
+STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                     :{TINYFONT}EN
+STR_CARGO_LABEL_ENGINEERING_SUPPLIES                      :ENGS
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                       :{COMMA} crate{P "" s} of engineering supplies
 
-STR_CARGO_PLURAL_FERTILIZER                                 :Fertilizer
-STR_CARGO_SINGULAR_FERTILIZER                               :Fertilizer
-STR_CARGO_ABBREV_FERTILIZER                                 :{TINYFONT}FE
-STR_CARGO_LABEL_FERTILIZER                                  :FERT
-STR_CARGO_UNIT_FERTILIZER                                   :{WEIGHT} of fertilizer
+STR_CARGO_PLURAL_FERTILIZER                               :Fertilizer
+STR_CARGO_SINGULAR_FERTILIZER                             :Fertilizer
+STR_CARGO_ABBREV_FERTILIZER                               :{TINYFONT}FE
+STR_CARGO_LABEL_FERTILIZER                                :FERT
+STR_CARGO_UNIT_FERTILIZER                                 :{WEIGHT} of fertilizer
 
-STR_CARGO_PLURAL_SALT                                       :Salt
-STR_CARGO_SINGULAR_SALT                                     :Salt
-STR_CARGO_ABBREV_SALT                                       :{TINYFONT}SL
-STR_CARGO_LABEL_SALT                                        :SALT
-STR_CARGO_UNIT_SALT                                         :{WEIGHT} of salt
+STR_CARGO_PLURAL_SALT                                     :Salt
+STR_CARGO_SINGULAR_SALT                                   :Salt
+STR_CARGO_ABBREV_SALT                                     :{TINYFONT}SL
+STR_CARGO_LABEL_SALT                                      :SALT
+STR_CARGO_UNIT_SALT                                       :{WEIGHT} of salt
 
-STR_CARGO_PLURAL_POTASH                                     :Potash
-STR_CARGO_SINGULAR_POTASH                                   :Potash
-STR_CARGO_ABBREV_POTASH                                     :{TINYFONT}PO
-STR_CARGO_LABEL_POTASH                                      :PTSH
-STR_CARGO_UNIT_POTASH                                       :{WEIGHT} of potash
+STR_CARGO_PLURAL_POTASH                                   :Potash
+STR_CARGO_SINGULAR_POTASH                                 :Potash
+STR_CARGO_ABBREV_POTASH                                   :{TINYFONT}PO
+STR_CARGO_LABEL_POTASH                                    :PTSH
+STR_CARGO_UNIT_POTASH                                     :{WEIGHT} of potash
 
-STR_CARGO_PLURAL_SAND                                       :Sand
-STR_CARGO_SINGULAR_SAND                                     :Sand
-STR_CARGO_ABBREV_SAND                                       :{TINYFONT}SN
-STR_CARGO_LABEL_SAND                                        :SAND
-STR_CARGO_UNIT_SAND                                         :{WEIGHT} of sand
+STR_CARGO_PLURAL_SAND                                     :Sand
+STR_CARGO_SINGULAR_SAND                                   :Sand
+STR_CARGO_ABBREV_SAND                                     :{TINYFONT}SN
+STR_CARGO_LABEL_SAND                                      :SAND
+STR_CARGO_UNIT_SAND                                       :{WEIGHT} of sand
 
-STR_CARGO_PLURAL_MINERALS                                   :Minerals
-STR_CARGO_SINGULAR_MINERALS                                 :Minerals
-STR_CARGO_ABBREV_MINERALS                                   :{TINYFONT}MI
-STR_CARGO_LABEL_MINERALS                                    :MNRL
-STR_CARGO_UNIT_MINERALS                                     :{WEIGHT} of minerals
+STR_CARGO_PLURAL_MINERALS                                 :Minerals
+STR_CARGO_SINGULAR_MINERALS                               :Minerals
+STR_CARGO_ABBREV_MINERALS                                 :{TINYFONT}MI
+STR_CARGO_LABEL_MINERALS                                  :MNRL
+STR_CARGO_UNIT_MINERALS                                   :{WEIGHT} of minerals
 
-STR_CARGO_PLURAL_CORN                                       :Corn
-STR_CARGO_SINGULAR_CORN                                     :Corn
-STR_CARGO_ABBREV_CORN                                       :{TINYFONT}CO
-STR_CARGO_LABEL_CORN                                        :CORN
-STR_CARGO_UNIT_CORN                                         :{WEIGHT} of corn
+STR_CARGO_PLURAL_CORN                                     :Corn
+STR_CARGO_SINGULAR_CORN                                   :Corn
+STR_CARGO_ABBREV_CORN                                     :{TINYFONT}CO
+STR_CARGO_LABEL_CORN                                      :CORN
+STR_CARGO_UNIT_CORN                                       :{WEIGHT} of corn
 
-STR_CARGO_PLURAL_SOY                                        :Soy
-STR_CARGO_SINGULAR_SOY                                      :Soy
-STR_CARGO_ABBREV_SOY                                        :{TINYFONT}SO
-STR_CARGO_LABEL_SOY                                         :SOYB
-STR_CARGO_UNIT_SOY                                          :{WEIGHT} of soy
+STR_CARGO_PLURAL_SOY                                      :Soy
+STR_CARGO_SINGULAR_SOY                                    :Soy
+STR_CARGO_ABBREV_SOY                                      :{TINYFONT}SO
+STR_CARGO_LABEL_SOY                                       :SOYB
+STR_CARGO_UNIT_SOY                                        :{WEIGHT} of soy
 
-STR_CARGO_PLURAL_YAM                                        :Yam
-STR_CARGO_SINGULAR_YAM                                      :Yam
-STR_CARGO_ABBREV_YAM                                        :{TINYFONT}YA
-STR_CARGO_LABEL_YAM                                         :YAMS
-STR_CARGO_UNIT_YAM                                          :{WEIGHT} of yams
+STR_CARGO_PLURAL_YAM                                      :Yam
+STR_CARGO_SINGULAR_YAM                                    :Yam
+STR_CARGO_ABBREV_YAM                                      :{TINYFONT}YA
+STR_CARGO_LABEL_YAM                                       :YAMS
+STR_CARGO_UNIT_YAM                                        :{WEIGHT} of yams
 
-STR_CARGO_PLURAL_VIALS                                      :Vials
-STR_CARGO_SINGULAR_VIALS                                    :Vial
-STR_CARGO_ABBREV_VIALS                                      :{TINYFONT}VI
-STR_CARGO_LABEL_VIALS                                       :VIAL
-STR_CARGO_UNIT_VIALS                                        :{COMMA} crate{P "" s} of vials
+STR_CARGO_PLURAL_VIALS                                    :Vials
+STR_CARGO_SINGULAR_VIALS                                  :Vial
+STR_CARGO_ABBREV_VIALS                                    :{TINYFONT}VI
+STR_CARGO_LABEL_VIALS                                     :VIAL
+STR_CARGO_UNIT_VIALS                                      :{COMMA} crate{P "" s} of vials
 
-STR_CARGO_PLURAL_CHEMICALS                                  :Chemicals
-STR_CARGO_SINGULAR_CHEMICALS                                :Chemical
-STR_CARGO_ABBREV_CHEMICALS                                  :{TINYFONT}CH
-STR_CARGO_LABEL_CHEMICALS                                   :CHEM
-STR_CARGO_UNIT_CHEMICALS                                    :{VOLUME} of chemicals
+STR_CARGO_PLURAL_CHEMICALS                                :Chemicals
+STR_CARGO_SINGULAR_CHEMICALS                              :Chemical
+STR_CARGO_ABBREV_CHEMICALS                                :{TINYFONT}CH
+STR_CARGO_LABEL_CHEMICALS                                 :CHEM
+STR_CARGO_UNIT_CHEMICALS                                  :{VOLUME} of chemicals
 
-STR_CARGO_PLURAL_VEGETABLE_OIL                              :Vegetable Oil
-STR_CARGO_SINGULAR_VEGETABLE_OIL                            :Vegetable Oil
-STR_CARGO_ABBREV_VEGETABLE_OIL                              :{TINYFONT}VO
-STR_CARGO_LABEL_VEGETABLE_OIL                               :VGOL
-STR_CARGO_UNIT_VEGETABLE_OIL                                :{VOLUME} of vegetable oil
+STR_CARGO_PLURAL_VEGETABLE_OIL                            :Vegetable Oil
+STR_CARGO_SINGULAR_VEGETABLE_OIL                          :Vegetable Oil
+STR_CARGO_ABBREV_VEGETABLE_OIL                            :{TINYFONT}VO
+STR_CARGO_LABEL_VEGETABLE_OIL                             :VGOL
+STR_CARGO_UNIT_VEGETABLE_OIL                              :{VOLUME} of vegetable oil
 
-STR_CARGO_PLURAL_ALCOHOL                                    :Alcohol
-STR_CARGO_SINGULAR_ALCOHOL                                  :Alcohol
-STR_CARGO_ABBREV_ALCOHOL                                    :{TINYFONT}AL
-STR_CARGO_LABEL_ALCOHOL                                     :ALCH
-STR_CARGO_UNIT_ALCOHOL                                      :{VOLUME} of alcohol
+STR_CARGO_PLURAL_ALCOHOL                                  :Alcohol
+STR_CARGO_SINGULAR_ALCOHOL                                :Alcohol
+STR_CARGO_ABBREV_ALCOHOL                                  :{TINYFONT}AL
+STR_CARGO_LABEL_ALCOHOL                                   :ALCH
+STR_CARGO_UNIT_ALCOHOL                                    :{VOLUME} of alcohol
 
-STR_CARGO_PLURAL_DIOSGENIN                                  :Diosgenin
-STR_CARGO_SINGULAR_DIOSGENIN                                :Diosgenin
-STR_CARGO_ABBREV_DIOSGENIN                                  :{TINYFONT}DI
-STR_CARGO_LABEL_DIOSGENIN                                   :DIOS
-STR_CARGO_UNIT_DIOSGENIN                                    :{COMMA} crate{P "" s} of diosgenin
+STR_CARGO_PLURAL_DIOSGENIN                                :Diosgenin
+STR_CARGO_SINGULAR_DIOSGENIN                              :Diosgenin
+STR_CARGO_ABBREV_DIOSGENIN                                :{TINYFONT}DI
+STR_CARGO_LABEL_DIOSGENIN                                 :DIOS
+STR_CARGO_UNIT_DIOSGENIN                                  :{COMMA} crate{P "" s} of diosgenin
 
-STR_CARGO_PLURAL_RAW_ESTRONE                                :Raw Estrone
-STR_CARGO_SINGULAR_RAW_ESTRONE                              :Raw Estrone
-STR_CARGO_ABBREV_RAW_ESTRONE                                :{TINYFONT}RE
-STR_CARGO_LABEL_RAW_ESTRONE                                 :RWES
-STR_CARGO_UNIT_RAW_ESTRONE                                  :{VOLUME} of raw estrone
+STR_CARGO_PLURAL_RAW_ESTRONE                              :Raw Estrone
+STR_CARGO_SINGULAR_RAW_ESTRONE                            :Raw Estrone
+STR_CARGO_ABBREV_RAW_ESTRONE                              :{TINYFONT}RE
+STR_CARGO_LABEL_RAW_ESTRONE                               :RWES
+STR_CARGO_UNIT_RAW_ESTRONE                                :{VOLUME} of raw estrone
 
-STR_CARGO_PLURAL_RAW_TESTOSTERONE                           :Raw Testosterone
-STR_CARGO_SINGULAR_RAW_TESTOSTERONE                         :Raw Testosterone
-STR_CARGO_ABBREV_RAW_TESTOSTERONE                           :{TINYFONT}RT
-STR_CARGO_LABEL_RAW_TESTOSTERONE                            :RWTS
-STR_CARGO_UNIT_RAW_TESTOSTERONE                             :{COMMA} crate{P "" s} of raw testosterone
+STR_CARGO_PLURAL_RAW_TESTOSTERONE                         :Raw Testosterone
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE                       :Raw Testosterone
+STR_CARGO_ABBREV_RAW_TESTOSTERONE                         :{TINYFONT}RT
+STR_CARGO_LABEL_RAW_TESTOSTERONE                          :RWTS
+STR_CARGO_UNIT_RAW_TESTOSTERONE                           :{COMMA} crate{P "" s} of raw testosterone
 
-STR_CARGO_PLURAL_ESTROGEN                                   :Estrogen
-STR_CARGO_SINGULAR_ESTROGEN                                 :Estrogen
-STR_CARGO_ABBREV_ESTROGEN                                   :{TINYFONT}ES
-STR_CARGO_LABEL_ESTROGEN                                    :ESTR
-STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} crate{P "" s} of estrogen
+STR_CARGO_PLURAL_ESTROGEN                                 :Estrogen
+STR_CARGO_SINGULAR_ESTROGEN                               :Estrogen
+STR_CARGO_ABBREV_ESTROGEN                                 :{TINYFONT}ES
+STR_CARGO_LABEL_ESTROGEN                                  :ESTR
+STR_CARGO_UNIT_ESTROGEN                                   :{COMMA} crate{P "" s} of estrogen
 
-STR_CARGO_PLURAL_TESTOSTERONE                               :Testosterone
-STR_CARGO_SINGULAR_TESTOSTERONE                             :Testosterone
-STR_CARGO_ABBREV_TESTOSTERONE                               :{TINYFONT}TE
-STR_CARGO_LABEL_TESTOSTERONE                                :TEST
-STR_CARGO_UNIT_TESTOSTERONE                                 :{COMMA} crate{P "" s} of testosterone
+STR_CARGO_PLURAL_TESTOSTERONE                             :Testosterone
+STR_CARGO_SINGULAR_TESTOSTERONE                           :Testosterone
+STR_CARGO_ABBREV_TESTOSTERONE                             :{TINYFONT}TE
+STR_CARGO_LABEL_TESTOSTERONE                              :TEST
+STR_CARGO_UNIT_TESTOSTERONE                               :{COMMA} crate{P "" s} of testosterone
 
 # ----------------------------------------------------------------
 # Industries
 # ----------------------------------------------------------------
 
-STR_INDUSTRY_POWER_MINIMUM                                  :Minimum
-STR_INDUSTRY_POWER_LOW                                      :Low
-STR_INDUSTRY_POWER_DEFAULT                                  :Default
-STR_INDUSTRY_POWER_HIGH                                     :High
-STR_INDUSTRY_POWER_VERY_HIGH                                :Very High
-STR_INDUSTRY_POWER_MAXIMUM                                  :Maximum
+STR_INDUSTRY_POWER_MINIMUM                                :Minimum
+STR_INDUSTRY_POWER_LOW                                    :Low
+STR_INDUSTRY_POWER_DEFAULT                                :Default
+STR_INDUSTRY_POWER_HIGH                                   :High
+STR_INDUSTRY_POWER_VERY_HIGH                              :Very High
+STR_INDUSTRY_POWER_MAXIMUM                                :Maximum
 
-STR_INDUSTRY_RATIO_STATE_NORMAL                             :Normal
-STR_INDUSTRY_RATIO_STATE_ENHANCED                           :Enhanced
-STR_INDUSTRY_RATIO_STATE_GUNG_HO                            :Gung-Ho
+STR_INDUSTRY_RATIO_STATE_NORMAL                           :Normal
+STR_INDUSTRY_RATIO_STATE_ENHANCED                         :Enhanced
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                          :Gung-Ho
 
-STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                    :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}
-STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING                   :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                  :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING                 :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}
 
-STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                       :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of engineering supplies each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
-STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                      :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of engineering supplies each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                     :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of engineering supplies each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                    :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of engineering supplies each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
 
-STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                       :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of fertilizer each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
-STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                      :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of fertilizer each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                     :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of fertilizer each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                    :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Extraction Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying crates of fertilizer each season.{}{YELLOW}Enhanced: {BLACK}20 crates per season{}{YELLOW}Gung-Ho: {BLACK}80 crates per season{}{}Crates supplied last month: {YELLOW}{COMMA}
 
-STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                      :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Conversion Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying more kinds of cargos each season.
-STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Conversion Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying more kinds of cargos each season.
+STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                    :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {GREEN}good {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Conversion Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying more kinds of cargos each season.
+STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                   :{BLACK}Production Level: {YELLOW}{STRING}{}{WHITE}Fluctuates based on consecutive seasons of good/poor service.{}{}{BLACK}Seasons of {RED}poor {BLACK}service: {YELLOW}{COMMA}{}{}{BLACK}Conversion Ratio: {YELLOW}{STRING}{}{WHITE}Can be increased by supplying more kinds of cargos each season.
 
-STR_INDUSTRY_NAME_PORT                                      :Port
-STR_INDUSTRY_STATION_PORT                                   :{STRING} Port
-STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}{STRING} Port flooded from rising sea levels! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Port increases imports! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Port upsizes cranes to move bigger boxes! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Port downsizes cranes to move boxes faster! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Port keeps everything exactly the same, saving on crane costs! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Port suffers from tariffs! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Port has local fish population devastated by overfishing! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}{STRING} Port affected by supply chain shortage! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}{STRING} Port produces shipping containers in a new and exciting shape! (production decreased)
+STR_INDUSTRY_NAME_PORT                                    :Port
+STR_INDUSTRY_STATION_PORT                                 :{STRING} Port
+STR_INDUSTRY_CLOSURE_PORT                                 :{BIGFONT}{BLACK}{STRING} Port flooded from rising sea levels! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                   :{BIGFONT}{BLACK}{STRING} Port increases imports! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                   :{BIGFONT}{BLACK}{STRING} Port upsizes cranes to move bigger boxes! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                   :{BIGFONT}{BLACK}{STRING} Port downsizes cranes to move boxes faster! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                   :{BIGFONT}{BLACK}{STRING} Port keeps everything exactly the same, saving on crane costs! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                   :{BIGFONT}{BLACK}{STRING} Port suffers from tariffs! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                   :{BIGFONT}{BLACK}{STRING} Port has local fish population devastated by overfishing! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                   :{BIGFONT}{BLACK}{STRING} Port affected by supply chain shortage! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                   :{BIGFONT}{BLACK}{STRING} Port produces shipping containers in a new and exciting shape! (production decreased)
 
+STR_INDUSTRY_NAME_QUARRY                                  :Quarry
+STR_INDUSTRY_STATION_QUARRY                               :{STRING} Quarry
+STR_INDUSTRY_CLOSURE_QUARRY                               :{BIGFONT}{BLACK}{STRING} Quarry runs dry! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                 :{BIGFONT}{BLACK}{STRING} Quarry establishes illegal company town! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                 :{BIGFONT}{BLACK}{STRING} Quarry expanded by helpful earthquake! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                 :{BIGFONT}{BLACK}{STRING} Quarry simply digs deeper! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                 :{BIGFONT}{BLACK}{STRING} Quarry busts workers' unions! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                 :{BIGFONT}{BLACK}{STRING} Quarry hires minors instead of miners! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                 :{BIGFONT}{BLACK}{STRING} Quarry hits vein of useless "sparkly rocks" instead of mildly valuable sand! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                 :{BIGFONT}{BLACK}{STRING} Quarry running out of rocks to mine! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                 :{BIGFONT}{BLACK}{STRING} Quarry digs in the wrong direction; creates skyscraper! (production decreased)
 
-STR_INDUSTRY_NAME_QUARRY                                    :Quarry
-STR_INDUSTRY_STATION_QUARRY                                 :{STRING} Quarry
-STR_INDUSTRY_PLANTED_QUARRY                                 :{BIGFONT}{BLACK}{0:STRING} starts mining operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}{STRING} Quarry runs dry! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Quarry establishes illegal company town! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Quarry expanded by helpful earthquake! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Quarry simply digs deeper! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Quarry busts workers' unions! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Quarry hires minors instead of miners! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Quarry hits vein of useless "sparkly rocks" instead of mildly valuable sand! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}{STRING} Quarry running out of rocks to mine! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}{STRING} Quarry digs in the wrong direction; creates skyscraper! (production decreased)
+STR_INDUSTRY_NAME_MINERAL_MINE                            :Mineral Mine
+STR_INDUSTRY_STATION_MINERAL_MINE                         :{STRING} Mineral Mine
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                         :{BIGFONT}{BLACK}{STRING} Mines runs dry! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRING} Mines craves those minerals! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mines broadens definition of "minerals"! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C           :{BIGFONT}{BLACK}{STRING} Mines broadens definition of "mines"! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D           :{BIGFONT}{BLACK}{STRING} Mines digs up neighborhoods; cites eminent domain! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRING} Mines no longer craves those minerals! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mines begins offering workers' comp! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C           :{BIGFONT}{BLACK}{STRING} Mines hits oil; forced to dig around useless substance! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D           :{BIGFONT}{BLACK}{STRING} Mines loses multiple workers to elevator accident; forced to pay out life insurance! (production decreased)
 
-STR_INDUSTRY_NAME_MINERAL_MINE                              :Mineral Mine
-STR_INDUSTRY_STATION_MINERAL_MINE                           :{STRING} Mineral Mine
-STR_INDUSTRY_PLANTED_MINERAL_MINE                           :{BIGFONT}{BLACK}{0:STRING} excavated near {1:STRING}!
-STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}{STRING} Mines runs dry! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Mines craves those minerals! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Mines broadens definition of "minerals"! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Mines broadens definition of "mines"! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Mines digs up neighborhoods; cites eminent domain! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Mines no longer craves those minerals! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Mines begins offering workers' comp! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}{STRING} Mines hits oil; forced to dig around useless substance! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{STRING} Mines loses multiple workers to elevator accident; forced to pay out life insurance! (production decreased)
+STR_INDUSTRY_NAME_CORN_FARM                               :Corn Farm
+STR_INDUSTRY_STATION_CORN_FARM                            :{STRING} Corn Farm
+STR_INDUSTRY_CLOSURE_CORN_FARM                            :{BIGFONT}{BLACK}{STRING} Corn Farm sued out of existence by Monsanto! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A              :{BIGFONT}{BLACK}{STRING} Corn Farm slashes wages! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B              :{BIGFONT}{BLACK}{STRING} Corn Farm turns swords into plowshares! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C              :{BIGFONT}{BLACK}{STRING} Corn Farm drives pests extinct; local ecosystem in shambles! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D              :{BIGFONT}{BLACK}{STRING} Corn Farm genetically modifies farmhands! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A              :{BIGFONT}{BLACK}{STRING} Corn Farm forgets about crop rotations! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B              :{BIGFONT}{BLACK}{STRING} Corn Farm pisses off local deity; swarmed with locusts! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C              :{BIGFONT}{BLACK}{STRING} Corn Farm hit by "an Animal Farm situation"! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D              :{BIGFONT}{BLACK}{STRING} Corn Farm suffers the consequences of growing a monoculture! (production decreased)
 
-STR_INDUSTRY_NAME_CORN_FARM                                 :Corn Farm
-STR_INDUSTRY_STATION_CORN_FARM                              :{STRING} Corn Farm
-STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} planted near {1:STRING}!
-STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}{STRING} Corn Farm sued out of existence by Monsanto! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Corn Farm slashes wages! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Corn Farm turns swords into plowshares! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Corn Farm drives pests extinct; local ecosystem in shambles! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Corn Farm genetically modifies farmhands! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Corn Farm forgets about crop rotations! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Corn Farm pisses off local deity; swarmed with locusts! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}{STRING} Corn Farm hit by "an Animal Farm situation"! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{STRING} Corn Farm suffers the consequences of growing a monoculture! (production decreased)
+STR_INDUSTRY_NAME_SOY_FARM                                :Soy Farm
+STR_INDUSTRY_STATION_SOY_FARM                             :{STRING} Soy Farm
+STR_INDUSTRY_CLOSURE_SOY_FARM                             :{BIGFONT}{BLACK}{STRING} Soy Farm succumbs to climate change! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A               :{BIGFONT}{BLACK}{STRING} Soy Farm slashes wages! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B               :{BIGFONT}{BLACK}{STRING} Soy Farm turns swords into plowshares! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C               :{BIGFONT}{BLACK}{STRING} Soy Farm drives pests extinct; local ecosystem in shambles! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D               :{BIGFONT}{BLACK}{STRING} Soy Farm genetically modifies farmhands! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A               :{BIGFONT}{BLACK}{STRING} Soy Farm forgets about crop rotations! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B               :{BIGFONT}{BLACK}{STRING} Soy Farm pisses off local deity; swarmed with locusts! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C               :{BIGFONT}{BLACK}{STRING} Soy Farm hit by "an Animal Farm situation"! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D               :{BIGFONT}{BLACK}{STRING} Soy Farm suffers the consequences of growing a monoculture! (production decreased)
 
-STR_INDUSTRY_NAME_SOY_FARM                                  :Soy Farm
-STR_INDUSTRY_STATION_SOY_FARM                               :{STRING} Soy Farm
-STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} planted near {1:STRING}!
-STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}{STRING} Soy Farm succumbs to climate change! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Soy Farm slashes wages! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Soy Farm turns swords into plowshares! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Soy Farm drives pests extinct; local ecosystem in shambles! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Soy Farm genetically modifies farmhands! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Soy Farm forgets about crop rotations! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Soy Farm pisses off local deity; swarmed with locusts! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}{STRING} Soy Farm hit by "an Animal Farm situation"! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{STRING} Soy Farm suffers the consequences of growing a monoculture! (production decreased)
+STR_INDUSTRY_NAME_YAM_FARM                                :Yam Farm
+STR_INDUSTRY_STATION_YAM_FARM                             :{STRING} Yam Farm
+STR_INDUSTRY_CLOSURE_YAM_FARM                             :{BIGFONT}{BLACK}{STRING} Yam Farm loses right to repair its farm vehicles! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A               :{BIGFONT}{BLACK}{STRING} Yam Farm slashes wages! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B               :{BIGFONT}{BLACK}{STRING} Yam Farm turns swords into plowshares! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C               :{BIGFONT}{BLACK}{STRING} Yam Farm drives pests extinct; local ecosystem in shambles! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D               :{BIGFONT}{BLACK}{STRING} Yam Farm genetically modifies farmhands! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A               :{BIGFONT}{BLACK}{STRING} Yam Farm forgets about crop rotations! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B               :{BIGFONT}{BLACK}{STRING} Yam Farm pisses off local deity; swarmed with locusts! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C               :{BIGFONT}{BLACK}{STRING} Yam Farm hit by "an Animal Farm situation"! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D               :{BIGFONT}{BLACK}{STRING} Yam Farm suffers the consequences of growing a monoculture! (production decreased)
 
-STR_INDUSTRY_NAME_YAM_FARM                                  :Yam Farm
-STR_INDUSTRY_STATION_YAM_FARM                               :{STRING} Yam Farm
-STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} planted near {1:STRING}!
-STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}{STRING} Yam Farm loses right to repair its farm vehicles! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Yam Farm slashes wages! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Yam Farm turns swords into plowshares! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Yam Farm drives pests extinct; local ecosystem in shambles! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Yam Farm genetically modifies farmhands! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Yam Farm forgets about crop rotations! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Yam Farm pisses off local deity; swarmed with locusts! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}{STRING} Yam Farm hit by "an Animal Farm situation"! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{STRING} Yam Farm suffers the consequences of growing a monoculture! (production decreased)
+STR_INDUSTRY_NAME_GLASSWORKS                              :Glassworks
+STR_INDUSTRY_STATION_GLASSWORKS                           :{STRING} Glassworks
+STR_INDUSTRY_CLOSURE_GLASSWORKS                           :{BIGFONT}{BLACK}{STRING} Glassworks shattered by nearby opera! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A             :{BIGFONT}{BLACK}{STRING} Glassworks starts using 50% less glass per glass! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B             :{BIGFONT}{BLACK}{STRING} Glassworks brands more products as "artisinal"! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C             :{BIGFONT}{BLACK}{STRING} Glassworks convinces shareholders that empty air is "just really clear glass"! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D             :{BIGFONT}{BLACK}{STRING} Glassworks shines lasers into people's eyes; demand for glasses skyrocket! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A             :{BIGFONT}{BLACK}{STRING} Glassworks lays off safety inspectors! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B             :{BIGFONT}{BLACK}{STRING} Glassworks makes glass so clear they can't find it! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C             :{BIGFONT}{BLACK}{STRING} Glassworks constructs glass houses "for throwing stones from"! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D             :{BIGFONT}{BLACK}{STRING} Glassworks in shambles as local town decides sunlight is overrated! (production decreased)
 
-STR_INDUSTRY_NAME_GLASSWORKS                                :Glassworks
-STR_INDUSTRY_STATION_GLASSWORKS                             :{STRING} Glassworks
-STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} established near {1:STRING}!
-STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}{STRING} Glassworks shattered by nearby opera! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Glassworks starts using 50% less glass per glass! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Glassworks brands more products as "artisinal"! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Glassworks convinces shareholders that empty air is "just really clear glass"! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Glassworks shines lasers into people's eyes; demand for glasses skyrocket! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Glassworks lays off safety inspectors! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Glassworks makes glass so clear they can't find it! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}{STRING} Glassworks constructs glass houses "for throwing stones from"! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{STRING} Glassworks in shambles as local town decides sunlight is overrated! (production decreased)
+STR_INDUSTRY_NAME_CHEMICAL_PLANT                          :Chemical Plant
+STR_INDUSTRY_STATION_CHEMICAL_PLANT                       :{STRING} Chemical Plant
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                       :{BIGFONT}{BLACK}{STRING} Chemical Plant undergoes a catastrophic meltdown! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A         :{BIGFONT}{BLACK}{STRING} Chemical Plant discovers a new element! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B         :{BIGFONT}{BLACK}{STRING} Chemical Plant hires someone with an actual chemistry degree! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C         :{BIGFONT}{BLACK}{STRING} Chemical Plant invents another kind of artificial flavor! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D         :{BIGFONT}{BLACK}{STRING} Chemical Plant starts selling water; "technically a chemical"! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A         :{BIGFONT}{BLACK}{STRING} Chemical Plant's top scientist goes mad! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B         :{BIGFONT}{BLACK}{STRING} Chemical Plant turns gold into lead; wastes millions in grant money! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C         :{BIGFONT}{BLACK}{STRING} Chemical Plant tries out alchemy again-- "maybe it'll work this time"! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D         :{BIGFONT}{BLACK}{STRING} Chemical Plant tries and fails to find a use for oil! (production decreased)
 
-STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :Chemical Plant
-STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :{STRING} Chemical Plant
-STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} begins operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{STRING} Chemical Plant undergoes a catastrophic meltdown! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Chemical Plant discovers a new element! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Chemical Plant hires someone with an actual chemistry degree! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Chemical Plant invents another kind of artificial flavor! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Chemical Plant starts selling water; "technically a chemical"! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Chemical Plant's top scientist goes mad! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Chemical Plant turns gold into lead; wastes millions in grant money! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}{STRING} Chemical Plant tries out alchemy again-- "maybe it'll work this time"! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{STRING} Chemical Plant tries and fails to find a use for oil! (production decreased)
+STR_INDUSTRY_NAME_BIOLAB                                  :Biolab
+STR_INDUSTRY_STATION_BIOLAB                               :{STRING} Biolab
+STR_INDUSTRY_CLOSURE_BIOLAB                               :{BIGFONT}{BLACK}{STRING} Laboratory loses all government funding! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                 :{BIGFONT}{BLACK}{STRING} Laboratory accidentally turns multiple researchers into catgirls! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                 :{BIGFONT}{BLACK}{STRING} Laboratory suddenly receives immense military funding! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                 :{BIGFONT}{BLACK}{STRING} Laboratory CRISPRs scientists to be better at science! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                 :{BIGFONT}{BLACK}{STRING} Laboratory creates clones of top scientists! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                 :{BIGFONT}{BLACK}{STRING} Laboratory accidentally turns multiple researchers into catgirls! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                 :{BIGFONT}{BLACK}{STRING} Laboratory engineers super virus "for fun"; immediately fails containment! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                 :{BIGFONT}{BLACK}{STRING} Laboratory evacuated under mysterious circumstances! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                 :{BIGFONT}{BLACK}{STRING} Laboratory forced to reduce number of human test subjects! (production decreased)
 
-STR_INDUSTRY_NAME_BIOLAB                                    :Biolab
-STR_INDUSTRY_STATION_BIOLAB                                 :{STRING} Biolab
-STR_INDUSTRY_PLANTED_BIOLAB                                 :{BIGFONT}{BLACK}{0:STRING} begins operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}{STRING} Laboratory loses all government funding! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratory accidentally turns multiple researchers into catgirls! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratory suddenly receives immense military funding! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratory CRISPRs scientists to be better at science! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratory creates clones of top scientists! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratory accidentally turns multiple researchers into catgirls! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}{STRING} Laboratory engineers super virus "for fun"; immediately fails containment! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}{STRING} Laboratory evacuated under mysterious circumstances! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}{STRING} Laboratory forced to reduce number of human test subjects! (production decreased)
+STR_INDUSTRY_NAME_DISTILLERY                              :Distillery
+STR_INDUSTRY_STATION_DISTILLERY                           :{STRING} Distillery
+STR_INDUSTRY_PLANTED_DISTILLERY                           :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; alcoholics celebrate!
+STR_INDUSTRY_CLOSURE_DISTILLERY                           :{BIGFONT}{BLACK}{STRING} Distillery's local government brings back The Prohibition! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A             :{BIGFONT}{BLACK}{STRING} Distillery dismantles local AA groups! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B             :{BIGFONT}{BLACK}{STRING} Distillery begins expanding into school cafeterias! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C             :{BIGFONT}{BLACK}{STRING} Distillery replaces local hospitals with bars! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D             :{BIGFONT}{BLACK}{STRING} Distillery rebottles vodka as hand sanitizer! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A             :{BIGFONT}{BLACK}{STRING} Distillery increases production of IPAs! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B             :{BIGFONT}{BLACK}{STRING} Distillery loses market share to vapes! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C             :{BIGFONT}{BLACK}{STRING} Distillery shunned by local puritan movement! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D             :{BIGFONT}{BLACK}{STRING} Distillery "just not as cool as it used to be"! (production decreased)
 
-STR_INDUSTRY_NAME_DISTILLERY                                :Distillery
-STR_INDUSTRY_STATION_DISTILLERY                             :{STRING} Distillery
-STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; alcoholics celebrate!
-STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}{STRING} Distillery's local government brings back The Prohibition! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Distillery dismantles local AA groups! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Distillery begins expanding into school cafeterias! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Distillery replaces local hospitals with bars! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Distillery rebottles vodka as hand sanitizer! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}{STRING} Distillery increases production of IPAs! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}{STRING} Distillery loses market share to vapes! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}{STRING} Distillery shunned by local puritan movement! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{STRING} Distillery "just not as cool as it used to be"! (production decreased)
+STR_INDUSTRY_NAME_PROCESSING_PLANT                        :Processing Plant
+STR_INDUSTRY_STATION_PROCESSING_PLANT                     :{STRING} Processing Plant
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                     :{BIGFONT}{BLACK}{STRING} Processing Plant processes itself in a freak accident! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A       :{BIGFONT}{BLACK}{STRING} Processing Plant starts using bigger blenders! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B       :{BIGFONT}{BLACK}{STRING} Processing Plant preprocesses processor proceeds, preceding proper protocol! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C       :{BIGFONT}{BLACK}{STRING} Processing Plant lobbies FDA to label processed foods as healthy! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D       :{BIGFONT}{BLACK}{STRING} Processing Plant automates jobs; lays off hundreds! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A       :{BIGFONT}{BLACK}{STRING} Processing Plant forgets to sharpen blender blades! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B       :{BIGFONT}{BLACK}{STRING} Processing Plant having trouble processing its existence! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C       :{BIGFONT}{BLACK}{STRING} Processing Plant prevents precise practice; purports purpose protects property! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D       :{BIGFONT}{BLACK}{STRING} Processing Plant affected by new study linking processed foods and cancer! (production decreased)
 
-STR_INDUSTRY_NAME_PROCESSING_PLANT                          :Processing Plant
-STR_INDUSTRY_STATION_PROCESSING_PLANT                       :{STRING} Processing Plant
-STR_INDUSTRY_PLANTED_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{0:STRING} begins operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{STRING} Processing Plant processes itself in a freak accident! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Processing Plant starts using bigger blenders! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Processing Plant preprocesses processor proceeds, preceding proper protocol! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Processing Plant lobbies FDA to label processed foods as healthy! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Processing Plant automates jobs; lays off hundreds! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Processing Plant forgets to sharpen blender blades! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}{STRING} Processing Plant having trouble processing its existence! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}{STRING} Processing Plant prevents precise practice; purports purpose protects property! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{STRING} Processing Plant affected by new study linking processed foods and cancer! (production decreased)
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                  :Pharmaceutical Plant (Estrogen)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E               :{STRING} Pharmaceutical Plant (Estrogen)
 
-STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :Pharmaceutical Plant (Estrogen)
-STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :{STRING} Pharmaceutical Plant (Estrogen)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} begins operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant shut down for unethical research practices! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant markets sugar pills as miracle drugs! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents new drug to sell at a 1000% markup! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents a new disease to sell medicine for! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant starts a new opioid epidemic! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant research stalled by patent laws! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to comply with FDA standards! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant seriously considering homeopathic medicine! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to start making more "real" drugs! (production decreased)
+STR_INDUSTRY_NAME_PHARMACY_E                              :Pharmacy (Estrogen)
+STR_INDUSTRY_STATION_PHARMACY_E                           :{STRING} Pharmacy (Estrogen)
 
-STR_INDUSTRY_NAME_PHARMACY_E                                :Pharmacy (Estrogen)
-STR_INDUSTRY_STATION_PHARMACY_E                             :{STRING} Pharmacy (Estrogen)
-STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}{STRING} Pharmacy announces imminent closure! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Pharmacy prescribes medicines to itself! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Pharmacy lowers dosages; insists population is just sicker! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Pharmacy conducts study proving you need to buy more drugs! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sales skyrocket as nearby town catches the flu! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Pharmacy fails to lobby for higher medical costs! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Pharmacy loses prescriptions due to client Bobby Tables! (production decreased)
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                         :Gender Clinic (Estrogen)
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                      :{STRING} Gender Clinic (Estrogen)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                  :Pharmaceutical Plant (Testosterone)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T               :{STRING} Pharmaceutical Plant (Testosterone)
+
+STR_INDUSTRY_NAME_PHARMACY_T                              :Pharmacy (Testosterone)
+STR_INDUSTRY_STATION_PHARMACY_T                           :{STRING} Pharmacy (Testosterone)
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_T                         :Gender Clinic (Testosterone)
+STR_INDUSTRY_STATION_GENDER_CLINIC_T                      :{STRING} Gender Clinic (Testosterone)
+
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                 :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant shut down for unethical research practices! (closed)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant markets sugar pills as miracle drugs! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents new drug to sell at a 1000% markup! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents a new disease to sell medicine for! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant starts a new opioid epidemic! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant research stalled by patent laws! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to comply with FDA standards! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant seriously considering homeopathic medicine! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to start making more "real" drugs! (production decreased)
+
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A               :{BIGFONT}{BLACK}{STRING} Pharmacy prescribes medicines to itself! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B               :{BIGFONT}{BLACK}{STRING} Pharmacy lowers dosages; insists population is just sicker! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C               :{BIGFONT}{BLACK}{STRING} Pharmacy conducts study proving you need to buy more drugs! (production increased)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sales skyrocket as nearby town catches the flu! (production increased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A               :{BIGFONT}{BLACK}{STRING} Pharmacy fails to lobby for higher medical costs! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B               :{BIGFONT}{BLACK}{STRING} Pharmacy loses prescriptions due to client Bobby Tables! (production decreased)
 # https://xkcd.com/327/
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Pharmacy loses millions in sales as scientists cure deadly disease! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sued for malpractice in class-action lawsuit! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C               :{BIGFONT}{BLACK}{STRING} Pharmacy loses millions in sales as scientists cure deadly disease! (production decreased)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sued for malpractice in class-action lawsuit! (production decreased)
 
-STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :Gender Clinic (Estrogen)
-STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :{STRING} Gender Clinic (Estrogen)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} magically appears near {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{STRING} Gender Clinic finishes transing everyone's genders! (closed)
-
-STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :Pharmaceutical Plant (Testosterone)
-STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :{STRING} Pharmaceutical Plant (Testosterone)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} begins operations near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant shut down for unethical research practices! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant markets sugar pills as miracle drugs! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents new drug to sell at a 1000% markup! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents a new disease to sell medicine for! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant starts a new opioid epidemic! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant research stalled by patent laws! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to comply with FDA standards! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant seriously considering homeopathic medicine! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to start making more "real" drugs! (production decreased)
-
-STR_INDUSTRY_NAME_PHARMACY_T                                :Pharmacy (Testosterone)
-STR_INDUSTRY_STATION_PHARMACY_T                             :{STRING} Pharmacy (Testosterone)
-STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}A new {0:STRING} has set up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}{STRING} Pharmacy announces imminent closure! (closed)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Pharmacy prescribes medicines to itself! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Pharmacy lowers dosages; insists population is just sicker! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Pharmacy conducts study proving you need to buy more drugs! (production increased)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sales skyrocket as nearby town catches the flu! (production increased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Pharmacy fails to lobby for higher medical costs! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Pharmacy loses prescriptions due to clerical error! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Pharmacy loses millions in sales as scientists cure deadly disease! (production decreased)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Pharmacy sued for malpractice in class-action lawsuit! (production decreased)
-
-STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :Gender Clinic (Testosterone)
-STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :{STRING} Gender Clinic (Testosterone)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} magically appears near {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{STRING} Gender Clinic finishes transing everyone's genders! (closed)
+STR_INDUSTRY_PLANTED_GENDER_CLINIC                        :{BIGFONT}{BLACK}{0:STRING} magically appears near {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                        :{BIGFONT}{BLACK}{STRING} Gender Clinic finishes transing everyone's genders! (closed)

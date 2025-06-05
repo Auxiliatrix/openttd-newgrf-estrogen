@@ -390,7 +390,6 @@ STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Poziom produ
 STR_INDUSTRY_NAME_PORT                                      :{G=m}Port
 STR_INDUSTRY_NAME_PORT.d                                    :portu
 STR_INDUSTRY_STATION_PORT                                   :{STRING} Port
-STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} otwiera się w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}{STRING} Port zatopiony przez rosnący poziom mórz! (zamknięty)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}{STRING} Port zwiększa import! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}{STRING} Port zwiększa dźwigi, by przenosić większe skrzynie! (produkcja zwiększona)
@@ -404,7 +403,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_QUARRY                                    :{G=m}Kamieniołom
 STR_INDUSTRY_NAME_QUARRY.d                                  :kamieniołomu
 STR_INDUSTRY_STATION_QUARRY                                 :{STRING} Kamieniołom
-STR_INDUSTRY_PLANTED_QUARRY                                 :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność wydobywczą w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}{STRING} Kamieniołom się wyczerpał! (zamknięty)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}{STRING} Kamieniołom otwiera nielegalne miasteczko firmowe! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}{STRING} Kamieniołom zwiększył się przez pomocne trzęsienie ziemi! (produkcja zwiększona)
@@ -419,7 +417,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_MINERAL_MINE                              :{G=f}Kopalnia minerałów
 STR_INDUSTRY_NAME_MINERAL_MINE.d                            :kopalni minerałów
 STR_INDUSTRY_STATION_MINERAL_MINE                           :{STRING} Kopalnia minerałów
-STR_INDUSTRY_PLANTED_MINERAL_MINE                           :{BIGFONT}{BLACK}{0:STRING} wydrążona w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}{STRING} Kopalnia się wyczerpała! (zamknięta)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}{STRING} Kopalnia pragnie tych minerałów! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}{STRING} Kopalnia poszerza definicję „minerałów”! (produkcja zwiększona)
@@ -433,7 +430,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_CORN_FARM                                 :{G=f}Farma kukurydzy
 STR_INDUSTRY_NAME_CORN_FARM.d                               :farmy kukurydzy
 STR_INDUSTRY_STATION_CORN_FARM                              :{STRING} Farma kukurydzy
-STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} posadzona w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}{STRING} Farma kukurydzy doprowadzona do bankructwa przez pozwy Monsanto!
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy obcina zarobki! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}{STRING} Farma kukurydzy przekuwa miecze na lemiesze! (produkcja zwiększona)
@@ -447,7 +443,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_SOY_FARM                                  :{G=f}Farma soi
 STR_INDUSTRY_NAME_SOY_FARM.d                                :farmy soi
 STR_INDUSTRY_STATION_SOY_FARM                               :{STRING} Farma soi
-STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} posadzona w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}{STRING} Farma soi uległa zmianie klimatu! (zamknięta)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma soi obcina zarobki! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma soi przekuwa miecze na lemiesze! (produkcja zwiększona)
@@ -461,7 +456,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_YAM_FARM                                  :{G=f}Farma jamu
 STR_INDUSTRY_NAME_YAM_FARM.d                                :farmy jamu
 STR_INDUSTRY_STATION_YAM_FARM                               :{STRING} Farma jamu
-STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} posadzona w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}{STRING} Farma jamu traci prawa do naprawy swoich maszyn rolniczych! (zamknięta)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}{STRING} Farma jamu obcina zarobki! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}{STRING} Farma jamu przekuwa miecze na lemiesze! (produkcja zwiększona)
@@ -475,7 +469,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_GLASSWORKS                                :{G=f}Huta szkła
 STR_INDUSTRY_NAME_GLASSWORKS.d                              :huty szkła
 STR_INDUSTRY_STATION_GLASSWORKS                             :{STRING} Huta szkła
-STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} założona w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}{STRING} Huta szkła zbita przez pobliską operę! (zamknięta)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}{STRING} Huta szkła zaczyna używać 50% mniej szkła w szkle! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}{STRING} Huta szkła nazywa więcej produktów „rzemieślniczymi”! (produkcja zwiększona)
@@ -490,7 +483,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=m}Zakład chemiczny
 STR_INDUSTRY_NAME_CHEMICAL_PLANT.d                          :zakładu chemicznego
 STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :{STRING} Zakład chemiczny
-STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{STRING} Katastrofalne stopienie reaktora w zakładzie chemicznym! (zamknięty)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny odkrywa nowy pierwiastek! (produkcja zwiększona)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}{STRING} Zakład chemiczny zatrudnia kogoś z faktycznym tytułem z chemii! (produkcja zwiększona)
@@ -504,7 +496,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_BIOLAB                                    :{G=n}Laboratorium biologiczne
 STR_INDUSTRY_NAME_BIOLAB.d                                  :laboratorium biologicznego
 STR_INDUSTRY_STATION_BIOLAB                                 :{STRING} Laboratorium biologiczne
-STR_INDUSTRY_PLANTED_BIOLAB                                 :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}{STRING} Laboratorium traci wszelkie finansowanie z rządu! (zamknięte)
 # me :3
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}{STRING} Laboratorium przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zwiększona)
@@ -533,7 +524,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_PROCESSING_PLANT                          :{G=f}Przetwórnia
 STR_INDUSTRY_NAME_PROCESSING_PLANT.d                        :przetwórni
 STR_INDUSTRY_STATION_PROCESSING_PLANT                       :{STRING} Przetwórnia
-STR_INDUSTRY_PLANTED_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{STRING} Przetwórnia przetwarza sama siebie w dziwacznym wypadku! (zamknięta)
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}{STRING} Przetwórnia zaczyna używać większych blenderów! (produkcja zwiększona)
 # this sucks, I copied the idea for decrease C from pt_BR xD
@@ -548,69 +538,48 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}{ST
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=m}Zakład farmaceutyczny (estrogen)
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E.d                  :zakładu farmaceutycznego (estrogen)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :{STRING} Zakład farmaceutyczny (estrogen)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zamknięty z powodu nieetycznych metod badawczych!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny rozpoczął nową epidemię opioidów! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}{STRING} Badania zakładu farmaceutycznego zatrzymane przez prawa patentowe! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_PHARMACY_E                                :{G=f}Apteka (estrogen)
 STR_INDUSTRY_NAME_PHARMACY_E.d                              :apteki (estrogen)
 STR_INDUSTRY_STATION_PHARMACY_E                             :{STRING} Apteka (estrogen)
-STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} otwiera się w pobliżu {1:STRING}!
 STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}{STRING} Apteka ogłasza bliskie zamknięcie!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Apteka wystawia recepty na siebie! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Apteka zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Apteka przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Sprzedaż apteki szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}{STRING} Aptece nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}{STRING} Apteka traci recepty z powodu klienta Bobby Tables! (produkcja zmniejszona)
-# https://xkcd.com/327/
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}{STRING} Apteka traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}{STRING} Apteka posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
 
 # not a thing in Poland, so everything will sound artificial here
 STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=f}Klinika płci (estrogen)
 STR_INDUSTRY_NAME_GENDER_CLINIC_E.d                         :kliniki płci (estrogen)
 STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :{STRING} Klinika płci (estrogen)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} magicznie pojawia się w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{STRING} Klinika płci skończyła transować wszystkim płcie! (zamknięta)
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :{G=m}Zakład farmaceutyczny (testosteron)
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T.d                  :zakładu farmaceutycznego (testosteron)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :{STRING} Zakład farmaceutyczny (testosteron)
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} rozpoczyna działalność w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zamknięty z powodu nieetycznych metod badawczych!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny rozpoczął nową epidemię opioidów! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}{STRING} Badania zakładu farmaceutycznego zatrzymane przez prawa patentowe! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_PHARMACY_T                                :{G=f}Apteka (testosteron)
 STR_INDUSTRY_NAME_PHARMACY_T.d                              :apteki (testosteron)
 STR_INDUSTRY_STATION_PHARMACY_T                             :{STRING} Apteka (testosteron)
-STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}Nowa {0:STRING} otwiera się w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}{STRING} Apteka ogłasza bliskie zamknięcie!
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Apteka wystawia recepty na siebie! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Apteka zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Apteka przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Sprzedaż apteki szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}{STRING} Aptece nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}{STRING} Apteka traci recepty z powodu błędu urzędniczego! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}{STRING} Apteka traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}{STRING} Apteka posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=f}Klinika płci (testosteron)
 STR_INDUSTRY_NAME_GENDER_CLINIC_T.d                         :kliniki płci (testosteron)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :{STRING} Klinika płci (testosteron)
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} magicznie pojawia się w pobliżu {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{STRING} Klinika płci skończyła transować wszystkim płcie! (zamknięta)
+
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zamknięty z powodu nieetycznych metod badawczych!
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny rozpoczął nową epidemię opioidów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}{STRING} Badania zakładu farmaceutycznego zatrzymane przez prawa patentowe! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}{STRING} Zakład farmaceutyczny zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
+
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}{STRING} Apteka wystawia recepty na siebie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}{STRING} Apteka zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}{STRING} Apteka przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}{STRING} Sprzedaż apteki szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}{STRING} Aptece nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}{STRING} Apteka traci recepty z powodu klienta Bobby Tables! (produkcja zmniejszona)
+# https://xkcd.com/327/
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}{STRING} Apteka traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}{STRING} Apteka posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
+
+STR_INDUSTRY_PLANTED_GENDER_CLINIC                          :{BIGFONT}{BLACK}{0:STRING} magicznie pojawia się w pobliżu {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}{STRING} Klinika płci skończyła transować wszystkim płcie! (zamknięta)
