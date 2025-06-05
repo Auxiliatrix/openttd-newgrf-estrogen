@@ -542,7 +542,6 @@ STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :{STRING} Zakład fa
 STR_INDUSTRY_NAME_PHARMACY_E                                :{G=f}Apteka (estrogen)
 STR_INDUSTRY_NAME_PHARMACY_E.d                              :apteki (estrogen)
 STR_INDUSTRY_STATION_PHARMACY_E                             :{STRING} Apteka (estrogen)
-STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}{STRING} Apteka ogłasza bliskie zamknięcie!
 
 # not a thing in Poland, so everything will sound artificial here
 STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=f}Klinika płci (estrogen)

@@ -263,7 +263,7 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         cargo_label: "ENSP";
         station_list_colour: 146;
         cargo_payment_list_colour: 146;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES);
         cargo_classes: bitmask(CC_EXPRESS,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
@@ -286,7 +286,7 @@ item (FEAT_CARGOS, item_fertilizer) {
         unit_name: string(STR_CARGO_SINGULAR_FERTILIZER);
         type_abbreviation: string(STR_CARGO_ABBREV_FERTILIZER);
         cargo_label: "FERT";
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER);
         cargo_classes: bitmask(CC_BULK,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
@@ -311,7 +311,7 @@ item (FEAT_CARGOS, item_salt) {
         cargo_label: "SALT";
         station_list_colour: 48;
         cargo_payment_list_colour: 48;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SALT);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
@@ -336,7 +336,7 @@ item (FEAT_CARGOS, item_potash) {
         cargo_label: "POTA";
         station_list_colour: 13;
         cargo_payment_list_colour: 13;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_POTASH);
         cargo_classes: bitmask(CC_BULK,CC_COVERED);
         penalty_lowerbound: 30;
@@ -361,7 +361,7 @@ item (FEAT_CARGOS, item_sand) {
         cargo_label: "SAND";
         station_list_colour: 64;
         cargo_payment_list_colour: 64;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SAND);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 40;
@@ -386,7 +386,7 @@ item (FEAT_CARGOS, item_minerals) {
         cargo_label: "MNRL";
         station_list_colour: 41;
         cargo_payment_list_colour: 41;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
@@ -411,7 +411,7 @@ item (FEAT_CARGOS, item_corn) {
         cargo_label: "MAIZ";
         station_list_colour: 66;
         cargo_payment_list_colour: 66;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_CORN);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 12;
@@ -436,7 +436,7 @@ item (FEAT_CARGOS, item_soy) {
         cargo_label: "BEAN";
         station_list_colour: 71;
         cargo_payment_list_colour: 71;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SOY);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
@@ -461,7 +461,7 @@ item (FEAT_CARGOS, item_yam) {
         cargo_label: "TATO";
         station_list_colour: 75;
         cargo_payment_list_colour: 75;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_YAM);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
@@ -486,7 +486,7 @@ item (FEAT_CARGOS, item_vials) {
         cargo_label: "MNSP";
         station_list_colour: 135;
         cargo_payment_list_colour: 135;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_VIALS);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 16;
@@ -511,7 +511,7 @@ item (FEAT_CARGOS, item_chemicals) {
         cargo_label: "RFPR";
         station_list_colour: 185;
         cargo_payment_list_colour: 185;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS);
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
         penalty_lowerbound: 24;
@@ -536,7 +536,7 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         cargo_label: "EOIL";
         station_list_colour: 206;
         cargo_payment_list_colour: 206;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 8;
@@ -561,7 +561,7 @@ item (FEAT_CARGOS, item_alcohol) {
         cargo_label: "BEER";
         station_list_colour: 192;
         cargo_payment_list_colour: 192;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 12;
@@ -586,7 +586,7 @@ item (FEAT_CARGOS, item_diosgenin) {
         cargo_label: "DIOS";
         station_list_colour: 133;
         cargo_payment_list_colour: 133;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -611,7 +611,7 @@ item (FEAT_CARGOS, item_raw_estrone) {
         cargo_label: "RWES";
         station_list_colour: 152;
         cargo_payment_list_colour: 152;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -636,7 +636,7 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         cargo_label: "RWTS";
         station_list_colour: 103;
         cargo_payment_list_colour: 103;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -661,7 +661,7 @@ item (FEAT_CARGOS, item_estrogen) {
         cargo_label: "ESTR";
         station_list_colour: 150;
         cargo_payment_list_colour: 150;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN);
         cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
         penalty_lowerbound: 12;
@@ -687,7 +687,7 @@ item (FEAT_CARGOS, item_testosterone) {
         cargo_label: "TEST";
         station_list_colour: 101;
         cargo_payment_list_colour: 101;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
         cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
         penalty_lowerbound: 13;
@@ -2276,7 +2276,7 @@ switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input, cargo_index, [
     load_perm_variable(28*(1+cargo_index))
 ]) {
     // 0x3800 clears extra information from cargo subtype
-    0: return (0x3800 + string(STR_EMPTY));
+    0: return 0x3800;
     return 0x3800 + string(STR_CARGO_SUPPLIED);
 }
 
