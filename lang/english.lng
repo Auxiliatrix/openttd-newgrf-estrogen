@@ -27,12 +27,6 @@ STR_PARAM_DESC_INDUSTRY_CLOSE                               :Whether Industry De
 STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Industry Starting Power
 STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Level of production industries should start at.
 
-STR_EMPTY                                                   :
-
-TTD_STR_CRATES                                              :{COMMA} crate{P "" s}
-TTD_STR_TONS                                                :{COMMA} tonne{P "" s}
-TTD_STR_LITERS                                              :{COMMA} litre{P "" s}
-
 # ----------------------------------------------------------------
 # Cargos
 # ----------------------------------------------------------------

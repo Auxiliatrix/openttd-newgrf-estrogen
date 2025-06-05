@@ -27,12 +27,6 @@ STR_PARAM_DESC_INDUSTRY_CLOSE                               :Se o decaimento exc
 STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Poder de Produção Inicial.
 STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Nivel de produção no qual industrias devem começar.
 
-STR_EMPTY                                                   :
-
-TTD_STR_CRATES                                              :{COMMA} caixas{P "" s}
-TTD_STR_TONS                                                :{COMMA} toneladas{P "" s}
-TTD_STR_LITERS                                              :{COMMA} litros{P "" s}
-
 # ----------------------------------------------------------------
 # Cargos
 # ----------------------------------------------------------------
