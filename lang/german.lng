@@ -1,0 +1,383 @@
+##grflangid 0x02
+##plural 0
+##gender m w n p
+
+# ----------------------------------------------------------------
+# Global
+# ----------------------------------------------------------------
+
+STR_GRF_NAME                                                :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                         :Industrie-Ersatz-Set das HRT-Logistik der echten Welt nachstellt. Gemacht von autistischen Transfems, für autistische Transfems.
+
+STR_PARAM_NAME_HORMONE                                      :Hormon
+STR_PARAM_DESC_HORMONE                                      :Hormon, welches in Arzneimittelfabriken aus Diosgenin gemacht werden kann.{}Beide zu wählen könnte die Spielbalance beeinträchtigen.
+
+STR_PARAM_VALUE_HORMONE_ESTROGEN                            :Östrogen
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE                        :Testosteron
+STR_PARAM_VALUE_HORMONE_BOTH                                :Beide
+
+STR_PARAM_NAME_INDUSTRY_DECAY                               :Industrieverfall
+STR_PARAM_DESC_INDUSTRY_DECAY                               :Ob unbelieferte Industrien auf niedriegere Produktionslevel fallen.
+
+STR_PARAM_NAME_INDUSTRY_GROWTH                              :Industriewachstum
+STR_PARAM_DESC_INDUSTRY_GROWTH                              :Ob belieferte Industrien auf höhere Produktionslevel wachsen.
+
+STR_PARAM_NAME_INDUSTRY_CLOSE                               :Werksschließungen
+STR_PARAM_DESC_INDUSTRY_CLOSE                               :Ob Industrieverfall zu Schließungen führen kann.
+
+STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Produktionslevel nach Werksgründung
+STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Produktionslevel mit dem neue Werke anfangen.
+
+STR_EMPTY                                                   :
+
+TTD_STR_CRATES                                              :{COMMA} Kiste{P "" n}
+TTD_STR_TONS                                                :{COMMA} Tonne{P "" n}
+TTD_STR_LITERS                                              :{COMMA} Liter{P "" ""}
+
+# ----------------------------------------------------------------
+# Frachten
+# ----------------------------------------------------------------
+
+STR_CARGO_SUPPLIED                                          :{BLACK} (Geliefert)
+
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                       :{G=p}Ersatzteile
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                     :{G=p}Ersatzteile
+STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                       :{TINYFONT}ET
+STR_CARGO_LABEL_ENGINEERING_SUPPLIES                        :ETZL
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                         :{COMMA} Ersatzteilekiste{P "" n}
+
+STR_CARGO_PLURAL_FERTILIZER                                 :{G=p}Düngemittel
+STR_CARGO_SINGULAR_FERTILIZER                               :{G=n}Düngemittel
+STR_CARGO_ABBREV_FERTILIZER                                 :{TINYFONT}DM
+STR_CARGO_LABEL_FERTILIZER                                  :DMTL
+STR_CARGO_UNIT_FERTILIZER                                   :{WEIGHT} Düngemittel
+
+STR_CARGO_PLURAL_SALT                                       :{G=n}Salz
+STR_CARGO_SINGULAR_SALT                                     :{G=n}Salz
+STR_CARGO_ABBREV_SALT                                       :{TINYFONT}SZ
+STR_CARGO_LABEL_SALT                                        :SALZ
+STR_CARGO_UNIT_SALT                                         :{WEIGHT} Salz
+
+STR_CARGO_PLURAL_POTASH                                     :{G=n}Kalisalz
+STR_CARGO_SINGULAR_POTASH                                   :{G=n}Kalisalz
+STR_CARGO_ABBREV_POTASH                                     :{TINYFONT}KS
+STR_CARGO_LABEL_POTASH                                      :KALI
+STR_CARGO_UNIT_POTASH                                       :{WEIGHT} Kalisalz
+
+STR_CARGO_PLURAL_SAND                                       :{G=m}Sand
+STR_CARGO_SINGULAR_SAND                                     :{G=m}Sand
+STR_CARGO_ABBREV_SAND                                       :{TINYFONT}SD
+STR_CARGO_LABEL_SAND                                        :SAND
+STR_CARGO_UNIT_SAND                                         :{WEIGHT} Sand
+
+STR_CARGO_PLURAL_MINERALS                                   :{G=p}Mineralien
+STR_CARGO_SINGULAR_MINERALS                                 :{G=n}Mineral
+STR_CARGO_ABBREV_MINERALS                                   :{TINYFONT}MI
+STR_CARGO_LABEL_MINERALS                                    :MNRL
+STR_CARGO_UNIT_MINERALS                                     :{WEIGHT} Mineralien
+
+STR_CARGO_PLURAL_CORN                                       :{G=m}Mais
+STR_CARGO_SINGULAR_CORN                                     :{G=m}Mais
+STR_CARGO_ABBREV_CORN                                       :{TINYFONT}MS
+STR_CARGO_LABEL_CORN                                        :MAIS
+STR_CARGO_UNIT_CORN                                         :{WEIGHT} Mais
+
+STR_CARGO_PLURAL_SOY                                        :{G=n}Soja
+STR_CARGO_SINGULAR_SOY                                      :{G=n}Soja
+STR_CARGO_ABBREV_SOY                                        :{TINYFONT}SJ
+STR_CARGO_LABEL_SOY                                         :SOJA
+STR_CARGO_UNIT_SOY                                          :{WEIGHT} Soja
+
+STR_CARGO_PLURAL_YAM                                        :{G=p}Yams
+STR_CARGO_SINGULAR_YAM                                      :{G=m}Yam
+STR_CARGO_ABBREV_YAM                                        :{TINYFONT}YA
+STR_CARGO_LABEL_YAM                                         :YAMS
+STR_CARGO_UNIT_YAM                                          :{WEIGHT} Yams
+
+STR_CARGO_PLURAL_VIALS                                      :{G=p}Phiolen
+STR_CARGO_SINGULAR_VIALS                                    :{G=w}Phiole
+STR_CARGO_ABBREV_VIALS                                      :{TINYFONT}PL
+STR_CARGO_LABEL_VIALS                                       :PHIL
+STR_CARGO_UNIT_VIALS                                        :{COMMA} Phiolenkiste{P "" n}
+
+STR_CARGO_PLURAL_CHEMICALS                                  :{G=p}Chemikalien
+STR_CARGO_SINGULAR_CHEMICALS                                :{G=p}Chemikalien
+STR_CARGO_ABBREV_CHEMICALS                                  :{TINYFONT}CH
+STR_CARGO_LABEL_CHEMICALS                                   :CHEM
+STR_CARGO_UNIT_CHEMICALS                                    :{VOLUME} Chemikalien
+
+STR_CARGO_PLURAL_VEGETABLE_OIL                              :{G=n}Pflanzenöl
+STR_CARGO_SINGULAR_VEGETABLE_OIL                            :{G=n}Pflanzenöl
+STR_CARGO_ABBREV_VEGETABLE_OIL                              :{TINYFONT}PÖ
+STR_CARGO_LABEL_VEGETABLE_OIL                               :PFÖL
+STR_CARGO_UNIT_VEGETABLE_OIL                                :{VOLUME} Pflanzenöl
+
+STR_CARGO_PLURAL_ALCOHOL                                    :{G=m}Alkohol
+STR_CARGO_SINGULAR_ALCOHOL                                  :{G=m}Alkohol
+STR_CARGO_ABBREV_ALCOHOL                                    :{TINYFONT}AL
+STR_CARGO_LABEL_ALCOHOL                                     :ALK
+STR_CARGO_UNIT_ALCOHOL                                      :{VOLUME} Alkohol
+
+STR_CARGO_PLURAL_DIOSGENIN                                  :{G=n}Diosgenin
+STR_CARGO_SINGULAR_DIOSGENIN                                :{G=n}Diosgenin
+STR_CARGO_ABBREV_DIOSGENIN                                  :{TINYFONT}DI
+STR_CARGO_LABEL_DIOSGENIN                                   :DIOS
+STR_CARGO_UNIT_DIOSGENIN                                    :{COMMA} Diosgeninkiste{P "" n}
+
+STR_CARGO_PLURAL_RAW_ESTRONE                                :{G=n}rohes Estron
+STR_CARGO_SINGULAR_RAW_ESTRONE                              :{G=n}rohes Estron
+STR_CARGO_ABBREV_RAW_ESTRONE                                :{TINYFONT}RE
+STR_CARGO_LABEL_RAW_ESTRONE                                 :RHES
+STR_CARGO_UNIT_RAW_ESTRONE                                  :{VOLUME} rohes Estron
+
+STR_CARGO_PLURAL_RAW_TESTOSTERONE                           :{G=n}rohes Testosteron
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE                         :{G=n}rohes Testosteron
+STR_CARGO_ABBREV_RAW_TESTOSTERONE                           :{TINYFONT}RT
+STR_CARGO_LABEL_RAW_TESTOSTERONE                            :RHTS
+STR_CARGO_UNIT_RAW_TESTOSTERONE                             :{COMMA} Kiste{P "" n} rohen Testosterons
+
+STR_CARGO_PLURAL_ESTROGEN                                   :{G=n}Östrogen
+STR_CARGO_SINGULAR_ESTROGEN                                 :{G=n}Östrogen
+STR_CARGO_ABBREV_ESTROGEN                                   :{TINYFONT}ES
+STR_CARGO_LABEL_ESTROGEN                                    :ESTR
+STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} Östrogenkiste{P "" n}
+
+STR_CARGO_PLURAL_TESTOSTERONE                               :{G=n}Testosteron
+STR_CARGO_SINGULAR_TESTOSTERONE                             :{G=n}Testosteron
+STR_CARGO_ABBREV_TESTOSTERONE                               :{TINYFONT}TE
+STR_CARGO_LABEL_TESTOSTERONE                                :TEST
+STR_CARGO_UNIT_TESTOSTERONE                                 :{COMMA} Testosteronkiste{P "" n}
+
+# ----------------------------------------------------------------
+# Industries
+# ----------------------------------------------------------------
+
+STR_INDUSTRY_POWER_MINIMUM                                  :minimum
+STR_INDUSTRY_POWER_LOW                                      :niedrig
+STR_INDUSTRY_POWER_DEFAULT                                  :standard
+STR_INDUSTRY_POWER_HIGH                                     :hoch
+STR_INDUSTRY_POWER_VERY_HIGH                                :sehr hoch
+STR_INDUSTRY_POWER_MAXIMUM                                  :maximum
+
+STR_INDUSTRY_RATIO_STATE_NORMAL                             :normal
+STR_INDUSTRY_RATIO_STATE_ENHANCED                           :erhöht
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                            :spitzenmäßig
+
+STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING                   :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{RED}Schlechte {BLACK}Quartale: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                    :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{GREEN}Gute{BLACK}Quartale: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                       :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{GREEN}Gute {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Abbaurate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal Ersatzteilkisten zugeliefert werden.{}{YELLOW}Erhöht: {BLACK}20 Kisten im Quartal{}{YELLOW}Spitzenmäßig: {BLACK}80 Kisten im Quartal{}{}Im letzten Monat gelieferte Kisten: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                      :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{RED}Schlechte {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Abbaurate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal Ersatzteilkisten zugeliefert werden.{}{YELLOW}Erhöht: {BLACK}20 Kisten im Quartal{}{YELLOW}Spitzenmäßig: {BLACK}80 Kisten im Quartal{}{}Im letzten Monat gelieferte Kisten: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                       :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{GREEN}Gute {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Abbaurate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal Düngermittelkisten zugeliefert werden.{}{YELLOW}Erhöht: {BLACK}20 Kisten im Quartal{}{YELLOW}Spitzenmäßig: {BLACK}80 Kisten im Quartal{}{}Im letzten Monat gelieferte Kisten: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                      :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{RED}Schlechte {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Abbaurate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal Düngermittelkisten zugeliefert werden.{}{YELLOW}Erhöht: {BLACK}20 Kisten im Quartal{}{YELLOW}Spitzenmäßig: {BLACK}80 Kisten im Quartal{}{}Im letzten Monat gelieferte Kisten: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                      :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{GREEN}Gute {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Produktionsrate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal mehrere Arten Frachten zugeliefert werden.
+STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Produktionslevel: {YELLOW}{STRING}{}{WHITE}Schwankt je nach aufeinanderfolgenden guten bzw. schlechten Quartalen.{}{}{RED}Schlechte {BLACK}Quartale: {YELLOW}{COMMA}{}{}{BLACK}Produktionsrate: {YELLOW}{STRING}{}{WHITE}Kann verbessert werden, indem jedes Quartal mehrere Arten Frachten zugeliefert werden.
+
+STR_INDUSTRY_NAME_PORT                                      :{G=m}Hafen
+STR_INDUSTRY_STATION_PORT                                   :Hafen {STRING}
+STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} öffnet nahe {1:STRING}!
+STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}Hafen {STRING} wegen wachsendem Meeresspiegel untergetaucht! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}Hafen {STRING} erhöht Importe! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}Hafen {STRING} vergrößert Krane um größere Kisten zu laden! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}Hafen {STRING} verkleinert Krane um schneller zu laden! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}Hafen {STRING} behält alles beim gleichen, wodurch an Krankosten gespart wird! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}Hafen {STRING} leidet an Zöllen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}Hafen {STRING} leidet unter durch Überfischung dezimierter Fischpopulation! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}Hafen {STRING} von überlasteten Lieferketten betroffen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}Hafen {STRING} produziert Container die nicht der DIN entsprechen! (Produktion abgenommen)
+
+
+STR_INDUSTRY_NAME_QUARRY                                    :{G=w}Grube
+STR_INDUSTRY_STATION_QUARRY                                 :Grube {STRING}
+STR_INDUSTRY_PLANTED_QUARRY                                 :{BIGFONT}{BLACK}{0:STRING} baggert {1:STRING} an!
+STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}Grube {STRING} läuft auf Grund! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}Grube {STRING} etabliert illegales Arbeiterlager! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}Grube {STRING} durch hilfreiches Erdbeben erweitert! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}Grube {STRING} gräbt einfach tiefer! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}Grube {STRING} zerschlägt Arbeiterverbände! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}Grube {STRING} stößt auf Balrog! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}Grube {STRING} findet Ader voller nutzloser „Glitzersteine“ statt altbekanntem Sand! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}Grube {STRING} in tiefem Finanzloch! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}Grube {STRING} gräbt in die falsche richtung; erbaut Wolkenkratzer! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_MINERAL_MINE                              :{G=n}Mineralstollen
+STR_INDUSTRY_STATION_MINERAL_MINE                           :Mineralstollen {STRING}
+STR_INDUSTRY_PLANTED_MINERAL_MINE                           :{BIGFONT}{BLACK}{0:STRING} setzt Spatenstich bei {1:STRING}!
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}Mineralstollen {STRING} ist gegessen! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Mineralstollen {STRING} lechzt nach Mineralien! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Mineralstollen {STRING} erweitert Bedeutung von "Mineral"! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Mineralstollen {STRING} erweitert Bedeutung von "Stollen"! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Mineralstollen {STRING} gräbt mitten durch Siedlung, droht mit Enteignung! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Mineralstollen {STRING} lechzt nicht mehr nach Mineralien! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Mineralstollen {STRING} gerichtlich gezwungen Arbeitnehmerrechte nachzugehen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Mineralstollen {STRING} stößt auf Rohöl; gezwungen die nutzlose Substanz zu umgraben! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Mineralstollen {STRING} verliert mehrere Arbeiter in Aufzugabsturz; zahlt Familien für Stillschweigeabkommen! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_CORN_FARM                                 :{G=m}Maisbauer
+STR_INDUSTRY_STATION_CORN_FARM                              :Maisbauer {STRING}
+STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
+STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}Maisbauer {STRING} durch Bayer AG in Grund und Boden verklagt! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Maisbauer {STRING} rottet Ungeziefer aus; Tohuwabohu im örtlichen Ökosystem! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Maisbauer {STRING} modifiziert Gene der Arbeiter, umgeht „Ohne Gentechnik hergestellt“ Kontrollzeichen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Maisbauer {STRING} vergisst Fruchtfolge! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Maisbauer {STRING} vergrämt hiesige Gottheit; überschwärmt mit Heuschrecken! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Maisbauer {STRING} durch „Shaun das Schaf“ betroffen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Maisbauer {STRING} sät eine Monokultur und erntet bittere Konsequenzen! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_SOY_FARM                                  :{G=m}Sojabauer
+STR_INDUSTRY_STATION_SOY_FARM                               :Sojabauer {STRING}
+STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
+STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}Sojabauer {STRING} erliegt dem Klimawandel! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Sojabauer {STRING} rottet Ungeziefer aus; Tohuwabohu im örtlichen Ökosystem! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Sojabauer {STRING} modifiziert Gene der Arbeiter, umgeht „Ohne Gentechnik hergestellt“ Kontrollzeichen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Sojabauer {STRING} vergisst Fruchtfolge! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Sojabauer {STRING} vergrämt hiesige Gottheit; überschwärmt mit Heuschrecken! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Sojabauer {STRING} durch „Shaun das Schaf“ betroffen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Sojabauer {STRING} sät eine Monokultur und erntet bittere Konsequenzen! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_YAM_FARM                                  :{G=m}Yambauer
+STR_INDUSTRY_STATION_YAM_FARM                               :Yambauer {STRING}
+STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
+STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}Yambauer {STRING} verliert das Recht, die eigenen Hofmaschinen zu reparieren! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Yambauer {STRING} rottet Ungeziefer aus; Tohuwabohu im örtlichen Ökosystem! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Yambauer {STRING} modifiziert Gene der Arbeiter, umgeht „Ohne Gentechnik hergestellt“ Kontrollzeichen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Yambauer {STRING} vergisst Fruchtfolge! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Yambauer {STRING} vergrämt hiesige Gottheit; überschwärmt mit Heuschrecken! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Yambauer {STRING} durch „Shaun das Schaf“ betroffen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Yambauer {STRING} sät eine Monokultur und erntet bittere Konsequenzen! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_GLASSWORKS                                :{G=w}Glasfabrik
+STR_INDUSTRY_STATION_GLASSWORKS                             :Glasfabrik {STRING}
+STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet!
+STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}Glasfabrik {STRING} durch örtliche Oper zerschmettert! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Glasfabrik {STRING} verwendet nun 50% weniger Glas pro Glas! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Glasfabrik {STRING} vermarktet mehr Produkte als „handgefertegt“ (sic)! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Glasfabrik {STRING} überzeugt Aktionäre, dass leere Luft in Wirklichkeit „echt klares Glas“ ist! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Glasfabrik {STRING} strahlt Laser in anderer Leute Augen; Nachfrage für Brillengläser schießt hoch! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Glasfabrik {STRING} entlässt Sicherheitsbeauftragte! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Glasfabrik {STRING} macht Glas so klar, dass es unauffindbar wird! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Glasfabrik {STRING} konstruiert Glashäuser „fürs reinsetzen und Steine hinauswerfen“! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Glasfabrik {STRING} auf kon-Kurs nachdem umliegendes Dorf Sonnenlicht für überbewertet beschließt! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=w}Chemiefabrik
+STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :Chemiefabrik {STRING}
+STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} lässt sich bei {1:STRING} nieder!
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}Chemiefabrik {STRING} erfährt eine katastrophale Kernschmelze! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Chemiefabrik {STRING} findet ein neues Element! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Chemiefabrik {STRING} stellt jemanden mit echtem Chemiestudium an! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Chemiefabrik {STRING} erfindet eine neue Art künstlicher Geschmackstoff! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Chemiefabrik {STRING} verkauft nun auch Wasser; „im Prinzip eine Chemikalie“! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Chemiefabrik {STRING} verliert einen weiteren Wissenschaftler an den Wahnsinn! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Chemiefabrik {STRING} macht Blei aus Gold; verschwendet Millionen aus Stipendien! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Chemiefabrik {STRING} versucht es wieder einmal mit Alchemie - „vielleicht funkt es ja diesmal“! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Chemiefabrik {STRING} versucht einen Nutzen für Rohöl zu finden; scheitert auf ganzer Linie! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_BIOLAB                                    :{G=n}Biolab
+STR_INDUSTRY_STATION_BIOLAB                                 :Biolab {STRING}
+STR_INDUSTRY_PLANTED_BIOLAB                                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Streit über die Bedeutung von „bio“ bricht aus!
+STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}Labor {STRING} verliert alle Staatlichen Förderungen! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Labor {STRING} erfährt unglaubliches Glück; mehrere Wissenschaftler in Catgirls verwandelt! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Labor {STRING} erhält plötzlich riesige Summen an Förderung durch Militär! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Labor {STRING} CRISPRt Wissenschaftler um besser wissenzuschafteln! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Labor {STRING} klont seine besten Wissenschaftler! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Labor {STRING} trifft schwerer Schlag; mehrere Wissenschaftler in Catgirls verwandelt! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Labor {STRING} kreiert Supervirus „aus Spaß“, verliert sofort Kontrolle darüber! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Labor {STRING} inmitten mysteriöser Umstände evakuiert! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Labor {STRING} erzwungen Anzahl an menschlichen Testsubjekten zu reduzieren! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_DISTILLERY                                :{G=w}Distillerie
+STR_INDUSTRY_STATION_DISTILLERY                             :Distillerie {STRING}
+STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} „angezapft“; Alkoholiker verzücken!
+STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}Distillerie {STRING} betroffen von Alkoholverbot; Bürgermeister meint „letztes Mal hat es ja gut funktioniert“! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Distillerie {STRING} zerschlägt örtliche AA-Gruppen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Distillerie {STRING} trifft Abkommen mit Schulmensen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Distillerie {STRING} ersetzt örtliche Krankenhäuser mit Gasthäuser; „Lieber Gast als Krank“! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Distillerie {STRING} verkauft Vodka als Desinfiktionsmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Distillerie {STRING} stellt Produktion auf Malzbier um! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Distillerie {STRING} verliert Marktvorherrschaft wegen E-Zigarretten! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Distillerie {STRING} von wachsender Puritanergruppe vermieden! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Distillerie {STRING} „einfach nicht mehr so lässig wie's mal war“! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_PROCESSING_PLANT                          :{G=w}Ölmühle
+STR_INDUSTRY_STATION_PROCESSING_PLANT                       :Ölmühle {STRING}
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                       :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; ansässige „Ölis“ in Jubel!
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}Ölmühle {STRING} zermahlt sich in „extremen Einzelfall“ selbst! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Ölmühle {STRING} verwendet nun größere Mahlsteine! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Ölmühle {STRING} zermahlt Männer mit Mafia, macht massig Moneten! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Ölmühle {STRING} lobbies FDA to label processed foods as healthy! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Ölmühle {STRING} automatisiert Arbeitsplätze; entlässt hunderte! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Ölmühle {STRING} kauft Mühlstein aus Styropor! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Ölmühle {STRING} mahlt sich schlechte Zukunft aus! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Ölmühle {STRING} zermahlt Männer der Mühle; Mafia meint „Mahnung missverstanden“! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Ölmühle {STRING} leidet durch Studie welche Ölkonsum mit Krebs in verbindung setzt! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=w}Arzneimittelfabrik (Östrogen)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :Arzneimittelfabrik (Östrogen) {STRING}
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_PHARMACY_E                                :{G=w}Apotheke (Östrogen)
+STR_INDUSTRY_STATION_PHARMACY_E                             :Apotheke (Östrogen) {STRING}
+STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
+# https://xkcd.com/327/
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=w}Geschlechtsklinik (Östrogen)
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :Geschlechtsklinik (Östrogen) {STRING}
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :{G=w}Arzneimittelfabrik (Testosteron)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :Arzneimittelfabrik (Testosteron) {STRING}
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_PHARMACY_T                                :{G=w}Apotheke (Testosteron)
+STR_INDUSTRY_STATION_PHARMACY_T                             :Apotheke (Testosteron) {STRING}
+STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=w}Geschlechtsklinik (Testosteron)
+STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :Geschlechtsklinik (Testosteron) {STRING}
+STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
