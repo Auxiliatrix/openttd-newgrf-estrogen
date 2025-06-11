@@ -32,7 +32,7 @@ While this mod is still currently a work in progress, the gameplay is more or le
 As such, you can now search for, download, and sync this mod as a NewGRF in the OpenTTD client.<br>
 
 To compile the NewGRF yourself, follow [the installation tutorial](https://www.tt-wiki.net/wiki/NMLTutorial/Installation), and run the following command from the repository's root directory:<br>
-`nmlc --grf mygrf.grf mygrf.nml`
+`nmlc --grf openhrt.grf openhrt.nml`
 
 ## Game Mechanics
 

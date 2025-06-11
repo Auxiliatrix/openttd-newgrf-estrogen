@@ -263,7 +263,7 @@ item (FEAT_CARGOS, item_engineering_supplies) {
         cargo_label: "ENSP";
         station_list_colour: 146;
         cargo_payment_list_colour: 146;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_ENGINEERING_SUPPLIES);
         cargo_classes: bitmask(CC_EXPRESS,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
@@ -286,7 +286,7 @@ item (FEAT_CARGOS, item_fertilizer) {
         unit_name: string(STR_CARGO_SINGULAR_FERTILIZER);
         type_abbreviation: string(STR_CARGO_ABBREV_FERTILIZER);
         cargo_label: "FERT";
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_FERTILIZER);
         cargo_classes: bitmask(CC_BULK,CC_PIECE_GOODS);
         penalty_lowerbound: 20;
@@ -311,7 +311,7 @@ item (FEAT_CARGOS, item_salt) {
         cargo_label: "SALT";
         station_list_colour: 48;
         cargo_payment_list_colour: 48;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SALT);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
@@ -336,7 +336,7 @@ item (FEAT_CARGOS, item_potash) {
         cargo_label: "POTA";
         station_list_colour: 13;
         cargo_payment_list_colour: 13;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_POTASH);
         cargo_classes: bitmask(CC_BULK,CC_COVERED);
         penalty_lowerbound: 30;
@@ -361,7 +361,7 @@ item (FEAT_CARGOS, item_sand) {
         cargo_label: "SAND";
         station_list_colour: 64;
         cargo_payment_list_colour: 64;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SAND);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 40;
@@ -386,7 +386,7 @@ item (FEAT_CARGOS, item_minerals) {
         cargo_label: "MNRL";
         station_list_colour: 41;
         cargo_payment_list_colour: 41;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_MINERALS);
         cargo_classes: bitmask(CC_BULK);
         penalty_lowerbound: 30;
@@ -411,7 +411,7 @@ item (FEAT_CARGOS, item_corn) {
         cargo_label: "MAIZ";
         station_list_colour: 66;
         cargo_payment_list_colour: 66;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_CORN);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 12;
@@ -436,7 +436,7 @@ item (FEAT_CARGOS, item_soy) {
         cargo_label: "BEAN";
         station_list_colour: 71;
         cargo_payment_list_colour: 71;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_SOY);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
@@ -461,7 +461,7 @@ item (FEAT_CARGOS, item_yam) {
         cargo_label: "TATO";
         station_list_colour: 75;
         cargo_payment_list_colour: 75;
-        units_of_cargo: string(TTD_STR_TONS);
+        units_of_cargo: TTD_STR_TONS;
         items_of_cargo: string(STR_CARGO_UNIT_YAM);
         cargo_classes: bitmask(CC_COVERED, CC_BULK);
         penalty_lowerbound: 8;
@@ -486,7 +486,7 @@ item (FEAT_CARGOS, item_vials) {
         cargo_label: "MNSP";
         station_list_colour: 135;
         cargo_payment_list_colour: 135;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_VIALS);
         cargo_classes: bitmask(CC_PIECE_GOODS);
         penalty_lowerbound: 16;
@@ -511,7 +511,7 @@ item (FEAT_CARGOS, item_chemicals) {
         cargo_label: "RFPR";
         station_list_colour: 185;
         cargo_payment_list_colour: 185;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_CHEMICALS);
         cargo_classes: bitmask(CC_LIQUID, CC_HAZARDOUS);
         penalty_lowerbound: 24;
@@ -536,7 +536,7 @@ item (FEAT_CARGOS, item_vegetable_oil) {
         cargo_label: "EOIL";
         station_list_colour: 206;
         cargo_payment_list_colour: 206;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_VEGETABLE_OIL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 8;
@@ -561,7 +561,7 @@ item (FEAT_CARGOS, item_alcohol) {
         cargo_label: "BEER";
         station_list_colour: 192;
         cargo_payment_list_colour: 192;
-        units_of_cargo: string(TTD_STR_LITERS);
+        units_of_cargo: TTD_STR_LITERS;
         items_of_cargo: string(STR_CARGO_UNIT_ALCOHOL);
         cargo_classes: bitmask(CC_LIQUID);
         penalty_lowerbound: 12;
@@ -586,7 +586,7 @@ item (FEAT_CARGOS, item_diosgenin) {
         cargo_label: "DIOS";
         station_list_colour: 133;
         cargo_payment_list_colour: 133;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_DIOSGENIN);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -611,7 +611,7 @@ item (FEAT_CARGOS, item_raw_estrone) {
         cargo_label: "RWES";
         station_list_colour: 152;
         cargo_payment_list_colour: 152;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_RAW_ESTRONE);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -636,7 +636,7 @@ item (FEAT_CARGOS, item_raw_testosterone) {
         cargo_label: "RWTS";
         station_list_colour: 103;
         cargo_payment_list_colour: 103;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_RAW_TESTOSTERONE);
         cargo_classes: bitmask(CC_REFRIGERATED, CC_BULK);
         penalty_lowerbound: 32;
@@ -661,7 +661,7 @@ item (FEAT_CARGOS, item_estrogen) {
         cargo_label: "ESTR";
         station_list_colour: 150;
         cargo_payment_list_colour: 150;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_ESTROGEN);
         cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
         penalty_lowerbound: 12;
@@ -687,7 +687,7 @@ item (FEAT_CARGOS, item_testosterone) {
         cargo_label: "TEST";
         station_list_colour: 101;
         cargo_payment_list_colour: 101;
-        units_of_cargo: string(TTD_STR_CRATES);
+        units_of_cargo: TTD_STR_CRATES;
         items_of_cargo: string(STR_CARGO_UNIT_TESTOSTERONE);
         cargo_classes: bitmask(CC_EXPRESS, CC_REFRIGERATED);
         penalty_lowerbound: 13;
@@ -2276,7 +2276,7 @@ switch(FEAT_INDUSTRIES, SELF, cargo_subtype_display_input, cargo_index, [
     load_perm_variable(28*(1+cargo_index))
 ]) {
     // 0x3800 clears extra information from cargo subtype
-    0: return (0x3800 + string(STR_EMPTY));
+    0: return 0x3800;
     return 0x3800 + string(STR_CARGO_SUPPLIED);
 }
 
@@ -2876,7 +2876,7 @@ item (FEAT_INDUSTRIES, industry_port) {
             produce_cargo("SALT", 0)
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PORT);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_PORT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A);
@@ -2947,7 +2947,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
             produce_cargo("POTA", 0)
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_QUARRY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A);
@@ -3017,7 +3017,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
             produce_cargo("MNRL", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_MINERAL_MINE);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_MINERAL_MINE);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A);
@@ -3087,7 +3087,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
             produce_cargo("MAIZ", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_CORN_FARM);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
         closure_msg: string(STR_INDUSTRY_CLOSURE_CORN_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A);
@@ -3157,7 +3157,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
             produce_cargo("BEAN", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_SOY_FARM);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
         closure_msg: string(STR_INDUSTRY_CLOSURE_SOY_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A);
@@ -3227,7 +3227,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
             produce_cargo("TATO", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_YAM_FARM);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
         closure_msg: string(STR_INDUSTRY_CLOSURE_YAM_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A);
@@ -3299,7 +3299,7 @@ item (FEAT_INDUSTRIES, industry_glassworks) {
             produce_cargo("GOOD", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_GLASSWORKS);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_GLASSWORKS);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A);
@@ -3374,7 +3374,7 @@ item (FEAT_INDUSTRIES, industry_chemical_plant) {
             produce_cargo("RFPR", 0)
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_CHEMICAL_PLANT);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A);
@@ -3443,7 +3443,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
             produce_cargo("EOIL", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A);
@@ -3585,7 +3585,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
             produce_cargo("DIOS", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
         closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A);
@@ -3656,10 +3656,10 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
             produce_cargo("RWES", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A);
         prob_in_game: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
@@ -3671,7 +3671,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D), transported_last_month_pct("RWES"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D), transported_last_month_pct("RWES"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_e;
@@ -3728,10 +3728,10 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
             produce_cargo("RWTS", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T);
-        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A);
-        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
+        prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A);
+        prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A);
         prob_in_game: 8;
         prob_map_gen: 10;
         fund_cost_multiplier: 100;
@@ -3743,7 +3743,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D), transported_last_month_pct("RWTS"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D), transported_last_month_pct("RWTS"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmaceutical_plant_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmaceutical_plant_t;
@@ -3802,8 +3802,8 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
             produce_cargo("ESTR", 0)
         ];
         spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_E);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_E);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        closure_msg: TTD_STR_NEWS_INDUSTRY_CLOSURE_GENERAL;
         prob_in_game: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
@@ -3815,7 +3815,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_e) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D), transported_last_month_pct("ESTR"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D), transported_last_month_pct("ESTR"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_e;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_e;
@@ -3874,8 +3874,8 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
             produce_cargo("TEST", 0)
         ];
         spec_flags: bitmask(IND_FLAG_BUILT_NEAR_TOWN);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACY_T);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACY_T);
+        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        closure_msg: TTD_STR_NEWS_INDUSTRY_CLOSURE_GENERAL;
         prob_in_game: 6;
         prob_map_gen: 9;
         fund_cost_multiplier: 100;
@@ -3887,7 +3887,7 @@ item (FEAT_INDUSTRIES, industry_pharmacy_t) {
     graphics {
         location_check: is_isolated(16);
         build_prod_change: initialize_industry;
-        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D), transported_last_month_pct("TEST"));
+        monthly_prod_change: check_seasonal_prod_update(string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C), string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C), string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D), transported_last_month_pct("TEST"));
         random_prod_change: CB_RESULT_IND_PROD_NO_CHANGE;
         produce_256_ticks: produce_256_ticks_pharmacy_t;
         produce_cargo_arrival: produce_cargo_arrival_pharmacy_t;
@@ -3921,8 +3921,8 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_e) {
             accept_cargo("ESTR"),
         ];
         spec_flags: bitmask(IND_FLAG_ONLY_IN_TOWNS);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_E);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
         prob_in_game: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;
@@ -3966,8 +3966,8 @@ item (FEAT_INDUSTRIES, industry_gender_clinic_t) {
             accept_cargo("TEST"),
         ];
         spec_flags: bitmask(IND_FLAG_ONLY_IN_TOWNS);
-        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC_T);
-        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T);
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_GENDER_CLINIC);
+        closure_msg: string(STR_INDUSTRY_CLOSURE_GENDER_CLINIC);
         prob_in_game: 4;
         prob_map_gen: 5;
         fund_cost_multiplier: 25;

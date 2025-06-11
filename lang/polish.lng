@@ -1,0 +1,584 @@
+##grflangid 0x30
+##plural 7
+##gender m f n
+##case d c b n m w
+
+# ----------------------------------------------------------------
+# Global
+# ----------------------------------------------------------------
+
+STR_GRF_NAME                                                :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                         :Zestaw zmienionych przedsiębiorstw, który emuluje prawdziwą logistykę produkcji HRT. Stworzone przez autystyczne transfemki dla autystycznych transfemek.
+
+STR_PARAM_NAME_HORMONE                                      :Hormon
+STR_PARAM_DESC_HORMONE                                      :Hormon, w który można zamienić diosgeninę w zakładzie farmaceutycznym.{}Wybranie obu może skutkować w niezbilansowanej rozgrywce.
+
+STR_PARAM_VALUE_HORMONE_ESTROGEN                            :Estrogen
+STR_PARAM_VALUE_HORMONE_TESTOSTERONE                        :Testosteron
+STR_PARAM_VALUE_HORMONE_BOTH                                :Oba
+
+STR_PARAM_NAME_INDUSTRY_DECAY                               :Podupadanie przedsiębiorstw
+STR_PARAM_DESC_INDUSTRY_DECAY                               :Czy nietknięte przedsiębiorstwa mają upadać poniżej domyślnego poziomu produkcji.
+
+STR_PARAM_NAME_INDUSTRY_GROWTH                              :Rozwój przedsiębiorstw
+STR_PARAM_DESC_INDUSTRY_GROWTH                              :Czy zadbane przedsiębiorstwa mają rosnąć powyżej domyślnego poziomu produkcji.
+
+STR_PARAM_NAME_INDUSTRY_CLOSE                               :Zamykanie przedsiębiorstw
+STR_PARAM_DESC_INDUSTRY_CLOSE                               :Czy podupadłe przedsiębiorstwa mogą się zamknąć.
+
+STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Początkowy poziom produkcji przedsiębiorstw 
+STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Poziom, z jakim produkujące przedsiębiorstwa powinny zaczynać.
+
+# ----------------------------------------------------------------
+# Cargos
+# ----------------------------------------------------------------
+
+STR_CARGO_SUPPLIED                                          :{BLACK} (dostarczono)
+
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES                       :Zaopatrzenie techniczne
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.d                     :zaopatrzenia technicznego
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.c                     :zaopatrzeniu technicznemu
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.b                     :zaopatrzenie techniczne
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.n                     :zaopatrzeniem technicznym
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.m                     :zaopatrzeniu technicznym
+STR_CARGO_PLURAL_ENGINEERING_SUPPLIES.w                     :zaopatrzenie techniczne
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES                     :{G=n}Zaopatrzenie techniczne
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.d                   :zaopatrzenia technicznego
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.c                   :zaopatrzeniu technicznemu
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.b                   :zaopatrzenie techniczne
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.n                   :zaopatrzeniem technicznym
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.m                   :zaopatrzeniu technicznym
+STR_CARGO_SINGULAR_ENGINEERING_SUPPLIES.w                   :zaopatrzenie techniczne
+STR_CARGO_ABBREV_ENGINEERING_SUPPLIES                       :{TINYFONT}ZT
+STR_CARGO_LABEL_ENGINEERING_SUPPLIES                        :ZTCH
+STR_CARGO_UNIT_ENGINEERING_SUPPLIES                         :{COMMA} skrzy{P nia nie ń} zaopatrzenia technicznego
+
+STR_CARGO_PLURAL_FERTILIZER                                 :Nawóz
+STR_CARGO_PLURAL_FERTILIZER.d                               :nawozu
+STR_CARGO_PLURAL_FERTILIZER.c                               :nawozowi
+STR_CARGO_PLURAL_FERTILIZER.b                               :nawóz
+STR_CARGO_PLURAL_FERTILIZER.n                               :nawozem
+STR_CARGO_PLURAL_FERTILIZER.m                               :nawozie
+STR_CARGO_PLURAL_FERTILIZER.w                               :nawozie
+STR_CARGO_SINGULAR_FERTILIZER                               :{G=m}Nawóz
+STR_CARGO_SINGULAR_FERTILIZER.d                             :nawozu
+STR_CARGO_SINGULAR_FERTILIZER.c                             :nawozowi
+STR_CARGO_SINGULAR_FERTILIZER.b                             :nawóz
+STR_CARGO_SINGULAR_FERTILIZER.n                             :nawozem
+STR_CARGO_SINGULAR_FERTILIZER.m                             :nawozie
+STR_CARGO_SINGULAR_FERTILIZER.w                             :nawozie
+STR_CARGO_ABBREV_FERTILIZER                                 :{TINYFONT}NW
+STR_CARGO_LABEL_FERTILIZER                                  :NAWZ
+STR_CARGO_UNIT_FERTILIZER                                   :{WEIGHT} nawozu
+
+STR_CARGO_PLURAL_SALT                                       :Sól
+STR_CARGO_PLURAL_SALT.d                                     :soli
+STR_CARGO_PLURAL_SALT.c                                     :soli
+STR_CARGO_PLURAL_SALT.b                                     :sól
+STR_CARGO_PLURAL_SALT.n                                     :solą
+STR_CARGO_PLURAL_SALT.m                                     :soli
+STR_CARGO_PLURAL_SALT.w                                     :soli
+STR_CARGO_SINGULAR_SALT                                     :{G=f}Sól
+STR_CARGO_SINGULAR_SALT.d                                   :soli
+STR_CARGO_SINGULAR_SALT.c                                   :soli
+STR_CARGO_SINGULAR_SALT.b                                   :sól
+STR_CARGO_SINGULAR_SALT.n                                   :solą
+STR_CARGO_SINGULAR_SALT.m                                   :soli
+STR_CARGO_SINGULAR_SALT.w                                   :soli
+STR_CARGO_ABBREV_SALT                                       :{TINYFONT}SL
+STR_CARGO_LABEL_SALT                                        :SÓL
+STR_CARGO_UNIT_SALT                                         :{WEIGHT} soli
+
+STR_CARGO_PLURAL_POTASH                                     :Potaż
+STR_CARGO_PLURAL_POTASH.d                                   :potażu
+STR_CARGO_PLURAL_POTASH.c                                   :potażowi
+STR_CARGO_PLURAL_POTASH.b                                   :potaż
+STR_CARGO_PLURAL_POTASH.n                                   :potażem
+STR_CARGO_PLURAL_POTASH.m                                   :potażie
+STR_CARGO_PLURAL_POTASH.w                                   :potażie
+STR_CARGO_SINGULAR_POTASH                                   :{G=m}Potaż
+STR_CARGO_SINGULAR_POTASH.d                                 :potażu
+STR_CARGO_SINGULAR_POTASH.c                                 :potażowi
+STR_CARGO_SINGULAR_POTASH.b                                 :potaż
+STR_CARGO_SINGULAR_POTASH.n                                 :potażem
+STR_CARGO_SINGULAR_POTASH.m                                 :potażie
+STR_CARGO_SINGULAR_POTASH.w                                 :potażie
+STR_CARGO_ABBREV_POTASH                                     :{TINYFONT}PŻ
+STR_CARGO_LABEL_POTASH                                      :PTAŻ
+STR_CARGO_UNIT_POTASH                                       :{WEIGHT} potażu
+
+STR_CARGO_PLURAL_SAND                                       :Piasek
+STR_CARGO_PLURAL_SAND.d                                     :piasku
+STR_CARGO_PLURAL_SAND.c                                     :piaskowi
+STR_CARGO_PLURAL_SAND.b                                     :piasek
+STR_CARGO_PLURAL_SAND.n                                     :piaskiem
+STR_CARGO_PLURAL_SAND.m                                     :piasku
+STR_CARGO_PLURAL_SAND.w                                     :piasku
+STR_CARGO_SINGULAR_SAND                                     :{G=m}Piasek
+STR_CARGO_SINGULAR_SAND.d                                   :piasku
+STR_CARGO_SINGULAR_SAND.c                                   :piaskowi
+STR_CARGO_SINGULAR_SAND.b                                   :piasek
+STR_CARGO_SINGULAR_SAND.n                                   :piaskiem
+STR_CARGO_SINGULAR_SAND.m                                   :piasku
+STR_CARGO_SINGULAR_SAND.w                                   :piasku
+STR_CARGO_ABBREV_SAND                                       :{TINYFONT}PK
+STR_CARGO_LABEL_SAND                                        :PSEK
+STR_CARGO_UNIT_SAND                                         :{WEIGHT} piasku
+
+STR_CARGO_PLURAL_MINERALS                                   :Minerały
+STR_CARGO_PLURAL_MINERALS.d                                 :minerałów
+STR_CARGO_PLURAL_MINERALS.c                                 :minerałom
+STR_CARGO_PLURAL_MINERALS.b                                 :minerały
+STR_CARGO_PLURAL_MINERALS.n                                 :minerałami
+STR_CARGO_PLURAL_MINERALS.m                                 :minerałach
+STR_CARGO_PLURAL_MINERALS.w                                 :minerały
+STR_CARGO_SINGULAR_MINERALS                                 :{G=m}Minerał
+STR_CARGO_SINGULAR_MINERALS.d                               :minerału
+STR_CARGO_SINGULAR_MINERALS.c                               :minerałowi
+STR_CARGO_SINGULAR_MINERALS.b                               :minerał
+STR_CARGO_SINGULAR_MINERALS.n                               :minerałem
+STR_CARGO_SINGULAR_MINERALS.m                               :minerale
+STR_CARGO_SINGULAR_MINERALS.w                               :minerale
+STR_CARGO_ABBREV_MINERALS                                   :{TINYFONT}MI
+STR_CARGO_LABEL_MINERALS                                    :MNRŁ
+STR_CARGO_UNIT_MINERALS                                     :{WEIGHT} minerałów
+
+STR_CARGO_PLURAL_CORN                                       :Kukurydza
+STR_CARGO_PLURAL_CORN.d                                     :kukurydzy
+STR_CARGO_PLURAL_CORN.c                                     :kukurydzy
+STR_CARGO_PLURAL_CORN.b                                     :kukurydzę
+STR_CARGO_PLURAL_CORN.n                                     :kukurydzą
+STR_CARGO_PLURAL_CORN.m                                     :kukurydzy
+STR_CARGO_PLURAL_CORN.w                                     :kukurydzo
+STR_CARGO_SINGULAR_CORN                                     :{G=f}Kukurydza
+STR_CARGO_SINGULAR_CORN.d                                   :kukurydzy
+STR_CARGO_SINGULAR_CORN.c                                   :kukurydzy
+STR_CARGO_SINGULAR_CORN.b                                   :kukurydzę
+STR_CARGO_SINGULAR_CORN.n                                   :kukurydzą
+STR_CARGO_SINGULAR_CORN.m                                   :kukurydzy
+STR_CARGO_SINGULAR_CORN.w                                   :kukurydzo
+STR_CARGO_ABBREV_CORN                                       :{TINYFONT}KU
+STR_CARGO_LABEL_CORN                                        :KUKU
+STR_CARGO_UNIT_CORN                                         :{WEIGHT} kukurydzy
+
+STR_CARGO_PLURAL_SOY                                        :Soja
+STR_CARGO_PLURAL_SOY.d                                      :soi
+STR_CARGO_PLURAL_SOY.c                                      :soi
+STR_CARGO_PLURAL_SOY.b                                      :soję
+STR_CARGO_PLURAL_SOY.n                                      :soją
+STR_CARGO_PLURAL_SOY.m                                      :soi
+STR_CARGO_PLURAL_SOY.w                                      :sojo
+STR_CARGO_SINGULAR_SOY                                      :{G=f}Soja
+STR_CARGO_SINGULAR_SOY.d                                    :soi
+STR_CARGO_SINGULAR_SOY.c                                    :soi
+STR_CARGO_SINGULAR_SOY.b                                    :soję
+STR_CARGO_SINGULAR_SOY.n                                    :soją
+STR_CARGO_SINGULAR_SOY.m                                    :soi
+STR_CARGO_SINGULAR_SOY.w                                    :sojo
+STR_CARGO_ABBREV_SOY                                        :{TINYFONT}SO
+STR_CARGO_LABEL_SOY                                         :SOJA
+STR_CARGO_UNIT_SOY                                          :{WEIGHT} soi
+
+STR_CARGO_PLURAL_YAM                                        :Jam
+STR_CARGO_PLURAL_YAM.d                                      :jamu
+STR_CARGO_PLURAL_YAM.c                                      :jamowi
+STR_CARGO_PLURAL_YAM.b                                      :jam
+STR_CARGO_PLURAL_YAM.n                                      :jamem
+STR_CARGO_PLURAL_YAM.m                                      :jamie
+STR_CARGO_PLURAL_YAM.w                                      :jamie
+STR_CARGO_SINGULAR_YAM                                      :{G=m}Jam
+STR_CARGO_SINGULAR_YAM.d                                    :jamu
+STR_CARGO_SINGULAR_YAM.c                                    :jamowi
+STR_CARGO_SINGULAR_YAM.b                                    :jam
+STR_CARGO_SINGULAR_YAM.n                                    :jamem
+STR_CARGO_SINGULAR_YAM.m                                    :jamie
+STR_CARGO_SINGULAR_YAM.w                                    :jamie
+STR_CARGO_ABBREV_YAM                                        :{TINYFONT}JA
+STR_CARGO_LABEL_YAM                                         :JAM
+STR_CARGO_UNIT_YAM                                          :{WEIGHT} jamu
+
+STR_CARGO_PLURAL_VIALS                                      :Fiolki
+STR_CARGO_PLURAL_VIALS.d                                    :fiolek
+STR_CARGO_PLURAL_VIALS.c                                    :fiolkom
+STR_CARGO_PLURAL_VIALS.b                                    :fiolki
+STR_CARGO_PLURAL_VIALS.n                                    :fiolkami
+STR_CARGO_PLURAL_VIALS.m                                    :fiolkach
+STR_CARGO_PLURAL_VIALS.w                                    :fiolki
+STR_CARGO_SINGULAR_VIALS                                    :{G=f}Fiolka
+STR_CARGO_SINGULAR_VIALS.d                                  :fiolki
+STR_CARGO_SINGULAR_VIALS.c                                  :fiolce
+STR_CARGO_SINGULAR_VIALS.b                                  :fiolkę
+STR_CARGO_SINGULAR_VIALS.n                                  :fiolką
+STR_CARGO_SINGULAR_VIALS.m                                  :fiolce
+STR_CARGO_SINGULAR_VIALS.w                                  :fiolko
+STR_CARGO_ABBREV_VIALS                                      :{TINYFONT}FI
+STR_CARGO_LABEL_VIALS                                       :FIOL
+STR_CARGO_UNIT_VIALS                                        :{COMMA} skrzy{P nia nie ń} fiolek
+
+STR_CARGO_PLURAL_CHEMICALS                                  :Chemikalia
+STR_CARGO_PLURAL_CHEMICALS.d                                :chemikaliów
+STR_CARGO_PLURAL_CHEMICALS.c                                :chemikaliom
+STR_CARGO_PLURAL_CHEMICALS.b                                :chemikalia
+STR_CARGO_PLURAL_CHEMICALS.n                                :chemikaliami
+STR_CARGO_PLURAL_CHEMICALS.m                                :chemikaliach
+STR_CARGO_PLURAL_CHEMICALS.w                                :chemikalia
+STR_CARGO_SINGULAR_CHEMICALS                                :Chemikalia
+STR_CARGO_SINGULAR_CHEMICALS.d                              :chemikaliów
+STR_CARGO_SINGULAR_CHEMICALS.c                              :chemikaliom
+STR_CARGO_SINGULAR_CHEMICALS.b                              :chemikalia
+STR_CARGO_SINGULAR_CHEMICALS.n                              :chemikaliami
+STR_CARGO_SINGULAR_CHEMICALS.m                              :chemikaliach
+STR_CARGO_SINGULAR_CHEMICALS.w                              :chemikalia
+STR_CARGO_ABBREV_CHEMICALS                                  :{TINYFONT}CH
+STR_CARGO_LABEL_CHEMICALS                                   :CHEM
+STR_CARGO_UNIT_CHEMICALS                                    :{VOLUME} chemikaliów
+
+STR_CARGO_PLURAL_VEGETABLE_OIL                              :Olej roślinny
+STR_CARGO_PLURAL_VEGETABLE_OIL.d                            :oleju roślinnego
+STR_CARGO_PLURAL_VEGETABLE_OIL.c                            :olejowi roślinnemu
+STR_CARGO_PLURAL_VEGETABLE_OIL.b                            :olej roślinny
+STR_CARGO_PLURAL_VEGETABLE_OIL.n                            :olejem roślinnym
+STR_CARGO_PLURAL_VEGETABLE_OIL.m                            :oleju roślinnym
+STR_CARGO_PLURAL_VEGETABLE_OIL.w                            :oleju roślinny
+STR_CARGO_SINGULAR_VEGETABLE_OIL                            :{G=m}Olej roślinny
+STR_CARGO_SINGULAR_VEGETABLE_OIL.d                          :oleju roślinnego
+STR_CARGO_SINGULAR_VEGETABLE_OIL.c                          :olejowi roślinnemu
+STR_CARGO_SINGULAR_VEGETABLE_OIL.b                          :olej roślinny
+STR_CARGO_SINGULAR_VEGETABLE_OIL.n                          :olejem roślinnym
+STR_CARGO_SINGULAR_VEGETABLE_OIL.m                          :oleju roślinnym
+STR_CARGO_SINGULAR_VEGETABLE_OIL.w                          :oleju roślinny
+STR_CARGO_ABBREV_VEGETABLE_OIL                              :{TINYFONT}OR
+STR_CARGO_LABEL_VEGETABLE_OIL                               :OROŚ
+STR_CARGO_UNIT_VEGETABLE_OIL                                :{VOLUME} oleju roślinnego
+
+STR_CARGO_PLURAL_ALCOHOL                                    :Alkohol
+STR_CARGO_PLURAL_ALCOHOL.d                                  :alkoholu
+STR_CARGO_PLURAL_ALCOHOL.c                                  :alkoholowi
+STR_CARGO_PLURAL_ALCOHOL.b                                  :alkohol
+STR_CARGO_PLURAL_ALCOHOL.n                                  :alkoholem
+STR_CARGO_PLURAL_ALCOHOL.m                                  :alkoholu
+STR_CARGO_PLURAL_ALCOHOL.w                                  :alkoholu
+STR_CARGO_SINGULAR_ALCOHOL                                  :{G=m}Alkohol
+STR_CARGO_SINGULAR_ALCOHOL.d                                :alkoholu
+STR_CARGO_SINGULAR_ALCOHOL.c                                :alkoholowi
+STR_CARGO_SINGULAR_ALCOHOL.b                                :alkohol
+STR_CARGO_SINGULAR_ALCOHOL.n                                :alkoholem
+STR_CARGO_SINGULAR_ALCOHOL.m                                :alkoholu
+STR_CARGO_SINGULAR_ALCOHOL.w                                :alkoholu
+STR_CARGO_ABBREV_ALCOHOL                                    :{TINYFONT}AL
+STR_CARGO_LABEL_ALCOHOL                                     :ALKO
+STR_CARGO_UNIT_ALCOHOL                                      :{VOLUME} alkoholu
+
+STR_CARGO_PLURAL_DIOSGENIN                                  :Diosgenina
+STR_CARGO_PLURAL_DIOSGENIN.d                                :diosgeniny
+STR_CARGO_PLURAL_DIOSGENIN.c                                :diosgeninie
+STR_CARGO_PLURAL_DIOSGENIN.b                                :diosgeninę
+STR_CARGO_PLURAL_DIOSGENIN.n                                :diosgeniną
+STR_CARGO_PLURAL_DIOSGENIN.m                                :diosgeninie
+STR_CARGO_PLURAL_DIOSGENIN.w                                :diosgenino
+STR_CARGO_SINGULAR_DIOSGENIN                                :{G=f}Diosgenina
+STR_CARGO_SINGULAR_DIOSGENIN.d                              :diosgeniny
+STR_CARGO_SINGULAR_DIOSGENIN.c                              :diosgeninie
+STR_CARGO_SINGULAR_DIOSGENIN.b                              :diosgeninę
+STR_CARGO_SINGULAR_DIOSGENIN.n                              :diosgeniną
+STR_CARGO_SINGULAR_DIOSGENIN.m                              :diosgeniny
+STR_CARGO_SINGULAR_DIOSGENIN.w                              :diosgeninie
+STR_CARGO_ABBREV_DIOSGENIN                                  :{TINYFONT}DI
+STR_CARGO_LABEL_DIOSGENIN                                   :DIOS
+STR_CARGO_UNIT_DIOSGENIN                                    :{COMMA} skrzy{P nia nie ń} diosgeniny
+
+STR_CARGO_PLURAL_RAW_ESTRONE                                :Surowy estron
+STR_CARGO_PLURAL_RAW_ESTRONE.d                              :surowego estronu
+STR_CARGO_PLURAL_RAW_ESTRONE.c                              :surowemu estronowi
+STR_CARGO_PLURAL_RAW_ESTRONE.b                              :surowy estron
+STR_CARGO_PLURAL_RAW_ESTRONE.n                              :surowym estronem
+STR_CARGO_PLURAL_RAW_ESTRONE.m                              :surowym estronie
+STR_CARGO_PLURAL_RAW_ESTRONE.w                              :surowy estronie
+STR_CARGO_SINGULAR_RAW_ESTRONE                              :{G=m}Surowy estron
+STR_CARGO_SINGULAR_RAW_ESTRONE.d                            :surowego estronu
+STR_CARGO_SINGULAR_RAW_ESTRONE.c                            :surowemu estronowi
+STR_CARGO_SINGULAR_RAW_ESTRONE.b                            :surowy estron
+STR_CARGO_SINGULAR_RAW_ESTRONE.n                            :surowym estronem
+STR_CARGO_SINGULAR_RAW_ESTRONE.m                            :surowym estronie
+STR_CARGO_SINGULAR_RAW_ESTRONE.w                            :surowy estronie
+STR_CARGO_ABBREV_RAW_ESTRONE                                :{TINYFONT}SE
+STR_CARGO_LABEL_RAW_ESTRONE                                 :SRES
+STR_CARGO_UNIT_RAW_ESTRONE                                  :{VOLUME} surowego estronu
+
+STR_CARGO_PLURAL_RAW_TESTOSTERONE                           :Surowy testosteron
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.d                         :surowego testosteronu
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.c                         :surowemu testosteronowi
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.b                         :surowy testosteron
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.n                         :surowym testosteronem
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.m                         :surowym testosteronie
+STR_CARGO_PLURAL_RAW_TESTOSTERONE.w                         :surowy testosteronie
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE                         :{G=m}Surowy testosteron
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.d                       :surowego testosteronu
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.c                       :surowemu testosteronowi
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.b                       :surowy testosteron
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.n                       :surowym testosteronem
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.m                       :surowym testosteronie
+STR_CARGO_SINGULAR_RAW_TESTOSTERONE.w                       :surowy testosteronie
+STR_CARGO_ABBREV_RAW_TESTOSTERONE                           :{TINYFONT}ST
+STR_CARGO_LABEL_RAW_TESTOSTERONE                            :SRTS
+STR_CARGO_UNIT_RAW_TESTOSTERONE                             :{COMMA} skrzy{P nia nie ń} surowego testosteronu
+
+STR_CARGO_PLURAL_ESTROGEN                                   :Estrogen
+STR_CARGO_PLURAL_ESTROGEN.d                                 :estrogenu
+STR_CARGO_PLURAL_ESTROGEN.c                                 :estrogenowi
+STR_CARGO_PLURAL_ESTROGEN.b                                 :estrogen
+STR_CARGO_PLURAL_ESTROGEN.n                                 :estrogenem
+STR_CARGO_PLURAL_ESTROGEN.m                                 :estrogenie
+STR_CARGO_PLURAL_ESTROGEN.w                                 :estrogenie
+STR_CARGO_SINGULAR_ESTROGEN                                 :{G=m}Estrogen
+STR_CARGO_SINGULAR_ESTROGEN.d                               :estrogenu
+STR_CARGO_SINGULAR_ESTROGEN.c                               :estrogenowi
+STR_CARGO_SINGULAR_ESTROGEN.b                               :estrogen
+STR_CARGO_SINGULAR_ESTROGEN.n                               :estrogenem
+STR_CARGO_SINGULAR_ESTROGEN.m                               :estrogenie
+STR_CARGO_SINGULAR_ESTROGEN.w                               :estrogenie
+STR_CARGO_ABBREV_ESTROGEN                                   :{TINYFONT}ES
+STR_CARGO_LABEL_ESTROGEN                                    :ESTR
+STR_CARGO_UNIT_ESTROGEN                                     :{COMMA} skrzy{P nia nie ń} estrogenu
+
+STR_CARGO_PLURAL_TESTOSTERONE                               :Testosteron
+STR_CARGO_PLURAL_TESTOSTERONE.d                             :testosteronu
+STR_CARGO_PLURAL_TESTOSTERONE.c                             :testosteronowi
+STR_CARGO_PLURAL_TESTOSTERONE.b                             :testosteron
+STR_CARGO_PLURAL_TESTOSTERONE.n                             :testosteronem
+STR_CARGO_PLURAL_TESTOSTERONE.m                             :testosteronie
+STR_CARGO_PLURAL_TESTOSTERONE.w                             :testosteronie
+STR_CARGO_SINGULAR_TESTOSTERONE                             :{G=m}Testosteron
+STR_CARGO_SINGULAR_TESTOSTERONE.d                           :testosteronu
+STR_CARGO_SINGULAR_TESTOSTERONE.c                           :testosteronowi
+STR_CARGO_SINGULAR_TESTOSTERONE.b                           :testosteron
+STR_CARGO_SINGULAR_TESTOSTERONE.n                           :testosteronem
+STR_CARGO_SINGULAR_TESTOSTERONE.m                           :testosteronie
+STR_CARGO_SINGULAR_TESTOSTERONE.w                           :testosteronie
+STR_CARGO_ABBREV_TESTOSTERONE                               :{TINYFONT}TE
+STR_CARGO_LABEL_TESTOSTERONE                                :TEST
+STR_CARGO_UNIT_TESTOSTERONE                                 :{COMMA} skrzy{P nia nie ń} testosteronu
+
+# ----------------------------------------------------------------
+# Industries
+# ----------------------------------------------------------------
+
+STR_INDUSTRY_POWER_MINIMUM                                  :minimalny
+STR_INDUSTRY_POWER_LOW                                      :niski
+STR_INDUSTRY_POWER_DEFAULT                                  :domyślny
+STR_INDUSTRY_POWER_HIGH                                     :wysoki
+STR_INDUSTRY_POWER_VERY_HIGH                                :bardzo wysoki
+STR_INDUSTRY_POWER_MAXIMUM                                  :maksymalny
+
+STR_INDUSTRY_RATIO_STATE_NORMAL                             :normalny
+STR_INDUSTRY_RATIO_STATE_ENHANCED                           :zwiększony
+STR_INDUSTRY_RATIO_STATE_GUNG_HO                            :niewiarygodny
+
+STR_INDUSTRY_LEVEL_STATE_GENERIC_GROWING                    :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {GREEN}dobrej {BLACK}obsługi: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_GENERIC_DECAYING                   :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {RED}złej {BLACK}obsługi: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_ENGS_GROWING                       :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {GREEN}dobrej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik wydobycia: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie zaopatrzenia technicznego każdego kwartału.{}{YELLOW}Zwiększony: {BLACK}20 skrzyń na kwartał{}{YELLOW}Niewiarygodny: {BLACK}80 skrzyń na kwartał{}{}Skrzynie dostarczone w zeszłym miesiącu: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_ENGS_DECAYING                      :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {RED}złej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik wydobycia: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie zaopatrzenia technicznego każdego kwartału.{}{YELLOW}Zwiększony: {BLACK}20 skrzyń na kwartał{}{YELLOW}Niewiarygodny: {BLACK}80 skrzyń na kwartał{}{}Skrzynie dostarczone w ostatnim miesiącu: {YELLOW}{COMMA}
+
+STR_INDUSTRY_LEVEL_STATE_FERT_GROWING                       :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {GREEN}dobrej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik wydobycia: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie nawozu każdego kwartału.{}{YELLOW}Zwiększony: {BLACK}20 skrzyń na kwartał{}{YELLOW}Niewiarygodny: {BLACK}80 skrzyń na kwartał{}{}Skrzynie dostarczone w ostatnim miesiącu: {YELLOW}{COMMA}
+STR_INDUSTRY_LEVEL_STATE_FERT_DECAYING                      :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {RED}złej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik wydobycia: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie nawozu każdego kwartału.{}{YELLOW}Zwiększony: {BLACK}20 skrzyń na kwartał{}{YELLOW}Niewiarygodny: {BLACK}80 skrzyń na kwartał{}{}Skrzynie dostarczone w ostatnim miesiącu: {YELLOW}{COMMA}
+
+# towary is Polish for the TTD's goods type, but it's hard to find a synonym here
+STR_INDUSTRY_LEVEL_STATE_COMBO_GROWING                      :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {GREEN}dobrej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik konwersji: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie wielu rodzajów towarów każdego kwartału.
+STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Poziom produkcji: {YELLOW}{STRING}{}{WHITE}Zmienia się z liczbą kwartałów dobrej/złej obsługi z rzędu.{}{}{BLACK}Kwartały {RED}złej {BLACK}obsługi: {YELLOW}{COMMA}{}{}{BLACK}Współczynnik konwersji: {YELLOW}{STRING}{}{WHITE}Może być zwiększony przez dostarczanie wielu rodzajów towarów każdego kwartału.
+
+STR_INDUSTRY_NAME_PORT                                      :{G=m}Port
+STR_INDUSTRY_NAME_PORT.d                                    :portu
+STR_INDUSTRY_STATION_PORT                                   :{STRING} Port
+STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}Port {STRING} zatopiony przez rosnący poziom mórz! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}Port {STRING} zwiększa import! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}Port {STRING} zwiększa dźwigi, by przenosić większe skrzynie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_C                     :{BIGFONT}{BLACK}Port {STRING} zmniejsza dźwigi, by szybciej przenosić skrzynie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PORT_D                     :{BIGFONT}{BLACK}Port {STRING} nie zmienia absolutnie niczego, oszczędzając na koszcie dźwigów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_A                     :{BIGFONT}{BLACK}Port {STRING} dotknięty cłami! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_B                     :{BIGFONT}{BLACK}Port {STRING} zdziesiątkował populację ryb przez nadmierny połów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_C                     :{BIGFONT}{BLACK}Port {STRING} dotknięty przez braki w łańcuchu dostaw! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                     :{BIGFONT}{BLACK}Port {STRING} produkuje kontenery w nowym i ekscytującym kształcie! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_QUARRY                                    :{G=m}Kamieniołom
+STR_INDUSTRY_NAME_QUARRY.d                                  :kamieniołomu
+STR_INDUSTRY_STATION_QUARRY                                 :{STRING} Kamieniołom
+STR_INDUSTRY_CLOSURE_QUARRY                                 :{BIGFONT}{BLACK}Kamieniołom {STRING} się wyczerpał! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                   :{BIGFONT}{BLACK}Kamieniołom {STRING} otwiera nielegalne miasteczko firmowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                   :{BIGFONT}{BLACK}Kamieniołom {STRING} zwiększył się przez pomocne trzęsienie ziemi! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_C                   :{BIGFONT}{BLACK}Kamieniołom {STRING} po prostu kopie głębiej! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_D                   :{BIGFONT}{BLACK}Kamieniołom {STRING} rozwiązuje związki zawodowe! (produkcja zwiększona)
+# changed a pun                                                                           
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A                   :{BIGFONT}{BLACK}Kamieniołom {STRING} zatrudnia piłkarzy zamiast kopaczy! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_B                   :{BIGFONT}{BLACK}Kamieniołom {STRING} trafia na żyłę bezużytecznych „lśniących kamieni” zamiast w miarę wartościowego piasku! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_C                   :{BIGFONT}{BLACK}Kamieniołomowi {STRING} kończą się skały do kopania! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                   :{BIGFONT}{BLACK}Kamieniołom {STRING} kopie w złą stronę; tworzy wieżowiec! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_MINERAL_MINE                              :{G=f}Kopalnia minerałów
+STR_INDUSTRY_NAME_MINERAL_MINE.d                            :kopalni minerałów
+STR_INDUSTRY_STATION_MINERAL_MINE                           :{STRING} Kopalnia minerałów
+STR_INDUSTRY_CLOSURE_MINERAL_MINE                           :{BIGFONT}{BLACK}Kopalnia {STRING} się wyczerpała! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Kopalnia {STRING} pragnie tych minerałów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Kopalnia {STRING} poszerza definicję „minerałów”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Kopalnia {STRING} poszerza definicję „kopalni”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Kopalnia {STRING} przekopuje się do sąsiedztwa; miasta wywłaszczone! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A             :{BIGFONT}{BLACK}Kopalnia {STRING} już nie pragnie tych minerałów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Kopalnia {STRING} zaczyna oferować pracownikom rekompensaty! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Kopalnia {STRING} trafia na olej; jest zmuszona wydobywać kolejną bezużyteczną substancję! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Kopalnia {STRING} traci wielu pracowników w wypadku w szybie; zmuszona wypłacać ubezpieczenia na życie! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_CORN_FARM                                 :{G=f}Farma kukurydzy
+STR_INDUSTRY_NAME_CORN_FARM.d                               :farmy kukurydzy
+STR_INDUSTRY_STATION_CORN_FARM                              :{STRING} Farma kukurydzy
+STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}Farma kukurydzy {STRING} doprowadzona do bankructwa przez pozwy Monsanto!
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_C                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Farma kukurydzy {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_SOY_FARM                                  :{G=f}Farma soi
+STR_INDUSTRY_NAME_SOY_FARM.d                                :farmy soi
+STR_INDUSTRY_STATION_SOY_FARM                               :{STRING} Farma soi
+STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}Farma soi {STRING} uległa zmianie klimatu! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Farma soi {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Farma soi {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Farma soi {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Farma soi {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Farma soi {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Farma soi {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_C                 :{BIGFONT}{BLACK}Farma soi {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Farma soi {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_YAM_FARM                                  :{G=f}Farma jamu
+STR_INDUSTRY_NAME_YAM_FARM.d                                :farmy jamu
+STR_INDUSTRY_STATION_YAM_FARM                               :{STRING} Farma jamu
+STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}Farma jamu {STRING} traci prawa do naprawy swoich maszyn rolniczych! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Farma jamu {STRING} obcina zarobki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Farma jamu {STRING} przekuwa miecze na lemiesze! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Farma jamu {STRING} sprawia, że szkodniki wyginęły; lokalny ekosystem w rozsypce! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Farma jamu {STRING} genetycznie modyfikuje rolników! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Farma jamu {STRING} zapomina o płodozmianie! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Farma jamu {STRING} wkurza lokalne bóstwo, które przez to ściągnęło szarańczę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_C                 :{BIGFONT}{BLACK}Farma jamu {STRING} dotknięta „sytuacją z Folwarku zwierzęcego”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Farma jamu {STRING} odczuwa konsekwencje uprawiania monokultury! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_GLASSWORKS                                :{G=f}Huta szkła
+STR_INDUSTRY_NAME_GLASSWORKS.d                              :huty szkła
+STR_INDUSTRY_STATION_GLASSWORKS                             :{STRING} Huta szkła
+STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}Huta szkła {STRING} zbita przez pobliską operę! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Huta szkła {STRING} zaczyna używać 50% mniej szkła w szkle! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Huta szkła {STRING} nazywa więcej produktów „rzemieślniczymi”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Huta szkła {STRING} przekonuje udziałowców, że puste powietrze „to po prostu bardzo przezroczyste szkło”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Huta szkła {STRING} świeci laserami w oczy ludziom; zapotrzebowanie na okulary szybuje! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Huta szkła {STRING} zwalnia inspektorów bezpieczeństwa! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Huta szkła {STRING} tworzy tak przezroczyste szkło, że nie mogą go znaleźć! (produkcja zmniejszona)
+# the English string accidentally made a reference to Polish literature (Przedwiośnie) and the stone part doesn't make sense in that context
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_C               :{BIGFONT}{BLACK}Huta szkła {STRING} tworzy szklane domy! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Huta szkła {STRING} w rozsypce, bo pobliskie miasto uznaje, że światło słoneczne jest przereklamowane! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=m}Zakład chemiczny
+STR_INDUSTRY_NAME_CHEMICAL_PLANT.d                          :zakładu chemicznego
+STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :{STRING} Zakład chemiczny
+STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}Katastrofalne stopienie reaktora w zakładzie chemicznym {STRING}! (zamknięty)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} odkrywa nowy pierwiastek! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zatrudnia kogoś z faktycznym tytułem z chemii! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} wynalazł kolejny sztuczny smak! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zaczyna sprzedaż wody; „technicznie rzecz biorąc, substancja”! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Czołowy naukowiec zakładu chemicznego {STRING} wpada w szał! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} zamienia złoto w ołów; marnuje miliony w grantach! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_C           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} znowu próbuje alchemii - „może tym razem zadziała”! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D           :{BIGFONT}{BLACK}Zakład chemiczny {STRING} nieskutecznie próbuje znaleźć zastosowanie dla oleju! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_BIOLAB                                    :{G=n}Laboratorium biologiczne
+STR_INDUSTRY_NAME_BIOLAB.d                                  :laboratorium biologicznego
+STR_INDUSTRY_STATION_BIOLAB                                 :{STRING} Laboratorium biologiczne
+STR_INDUSTRY_CLOSURE_BIOLAB                                 :{BIGFONT}{BLACK}Laboratorium {STRING} traci wszelkie finansowanie z rządu! (zamknięte)
+# me :3                                                                                   
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Laboratorium {STRING} przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Laboratorium {STRING} nagle dostaje potężne finansowanie wojskowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Laboratorium {STRING} poddaje naukowców w działanie CRISPR, by byli lepsi w badaniach! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Laboratorium {STRING} tworzy klony czołowych naukowców! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A                   :{BIGFONT}{BLACK}Laboratorium {STRING} przypadkowo zamienia wielu badaczy w kotodziewczynki! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_B                   :{BIGFONT}{BLACK}Laboratorium {STRING} tworzy superwirusa „dla zabawy”; natychmiast wydostaje się na świat! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_C                   :{BIGFONT}{BLACK}Laboratorium {STRING} ewakuowane w tajemniczych okolicznościach! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_D                   :{BIGFONT}{BLACK}Laboratorium {STRING} zmuszone do zmniejszenia liczby ludzkich obiektów doświadczalnych! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_DISTILLERY                                :{G=f}Gorzelnia
+STR_INDUSTRY_NAME_DISTILLERY.d                              :gorzelni
+STR_INDUSTRY_STATION_DISTILLERY                             :{STRING} Gorzelnia
+STR_INDUSTRY_PLANTED_DISTILLERY                             :{BIGFONT}{BLACK}{0:STRING} otwiera się w pobliżu {1:STRING}; alkoholicy świętują!
+STR_INDUSTRY_CLOSURE_DISTILLERY                             :{BIGFONT}{BLACK}Lokalny rząd {STRING} gorzelni przywraca prohibicję! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Gorzelnia {STRING} demontuje lokalne grupy AA! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Gorzelnia {STRING} rozpoczyna ekspansję w szkolnych stołówkach! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Gorzelnia {STRING} zamienia lokalne szpitale w bary! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Gorzelnia {STRING} opakowuje wódkę jako środek do dezynfekcji! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_A               :{BIGFONT}{BLACK}Gorzelnia {STRING} zwiększa produkcję piw IPA! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_B               :{BIGFONT}{BLACK}Gorzelnia {STRING} traci udziały w rynku na rzecz e-papierosów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_C               :{BIGFONT}{BLACK}Gorzelnia {STRING} unikana przez lokalnych purystów! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D               :{BIGFONT}{BLACK}Gorzelnia {STRING} „nie jest tak fajna jak kiedyś”! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_PROCESSING_PLANT                          :{G=f}Przetwórnia
+STR_INDUSTRY_NAME_PROCESSING_PLANT.d                        :przetwórni
+STR_INDUSTRY_STATION_PROCESSING_PLANT                       :{STRING} Przetwórnia
+STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                       :{BIGFONT}{BLACK}Przetwórnia {STRING} przetwarza sama siebie w dziwacznym wypadku! (zamknięta)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Przetwórnia {STRING} zaczyna używać większych blenderów! (produkcja zwiększona)
+# this sucks, I copied the idea for decrease C from pt_BR xD                             
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Przetwórnia {STRING} przetwarza produkty przetwórcze, przetwarzając sprzecznie z protokołem! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Przetwórnia {STRING} lobbuje EMA, by oznaczać przetworzone jedzenie jako zdrowe! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Przetwórnia {STRING} automatyzuje pracę; zwalnia setki osób! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A         :{BIGFONT}{BLACK}Przetwórnia {STRING} zapomina naostrzyć blendery! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_B         :{BIGFONT}{BLACK}Przetwórnia {STRING} ma problem z przetworzeniem swojego istnienia! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_C         :{BIGFONT}{BLACK}Przetwórnia {STRING} zapomina, jak robić łamańce językowe dotyczące przetwarzania! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Przetwórnia {STRING} dotknięta nowymi badaniami łączącymi przetworzone jedzenie i raka! (produkcja zmniejszona)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=m}Zakład farmaceutyczny (estrogen)
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E.d                  :zakładu farmaceutycznego (estrogen)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :{STRING} Zakład farmaceutyczny (estrogen)
+
+STR_INDUSTRY_NAME_PHARMACY_E                                :{G=f}Apteka (estrogen)
+STR_INDUSTRY_NAME_PHARMACY_E.d                              :apteki (estrogen)
+STR_INDUSTRY_STATION_PHARMACY_E                             :{STRING} Apteka (estrogen)
+
+# not a thing in Poland, so everything will sound artificial here
+STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=f}Klinika płci (estrogen)
+STR_INDUSTRY_NAME_GENDER_CLINIC_E.d                         :kliniki płci (estrogen)
+STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :{STRING} Klinika płci (estrogen)
+
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :{G=m}Zakład farmaceutyczny (testosteron)
+STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T.d                  :zakładu farmaceutycznego (testosteron)
+STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :{STRING} Zakład farmaceutyczny (testosteron)
+
+STR_INDUSTRY_NAME_PHARMACY_T                                :{G=f}Apteka (testosteron)
+STR_INDUSTRY_NAME_PHARMACY_T.d                              :apteki (testosteron)
+STR_INDUSTRY_STATION_PHARMACY_T                             :{STRING} Apteka (testosteron)
+
+STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=f}Klinika płci (testosteron)
+STR_INDUSTRY_NAME_GENDER_CLINIC_T.d                         :kliniki płci (testosteron)
+STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :{STRING} Klinika płci (testosteron)
+
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zamknięty z powodu nieetycznych metod badawczych!
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} reklamuje tabletki z cukrem jako cudowne leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} wynalazł nowy lek do sprzedaży z 1000% marżą! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} wynalazł nową chorobę, na którą można sprzedać leki! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} rozpoczął nową epidemię opioidów! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Badania zakładu farmaceutycznego {STRING} zatrzymane przez prawa patentowe! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zmuszony do stosowania się do standardów EMA! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} poważnie rozważa leki homeopatyczne! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Zakład farmaceutyczny {STRING} zmuszony do zwiększenia produkcji „prawdziwych” leków! (produkcja zmniejszona)
+
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apteka {STRING} wystawia recepty na siebie! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apteka {STRING} zmniejsza dawki; przekonuje, że populacja jest po prostu bardziej chora! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apteka {STRING} przeprowadza badania, z których wynika, że masz kupować więcej leków! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Sprzedaż apteki {STRING} szybuje, bo w pobliskim mieście grasuje grypa! (produkcja zwiększona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Aptece {STRING} nie udaje się zalobbować wyższych kosztów medycznych! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apteka {STRING} traci recepty z powodu klienta Bobby Tables! (produkcja zmniejszona)
+# https://xkcd.com/327/
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apteka {STRING} traci miliony zysków, bo naukowcy znaleźli lek na śmiertelną chorobę! (produkcja zmniejszona)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apteka {STRING} posądzona za zaniedbania w pozwie zbiorowym! (produkcja zmniejszona)
+
+STR_INDUSTRY_PLANTED_GENDER_CLINIC                          :{BIGFONT}{BLACK}{0:STRING} magicznie pojawia się w pobliżu {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}Klinika płci {STRING} skończyła transować wszystkim płcie! (zamknięta)
