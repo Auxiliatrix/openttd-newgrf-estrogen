@@ -181,6 +181,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                   :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_QUARRY                                  :Pedreira
 STR_INDUSTRY_STATION_QUARRY                               :{STRING} Pedreira
+STR_INDUSTRY_PLANTED_QUARRY                               :{BIGFONT}{BLACK}{0:STRING} começa operações perto de {1:STRING}!
 STR_INDUSTRY_CLOSURE_QUARRY                               :{BIGFONT}{BLACK}{STRING} Pedreira se torna inviavel! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                 :{BIGFONT}{BLACK}{STRING} Pedreira abre cidade corporativa ilegal! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                 :{BIGFONT}{BLACK}{STRING} Pedreira expandida por terremoto conveniente! (produção aumentou)
@@ -193,6 +194,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                 :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_MINERAL_MINE                            :Mina
 STR_INDUSTRY_STATION_MINERAL_MINE                         :{STRING} Mina
+STR_INDUSTRY_PLANTED_MINERAL_MINE                         :{BIGFONT}{BLACK}{0:STRING} começou a escavar perto de {1:STRING}!
 STR_INDUSTRY_CLOSURE_MINERAL_MINE                         :{BIGFONT}{BLACK}{STRING} Mina se torna inviavel! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRING} Mina anseia por mais! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mina torna a definição de "mineral" mais vaga! (produção aumentou)
@@ -202,6 +204,8 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRI
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mina oferece compensação ao seus operários! (produção diminuiu)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C           :{BIGFONT}{BLACK}{STRING} Mina atinge petróleo, forçado a circular substacia inutil! (produção diminuiu)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D           :{BIGFONT}{BLACK}{STRING} Mina causa acidente fatal, forçado a pagar compensação a famílias! (produção diminuiu)
+
+STR_INDUSTRY_PLANTED_FARM                                 :{BIGFONT}{BLACK}{0:STRING} plantado perto de {1:STRING}!
 
 STR_INDUSTRY_NAME_CORN_FARM                               :Milharal
 STR_INDUSTRY_STATION_CORN_FARM                            :{STRING} Milhareira
@@ -265,6 +269,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D         :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_BIOLAB                                  :Bio-laboratório
 STR_INDUSTRY_STATION_BIOLAB                               :{STRING} Bio-laboratório
+STR_INDUSTRY_PLANTED_BIOLAB                               :{BIGFONT}{BLACK}{0:STRING} abre operações em {1:STRING}!
 STR_INDUSTRY_CLOSURE_BIOLAB                               :{BIGFONT}{BLACK}{STRING} Laboratório perde verba do governo! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                 :{BIGFONT}{BLACK}{STRING} Laboratório faz com que garotas palhaço se torna raça real de pessoa! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                 :{BIGFONT}{BLACK}{STRING} Laboratório recebe custeamento militar! (produção aumentou)
@@ -290,6 +295,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D             :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_PROCESSING_PLANT                        :Planta de Processamento
 STR_INDUSTRY_STATION_PROCESSING_PLANT                     :{STRING} Planta de Processamento
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                     :{BIGFONT}{BLACK}{0:STRING} abre operações em {1:STRING}!
 STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                     :{BIGFONT}{BLACK}{STRING} Planta de Processamento sofre processos! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A       :{BIGFONT}{BLACK}{STRING} Planta de Processamento compra processadores maiores! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B       :{BIGFONT}{BLACK}{STRING} Planta de Processamento preprocessa produto de processamento, procegindo com processamento pelo protocolo! (produção aumentou)
@@ -318,6 +324,7 @@ STR_INDUSTRY_STATION_PHARMACY_T                           :{STRING} Farmácia (T
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                         :Clínica de Gênero (Testosterona)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                      :{STRING} Clínica de Gênero (Testosterona)
 
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT                 :{BIGFONT}{BLACK}{0:STRING} começa operações em {1:STRING}!
 STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                 :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica fechada pela existencia do SUS! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica vende pirulas de efeito placebo! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica aproveita a falta de um Sistema Unico de Saúde! (produção aumentou)
@@ -328,6 +335,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRI
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica perde clientes para óleos essenciais! (produção diminuiu)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D   :{BIGFONT}{BLACK}{STRING} Planta Farmacêutica forçada a começar a fazer "drogas de verdade"! (produção diminuiu)
 
+STR_INDUSTRY_CLOSURE_PHARMACY                             :{BIGFONT}{BLACK}{STRING} Farmácia fechada pela existencia do SUS! (fechou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A               :{BIGFONT}{BLACK}{STRING} Farmácia diagnostica e prescreve medicicamento diretamente no balcão! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B               :{BIGFONT}{BLACK}{STRING} Farmácia dilui medicamentos, causando epidemia e recorde de lucros! (produção aumentou)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C               :{BIGFONT}{BLACK}{STRING} Farmácia conduz estudo que manda você comprar mais medicamentos! (produção aumentou)

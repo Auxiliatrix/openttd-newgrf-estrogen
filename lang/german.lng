@@ -28,12 +28,6 @@ STR_PARAM_DESC_INDUSTRY_CLOSE                               :Ob Industrieverfall
 STR_PARAM_NAME_INDUSTRY_STARTING_POWER                      :Produktionslevel nach Werksgründung
 STR_PARAM_DESC_INDUSTRY_STARTING_POWER                      :Produktionslevel mit dem neue Werke anfangen.
 
-STR_EMPTY                                                   :
-
-TTD_STR_CRATES                                              :{COMMA} Kiste{P "" n}
-TTD_STR_TONS                                                :{COMMA} Tonne{P "" n}
-TTD_STR_LITERS                                              :{COMMA} Liter{P "" ""}
-
 # ----------------------------------------------------------------
 # Frachten
 # ----------------------------------------------------------------
@@ -177,7 +171,6 @@ STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Produktionsl
 
 STR_INDUSTRY_NAME_PORT                                      :{G=m}Hafen
 STR_INDUSTRY_STATION_PORT                                   :Hafen {STRING}
-STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} öffnet nahe {1:STRING}!
 STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}Hafen {STRING} wegen wachsendem Meeresspiegel untergetaucht! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}Hafen {STRING} erhöht Importe! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}Hafen {STRING} vergrößert Krane um größere Kisten zu laden! (Produktion zugenommen)
@@ -215,9 +208,10 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Min
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Mineralstollen {STRING} stößt auf Rohöl; gezwungen die nutzlose Substanz zu umgraben! (Produktion abgenommen)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Mineralstollen {STRING} verliert mehrere Arbeiter in Aufzugabsturz; zahlt Familien für Stillschweigeabkommen! (Produktion abgenommen)
 
+STR_INDUSTRY_PLANTED_FARM                                   :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
+
 STR_INDUSTRY_NAME_CORN_FARM                                 :{G=m}Maisbauer
 STR_INDUSTRY_STATION_CORN_FARM                              :Maisbauer {STRING}
-STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}Maisbauer {STRING} durch Bayer AG in Grund und Boden verklagt! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -230,7 +224,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Mai
 
 STR_INDUSTRY_NAME_SOY_FARM                                  :{G=m}Sojabauer
 STR_INDUSTRY_STATION_SOY_FARM                               :Sojabauer {STRING}
-STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}Sojabauer {STRING} erliegt dem Klimawandel! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -243,7 +236,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Soj
 
 STR_INDUSTRY_NAME_YAM_FARM                                  :{G=m}Yambauer
 STR_INDUSTRY_STATION_YAM_FARM                               :Yambauer {STRING}
-STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}Yambauer {STRING} verliert das Recht, die eigenen Hofmaschinen zu reparieren! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -256,7 +248,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Yam
 
 STR_INDUSTRY_NAME_GLASSWORKS                                :{G=w}Glasfabrik
 STR_INDUSTRY_STATION_GLASSWORKS                             :Glasfabrik {STRING}
-STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet!
 STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}Glasfabrik {STRING} durch örtliche Oper zerschmettert! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Glasfabrik {STRING} verwendet nun 50% weniger Glas pro Glas! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Glasfabrik {STRING} vermarktet mehr Produkte als „handgefertegt“ (sic)! (Produktion zugenommen)
@@ -269,7 +260,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Gla
 
 STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=w}Chemiefabrik
 STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :Chemiefabrik {STRING}
-STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} lässt sich bei {1:STRING} nieder!
 STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}Chemiefabrik {STRING} erfährt eine katastrophale Kernschmelze! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Chemiefabrik {STRING} findet ein neues Element! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Chemiefabrik {STRING} stellt jemanden mit echtem Chemiestudium an! (Produktion zugenommen)
@@ -321,63 +311,43 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Öl
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=w}Arzneimittelfabrik (Östrogen)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :Arzneimittelfabrik (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_PHARMACY_E                                :{G=w}Apotheke (Östrogen)
 STR_INDUSTRY_STATION_PHARMACY_E                             :Apotheke (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
-# https://xkcd.com/327/
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=w}Geschlechtsklinik (Östrogen)
 STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :Geschlechtsklinik (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :{G=w}Arzneimittelfabrik (Testosteron)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :Arzneimittelfabrik (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_PHARMACY_T                                :{G=w}Apotheke (Testosteron)
 STR_INDUSTRY_STATION_PHARMACY_T                             :Apotheke (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=w}Geschlechtsklinik (Testosteron)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :Geschlechtsklinik (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
+
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
+
+STR_INDUSTRY_CLOSURE_PHARMACY                               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
+# https://xkcd.com/327/
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
+
+STR_INDUSTRY_PLANTED_GENDER_CLINIC                          :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)

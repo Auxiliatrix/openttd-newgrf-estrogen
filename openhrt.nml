@@ -2947,7 +2947,7 @@ item (FEAT_INDUSTRIES, industry_quarry) {
             produce_cargo("POTA", 0)
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_QUARRY);
         closure_msg: string(STR_INDUSTRY_CLOSURE_QUARRY);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_A);
@@ -3017,7 +3017,7 @@ item (FEAT_INDUSTRIES, industry_mineral_mine) {
             produce_cargo("MNRL", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_MINERAL_MINE);
         closure_msg: string(STR_INDUSTRY_CLOSURE_MINERAL_MINE);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A);
@@ -3087,7 +3087,7 @@ item (FEAT_INDUSTRIES, industry_corn_farm) {
             produce_cargo("MAIZ", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_CORN_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_A);
@@ -3157,7 +3157,7 @@ item (FEAT_INDUSTRIES, industry_soy_farm) {
             produce_cargo("BEAN", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_SOY_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_A);
@@ -3227,7 +3227,7 @@ item (FEAT_INDUSTRIES, industry_yam_farm) {
             produce_cargo("TATO", 0),
         ];
         spec_flags: bitmask(IND_FLAG_PLANT_FIELDS_PERIODICALLY, IND_FLAG_PLANT_FIELDS_WHEN_BUILT);
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_PLANTED;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_FARM);
         closure_msg: string(STR_INDUSTRY_CLOSURE_YAM_FARM);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_A);
@@ -3443,7 +3443,7 @@ item (FEAT_INDUSTRIES, industry_processing_plant) {
             produce_cargo("EOIL", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PROCESSING_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PROCESSING_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_A);
@@ -3585,7 +3585,7 @@ item (FEAT_INDUSTRIES, industry_biolab) {
             produce_cargo("DIOS", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_BIOLAB);
         closure_msg: string(STR_INDUSTRY_CLOSURE_BIOLAB);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_BIOLAB_A);
@@ -3656,7 +3656,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_e) {
             produce_cargo("RWES", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A);
@@ -3728,7 +3728,7 @@ item (FEAT_INDUSTRIES, industry_pharmaceutical_plant_t) {
             produce_cargo("RWTS", 0),
         ];
         spec_flags: bitmask();
-        new_ind_msg: TTD_STR_NEWS_INDUSTRY_CONSTRUCTION;
+        new_ind_msg: string(STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT);
         closure_msg: string(STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT);
         prod_increase_msg: string(STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A);
         prod_decrease_msg: string(STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A);
