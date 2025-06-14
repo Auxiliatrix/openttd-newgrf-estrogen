@@ -429,7 +429,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}Kopal
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C           :{BIGFONT}{BLACK}Kopalnia {STRING} trafia na olej; jest zmuszona wydobywać kolejną bezużyteczną substancję! (produkcja zmniejszona)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D           :{BIGFONT}{BLACK}Kopalnia {STRING} traci wielu pracowników w wypadku w szybie; zmuszona wypłacać ubezpieczenia na życie! (produkcja zmniejszona)
 
-STR_INDUSTRY_PLANTED_FARM                                 :{BIG_FONT}{BLACK}Nowa {0:STRING} została posadzona blisko {1:STRING}!
+STR_INDUSTRY_PLANTED_FARM                                 :{BIGFONT}{BLACK}Nowa {0:STRING} została posadzona blisko {1:STRING}!
 
 STR_INDUSTRY_NAME_CORN_FARM                               :{G=f}Farma kukurydzy
 STR_INDUSTRY_NAME_CORN_FARM.d                             :farmy kukurydzy
