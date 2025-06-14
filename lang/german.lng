@@ -177,7 +177,6 @@ STR_INDUSTRY_LEVEL_STATE_COMBO_DECAYING                     :{BLACK}Produktionsl
 
 STR_INDUSTRY_NAME_PORT                                      :{G=m}Hafen
 STR_INDUSTRY_STATION_PORT                                   :Hafen {STRING}
-STR_INDUSTRY_PLANTED_PORT                                   :{BIGFONT}{BLACK}{0:STRING} öffnet nahe {1:STRING}!
 STR_INDUSTRY_CLOSURE_PORT                                   :{BIGFONT}{BLACK}Hafen {STRING} wegen wachsendem Meeresspiegel untergetaucht! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_A                     :{BIGFONT}{BLACK}Hafen {STRING} erhöht Importe! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PORT_B                     :{BIGFONT}{BLACK}Hafen {STRING} vergrößert Krane um größere Kisten zu laden! (Produktion zugenommen)
@@ -215,9 +214,10 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B             :{BIGFONT}{BLACK}Min
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C             :{BIGFONT}{BLACK}Mineralstollen {STRING} stößt auf Rohöl; gezwungen die nutzlose Substanz zu umgraben! (Produktion abgenommen)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D             :{BIGFONT}{BLACK}Mineralstollen {STRING} verliert mehrere Arbeiter in Aufzugabsturz; zahlt Familien für Stillschweigeabkommen! (Produktion abgenommen)
 
+STR_INDUSTRY_PLANTED_FARM                                   :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
+
 STR_INDUSTRY_NAME_CORN_FARM                                 :{G=m}Maisbauer
 STR_INDUSTRY_STATION_CORN_FARM                              :Maisbauer {STRING}
-STR_INDUSTRY_PLANTED_CORN_FARM                              :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_CORN_FARM                              :{BIGFONT}{BLACK}Maisbauer {STRING} durch Bayer AG in Grund und Boden verklagt! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_A                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CORN_FARM_B                :{BIGFONT}{BLACK}Maisbauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -230,7 +230,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CORN_FARM_D                :{BIGFONT}{BLACK}Mai
 
 STR_INDUSTRY_NAME_SOY_FARM                                  :{G=m}Sojabauer
 STR_INDUSTRY_STATION_SOY_FARM                               :Sojabauer {STRING}
-STR_INDUSTRY_PLANTED_SOY_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_SOY_FARM                               :{BIGFONT}{BLACK}Sojabauer {STRING} erliegt dem Klimawandel! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_A                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_SOY_FARM_B                 :{BIGFONT}{BLACK}Sojabauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -243,7 +242,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_SOY_FARM_D                 :{BIGFONT}{BLACK}Soj
 
 STR_INDUSTRY_NAME_YAM_FARM                                  :{G=m}Yambauer
 STR_INDUSTRY_STATION_YAM_FARM                               :Yambauer {STRING}
-STR_INDUSTRY_PLANTED_YAM_FARM                               :{BIGFONT}{BLACK}{0:STRING} pflanzt sich bei {1:STRING} hin!
 STR_INDUSTRY_CLOSURE_YAM_FARM                               :{BIGFONT}{BLACK}Yambauer {STRING} verliert das Recht, die eigenen Hofmaschinen zu reparieren! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_A                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Sense mit „guter“ bezahlung! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_YAM_FARM_B                 :{BIGFONT}{BLACK}Yambauer {STRING} macht Schwerter zu Pflugscharen! (Produktion zugenommen)
@@ -256,7 +254,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_YAM_FARM_D                 :{BIGFONT}{BLACK}Yam
 
 STR_INDUSTRY_NAME_GLASSWORKS                                :{G=w}Glasfabrik
 STR_INDUSTRY_STATION_GLASSWORKS                             :Glasfabrik {STRING}
-STR_INDUSTRY_PLANTED_GLASSWORKS                             :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet!
 STR_INDUSTRY_CLOSURE_GLASSWORKS                             :{BIGFONT}{BLACK}Glasfabrik {STRING} durch örtliche Oper zerschmettert! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_A               :{BIGFONT}{BLACK}Glasfabrik {STRING} verwendet nun 50% weniger Glas pro Glas! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_GLASSWORKS_B               :{BIGFONT}{BLACK}Glasfabrik {STRING} vermarktet mehr Produkte als „handgefertegt“ (sic)! (Produktion zugenommen)
@@ -269,7 +266,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_GLASSWORKS_D               :{BIGFONT}{BLACK}Gla
 
 STR_INDUSTRY_NAME_CHEMICAL_PLANT                            :{G=w}Chemiefabrik
 STR_INDUSTRY_STATION_CHEMICAL_PLANT                         :Chemiefabrik {STRING}
-STR_INDUSTRY_PLANTED_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}{0:STRING} lässt sich bei {1:STRING} nieder!
 STR_INDUSTRY_CLOSURE_CHEMICAL_PLANT                         :{BIGFONT}{BLACK}Chemiefabrik {STRING} erfährt eine katastrophale Kernschmelze! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_A           :{BIGFONT}{BLACK}Chemiefabrik {STRING} findet ein neues Element! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_CHEMICAL_PLANT_B           :{BIGFONT}{BLACK}Chemiefabrik {STRING} stellt jemanden mit echtem Chemiestudium an! (Produktion zugenommen)
@@ -348,7 +344,6 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Arz
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
 
-STR_INDUSTRY_PLANTED_PHARMACY                               :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
 STR_INDUSTRY_CLOSURE_PHARMACY                               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)

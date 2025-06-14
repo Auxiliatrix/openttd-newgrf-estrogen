@@ -182,6 +182,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PORT_D                   :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_QUARRY                                  :Quarry
 STR_INDUSTRY_STATION_QUARRY                               :{STRING} Quarry
+STR_INDUSTRY_PLANTED_QUARRY                               :{BIGFONT}{BLACK}{0:STRING} digs into {1:STRING}!
 STR_INDUSTRY_CLOSURE_QUARRY                               :{BIGFONT}{BLACK}{STRING} Quarry runs dry! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_A                 :{BIGFONT}{BLACK}{STRING} Quarry establishes illegal company town! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_QUARRY_B                 :{BIGFONT}{BLACK}{STRING} Quarry expanded by helpful earthquake! (production increased)
@@ -194,6 +195,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_QUARRY_D                 :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_MINERAL_MINE                            :Mineral Mine
 STR_INDUSTRY_STATION_MINERAL_MINE                         :{STRING} Mineral Mine
+STR_INDUSTRY_PLANTED_MINERAL_MINE                         :{BIGFONT}{BLACK}{0:STRING} digs into {1:STRING}!
 STR_INDUSTRY_CLOSURE_MINERAL_MINE                         :{BIGFONT}{BLACK}{STRING} Mines runs dry! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRING} Mines craves those minerals! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mines broadens definition of "minerals"! (production increased)
@@ -203,6 +205,8 @@ STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_A           :{BIGFONT}{BLACK}{STRI
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_B           :{BIGFONT}{BLACK}{STRING} Mines begins offering workers' comp! (production decreased)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_C           :{BIGFONT}{BLACK}{STRING} Mines hits oil; forced to dig around useless substance! (production decreased)
 STR_INDUSTRY_PRODUCTION_DECREASE_MINERAL_MINE_D           :{BIGFONT}{BLACK}{STRING} Mines loses multiple workers to elevator accident; forced to pay out life insurance! (production decreased)
+
+STR_INDUSTRY_PLANTED_FARM                                 :{BIGFONT}{BLACK}{0:STRING} planted near {1:STRING}!
 
 STR_INDUSTRY_NAME_CORN_FARM                               :Corn Farm
 STR_INDUSTRY_STATION_CORN_FARM                            :{STRING} Corn Farm
@@ -266,6 +270,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_CHEMICAL_PLANT_D         :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_BIOLAB                                  :Biolab
 STR_INDUSTRY_STATION_BIOLAB                               :{STRING} Biolab
+STR_INDUSTRY_PLANTED_BIOLAB                               :{BIGFONT}{BLACK}{0:STRING} founded near {1:STRING}; arguments over meaning of "bio" rampant!
 STR_INDUSTRY_CLOSURE_BIOLAB                               :{BIGFONT}{BLACK}{STRING} Laboratory loses all government funding! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_A                 :{BIGFONT}{BLACK}{STRING} Laboratory accidentally turns multiple researchers into catgirls! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_BIOLAB_B                 :{BIGFONT}{BLACK}{STRING} Laboratory suddenly receives immense military funding! (production increased)
@@ -291,6 +296,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_DISTILLERY_D             :{BIGFONT}{BLACK}{STRI
 
 STR_INDUSTRY_NAME_PROCESSING_PLANT                        :Processing Plant
 STR_INDUSTRY_STATION_PROCESSING_PLANT                     :{STRING} Processing Plant
+STR_INDUSTRY_PLANTED_PROCESSING_PLANT                     :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; local "oilies" celebrate!
 STR_INDUSTRY_CLOSURE_PROCESSING_PLANT                     :{BIGFONT}{BLACK}{STRING} Processing Plant processes itself in a freak accident! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_A       :{BIGFONT}{BLACK}{STRING} Processing Plant starts using bigger blenders! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_PROCESSING_PLANT_B       :{BIGFONT}{BLACK}{STRING} Processing Plant preprocesses processor proceeds, preceding proper protocol! (production increased)
@@ -319,6 +325,7 @@ STR_INDUSTRY_STATION_PHARMACY_T                           :{STRING} Pharmacy (Te
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                         :Gender Clinic (Testosterone)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                      :{STRING} Gender Clinic (Testosterone)
 
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT                 :{BIGFONT}{BLACK}{0:STRING} opens near {1:STRING}; hypochondriacs momentarily optimistic!
 STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                 :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant shut down for unethical research practices! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant markets sugar pills as miracle drugs! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant invents new drug to sell at a 1000% markup! (production increased)
@@ -329,6 +336,7 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B   :{BIGFONT}{BLACK}{STRI
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant seriously considering homeopathic medicine! (production decreased)
 STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D   :{BIGFONT}{BLACK}{STRING} Pharmaceutical Plant forced to start making more "real" drugs! (production decreased)
 
+STR_INDUSTRY_CLOSURE_PHARMACY                             :{BIGFONT}{BLACK}{STRING} Pharmacy downsizes workforce to local drug dealer! (closed)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A               :{BIGFONT}{BLACK}{STRING} Pharmacy prescribes medicines to itself! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B               :{BIGFONT}{BLACK}{STRING} Pharmacy lowers dosages; insists population is just sicker! (production increased)
 STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C               :{BIGFONT}{BLACK}{STRING} Pharmacy conducts study proving you need to buy more drugs! (production increased)
