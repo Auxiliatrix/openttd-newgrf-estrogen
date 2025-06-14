@@ -321,63 +321,44 @@ STR_INDUSTRY_PRODUCTION_DECREASE_PROCESSING_PLANT_D         :{BIGFONT}{BLACK}Öl
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_E                    :{G=w}Arzneimittelfabrik (Östrogen)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_E                 :Arzneimittelfabrik (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_E                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_E_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_PHARMACY_E                                :{G=w}Apotheke (Östrogen)
 STR_INDUSTRY_STATION_PHARMACY_E                             :Apotheke (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACY_E                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_E                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
-# https://xkcd.com/327/
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_E_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_E                           :{G=w}Geschlechtsklinik (Östrogen)
 STR_INDUSTRY_STATION_GENDER_CLINIC_E                        :Geschlechtsklinik (Östrogen) {STRING}
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_E                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
 
 STR_INDUSTRY_NAME_PHARMACEUTICAL_PLANT_T                    :{G=w}Arzneimittelfabrik (Testosteron)
 STR_INDUSTRY_STATION_PHARMACEUTICAL_PLANT_T                 :Arzneimittelfabrik (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
-STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT_T                 :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_A   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_B   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_C   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_T_D   :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_PHARMACY_T                                :{G=w}Apotheke (Testosteron)
 STR_INDUSTRY_STATION_PHARMACY_T                             :Apotheke (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_PHARMACY_T                             :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
-STR_INDUSTRY_CLOSURE_PHARMACY_T                             :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_A               :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_B               :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_C               :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
-STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_T_D               :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
 
 STR_INDUSTRY_NAME_GENDER_CLINIC_T                           :{G=w}Geschlechtsklinik (Testosteron)
 STR_INDUSTRY_STATION_GENDER_CLINIC_T                        :Geschlechtsklinik (Testosteron) {STRING}
-STR_INDUSTRY_PLANTED_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
-STR_INDUSTRY_CLOSURE_GENDER_CLINIC_T                        :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
+
+STR_INDUSTRY_PLANTED_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}{0:STRING} bei {1:STRING} gegründet; Hypochonder erhaschen Optimismus!
+STR_INDUSTRY_CLOSURE_PHARMACEUTICAL_PLANT                   :{BIGFONT}{BLACK}Razzia bei Arzneimittelfabrik {STRING} wegen unethischer Forschungsmethoden! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} vermarktet Zuckerpastillen als Wunderheilmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Medizin, verkauft diese mit 1000% Preisaufschlag! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} erfindet neue Krankheit! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} startet neue Opioidkrise! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_A     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} Forschung durch Patentgesetze erlähmt! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_B     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen Arzneimittelstandards zu befolgen! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_C     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} nimmt ernsthaft Homeopathie in Bezug! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACEUTICAL_PLANT_D     :{BIGFONT}{BLACK}Arzneimittelfabrik {STRING} gezwungen mehr „echte“ Medizin zu produzieren! (Produktion abgenommen)
+
+STR_INDUSTRY_PLANTED_PHARMACY                               :{BIGFONT}{BLACK}{0:STRING} sets up shop near {1:STRING}!
+STR_INDUSTRY_CLOSURE_PHARMACY                               :{BIGFONT}{BLACK}Apotheke {STRING} verringert Personenbestand auf einen einzigen hiesigen Drogendealer! (geschlossen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apotheke {STRING} verschreibt sich selbst Aufputschmittel! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apotheke {STRING} verringert Dosen; beharrt darauf, dass Bevölkerung „bloß mehr krank“ ist! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apotheke {STRING} führt Studie, welche beweist, dass Menschen mehr Medizin nehmen müssen! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_INCREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apotheke {STRING} blüht inmitten Ausbruch der echten Grippe auf! (Produktion zugenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_A                 :{BIGFONT}{BLACK}Apotheke {STRING} konnte Staat nicht zu erhöhten Medizinpreisen überzeugens! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_B                 :{BIGFONT}{BLACK}Apotheke {STRING} verliert Verschreibungen wegen Kunden Bobby Tables! (Produktion abgenommen)
+# https://xkcd.com/327/
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_C                 :{BIGFONT}{BLACK}Apotheke {STRING} verliert millionen an Erträgen von nun heilbarer chronischer Erkrankung! (Produktion abgenommen)
+STR_INDUSTRY_PRODUCTION_DECREASE_PHARMACY_D                 :{BIGFONT}{BLACK}Apotheke {STRING} wegen grober Fahrlässigkeit verklagt! (Produktion abgenommen)
+
+STR_INDUSTRY_PLANTED_GENDER_CLINIC                          :{BIGFONT}{BLACK}{0:STRING} erscheint magischerweise bei {1:STRING}!
+STR_INDUSTRY_CLOSURE_GENDER_CLINIC                          :{BIGFONT}{BLACK}Geschlechtsklinik {STRING} transt keine Geschlechter mehr! (geschlossen)
